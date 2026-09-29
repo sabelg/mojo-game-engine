@@ -1,0 +1,260 @@
+[
+  {
+    "properties": {
+      "ledge": true
+    },
+    "position": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "name": "island_bounds_phy"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "name": "terrain_island.005"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "name": "terrain_island.004"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "name": "terrain_island.003"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "name": "terrain_island.002"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "name": "terrain_island"
+  },
+  {
+    "properties": {
+      "portal_blend": "//level_selector.blend",
+      "portal": ""
+    },
+    "position": [
+      8.601978302001953,
+      0.2963007390499115,
+      0.394546777009964
+    ],
+    "name": "portal_level_selector"
+  },
+  {
+    "properties": {
+      "portal_blend": "//ending.blend",
+      "portal": ""
+    },
+    "position": [
+      29.833072662353516,
+      9.999303817749023,
+      -9.135165214538574
+    ],
+    "name": "portal_endgame"
+  },
+  {
+    "properties": {
+      "kill": 1000
+    },
+    "position": [
+      -3.0,
+      -6.0,
+      -10.0
+    ],
+    "name": "death_plane"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      16.715850830078125,
+      3.875265121459961,
+      -14.865833282470703
+    ],
+    "name": "island_cave_phys"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "name": "ground_invis"
+  },
+  {
+    "properties": {
+      "water": true,
+      "liquid": true
+    },
+    "position": [
+      0.0,
+      -200.0,
+      0.0
+    ],
+    "name": "water_surface.001"
+  },
+  {
+    "properties": {
+      "slip": true
+    },
+    "position": [
+      9.008968353271484,
+      4.0786261558532715,
+      -32.319786071777344
+    ],
+    "name": "tree_brown_001"
+  },
+  {
+    "properties": {
+      "twosided": true
+    },
+    "position": [
+      6.9113335609436035,
+      8.990530967712402,
+      -30.974979400634766
+    ],
+    "name": "tree_folage"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      1.3650612831115723,
+      6.909195423126221,
+      -49.547176361083984
+    ],
+    "name": "grass_platforms_3_gfx"
+  },
+  {
+    "properties": {
+      "slip": true
+    },
+    "position": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "name": "bridge_phys"
+  },
+  {
+    "properties": {
+      "water": true
+    },
+    "position": [
+      0.0,
+      -200.0,
+      0.0
+    ],
+    "name": "water_surface"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "name": "terrain_island.001"
+  },
+  {
+    "properties": {
+      "portal_scene": "lavaland",
+      "portal": "lava_end_position"
+    },
+    "position": [
+      -13.768611907958984,
+      7.294872760772705,
+      -45.05716323852539
+    ],
+    "name": "portal_lava_end"
+  },
+  {
+    "properties": {
+      "portal_scene": "lavaland",
+      "portal": "lava_init_position"
+    },
+    "position": [
+      -16.92367172241211,
+      8.098042488098145,
+      -64.49710083007812
+    ],
+    "name": "portal_lavaland"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      2.430192470550537,
+      3.299975633621216,
+      -34.04639434814453
+    ],
+    "name": "stone_stepping_phys"
+  },
+  {
+    "properties": {
+      "slip": true
+    },
+    "position": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "name": "island_bounds_phys"
+  },
+  {
+    "properties": {
+      "slip": true
+    },
+    "position": [
+      14.486576080322266,
+      4.993880271911621,
+      -47.50154495239258
+    ],
+    "name": "branchmaster.001"
+  }
+]

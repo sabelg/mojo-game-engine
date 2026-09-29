@@ -1,0 +1,503 @@
+[
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      -4.483535289764404,
+      14.777761459350586,
+      -9.52385139465332
+    ],
+    "name": "Plane.001"
+  },
+  {
+    "properties": {
+      "barrier": true
+    },
+    "position": [
+      0.0,
+      19.0,
+      0.0
+    ],
+    "name": "dirtground.001"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      -15.716867446899414,
+      17.82763671875,
+      8.499530792236328
+    ],
+    "name": "Plane.016"
+  },
+  {
+    "properties": {
+      "kill": 100
+    },
+    "position": [
+      -2.1360695362091064,
+      3.139853000640869,
+      -72.20514678955078
+    ],
+    "name": "cart"
+  },
+  {
+    "properties": {
+      "barrier": true
+    },
+    "position": [
+      -0.9053341746330261,
+      13.831184387207031,
+      -9.812894821166992
+    ],
+    "name": "Plane.015"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      43.09880828857422,
+      32.503360748291016,
+      -14.457026481628418
+    ],
+    "name": "Plane.003"
+  },
+  {
+    "properties": {
+      "barrier": true
+    },
+    "position": [
+      43.09880828857422,
+      32.503360748291016,
+      -14.457026481628418
+    ],
+    "name": "cart1"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      43.10325622558594,
+      32.41145706176758,
+      -14.449130058288574
+    ],
+    "name": "cart1.carrier"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      39.37828063964844,
+      21.26966094970703,
+      -10.73055648803711
+    ],
+    "name": "cart2.activate.again"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      37.95081329345703,
+      22.740461349487305,
+      -11.367635726928711
+    ],
+    "name": "cart2.carrier"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      37.95048522949219,
+      22.83234214782715,
+      -11.365582466125488
+    ],
+    "name": "cart1.001"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      -2.148206949234009,
+      15.510964393615723,
+      -9.113831520080566
+    ],
+    "name": "catapult_throw"
+  },
+  {
+    "properties": {
+      "barrier": true
+    },
+    "position": [
+      0.1480088233947754,
+      16.820068359375,
+      -7.811438083648682
+    ],
+    "name": "pier_sheep"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      0.14800874888896942,
+      16.820068359375,
+      -7.81143856048584
+    ],
+    "name": "Plane.014"
+  },
+  {
+    "properties": {
+      "portal_blend": "//../levels2/level_mine.blend",
+      "portal": ""
+    },
+    "position": [
+      -27.539405822753906,
+      18.750831604003906,
+      9.68373966217041
+    ],
+    "name": "Plane"
+  },
+  {
+    "properties": {
+      "ground": 0.0
+    },
+    "position": [
+      0.0,
+      19.0,
+      0.0
+    ],
+    "name": "ground.Open.001"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      -2.2552874088287354,
+      18.947235107421875,
+      0.1606031358242035
+    ],
+    "name": "X_stood"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      -2.258821725845337,
+      18.70313262939453,
+      0.08235251903533936
+    ],
+    "name": "stood_on_acorn"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      -2.2540178298950195,
+      18.69509506225586,
+      0.07469654083251953
+    ],
+    "name": "stood_on_acorn.001"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      47.84540557861328,
+      30.924591064453125,
+      -21.73396873474121
+    ],
+    "name": "pick_nut"
+  },
+  {
+    "properties": {
+      "ground": 0.0
+    },
+    "position": [
+      0.0,
+      19.0,
+      0.0
+    ],
+    "name": "ground.Open"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      -1.768635630607605,
+      10.867385864257812,
+      -53.99394226074219
+    ],
+    "name": "pier_ground"
+  },
+  {
+    "properties": {
+      "barrier": true,
+      "ledge": true
+    },
+    "position": [
+      -1.7686355113983154,
+      10.867385864257812,
+      -53.99393844604492
+    ],
+    "name": "pier_edge"
+  },
+  {
+    "properties": {
+      "slip": true
+    },
+    "position": [
+      5.203711032867432,
+      11.21114730834961,
+      -39.384666442871094
+    ],
+    "name": "bigtree_base"
+  },
+  {
+    "properties": {
+      "barrier": true,
+      "ledge": true
+    },
+    "position": [
+      0.0,
+      19.0,
+      0.0
+    ],
+    "name": "ground.007"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      -1.7344403266906738,
+      16.208660125732422,
+      -7.499831199645996
+    ],
+    "name": "catapult_01_branch"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      28.971235275268555,
+      20.367055892944336,
+      1.007398009300232
+    ],
+    "name": "Atransp"
+  },
+  {
+    "properties": {
+      "liquid": true,
+      "kill": 100,
+      "lava": true
+    },
+    "position": [
+      -26.77454376220703,
+      10.341434478759766,
+      -47.270572662353516
+    ],
+    "name": "laval_fall.003"
+  },
+  {
+    "properties": {
+      "kill": 100,
+      "lava": true
+    },
+    "position": [
+      34.24266815185547,
+      10.339067459106445,
+      -13.608015060424805
+    ],
+    "name": "Plane.009"
+  },
+  {
+    "properties": {
+      "ledge": true
+    },
+    "position": [
+      0.0,
+      19.0,
+      0.0
+    ],
+    "name": "Plane.006"
+  },
+  {
+    "properties": {
+      "portal_blend": "level_selector.blend",
+      "portal": ""
+    },
+    "position": [
+      -4.43479585647583,
+      14.997464179992676,
+      -9.531615257263184
+    ],
+    "name": "portal_back"
+  },
+  {
+    "properties": {
+      "slip": true,
+      "barrier": true
+    },
+    "position": [
+      0.0,
+      19.0,
+      0.0
+    ],
+    "name": "ground.002"
+  },
+  {
+    "properties": {
+      "liquid": true,
+      "kill": 100,
+      "lava": true
+    },
+    "position": [
+      0.0,
+      0.6460678577423096,
+      0.0
+    ],
+    "name": "Plane.004"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      2.78539776802063,
+      16.878522872924805,
+      -0.41938960552215576
+    ],
+    "name": "ground.001"
+  },
+  {
+    "properties": {
+      "liquid": true,
+      "kill": 100,
+      "lava": 1
+    },
+    "position": [
+      29.51239776611328,
+      6.029945373535156,
+      -27.97347068786621
+    ],
+    "name": "lava"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      0.0,
+      19.0,
+      0.0
+    ],
+    "name": "dirtground"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      0.0,
+      19.0,
+      0.0
+    ],
+    "name": "ground"
+  },
+  {
+    "properties": {
+      "liquid": true,
+      "kill": 50,
+      "lava": true
+    },
+    "position": [
+      70.03236389160156,
+      19.812021255493164,
+      25.169891357421875
+    ],
+    "name": "laval_fall.001"
+  },
+  {
+    "properties": {
+      "kill": 50,
+      "lava": true
+    },
+    "position": [
+      70.03236389160156,
+      12.482649803161621,
+      25.169891357421875
+    ],
+    "name": "laval_fall.002"
+  },
+  {
+    "properties": {
+      "kill": 50,
+      "lava": true
+    },
+    "position": [
+      69.8263931274414,
+      5.652153015136719,
+      25.156780242919922
+    ],
+    "name": "laval_fall"
+  },
+  {
+    "properties": {
+      "liquid": ""
+    },
+    "position": [
+      -1.9489517211914062,
+      10.998047828674316,
+      -23.217735290527344
+    ],
+    "name": "water_surface.002"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      5.203706741333008,
+      11.211145401000977,
+      -39.38467025756836
+    ],
+    "name": "tree_ground"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      -27.83810043334961,
+      19.508007049560547,
+      8.674341201782227
+    ],
+    "name": "island_cave_end"
+  },
+  {
+    "properties": {
+      "ground": 1,
+      "sheep_count": 4
+    },
+    "position": [
+      0.1480088233947754,
+      16.828882217407227,
+      -7.811438083648682
+    ],
+    "name": "sheep_ground"
+  }
+]

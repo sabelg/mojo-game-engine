@@ -1,0 +1,161 @@
+[
+  {
+    "properties": {
+      "ground": 1,
+      "ledge": true
+    },
+    "position": [
+      16.196216583251953,
+      0.15146827697753906,
+      7.911340713500977
+    ],
+    "name": "Plane"
+  },
+  {
+    "properties": {
+      "ground": 1,
+      "ledge": false
+    },
+    "position": [
+      15.580034255981445,
+      0.8718127608299255,
+      1.1256471872329712
+    ],
+    "name": "Circle.041"
+  },
+  {
+    "properties": {
+      "ground": 1
+    },
+    "position": [
+      15.124628067016602,
+      -0.3950272798538208,
+      -1.0791293382644653
+    ],
+    "name": "Circle.017"
+  },
+  {
+    "properties": {
+      "ground": true,
+      "ledge": true
+    },
+    "position": [
+      15.827006340026855,
+      2.2136495113372803,
+      -5.462673664093018
+    ],
+    "name": "Circle.038"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      1.120320439338684,
+      0.025336772203445435,
+      1.0914226770401
+    ],
+    "name": "rocks_rock_01.010"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      10.96174144744873,
+      4.934823989868164,
+      -6.5035529136657715
+    ],
+    "name": "log_small_001.002"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      2.051894187927246,
+      4.501604080200195,
+      -9.929279327392578
+    ],
+    "name": "stump2.002"
+  },
+  {
+    "properties": {
+      "ground": true,
+      "ledge": true
+    },
+    "position": [
+      21.498437881469727,
+      2.2136495113372803,
+      -0.8709908723831177
+    ],
+    "name": "Circle.014"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      15.763765335083008,
+      1.948984146118164,
+      6.865053176879883
+    ],
+    "name": "Circle.005"
+  },
+  {
+    "properties": {
+      "ledge": true
+    },
+    "position": [
+      18.182661056518555,
+      2.8436331748962402,
+      8.381166458129883
+    ],
+    "name": "Circle.004"
+  },
+  {
+    "properties": {
+      "pickup": "item_acorn"
+    },
+    "position": [
+      -1.9158449172973633,
+      -1.0393693447113037,
+      -15.87071704864502
+    ],
+    "name": "acorn_001.007"
+  },
+  {
+    "properties": {
+      "pickup": "item_acorn"
+    },
+    "position": [
+      -1.6905527114868164,
+      -1.0393693447113037,
+      -16.681774139404297
+    ],
+    "name": "acorn_001.005"
+  },
+  {
+    "properties": {
+      "ground": 1
+    },
+    "position": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "name": "Plane.047"
+  },
+  {
+    "properties": {
+      "attack": 1,
+      "pickup": "item_acorn"
+    },
+    "position": [
+      -0.05677938461303711,
+      0.3523542881011963,
+      -1.2644681930541992
+    ],
+    "name": "item_acorn"
+  }
+]

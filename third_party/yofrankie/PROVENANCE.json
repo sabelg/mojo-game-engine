@@ -1,0 +1,10 @@
+{
+  "upstream": "https://github.com/BlenderVR/yofrankie",
+  "archive": "https://codeload.github.com/BlenderVR/yofrankie/zip/refs/heads/master",
+  "archive_sha256": "de943f0c56d11ef512d4edd4fe3d9cbe9d869504b2c90a861b4e8523443d5e38",
+  "retrieved": "2026-09-29",
+  "attribution": "YoFrankie! (c) 2008, Blender Foundation, www.blender.org",
+  "media_license": "CC-BY-3.0",
+  "upstream_code_license": "GPL-2.0-or-later",
+  "modifications": "Triangulated original geometry, Y-up coordinate conversion, texture BMP conversion and resizing up to 1024, 12-frame animation pose baking. Original files preserved under third_party/yofrankie."
+}

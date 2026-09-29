@@ -1,0 +1,102 @@
+[
+  {
+    "properties": {
+      "Text": "to enter the level"
+    },
+    "position": [
+      1.329452633857727,
+      7.738882541656494,
+      2.9355313777923584
+    ],
+    "name": "Plane.001"
+  },
+  {
+    "properties": {
+      "Text": "walk into a sign"
+    },
+    "position": [
+      1.323948860168457,
+      7.92799186706543,
+      2.959620475769043
+    ],
+    "name": "Plane"
+  },
+  {
+    "properties": {
+      "slip": true
+    },
+    "position": [
+      0.4200185537338257,
+      -0.19571885466575623,
+      -0.69771409034729
+    ],
+    "name": "boundry_phys"
+  },
+  {
+    "properties": {
+      "mini_level": true
+    },
+    "position": [
+      1.916839599609375,
+      0.0,
+      2.372285842895508
+    ],
+    "name": "dyn_warp_placer"
+  },
+  {
+    "properties": {
+      "maxrenderdist": 60.0,
+      "colldet": false
+    },
+    "position": [
+      10.866392135620117,
+      7.239684104919434,
+      -5.834074974060059
+    ],
+    "name": "grass_002.024"
+  },
+  {
+    "properties": {
+      "water": true
+    },
+    "position": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "name": "Plane.003"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      9.56549072265625,
+      7.010369300842285,
+      -3.060873031616211
+    ],
+    "name": "mushroom_red_001.020"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      9.875898361206055,
+      7.044129371643066,
+      -3.125664710998535
+    ],
+    "name": "mushroom_red_001.019"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      1.8762434720993042,
+      7.058910369873047,
+      7.864922046661377
+    ],
+    "name": "mushroom_red_001"
+  }
+]

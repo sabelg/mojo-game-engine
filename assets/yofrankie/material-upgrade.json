@@ -1,0 +1,502 @@
+{
+  "max_texture_dimension": 4096,
+  "upscaled": false,
+  "materials": [
+    {
+      "albedo": "X_png.bmp",
+      "source": "third_party/yofrankie/textures/level_nut/X.png",
+      "width": 256,
+      "height": 256,
+      "normal": "-",
+      "sha256": "e0f68b6ed83b4f46471d57178bea183e6e4016eabbf8310a3ae84d6ee47f057e"
+    },
+    {
+      "albedo": "char_ram_col_png.bmp",
+      "source": "third_party/yofrankie/chars/textures/char_ram_col.png",
+      "width": 1024,
+      "height": 1024,
+      "normal": "char_ram_nor_png.bmp",
+      "sha256": "016a1a560afcd6d9a6f661dd3fd7e6a628cd57066a013286bc16f7db98a29196"
+    },
+    {
+      "albedo": "char_sheep_col_png.bmp",
+      "source": "third_party/yofrankie/chars/textures/char_sheep_col.png",
+      "width": 1024,
+      "height": 1024,
+      "normal": "char_sheep_nor_png.bmp",
+      "sha256": "e9bf40f57e41465b90583120aa82fb5d92715e861595668268393db04e5415f8"
+    },
+    {
+      "albedo": "flyingsquirrel_skin_col_png.bmp",
+      "source": "third_party/yofrankie/chars/textures/flyingsquirrel_skin_col.png",
+      "width": 1024,
+      "height": 1024,
+      "normal": "flyingsquirrel_skin_nor_png.bmp",
+      "sha256": "a86d661e795d7af98c94f5817d0066af0e5c477ee537ebcf15282675db8da9d4"
+    },
+    {
+      "albedo": "font_peach_tga.bmp",
+      "source": "third_party/yofrankie/textures/font_peach.tga",
+      "width": 256,
+      "height": 261,
+      "normal": "-",
+      "sha256": "280265ec2ea07728bb38f92668d3e8a158cb7e3ac67bd68ddc5a75268708d08e"
+    },
+    {
+      "albedo": "frankie_home_col_png.bmp",
+      "source": "third_party/yofrankie/textures/frankie_home_col.png",
+      "width": 1024,
+      "height": 1024,
+      "normal": "frankie_home_nor_png.bmp",
+      "sha256": "9df9da1256dfba63767550f0077cb92f0b6eaf040b1eeb92a39a06048177bb59"
+    },
+    {
+      "albedo": "frankie_tail2_png.bmp",
+      "source": "third_party/yofrankie/chars/textures/frankie_tail2.png",
+      "width": 1024,
+      "height": 256,
+      "normal": "-",
+      "sha256": "a5a631651b3963ca5283b0aaf828875974815e791101e13b0c6e08f0169c6bab"
+    },
+    {
+      "albedo": "fx_lava2_png.bmp",
+      "source": "third_party/yofrankie/textures/fx_lava2.png",
+      "width": 512,
+      "height": 512,
+      "normal": "-",
+      "sha256": "53737c93602808f81d8d2a6d68eab1c80caac0664531b5bcd9dac93c59839084"
+    },
+    {
+      "albedo": "fx_lava3_png.bmp",
+      "source": "third_party/yofrankie/textures/fx_lava3.png",
+      "width": 512,
+      "height": 512,
+      "normal": "-",
+      "sha256": "9ea36869e0f9a2a1e86dea98432340d07281955a1201933e12d727c62064536b"
+    },
+    {
+      "albedo": "fx_lava_png.bmp",
+      "source": "third_party/yofrankie/textures/fx_lava.png",
+      "width": 512,
+      "height": 512,
+      "normal": "-",
+      "sha256": "41f8c5940d73a4f7203be3d893818fea71516a891d9fa9c460d1446399d3b250"
+    },
+    {
+      "albedo": "fx_sparkles_png.bmp",
+      "source": "third_party/yofrankie/textures/fx_sparkles.png",
+      "width": 256,
+      "height": 256,
+      "normal": "-",
+      "sha256": "95beb5e5e950850352c65ab96037cd3183a0ea0e5ac29e39fa332d4eab125f05"
+    },
+    {
+      "albedo": "fx_splash_png.bmp",
+      "source": "third_party/yofrankie/textures/fx_splash.png",
+      "width": 512,
+      "height": 1024,
+      "normal": "-",
+      "sha256": "2aee2d0b0b5e7516517ffa3803b39c448b3650c1e6deb574d472574baa66babc"
+    },
+    {
+      "albedo": "generic_darkRock_col_png.bmp",
+      "source": "third_party/yofrankie/textures/generic_darkRock_col.png",
+      "width": 512,
+      "height": 512,
+      "normal": "generic_darkRock_nor_png.bmp",
+      "sha256": "c5193e75fd127192934007313d070dae80a447c2bebb507e9162c397f8fa4a68"
+    },
+    {
+      "albedo": "generic_dirt1_col_png.bmp",
+      "source": "third_party/yofrankie/textures/generic_dirt1_col.png",
+      "width": 512,
+      "height": 512,
+      "normal": "-",
+      "sha256": "b9df120f6939e8c69af4abe851a8441782337d70d0806e6b9081724770404e41"
+    },
+    {
+      "albedo": "generic_dirt2_col_png.bmp",
+      "source": "third_party/yofrankie/textures/generic_dirt2_col.png",
+      "width": 512,
+      "height": 512,
+      "normal": "-",
+      "sha256": "615ce5c2837893ac09611e430a0ccf7fbec51535279be7ba200a6d689a3f1595"
+    },
+    {
+      "albedo": "generic_dirt2dark_png.bmp",
+      "source": "third_party/yofrankie/textures/generic_dirt2dark.png",
+      "width": 512,
+      "height": 512,
+      "normal": "-",
+      "sha256": "1d4f2a78acc3e0f4d564bf52316b590f1f436a4f3150b0a4c5eb9cbb380dedcf"
+    },
+    {
+      "albedo": "generic_grass1_col_png.bmp",
+      "source": "third_party/yofrankie/textures/generic_grass1_col.png",
+      "width": 512,
+      "height": 512,
+      "normal": "-",
+      "sha256": "6a66246fd2ca5021910c3ea0215224480ada288d6f0b496bc6b318881e6e5d76"
+    },
+    {
+      "albedo": "generic_grass4_col_png.bmp",
+      "source": "third_party/yofrankie/textures/generic_grass4_col.png",
+      "width": 512,
+      "height": 512,
+      "normal": "-",
+      "sha256": "813650c588d35131645680994fa20fa0dae4d34ab1713da1f9bc3f022973a3df"
+    },
+    {
+      "albedo": "generic_grass4_dirt2_png.bmp",
+      "source": "third_party/yofrankie/textures/generic_grass4_dirt2.png",
+      "width": 512,
+      "height": 512,
+      "normal": "-",
+      "sha256": "e85a9b9e56b10397db8732a5c6a8dd1b52c4f4c1c6bf9fe2b3920a08d69a17c9"
+    },
+    {
+      "albedo": "generic_grassoverhang1_col_png.bmp",
+      "source": "third_party/yofrankie/textures/generic_grassoverhang1_col.png",
+      "width": 512,
+      "height": 512,
+      "normal": "-",
+      "sha256": "1d5760b7577be1cf0e3678e9dabb1c98bccb56548b52afe3095fd27f71fa4da9"
+    },
+    {
+      "albedo": "generic_grassoverhang2_col_png.bmp",
+      "source": "third_party/yofrankie/textures/generic_grassoverhang2_col.png",
+      "width": 512,
+      "height": 512,
+      "normal": "-",
+      "sha256": "54bda69f8704bc0d98ae269a3945aa57feb861668d88b30f881fafd25f08ef4e"
+    },
+    {
+      "albedo": "generic_grayrock1_col_png.bmp",
+      "source": "third_party/yofrankie/textures/generic_grayrock1_col.png",
+      "width": 512,
+      "height": 512,
+      "normal": "-",
+      "sha256": "3c30eff13f5018afed11ea834a765abc2b648c121874c143b48471ed506bebd9"
+    },
+    {
+      "albedo": "generic_lava_png.bmp",
+      "source": "third_party/yofrankie/textures/generic_lava.png",
+      "width": 512,
+      "height": 512,
+      "normal": "-",
+      "sha256": "692c5eb29fd7cb666fa5e39eae6babe268a26d843bc6463f7cf31b1e47b653d8"
+    },
+    {
+      "albedo": "generic_lightRock_col_png.bmp",
+      "source": "third_party/yofrankie/textures/generic_lightRock_col.png",
+      "width": 512,
+      "height": 512,
+      "normal": "-",
+      "sha256": "b3327ad0d787ae2bacfd00920bce365e5ddc57ff6bc8c87442d6c351c738ebda"
+    },
+    {
+      "albedo": "generic_redrock_col_png.bmp",
+      "source": "third_party/yofrankie/textures/generic_redrock_col.png",
+      "width": 1024,
+      "height": 256,
+      "normal": "generic_redrock_nor_png.bmp",
+      "sha256": "3c46d1917c088c6f895c1996fe1c259a8fb404ffa1df45c015a6b369b66f1d63"
+    },
+    {
+      "albedo": "phare_col_005_png.bmp",
+      "source": "third_party/yofrankie/textures/level_lighthouse/phare_col_005.png",
+      "width": 512,
+      "height": 512,
+      "normal": "-",
+      "sha256": "06fba5e95a6462bbeb6bb7724a2d71b13b5da9f48660e372bc980d0280d38021"
+    },
+    {
+      "albedo": "plants_grass_006_col_png.bmp",
+      "source": "third_party/yofrankie/textures/plants_grass_006_col.png",
+      "width": 512,
+      "height": 512,
+      "normal": "-",
+      "sha256": "a1cc6bc37de2af0c026c8c6c04648af3d5647662567fee9b8e9201e11b64ad77"
+    },
+    {
+      "albedo": "prop_bone_col_png.bmp",
+      "source": "third_party/yofrankie/textures/prop_bone_col.png",
+      "width": 256,
+      "height": 256,
+      "normal": "-",
+      "sha256": "81ee27c94db6c1f69e414480e28e777ae3fc107934342a1a1d1f754caaf7f027"
+    },
+    {
+      "albedo": "prop_bridge_col_png.bmp",
+      "source": "third_party/yofrankie/textures/prop_bridge_col.png",
+      "width": 512,
+      "height": 512,
+      "normal": "prop_bridge_nor_png.bmp",
+      "sha256": "df0f570ab1f9f5e4addfd717bfd6652fc94f2fd1890ce9db35c9765be0e40ab0"
+    },
+    {
+      "albedo": "prop_butterfly_diff_png.bmp",
+      "source": "third_party/yofrankie/textures/prop_butterfly_diff.png",
+      "width": 256,
+      "height": 256,
+      "normal": "-",
+      "sha256": "bf3033a75811d90add6d9b0d82f8204ac0e1ca46f574d933501e7c0d7e6c1054"
+    },
+    {
+      "albedo": "prop_fence1_col_png.bmp",
+      "source": "third_party/yofrankie/textures/prop_fence1_col.png",
+      "width": 512,
+      "height": 512,
+      "normal": "prop_fence1_nor_png.bmp",
+      "sha256": "b61a352e67d450fb39367b83fdb7ba7aa65440c0b836170f40fd74ac53230a9e"
+    },
+    {
+      "albedo": "prop_mushrooms_001_col_png.bmp",
+      "source": "third_party/yofrankie/textures/prop_mushrooms_001_col.png",
+      "width": 512,
+      "height": 512,
+      "normal": "prop_mushrooms_001_nor_png.bmp",
+      "sha256": "a4f549652ee345e24f374da7926e9fdfc7746ac05fffce542f99e1de5b70a4d3"
+    },
+    {
+      "albedo": "prop_plants_furn_png.bmp",
+      "source": "third_party/yofrankie/textures/prop_plants_furn.png",
+      "width": 512,
+      "height": 512,
+      "normal": "-",
+      "sha256": "c0d39db9f05761cd6cb9fbe46f3a7b258401b128da2eafc043ea8ebf419f1586"
+    },
+    {
+      "albedo": "prop_plants_ground_002_col_png.bmp",
+      "source": "third_party/yofrankie/textures/prop_plants_ground_002_col.png",
+      "width": 512,
+      "height": 512,
+      "normal": "prop_plants_ground_002_nor_png.bmp",
+      "sha256": "17546ec7e4df5e9489db531e15a02262a6feabb24a3d2af836df2af81bf45107"
+    },
+    {
+      "albedo": "prop_plants_water_001_col_png.bmp",
+      "source": "third_party/yofrankie/textures/prop_plants_water_001_col.png",
+      "width": 256,
+      "height": 256,
+      "normal": "prop_plants_water_001_nor_png.bmp",
+      "sha256": "92ed42dbcaaf1fabbf7347cab3c7a58c7b1a18ffee45f2569c8c70d57ede48c4"
+    },
+    {
+      "albedo": "prop_rocks_rock_002_col_png.bmp",
+      "source": "third_party/yofrankie/textures/prop_rocks_rock_002_col.png",
+      "width": 512,
+      "height": 512,
+      "normal": "prop_rocks_rock_002_nor_png.bmp",
+      "sha256": "1df65745393fecef71d45e9cdfe02553358d315956cb4ea51a1599641b63c2c2"
+    },
+    {
+      "albedo": "prop_rocks_rocksgrass_001_col_png.bmp",
+      "source": "third_party/yofrankie/textures/prop_rocks_rocksgrass_001_col.png",
+      "width": 1024,
+      "height": 1024,
+      "normal": "prop_rocks_rocksgrass_001_nor_png.bmp",
+      "sha256": "80936f3accdd12e5c801326888c74b27a692f1e388105563d0c1f22868f742f3"
+    },
+    {
+      "albedo": "props_frankie_home2_col_png.bmp",
+      "source": "third_party/yofrankie/textures/props_frankie_home2_col.png",
+      "width": 512,
+      "height": 512,
+      "normal": "-",
+      "sha256": "1ecb01529e02edba537db759c2aa1514b4c6debf25427c94f9a93491980c8810"
+    },
+    {
+      "albedo": "props_pickups_apricot_diff_png.bmp",
+      "source": "third_party/yofrankie/textures/props_pickups_apricot_diff.png",
+      "width": 512,
+      "height": 512,
+      "normal": "-",
+      "sha256": "dcc91a246cb11839ba7fba88bd2f8c71450fc49c2af56d029d317cca309a8874"
+    },
+    {
+      "albedo": "rabbithole_stencil_png.bmp",
+      "source": "third_party/yofrankie/textures/rabbithole_stencil.png",
+      "width": 256,
+      "height": 256,
+      "normal": "-",
+      "sha256": "e6d068092b14504c040dcf12b6f79c092c52a048122ff83f57c3531bd6d8b8a6"
+    },
+    {
+      "albedo": "rat_col_png.bmp",
+      "source": "third_party/yofrankie/chars/textures/rat_col.png",
+      "width": 512,
+      "height": 512,
+      "normal": "rat_nor_png.bmp",
+      "sha256": "0390b671e50c3c09d506f3eba72e47253ef8d98df162c5cb5ad861fece3862c0"
+    },
+    {
+      "albedo": "sign_catapult_png.bmp",
+      "source": "third_party/yofrankie/textures/level_nut/sign_catapult.png",
+      "width": 512,
+      "height": 256,
+      "normal": "-",
+      "sha256": "89af7b5ae87f4fa6a1b7e13193f1f83938be419518cd21eef6ad4ee4649a61b4"
+    },
+    {
+      "albedo": "sign_dontenter_png.bmp",
+      "source": "third_party/yofrankie/textures/level_nut/sign_dontenter.png",
+      "width": 512,
+      "height": 256,
+      "normal": "-",
+      "sha256": "625fc00ee72caee9290c5e7c9cb995d7ac0b794bb964865d9bb93a15768ce913"
+    },
+    {
+      "albedo": "sign_map_png.bmp",
+      "source": "third_party/yofrankie/textures/level_nut/sign_map.png",
+      "width": 512,
+      "height": 256,
+      "normal": "-",
+      "sha256": "7520f98cca770b77440a05358be2c4e082d90755b3d1674889b9034f4cf8385a"
+    },
+    {
+      "albedo": "sign_nut2x_png.bmp",
+      "source": "third_party/yofrankie/textures/level_nut/sign_nut2x.png",
+      "width": 512,
+      "height": 256,
+      "normal": "-",
+      "sha256": "1759e5810c3cdf7168c9d80fb49ed880e9bc6d7c80ec08db3cc5b7bf6312f5cc"
+    },
+    {
+      "albedo": "sign_ram_png.bmp",
+      "source": "third_party/yofrankie/textures/level_nut/sign_ram.png",
+      "width": 512,
+      "height": 256,
+      "normal": "-",
+      "sha256": "22877ca92ce6e3440be1934e962ae7e9ad92494b3d7188b38d27dec1b705d967"
+    },
+    {
+      "albedo": "sign_sheepCart2_png.bmp",
+      "source": "third_party/yofrankie/textures/level_nut/sign_sheepCart2.png",
+      "width": 512,
+      "height": 256,
+      "normal": "-",
+      "sha256": "29d6e6e9be4562289676bb3bc211ab14aa021587e07029d4b3b818460e95246c"
+    },
+    {
+      "albedo": "sign_sheepCart3_png.bmp",
+      "source": "third_party/yofrankie/textures/level_nut/sign_sheepCart3.png",
+      "width": 512,
+      "height": 256,
+      "normal": "-",
+      "sha256": "dff46e0bfea86da2887d40c8e6e139a59d88196d1e262b9d06497bdf705a47cc"
+    },
+    {
+      "albedo": "sign_sheepCart_png.bmp",
+      "source": "third_party/yofrankie/textures/level_nut/sign_sheepCart.png",
+      "width": 512,
+      "height": 256,
+      "normal": "-",
+      "sha256": "8cccbe2fe0bea4228dc6dfa854571a2cfce2f335d1410913daaff4f44ffb8bad"
+    },
+    {
+      "albedo": "sky1_png.bmp",
+      "source": "third_party/yofrankie/textures/sky1.png",
+      "width": 2048,
+      "height": 512,
+      "normal": "-",
+      "sha256": "383bbf55717eb428cd58f0c11198063d22205b15549d605a50b8797ad0ecacf3"
+    },
+    {
+      "albedo": "sky2_png.bmp",
+      "source": "third_party/yofrankie/textures/sky2.png",
+      "width": 1024,
+      "height": 1024,
+      "normal": "-",
+      "sha256": "fac9e88173f57ce682e98a816a1a872bb146bbc68d6792bf040f9df3f4987220"
+    },
+    {
+      "albedo": "slideshow_signpost_png.bmp",
+      "source": "third_party/yofrankie/textures/slideshow_signpost.png",
+      "width": 512,
+      "height": 512,
+      "normal": "-",
+      "sha256": "ebd7a07d4dbd5e9ab3d9cd721751ca0f58cab08554b742edfcd52444f7613470"
+    },
+    {
+      "albedo": "stone_cliff_tile_001_col_png.bmp",
+      "source": "third_party/yofrankie/textures/stone_cliff_tile_001_col.png",
+      "width": 1024,
+      "height": 256,
+      "normal": "stone_cliff_tile_001_nor_png.bmp",
+      "sha256": "096f3e45bb63edaac1583c71e5b7a00d23a17d97148af6a002b72352c47cd509"
+    },
+    {
+      "albedo": "stone_cliff_tile_2_black_png.bmp",
+      "source": "third_party/yofrankie/textures/stone_cliff_tile_2_black.png",
+      "width": 1024,
+      "height": 256,
+      "normal": "-",
+      "sha256": "ba30f1408705f5362454fa36e7272e99e12ae75fdbb839a0d71b7e89cb3db89f"
+    },
+    {
+      "albedo": "tree_stumps_col_png.bmp",
+      "source": "third_party/yofrankie/textures/tree_stumps_col.png",
+      "width": 512,
+      "height": 512,
+      "normal": "tree_stumps_nor_png.bmp",
+      "sha256": "84ea1ecf0138da95416117fe5020e155388c5767b7c6e834f16d44408f791829"
+    },
+    {
+      "albedo": "trees_bark_001_col_png.bmp",
+      "source": "third_party/yofrankie/textures/trees_bark_001_col.png",
+      "width": 512,
+      "height": 512,
+      "normal": "trees_bark_001_nor_png.bmp",
+      "sha256": "cb461a7c951c637c2d91ee7b4074bc05c5168c64a24438074a5071e8eba04152"
+    },
+    {
+      "albedo": "trees_bark_002_col_png.bmp",
+      "source": "third_party/yofrankie/textures/trees_bark_002_col.png",
+      "width": 512,
+      "height": 512,
+      "normal": "trees_bark_002_nor_png.bmp",
+      "sha256": "b71c5513f21bcc982c6fb28ffd1a9c839f22a4112e33548b2a41abffe954fb55"
+    },
+    {
+      "albedo": "trees_leaves_003_col_png.bmp",
+      "source": "third_party/yofrankie/textures/trees_leaves_003_col.png",
+      "width": 1024,
+      "height": 1024,
+      "normal": "-",
+      "sha256": "5092ee04e70ac5960f0f65b6f36443c1f3980fa82d82e2747b93db5f71fbf29e"
+    },
+    {
+      "albedo": "trees_leaves_004_col_png.bmp",
+      "source": "third_party/yofrankie/textures/trees_leaves_004_col.png",
+      "width": 1024,
+      "height": 1024,
+      "normal": "-",
+      "sha256": "48e8de38cbaf7981713f4e41806ddbe6fa0fd4e24ab56c619ac38e6e10c23259"
+    },
+    {
+      "albedo": "trees_log_001_col_png.bmp",
+      "source": "third_party/yofrankie/textures/trees_log_001_col.png",
+      "width": 512,
+      "height": 512,
+      "normal": "trees_log_001_nor_png.bmp",
+      "sha256": "705995b97bfb5395be58bdd32203450d7cb9eb266af8351127608567e67ac42f"
+    },
+    {
+      "albedo": "watermap_png.bmp",
+      "source": "third_party/yofrankie/textures/watermap.png",
+      "width": 2560,
+      "height": 2560,
+      "normal": "-",
+      "sha256": "dd0cd3de38f255bb45d17945b396dd6edfe47ad1e7b44ff7fe424b7cbcff26c0"
+    },
+    {
+      "albedo": "x_here_png.bmp",
+      "source": "third_party/yofrankie/textures/level_nut/x_here.png",
+      "width": 512,
+      "height": 256,
+      "normal": "-",
+      "sha256": "7f1fdee0e8d314190d9f3dab352d59f83af95597dcb561137d459617372cba79"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+YoFrankie! (c) 2008, Blender Foundation, www.blender.org
+Original media: Creative Commons Attribution 3.0.
+Converted meshes, textures and animation poses: see third_party/yofrankie/PROVENANCE.json.
+Original editable assets and license texts remain in third_party/yofrankie.
+Visual upgrade: native-resolution texture conversion (4096 cap, no upscaling), original normal maps, and one subdivision level on animated character surfaces. See material-upgrade.json and docs/YO_FRANKIE.md.

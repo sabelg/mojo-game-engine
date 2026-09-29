@@ -1,0 +1,6472 @@
+{
+  "blender": "5.2.1 LTS",
+  "seed": "sha256(asset name)",
+  "status": "procedural remaster, original topology/animation retained",
+  "materials": [
+    {
+      "albedo": "X_png.bmp",
+      "family": "preserved_graphic",
+      "treatment": "preserved authored graphic",
+      "width": 256,
+      "height": 256,
+      "source_sha256": "60a78ef93a040dff8745388f6c1beb7b4cc45a1d45523914c100f277f75582fa"
+    },
+    {
+      "albedo": "char_ram_col_png.bmp",
+      "family": "fur",
+      "treatment": "authored atlas with procedural surface detail",
+      "width": 1024,
+      "height": 1024,
+      "source_sha256": "976ada84801bce26f0cd8f24609cf6f004d9cf1f4be23740adb04da77251ea10"
+    },
+    {
+      "albedo": "char_sheep_col_png.bmp",
+      "family": "fur",
+      "treatment": "authored atlas with procedural surface detail",
+      "width": 1024,
+      "height": 1024,
+      "source_sha256": "ded02b0f2b60c7af04f9fe6f9bb96213325f9a8bb38d912e0906697fd8088dbf"
+    },
+    {
+      "albedo": "flyingsquirrel_skin_col_png.bmp",
+      "family": "fur",
+      "treatment": "authored atlas with procedural surface detail",
+      "width": 1024,
+      "height": 1024,
+      "source_sha256": "fb70a4ea360c2a0c71073139a6347c8e8e75397ecd64f440b417e4be4b695a21"
+    },
+    {
+      "albedo": "font_peach_tga.bmp",
+      "family": "preserved_graphic",
+      "treatment": "preserved authored graphic",
+      "width": 256,
+      "height": 261,
+      "source_sha256": "2bb2d03270c201e33246ec6d6efb024b1d3d80b7fb5fb898dea210fd23893211"
+    },
+    {
+      "albedo": "frankie_home_col_png.bmp",
+      "family": "weathered_atlas",
+      "treatment": "authored atlas with procedural surface detail",
+      "width": 1024,
+      "height": 1024,
+      "source_sha256": "f4da2bc75a662ad894bbb1b3f3414114dd2ef0d2c34ea7334c9327c81ab30d73"
+    },
+    {
+      "albedo": "frankie_tail2_png.bmp",
+      "family": "fur",
+      "treatment": "authored atlas with procedural surface detail",
+      "width": 1024,
+      "height": 256,
+      "source_sha256": "77ed1634160368166216a3ffc4c5e8a99b597525587d2f3466a30471c524cfbe"
+    },
+    {
+      "albedo": "fx_lava2_png.bmp",
+      "family": "lava",
+      "treatment": "authored atlas with procedural surface detail",
+      "width": 512,
+      "height": 512,
+      "source_sha256": "d613e3ba29b0eb238d1bdbc3f926961d7dbdbacd50368896c4503f679b3bf17b"
+    },
+    {
+      "albedo": "fx_lava3_png.bmp",
+      "family": "lava",
+      "treatment": "authored atlas with procedural surface detail",
+      "width": 512,
+      "height": 512,
+      "source_sha256": "6385c51f2fa8cd309bc3dfccc5a72989a6b0935cb6d01ca91557a1ab9222ac3a"
+    },
+    {
+      "albedo": "fx_lava_png.bmp",
+      "family": "lava",
+      "treatment": "authored atlas with procedural surface detail",
+      "width": 512,
+      "height": 512,
+      "source_sha256": "142b0a6eb38f38dc963b9c818574225f278fa249aa22af5f54ff7ea93ee7f3a3"
+    },
+    {
+      "albedo": "fx_sparkles_png.bmp",
+      "family": "preserved_graphic",
+      "treatment": "preserved authored graphic",
+      "width": 256,
+      "height": 256,
+      "source_sha256": "34995452a619a8d9d072bb5b86b0e1bb6117e74f2fd724e0453c2873eaadc622"
+    },
+    {
+      "albedo": "fx_splash_png.bmp",
+      "family": "preserved_graphic",
+      "treatment": "preserved authored graphic",
+      "width": 512,
+      "height": 1024,
+      "source_sha256": "c81aa42f659d50940ed00adb43c2575c0e8761985b065a3b1989087e0767feb0"
+    },
+    {
+      "albedo": "generic_darkRock_col_png.bmp",
+      "family": "stone",
+      "treatment": "new procedural tile",
+      "width": 512,
+      "height": 512,
+      "source_sha256": "c717304cf4e12b67625d9d039bb0f0ed9cdc9d0349f4fac09f5ef0b792bd3bd8"
+    },
+    {
+      "albedo": "generic_dirt1_col_png.bmp",
+      "family": "soil",
+      "treatment": "new procedural tile",
+      "width": 512,
+      "height": 512,
+      "source_sha256": "1c9cb2cd1de881ec4449c848cfde5d2e182a412c2bdf218ed755d5aacbf19197"
+    },
+    {
+      "albedo": "generic_dirt2_col_png.bmp",
+      "family": "soil",
+      "treatment": "new procedural tile",
+      "width": 512,
+      "height": 512,
+      "source_sha256": "6487a29919f6f01189f0bd96718fc839af48187061c2f0650f3ceadd284e10e4"
+    },
+    {
+      "albedo": "generic_dirt2dark_png.bmp",
+      "family": "soil",
+      "treatment": "new procedural tile",
+      "width": 512,
+      "height": 512,
+      "source_sha256": "8956713ba7cbc203b800647020ffbc1babd29dc1abc4c69e16730f6b7e1a48b0"
+    },
+    {
+      "albedo": "generic_grass1_col_png.bmp",
+      "family": "grass",
+      "treatment": "new procedural tile",
+      "width": 512,
+      "height": 512,
+      "source_sha256": "35b6ec6b1242819b0bf66892e96e473bd16127646fb18fbeb9f942cd73823e0f"
+    },
+    {
+      "albedo": "generic_grass4_col_png.bmp",
+      "family": "grass",
+      "treatment": "new procedural tile",
+      "width": 512,
+      "height": 512,
+      "source_sha256": "36d5b889edb28e6dde386bf1a979b30da11612eb7513a64ceb19906761b3a5b2"
+    },
+    {
+      "albedo": "generic_grass4_dirt2_png.bmp",
+      "family": "grass",
+      "treatment": "new procedural tile",
+      "width": 512,
+      "height": 512,
+      "source_sha256": "aebd6729a572a4fd08e3d7c795a9c092549b4e015bd935a74c1a550a596da005"
+    },
+    {
+      "albedo": "generic_grassoverhang1_col_png.bmp",
+      "family": "grass",
+      "treatment": "new procedural tile",
+      "width": 512,
+      "height": 512,
+      "source_sha256": "152bf1c7d6c0eaebb304c526c7c50334261770abba39a557a5656b34222eae23"
+    },
+    {
+      "albedo": "generic_grassoverhang2_col_png.bmp",
+      "family": "grass",
+      "treatment": "new procedural tile",
+      "width": 512,
+      "height": 512,
+      "source_sha256": "ca43a54c9f870436a9b1ac6d4e747e28de5d621613ba225442a6f830a2e78a40"
+    },
+    {
+      "albedo": "generic_grayrock1_col_png.bmp",
+      "family": "stone",
+      "treatment": "new procedural tile",
+      "width": 512,
+      "height": 512,
+      "source_sha256": "1119b88167dae27afefe1d357d1518cf9db1bf0aef9d749f92f6a74a908bb01b"
+    },
+    {
+      "albedo": "generic_lava_png.bmp",
+      "family": "lava",
+      "treatment": "authored atlas with procedural surface detail",
+      "width": 512,
+      "height": 512,
+      "source_sha256": "7e49428674fc2f8a88ab07a46684ebe4c2ccbddce4d684b600cc0ff57c8637dd"
+    },
+    {
+      "albedo": "generic_lightRock_col_png.bmp",
+      "family": "stone",
+      "treatment": "new procedural tile",
+      "width": 512,
+      "height": 512,
+      "source_sha256": "8735f68bb1163b85abffc04136dfaa77948714d7ac48d72ae0fb3bc7bed67bf3"
+    },
+    {
+      "albedo": "generic_redrock_col_png.bmp",
+      "family": "stone",
+      "treatment": "new procedural tile",
+      "width": 1024,
+      "height": 256,
+      "source_sha256": "4cda0b3d70f3ec25f8c29a32f97395618475aadbbfebbe25b96bf2bbe69a857f"
+    },
+    {
+      "albedo": "phare_col_005_png.bmp",
+      "family": "weathered_atlas",
+      "treatment": "authored atlas with procedural surface detail",
+      "width": 512,
+      "height": 512,
+      "source_sha256": "0c34ab262a2df21cd9ea347d79634ac1ef3c356374b120727b09c9227519ee5f"
+    },
+    {
+      "albedo": "plants_grass_006_col_png.bmp",
+      "family": "foliage",
+      "treatment": "authored atlas with procedural surface detail",
+      "width": 512,
+      "height": 512,
+      "source_sha256": "fd27c54eadae12d5f5aea0ef48a141dbb8a11438517a909b7940ac8c12ff9c59"
+    },
+    {
+      "albedo": "prop_bone_col_png.bmp",
+      "family": "prop_atlas",
+      "treatment": "authored atlas with procedural surface detail",
+      "width": 256,
+      "height": 256,
+      "source_sha256": "f79b65532faca0a607817f7d6cc8f7245b008c66dd8bf5ef8d80be738e52caf6"
+    },
+    {
+      "albedo": "prop_bridge_col_png.bmp",
+      "family": "weathered_atlas",
+      "treatment": "authored atlas with procedural surface detail",
+      "width": 512,
+      "height": 512,
+      "source_sha256": "833174358e234e16b22923ffc8b2f3cde6976f1a63ebc15bfb45436221f9ec8d"
+    },
+    {
+      "albedo": "prop_butterfly_diff_png.bmp",
+      "family": "prop_atlas",
+      "treatment": "authored atlas with procedural surface detail",
+      "width": 256,
+      "height": 256,
+      "source_sha256": "397caa6cefdb2a73cad58d94ce9227fe2f3243d56693aca1ba7adc682aaf8e28"
+    },
+    {
+      "albedo": "prop_fence1_col_png.bmp",
+      "family": "weathered_atlas",
+      "treatment": "authored atlas with procedural surface detail",
+      "width": 512,
+      "height": 512,
+      "source_sha256": "e9675298cb9079d6f3faea5c1f50349040875a157b375fa091e584f1ce7cf3d9"
+    },
+    {
+      "albedo": "prop_mushrooms_001_col_png.bmp",
+      "family": "prop_atlas",
+      "treatment": "authored atlas with procedural surface detail",
+      "width": 512,
+      "height": 512,
+      "source_sha256": "0ac6d6b52242007fbfdb299357b8eee1c96b4a957f8876fd03ba9dd77f99fb2a"
+    },
+    {
+      "albedo": "prop_plants_furn_png.bmp",
+      "family": "foliage",
+      "treatment": "authored atlas with procedural surface detail",
+      "width": 512,
+      "height": 512,
+      "source_sha256": "8112d8fb8d171fd7d91ac36abb0cbe064e1c295553add65dacb4ae5f49abbd0c"
+    },
+    {
+      "albedo": "prop_plants_ground_002_col_png.bmp",
+      "family": "foliage",
+      "treatment": "authored atlas with procedural surface detail",
+      "width": 512,
+      "height": 512,
+      "source_sha256": "d0aa5f9ffe21a44bd2ac5c2c48254927b4885c73a18326f2550cc4bd98a7f5c3"
+    },
+    {
+      "albedo": "prop_plants_water_001_col_png.bmp",
+      "family": "foliage",
+      "treatment": "authored atlas with procedural surface detail",
+      "width": 256,
+      "height": 256,
+      "source_sha256": "d4954c76b74ad11697d74eb1747c33a0a628dbcde8d3101d78d99cc05483462b"
+    },
+    {
+      "albedo": "prop_rocks_rock_002_col_png.bmp",
+      "family": "stone",
+      "treatment": "authored atlas with procedural surface detail",
+      "width": 512,
+      "height": 512,
+      "source_sha256": "90ca250daa1e926e1f0bfd26de3d9810e23a6f081285ca5f21ca6bc004a7992c"
+    },
+    {
+      "albedo": "prop_rocks_rocksgrass_001_col_png.bmp",
+      "family": "stone",
+      "treatment": "authored atlas with procedural surface detail",
+      "width": 1024,
+      "height": 1024,
+      "source_sha256": "77f066b343e42f1839e8f3af11d3a3129b7f756c3b7091e46989bdd7af5aa30e"
+    },
+    {
+      "albedo": "props_frankie_home2_col_png.bmp",
+      "family": "weathered_atlas",
+      "treatment": "authored atlas with procedural surface detail",
+      "width": 512,
+      "height": 512,
+      "source_sha256": "1c4ba8f076d82a463cf54b934c24652ab934d98b360451eca076aa8923a24dde"
+    },
+    {
+      "albedo": "props_pickups_apricot_diff_png.bmp",
+      "family": "prop_atlas",
+      "treatment": "authored atlas with procedural surface detail",
+      "width": 512,
+      "height": 512,
+      "source_sha256": "241dfb9d32866c8b5351b4364b9443a8bb56a1f3bba88d87f01383f6f79e2566"
+    },
+    {
+      "albedo": "rabbithole_stencil_png.bmp",
+      "family": "preserved_graphic",
+      "treatment": "preserved authored graphic",
+      "width": 256,
+      "height": 256,
+      "source_sha256": "0ed38ecaaa02e034c21636ff497d618479fbecf83dee71be41d6ce2b26d67ebb"
+    },
+    {
+      "albedo": "rat_col_png.bmp",
+      "family": "fur",
+      "treatment": "authored atlas with procedural surface detail",
+      "width": 512,
+      "height": 512,
+      "source_sha256": "cb8976c23187ce4d76c44f64b0cac1bf0189b01e55574910225bab7961fa6b0d"
+    },
+    {
+      "albedo": "sign_catapult_png.bmp",
+      "family": "preserved_graphic",
+      "treatment": "preserved authored graphic",
+      "width": 512,
+      "height": 256,
+      "source_sha256": "0dec635cfa5c04c31c9f47c5b240003220c855c2e3529397e04793ee5d329a57"
+    },
+    {
+      "albedo": "sign_dontenter_png.bmp",
+      "family": "preserved_graphic",
+      "treatment": "preserved authored graphic",
+      "width": 512,
+      "height": 256,
+      "source_sha256": "7b44c856b86e34120e702bc66a6558d80c7d4161c43d5895748329b952e26f0e"
+    },
+    {
+      "albedo": "sign_map_png.bmp",
+      "family": "preserved_graphic",
+      "treatment": "preserved authored graphic",
+      "width": 512,
+      "height": 256,
+      "source_sha256": "6356c37152ead1b0d140f4e063a7501e67bddb6d8db0dada857377834f6f24ff"
+    },
+    {
+      "albedo": "sign_nut2x_png.bmp",
+      "family": "preserved_graphic",
+      "treatment": "preserved authored graphic",
+      "width": 512,
+      "height": 256,
+      "source_sha256": "91167a0920c6d96bd65473b2bfb50c5a022e72f0cf23caa2c3dba9a7371647c4"
+    },
+    {
+      "albedo": "sign_ram_png.bmp",
+      "family": "preserved_graphic",
+      "treatment": "preserved authored graphic",
+      "width": 512,
+      "height": 256,
+      "source_sha256": "1b906d4cf89ce4cbfca12206ef3ac7343101f05889f631256bcb7a096fc41e8f"
+    },
+    {
+      "albedo": "sign_sheepCart2_png.bmp",
+      "family": "preserved_graphic",
+      "treatment": "preserved authored graphic",
+      "width": 512,
+      "height": 256,
+      "source_sha256": "7e21474c07c4e0f7c8cb3563bb69648269dfed6f82c6da0a86ed2ab5d1dcf9da"
+    },
+    {
+      "albedo": "sign_sheepCart3_png.bmp",
+      "family": "preserved_graphic",
+      "treatment": "preserved authored graphic",
+      "width": 512,
+      "height": 256,
+      "source_sha256": "35f033c0c9b6e56aa65b0ef3aff54e42ad6979bd0995786029551eb54ac221c1"
+    },
+    {
+      "albedo": "sign_sheepCart_png.bmp",
+      "family": "preserved_graphic",
+      "treatment": "preserved authored graphic",
+      "width": 512,
+      "height": 256,
+      "source_sha256": "717b54a5885ddb54b8ccd096ca88dcf05493a8f9ca9cd83af1e4bcb618066b35"
+    },
+    {
+      "albedo": "sky1_png.bmp",
+      "family": "preserved_graphic",
+      "treatment": "preserved authored graphic",
+      "width": 1024,
+      "height": 256,
+      "source_sha256": "e180d06f364097519dc06ad8e71330d21f54e4a1e617b4b32a6cf40a43db47db"
+    },
+    {
+      "albedo": "sky2_png.bmp",
+      "family": "preserved_graphic",
+      "treatment": "preserved authored graphic",
+      "width": 1024,
+      "height": 1024,
+      "source_sha256": "d38f91a7ede673ee6328279fbfde528bc6e89125a67de3ee06d49ff73f0d0f28"
+    },
+    {
+      "albedo": "slideshow_signpost_png.bmp",
+      "family": "preserved_graphic",
+      "treatment": "preserved authored graphic",
+      "width": 512,
+      "height": 512,
+      "source_sha256": "7d0247f38fb9ef089e81599fa0d656fd37c904fe43a403290eb749a73cb85eea"
+    },
+    {
+      "albedo": "stone_cliff_tile_001_col_png.bmp",
+      "family": "stone",
+      "treatment": "new procedural tile",
+      "width": 1024,
+      "height": 256,
+      "source_sha256": "332f638f82d3f36053a822abc641bb7ec8cd2e50ea87f4f971916dbcb91fb54c"
+    },
+    {
+      "albedo": "stone_cliff_tile_2_black_png.bmp",
+      "family": "stone",
+      "treatment": "new procedural tile",
+      "width": 1024,
+      "height": 256,
+      "source_sha256": "0c0ef9189c26573f745817062195a48b7d7ea6a58d0b5647bc14357f13a6be9c"
+    },
+    {
+      "albedo": "tree_stumps_col_png.bmp",
+      "family": "bark",
+      "treatment": "authored atlas with procedural surface detail",
+      "width": 512,
+      "height": 512,
+      "source_sha256": "322b85abb841481206caef556a1e5e365ea98ac65b7dde34cf4b7cc609ca38b1"
+    },
+    {
+      "albedo": "trees_bark_001_col_png.bmp",
+      "family": "bark",
+      "treatment": "new procedural tile",
+      "width": 512,
+      "height": 512,
+      "source_sha256": "3e74fb3f1e2d38c4558bf12ad12490d8d0fa560aac0b2faef34afc34b0692ea0"
+    },
+    {
+      "albedo": "trees_bark_002_col_png.bmp",
+      "family": "bark",
+      "treatment": "new procedural tile",
+      "width": 512,
+      "height": 512,
+      "source_sha256": "fe64f88f8284e9044746529b98d2fa92e8a31b5ffc7865089f0690a33c3adf18"
+    },
+    {
+      "albedo": "trees_leaves_003_col_png.bmp",
+      "family": "foliage",
+      "treatment": "authored atlas with procedural surface detail",
+      "width": 1024,
+      "height": 1024,
+      "source_sha256": "c14e556ffec30b034cda2853b0d0daf7150688eaae4124560ed034c252dbbd20"
+    },
+    {
+      "albedo": "trees_leaves_004_col_png.bmp",
+      "family": "foliage",
+      "treatment": "authored atlas with procedural surface detail",
+      "width": 1024,
+      "height": 1024,
+      "source_sha256": "927f74733ac1817cfcea747920d3afcd31522a596d785401f5ee6bd883651b41"
+    },
+    {
+      "albedo": "trees_log_001_col_png.bmp",
+      "family": "bark",
+      "treatment": "authored atlas with procedural surface detail",
+      "width": 512,
+      "height": 512,
+      "source_sha256": "2b85de28730426b2655af6c2d7d8b3062bbf178bf54c2a72bedff3441728f100"
+    },
+    {
+      "albedo": "watermap_png.bmp",
+      "family": "preserved_graphic",
+      "treatment": "preserved authored graphic",
+      "width": 1024,
+      "height": 1024,
+      "source_sha256": "b73051fb96141e8065e63576afa22b64407c6ff3dd8e5696b1026560b3c886f4"
+    },
+    {
+      "albedo": "x_here_png.bmp",
+      "family": "preserved_graphic",
+      "treatment": "preserved authored graphic",
+      "width": 512,
+      "height": 256,
+      "source_sha256": "a542e5c97728ecc263c5076ec6d8e95f2f3b7811661f28fe256ab8d561c6f64c"
+    }
+  ],
+  "meshes": [
+    {
+      "file": "acorn_001_0.yfm",
+      "triangles": 280,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "apricot_001_0.yfm",
+      "triangles": 292,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "bone_0.yfm",
+      "triangles": 436,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "ram_0.yfm",
+      "triangles": 3054,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "ram_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "rat_0.yfm",
+      "triangles": 2156,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "rat_0_fur.yfm",
+      "triangles": 718,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "sheep_cute_0.yfm",
+      "triangles": 320,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_1.yfm",
+      "triangles": 2462,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_1_fur.yfm",
+      "triangles": 820,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "springbox_001_0.yfm",
+      "triangles": 2,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "springbox_001_1.yfm",
+      "triangles": 2,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "springbox_001_2.yfm",
+      "triangles": 1256,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_0_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_0_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_0_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_carry_0_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_0_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_carry_1_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_1_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_1_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_carry_1_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_1_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_carry_10_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_10_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_10_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_carry_10_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_10_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_carry_11_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_11_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_11_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_carry_11_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_11_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_carry_2_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_2_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_2_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_carry_2_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_2_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_carry_3_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_3_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_3_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_carry_3_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_3_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_carry_4_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_4_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_4_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_carry_4_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_4_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_carry_5_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_5_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_5_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_carry_5_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_5_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_carry_6_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_6_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_6_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_carry_6_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_6_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_carry_7_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_7_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_7_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_carry_7_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_7_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_carry_8_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_8_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_8_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_carry_8_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_8_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_carry_9_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_9_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_9_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_carry_9_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_carry_9_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_double_0_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_0_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_0_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_double_0_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_0_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_double_1_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_1_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_1_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_double_1_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_1_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_double_10_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_10_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_10_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_double_10_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_10_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_double_11_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_11_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_11_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_double_11_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_11_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_double_2_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_2_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_2_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_double_2_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_2_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_double_3_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_3_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_3_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_double_3_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_3_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_double_4_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_4_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_4_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_double_4_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_4_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_double_5_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_5_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_5_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_double_5_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_5_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_double_6_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_6_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_6_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_double_6_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_6_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_double_7_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_7_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_7_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_double_7_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_7_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_double_8_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_8_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_8_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_double_8_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_8_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_double_9_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_9_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_9_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_double_9_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_double_9_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_fall_0_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_0_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_0_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_fall_0_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_0_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_fall_1_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_1_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_1_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_fall_1_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_1_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_fall_10_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_10_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_10_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_fall_10_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_10_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_fall_11_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_11_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_11_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_fall_11_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_11_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_fall_2_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_2_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_2_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_fall_2_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_2_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_fall_3_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_3_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_3_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_fall_3_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_3_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_fall_4_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_4_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_4_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_fall_4_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_4_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_fall_5_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_5_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_5_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_fall_5_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_5_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_fall_6_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_6_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_6_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_fall_6_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_6_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_fall_7_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_7_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_7_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_fall_7_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_7_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_fall_8_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_8_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_8_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_fall_8_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_8_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_fall_9_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_9_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_9_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_fall_9_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_fall_9_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_glide_0_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_0_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_0_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_glide_0_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_0_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_glide_1_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_1_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_1_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_glide_1_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_1_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_glide_10_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_10_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_10_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_glide_10_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_10_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_glide_11_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_11_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_11_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_glide_11_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_11_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_glide_2_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_2_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_2_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_glide_2_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_2_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_glide_3_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_3_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_3_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_glide_3_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_3_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_glide_4_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_4_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_4_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_glide_4_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_4_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_glide_5_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_5_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_5_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_glide_5_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_5_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_glide_6_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_6_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_6_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_glide_6_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_6_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_glide_7_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_7_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_7_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_glide_7_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_7_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_glide_8_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_8_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_8_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_glide_8_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_8_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_glide_9_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_9_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_9_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_glide_9_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_glide_9_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_hurt_0_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_0_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_0_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_hurt_0_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_0_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_hurt_1_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_1_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_1_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_hurt_1_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_1_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_hurt_10_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_10_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_10_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_hurt_10_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_10_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_hurt_11_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_11_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_11_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_hurt_11_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_11_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_hurt_2_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_2_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_2_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_hurt_2_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_2_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_hurt_3_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_3_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_3_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_hurt_3_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_3_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_hurt_4_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_4_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_4_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_hurt_4_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_4_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_hurt_5_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_5_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_5_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_hurt_5_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_5_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_hurt_6_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_6_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_6_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_hurt_6_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_6_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_hurt_7_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_7_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_7_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_hurt_7_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_7_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_hurt_8_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_8_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_8_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_hurt_8_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_8_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_hurt_9_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_9_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_9_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_hurt_9_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_hurt_9_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_idle_0_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_0_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_0_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_idle_0_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_0_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_idle_1_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_1_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_1_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_idle_1_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_1_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_idle_10_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_10_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_10_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_idle_10_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_10_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_idle_11_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_11_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_11_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_idle_11_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_11_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_idle_2_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_2_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_2_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_idle_2_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_2_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_idle_3_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_3_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_3_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_idle_3_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_3_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_idle_4_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_4_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_4_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_idle_4_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_4_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_idle_5_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_5_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_5_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_idle_5_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_5_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_idle_6_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_6_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_6_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_idle_6_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_6_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_idle_7_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_7_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_7_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_idle_7_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_7_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_idle_8_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_8_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_8_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_idle_8_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_8_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_idle_9_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_9_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_9_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_idle_9_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_idle_9_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_jump_0_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_0_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_0_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_jump_0_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_0_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_jump_1_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_1_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_1_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_jump_1_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_1_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_jump_10_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_10_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_10_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_jump_10_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_10_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_jump_11_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_11_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_11_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_jump_11_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_11_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_jump_2_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_2_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_2_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_jump_2_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_2_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_jump_3_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_3_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_3_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_jump_3_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_3_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_jump_4_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_4_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_4_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_jump_4_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_4_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_jump_5_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_5_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_5_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_jump_5_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_5_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_jump_6_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_6_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_6_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_jump_6_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_6_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_jump_7_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_7_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_7_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_jump_7_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_7_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_jump_8_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_8_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_8_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_jump_8_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_8_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_jump_9_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_9_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_9_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_jump_9_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_jump_9_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_kick_0_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_0_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_0_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_kick_0_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_0_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_kick_1_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_1_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_1_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_kick_1_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_1_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_kick_10_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_10_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_10_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_kick_10_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_10_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_kick_11_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_11_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_11_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_kick_11_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_11_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_kick_2_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_2_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_2_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_kick_2_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_2_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_kick_3_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_3_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_3_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_kick_3_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_3_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_kick_4_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_4_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_4_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_kick_4_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_4_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_kick_5_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_5_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_5_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_kick_5_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_5_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_kick_6_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_6_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_6_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_kick_6_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_6_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_kick_7_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_7_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_7_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_kick_7_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_7_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_kick_8_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_8_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_8_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_kick_8_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_8_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_kick_9_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_9_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_9_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_kick_9_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_kick_9_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_ledge_0_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_0_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_0_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_ledge_0_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_0_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_ledge_1_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_1_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_1_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_ledge_1_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_1_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_ledge_10_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_10_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_10_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_ledge_10_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_10_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_ledge_11_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_11_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_11_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_ledge_11_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_11_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_ledge_2_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_2_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_2_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_ledge_2_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_2_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_ledge_3_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_3_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_3_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_ledge_3_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_3_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_ledge_4_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_4_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_4_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_ledge_4_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_4_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_ledge_5_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_5_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_5_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_ledge_5_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_5_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_ledge_6_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_6_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_6_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_ledge_6_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_6_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_ledge_7_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_7_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_7_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_ledge_7_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_7_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_ledge_8_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_8_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_8_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_ledge_8_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_8_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_ledge_9_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_9_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_9_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_ledge_9_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_ledge_9_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_run_0_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_0_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_0_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_run_0_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_0_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_run_1_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_1_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_1_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_run_1_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_1_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_run_10_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_10_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_10_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_run_10_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_10_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_run_11_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_11_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_11_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_run_11_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_11_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_run_2_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_2_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_2_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_run_2_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_2_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_run_3_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_3_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_3_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_run_3_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_3_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_run_4_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_4_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_4_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_run_4_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_4_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_run_5_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_5_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_5_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_run_5_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_5_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_run_6_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_6_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_6_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_run_6_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_6_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_run_7_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_7_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_7_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_run_7_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_7_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_run_8_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_8_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_8_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_run_8_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_8_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_run_9_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_9_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_9_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_run_9_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_run_9_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_throw_0_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_0_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_0_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_throw_0_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_0_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_throw_1_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_1_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_1_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_throw_1_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_1_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_throw_10_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_10_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_10_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_throw_10_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_10_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_throw_11_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_11_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_11_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_throw_11_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_11_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_throw_2_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_2_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_2_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_throw_2_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_2_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_throw_3_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_3_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_3_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_throw_3_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_3_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_throw_4_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_4_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_4_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_throw_4_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_4_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_throw_5_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_5_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_5_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_throw_5_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_5_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_throw_6_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_6_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_6_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_throw_6_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_6_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_throw_7_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_7_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_7_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_throw_7_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_7_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_throw_8_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_8_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_8_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_throw_8_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_8_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_throw_9_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_9_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_9_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_throw_9_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_throw_9_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_whip_0_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_0_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_0_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_whip_0_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_0_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_whip_1_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_1_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_1_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_whip_1_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_1_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_whip_10_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_10_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_10_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_whip_10_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_10_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_whip_11_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_11_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_11_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_whip_11_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_11_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_whip_2_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_2_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_2_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_whip_2_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_2_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_whip_3_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_3_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_3_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_whip_3_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_3_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_whip_4_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_4_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_4_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_whip_4_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_4_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_whip_5_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_5_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_5_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_whip_5_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_5_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_whip_6_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_6_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_6_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_whip_6_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_6_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_whip_7_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_7_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_7_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_whip_7_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_7_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_whip_8_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_8_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_8_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_whip_8_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_8_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_whip_9_0.yfm",
+      "triangles": 76,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_9_1.yfm",
+      "triangles": 13500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_9_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "frankie_whip_9_2.yfm",
+      "triangles": 6048,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "frankie_whip_9_2_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "ram_hurt_0_0.yfm",
+      "triangles": 12636,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "ram_hurt_0_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "ram_hurt_1_0.yfm",
+      "triangles": 12636,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "ram_hurt_1_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "ram_hurt_2_0.yfm",
+      "triangles": 12636,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "ram_hurt_2_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "ram_hurt_3_0.yfm",
+      "triangles": 12636,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "ram_hurt_3_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "ram_hurt_4_0.yfm",
+      "triangles": 12636,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "ram_hurt_4_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "ram_hurt_5_0.yfm",
+      "triangles": 12636,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "ram_hurt_5_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "ram_hurt_6_0.yfm",
+      "triangles": 12636,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "ram_hurt_6_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "ram_hurt_7_0.yfm",
+      "triangles": 12636,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "ram_hurt_7_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "ram_idle_0_0.yfm",
+      "triangles": 12636,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "ram_idle_0_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "ram_idle_1_0.yfm",
+      "triangles": 12636,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "ram_idle_1_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "ram_idle_2_0.yfm",
+      "triangles": 12636,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "ram_idle_2_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "ram_idle_3_0.yfm",
+      "triangles": 12636,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "ram_idle_3_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "ram_idle_4_0.yfm",
+      "triangles": 12636,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "ram_idle_4_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "ram_idle_5_0.yfm",
+      "triangles": 12636,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "ram_idle_5_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "ram_idle_6_0.yfm",
+      "triangles": 12636,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "ram_idle_6_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "ram_idle_7_0.yfm",
+      "triangles": 12636,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "ram_idle_7_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "ram_run_0_0.yfm",
+      "triangles": 12636,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "ram_run_0_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "ram_run_1_0.yfm",
+      "triangles": 12636,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "ram_run_1_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "ram_run_2_0.yfm",
+      "triangles": 12636,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "ram_run_2_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "ram_run_3_0.yfm",
+      "triangles": 12636,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "ram_run_3_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "ram_run_4_0.yfm",
+      "triangles": 12636,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "ram_run_4_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "ram_run_5_0.yfm",
+      "triangles": 12636,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "ram_run_5_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "ram_run_6_0.yfm",
+      "triangles": 12636,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "ram_run_6_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "ram_run_7_0.yfm",
+      "triangles": 12636,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "ram_run_7_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "rat_hurt_0_0.yfm",
+      "triangles": 8888,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "rat_hurt_0_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "rat_hurt_1_0.yfm",
+      "triangles": 8888,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "rat_hurt_1_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "rat_hurt_2_0.yfm",
+      "triangles": 8888,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "rat_hurt_2_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "rat_hurt_3_0.yfm",
+      "triangles": 8888,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "rat_hurt_3_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "rat_hurt_4_0.yfm",
+      "triangles": 8888,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "rat_hurt_4_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "rat_hurt_5_0.yfm",
+      "triangles": 8888,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "rat_hurt_5_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "rat_hurt_6_0.yfm",
+      "triangles": 8888,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "rat_hurt_6_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "rat_hurt_7_0.yfm",
+      "triangles": 8888,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "rat_hurt_7_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "rat_idle_0_0.yfm",
+      "triangles": 8888,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "rat_idle_0_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "rat_idle_1_0.yfm",
+      "triangles": 8888,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "rat_idle_1_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "rat_idle_2_0.yfm",
+      "triangles": 8888,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "rat_idle_2_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "rat_idle_3_0.yfm",
+      "triangles": 8888,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "rat_idle_3_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "rat_idle_4_0.yfm",
+      "triangles": 8888,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "rat_idle_4_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "rat_idle_5_0.yfm",
+      "triangles": 8888,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "rat_idle_5_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "rat_idle_6_0.yfm",
+      "triangles": 8888,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "rat_idle_6_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "rat_idle_7_0.yfm",
+      "triangles": 8888,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "rat_idle_7_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "rat_run_0_0.yfm",
+      "triangles": 8888,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "rat_run_0_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "rat_run_1_0.yfm",
+      "triangles": 8888,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "rat_run_1_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "rat_run_2_0.yfm",
+      "triangles": 8888,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "rat_run_2_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "rat_run_3_0.yfm",
+      "triangles": 8888,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "rat_run_3_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "rat_run_4_0.yfm",
+      "triangles": 8888,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "rat_run_4_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "rat_run_5_0.yfm",
+      "triangles": 8888,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "rat_run_5_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "rat_run_6_0.yfm",
+      "triangles": 8888,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "rat_run_6_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "rat_run_7_0.yfm",
+      "triangles": 8888,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "rat_run_7_0_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "sheep_cute_hurt_0_0.yfm",
+      "triangles": 1336,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_hurt_0_1.yfm",
+      "triangles": 10068,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_hurt_0_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "sheep_cute_hurt_1_0.yfm",
+      "triangles": 1336,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_hurt_1_1.yfm",
+      "triangles": 10068,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_hurt_1_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "sheep_cute_hurt_2_0.yfm",
+      "triangles": 1336,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_hurt_2_1.yfm",
+      "triangles": 10068,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_hurt_2_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "sheep_cute_hurt_3_0.yfm",
+      "triangles": 1336,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_hurt_3_1.yfm",
+      "triangles": 10068,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_hurt_3_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "sheep_cute_hurt_4_0.yfm",
+      "triangles": 1336,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_hurt_4_1.yfm",
+      "triangles": 10068,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_hurt_4_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "sheep_cute_hurt_5_0.yfm",
+      "triangles": 1336,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_hurt_5_1.yfm",
+      "triangles": 10068,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_hurt_5_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "sheep_cute_hurt_6_0.yfm",
+      "triangles": 1336,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_hurt_6_1.yfm",
+      "triangles": 10068,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_hurt_6_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "sheep_cute_hurt_7_0.yfm",
+      "triangles": 1336,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_hurt_7_1.yfm",
+      "triangles": 10068,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_hurt_7_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "sheep_cute_idle_0_0.yfm",
+      "triangles": 1336,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_idle_0_1.yfm",
+      "triangles": 10068,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_idle_0_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "sheep_cute_idle_1_0.yfm",
+      "triangles": 1336,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_idle_1_1.yfm",
+      "triangles": 10068,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_idle_1_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "sheep_cute_idle_2_0.yfm",
+      "triangles": 1336,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_idle_2_1.yfm",
+      "triangles": 10068,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_idle_2_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "sheep_cute_idle_3_0.yfm",
+      "triangles": 1336,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_idle_3_1.yfm",
+      "triangles": 10068,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_idle_3_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "sheep_cute_idle_4_0.yfm",
+      "triangles": 1336,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_idle_4_1.yfm",
+      "triangles": 10068,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_idle_4_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "sheep_cute_idle_5_0.yfm",
+      "triangles": 1336,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_idle_5_1.yfm",
+      "triangles": 10068,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_idle_5_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "sheep_cute_idle_6_0.yfm",
+      "triangles": 1336,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_idle_6_1.yfm",
+      "triangles": 10068,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_idle_6_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "sheep_cute_idle_7_0.yfm",
+      "triangles": 1336,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_idle_7_1.yfm",
+      "triangles": 10068,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_idle_7_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "sheep_cute_run_0_0.yfm",
+      "triangles": 1336,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_run_0_1.yfm",
+      "triangles": 10068,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_run_0_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "sheep_cute_run_1_0.yfm",
+      "triangles": 1336,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_run_1_1.yfm",
+      "triangles": 10068,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_run_1_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "sheep_cute_run_2_0.yfm",
+      "triangles": 1336,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_run_2_1.yfm",
+      "triangles": 10068,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_run_2_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "sheep_cute_run_3_0.yfm",
+      "triangles": 1336,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_run_3_1.yfm",
+      "triangles": 10068,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_run_3_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "sheep_cute_run_4_0.yfm",
+      "triangles": 1336,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_run_4_1.yfm",
+      "triangles": 10068,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_run_4_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "sheep_cute_run_5_0.yfm",
+      "triangles": 1336,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_run_5_1.yfm",
+      "triangles": 10068,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_run_5_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "sheep_cute_run_6_0.yfm",
+      "triangles": 1336,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_run_6_1.yfm",
+      "triangles": 10068,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_run_6_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "sheep_cute_run_7_0.yfm",
+      "triangles": 1336,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_run_7_1.yfm",
+      "triangles": 10068,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "sheep_cute_run_7_1_fur.yfm",
+      "triangles": 900,
+      "treatment": "new geometric surface fibers"
+    },
+    {
+      "file": "level_1_home__island_0.yfm",
+      "triangles": 11,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__island_1.yfm",
+      "triangles": 2,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__island_2.yfm",
+      "triangles": 8,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__island_3.yfm",
+      "triangles": 72,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__island_4.yfm",
+      "triangles": 19,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__island_5.yfm",
+      "triangles": 60,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__island_6.yfm",
+      "triangles": 1593,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__island_7.yfm",
+      "triangles": 2,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__island_8.yfm",
+      "triangles": 16,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__island_9.yfm",
+      "triangles": 675,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__island_10.yfm",
+      "triangles": 9796,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__island_11.yfm",
+      "triangles": 3188,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__island_12.yfm",
+      "triangles": 30184,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__island_13.yfm",
+      "triangles": 618,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__island_14.yfm",
+      "triangles": 7324,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__island_15.yfm",
+      "triangles": 8602,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__island_16.yfm",
+      "triangles": 2156,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__island_17.yfm",
+      "triangles": 7488,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__island_18.yfm",
+      "triangles": 11160,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__island_19.yfm",
+      "triangles": 91350,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__island_20.yfm",
+      "triangles": 1544,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__island_21.yfm",
+      "triangles": 1730,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__island_22.yfm",
+      "triangles": 1152,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__island_23.yfm",
+      "triangles": 16955,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__island_24.yfm",
+      "triangles": 2238,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__island_25.yfm",
+      "triangles": 6854,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__island_26.yfm",
+      "triangles": 4770,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__island_27.yfm",
+      "triangles": 996,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__island_28.yfm",
+      "triangles": 2867,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__island_29.yfm",
+      "triangles": 4,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__island_ground_cover.yfm",
+      "triangles": 36000,
+      "treatment": "new procedural grass geometry"
+    },
+    {
+      "file": "level_1_home__island_garden.yfm",
+      "triangles": 106370,
+      "treatment": "new modeled broad-leaf plants and flowers"
+    },
+    {
+      "file": "level_1_home__lavaland_0.yfm",
+      "triangles": 8,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__lavaland_1.yfm",
+      "triangles": 216,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__lavaland_2.yfm",
+      "triangles": 154,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__lavaland_3.yfm",
+      "triangles": 72,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__lavaland_4.yfm",
+      "triangles": 32,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__lavaland_5.yfm",
+      "triangles": 1258,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__lavaland_6.yfm",
+      "triangles": 3660,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__lavaland_7.yfm",
+      "triangles": 834,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__lavaland_8.yfm",
+      "triangles": 9556,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__lavaland_9.yfm",
+      "triangles": 3228,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__lavaland_10.yfm",
+      "triangles": 1734,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__lavaland_11.yfm",
+      "triangles": 1510,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__lavaland_12.yfm",
+      "triangles": 546,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__lavaland_13.yfm",
+      "triangles": 15991,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__lavaland_14.yfm",
+      "triangles": 1002,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__lavaland_15.yfm",
+      "triangles": 1776,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__lavaland_16.yfm",
+      "triangles": 897,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_1_home__lavaland_ground_cover.yfm",
+      "triangles": 18846,
+      "treatment": "new procedural grass geometry"
+    },
+    {
+      "file": "level_1_home__lavaland_garden.yfm",
+      "triangles": 103374,
+      "treatment": "new modeled broad-leaf plants and flowers"
+    },
+    {
+      "file": "level_lighthouse__island_0.yfm",
+      "triangles": 96,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_lighthouse__island_1.yfm",
+      "triangles": 4,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_lighthouse__island_2.yfm",
+      "triangles": 60,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_lighthouse__island_3.yfm",
+      "triangles": 40,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_lighthouse__island_4.yfm",
+      "triangles": 1500,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_lighthouse__island_5.yfm",
+      "triangles": 896,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_lighthouse__island_6.yfm",
+      "triangles": 11890,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_lighthouse__island_7.yfm",
+      "triangles": 4689,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_lighthouse__island_8.yfm",
+      "triangles": 30231,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_lighthouse__island_9.yfm",
+      "triangles": 35,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_lighthouse__island_10.yfm",
+      "triangles": 440,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_lighthouse__island_11.yfm",
+      "triangles": 3414,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_lighthouse__island_12.yfm",
+      "triangles": 1593,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_lighthouse__island_13.yfm",
+      "triangles": 124,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_lighthouse__island_14.yfm",
+      "triangles": 48,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_lighthouse__island_15.yfm",
+      "triangles": 628,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_lighthouse__island_16.yfm",
+      "triangles": 2730,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_lighthouse__island_17.yfm",
+      "triangles": 1958,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_lighthouse__island_18.yfm",
+      "triangles": 1776,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_lighthouse__island_19.yfm",
+      "triangles": 1296,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_lighthouse__island_20.yfm",
+      "triangles": 750,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_lighthouse__island_21.yfm",
+      "triangles": 30678,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_lighthouse__island_22.yfm",
+      "triangles": 1260,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_lighthouse__island_23.yfm",
+      "triangles": 1730,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_lighthouse__island_24.yfm",
+      "triangles": 1120,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_lighthouse__island_25.yfm",
+      "triangles": 2412,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_lighthouse__island_26.yfm",
+      "triangles": 485,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_lighthouse__island_27.yfm",
+      "triangles": 3099,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_lighthouse__island_28.yfm",
+      "triangles": 5328,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_lighthouse__island_29.yfm",
+      "triangles": 4884,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_lighthouse__island_30.yfm",
+      "triangles": 1494,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_lighthouse__island_31.yfm",
+      "triangles": 2867,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_lighthouse__island_ground_cover.yfm",
+      "triangles": 663,
+      "treatment": "new procedural grass geometry"
+    },
+    {
+      "file": "level_lighthouse__island_garden.yfm",
+      "triangles": 5038,
+      "treatment": "new modeled broad-leaf plants and flowers"
+    },
+    {
+      "file": "level_nut__Scene_0.yfm",
+      "triangles": 18,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_1.yfm",
+      "triangles": 2,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_2.yfm",
+      "triangles": 816,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_3.yfm",
+      "triangles": 2,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_4.yfm",
+      "triangles": 36,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_5.yfm",
+      "triangles": 136,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_6.yfm",
+      "triangles": 8,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_7.yfm",
+      "triangles": 108,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_8.yfm",
+      "triangles": 16,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_9.yfm",
+      "triangles": 1390,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_10.yfm",
+      "triangles": 4,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_11.yfm",
+      "triangles": 74,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_12.yfm",
+      "triangles": 36,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_13.yfm",
+      "triangles": 36,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_14.yfm",
+      "triangles": 132,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_15.yfm",
+      "triangles": 14998,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_16.yfm",
+      "triangles": 1342,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_17.yfm",
+      "triangles": 633,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_18.yfm",
+      "triangles": 102,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_19.yfm",
+      "triangles": 6871,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_20.yfm",
+      "triangles": 220,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_21.yfm",
+      "triangles": 3639,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_22.yfm",
+      "triangles": 30752,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_23.yfm",
+      "triangles": 1036,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_24.yfm",
+      "triangles": 49916,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_25.yfm",
+      "triangles": 960,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_26.yfm",
+      "triangles": 41704,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_27.yfm",
+      "triangles": 10880,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_28.yfm",
+      "triangles": 288,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_29.yfm",
+      "triangles": 2030,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_30.yfm",
+      "triangles": 1031,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_31.yfm",
+      "triangles": 856,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_32.yfm",
+      "triangles": 560,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_33.yfm",
+      "triangles": 4,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_34.yfm",
+      "triangles": 2,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_35.yfm",
+      "triangles": 2,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_36.yfm",
+      "triangles": 2,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_37.yfm",
+      "triangles": 4,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_38.yfm",
+      "triangles": 4,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_39.yfm",
+      "triangles": 4,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_40.yfm",
+      "triangles": 4,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_41.yfm",
+      "triangles": 546,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_42.yfm",
+      "triangles": 19092,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_43.yfm",
+      "triangles": 104,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_44.yfm",
+      "triangles": 485,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_45.yfm",
+      "triangles": 2430,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_46.yfm",
+      "triangles": 897,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_47.yfm",
+      "triangles": 12,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_48.yfm",
+      "triangles": 4,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_nut__Scene_ground_cover.yfm",
+      "triangles": 36000,
+      "treatment": "new procedural grass geometry"
+    },
+    {
+      "file": "level_nut__Scene_garden.yfm",
+      "triangles": 103811,
+      "treatment": "new modeled broad-leaf plants and flowers"
+    },
+    {
+      "file": "level_selector__island_0.yfm",
+      "triangles": 16,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector__island_1.yfm",
+      "triangles": 2,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector__island_2.yfm",
+      "triangles": 46,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector__island_3.yfm",
+      "triangles": 44,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector__island_4.yfm",
+      "triangles": 4,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector__island_5.yfm",
+      "triangles": 2,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector__island_6.yfm",
+      "triangles": 3235,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector__island_7.yfm",
+      "triangles": 179,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector__island_8.yfm",
+      "triangles": 1456,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector__island_9.yfm",
+      "triangles": 198,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector__island_10.yfm",
+      "triangles": 7392,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector__island_11.yfm",
+      "triangles": 900,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector__island_12.yfm",
+      "triangles": 27782,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector__island_13.yfm",
+      "triangles": 1152,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector__island_14.yfm",
+      "triangles": 657,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector__island_15.yfm",
+      "triangles": 1601,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector__island_16.yfm",
+      "triangles": 888,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector__island_17.yfm",
+      "triangles": 897,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector__island_ground_cover.yfm",
+      "triangles": 24909,
+      "treatment": "new procedural grass geometry"
+    },
+    {
+      "file": "level_selector__island_garden.yfm",
+      "triangles": 105505,
+      "treatment": "new modeled broad-leaf plants and flowers"
+    },
+    {
+      "file": "level_selector_other__island_0.yfm",
+      "triangles": 16,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector_other__island_1.yfm",
+      "triangles": 2,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector_other__island_2.yfm",
+      "triangles": 46,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector_other__island_3.yfm",
+      "triangles": 44,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector_other__island_4.yfm",
+      "triangles": 4,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector_other__island_5.yfm",
+      "triangles": 2,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector_other__island_6.yfm",
+      "triangles": 163,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector_other__island_7.yfm",
+      "triangles": 240,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector_other__island_8.yfm",
+      "triangles": 1456,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector_other__island_9.yfm",
+      "triangles": 198,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector_other__island_10.yfm",
+      "triangles": 7392,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector_other__island_11.yfm",
+      "triangles": 900,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector_other__island_12.yfm",
+      "triangles": 28246,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector_other__island_13.yfm",
+      "triangles": 1152,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector_other__island_14.yfm",
+      "triangles": 657,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector_other__island_15.yfm",
+      "triangles": 2109,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector_other__island_16.yfm",
+      "triangles": 888,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector_other__island_17.yfm",
+      "triangles": 897,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_selector_other__island_ground_cover.yfm",
+      "triangles": 23157,
+      "treatment": "new procedural grass geometry"
+    },
+    {
+      "file": "level_selector_other__island_garden.yfm",
+      "triangles": 103913,
+      "treatment": "new modeled broad-leaf plants and flowers"
+    },
+    {
+      "file": "level_underworld__Game_0.yfm",
+      "triangles": 2,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_underworld__Game_1.yfm",
+      "triangles": 240,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_underworld__Game_2.yfm",
+      "triangles": 19,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_underworld__Game_3.yfm",
+      "triangles": 3578,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_underworld__Game_4.yfm",
+      "triangles": 26,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_underworld__Game_5.yfm",
+      "triangles": 24,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_underworld__Game_6.yfm",
+      "triangles": 132,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_underworld__Game_7.yfm",
+      "triangles": 411,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_underworld__Game_8.yfm",
+      "triangles": 2,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_underworld__Game_9.yfm",
+      "triangles": 3126,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_underworld__Game_10.yfm",
+      "triangles": 2720,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_underworld__Game_11.yfm",
+      "triangles": 11834,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_underworld__Game_12.yfm",
+      "triangles": 312,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_underworld__Game_13.yfm",
+      "triangles": 7092,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_underworld__Game_14.yfm",
+      "triangles": 1680,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_underworld__Game_15.yfm",
+      "triangles": 6104,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_underworld__Game_16.yfm",
+      "triangles": 315,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_underworld__Game_17.yfm",
+      "triangles": 456,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_underworld__Game_18.yfm",
+      "triangles": 22024,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_underworld__Game_19.yfm",
+      "triangles": 1377,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_underworld__Game_20.yfm",
+      "triangles": 1776,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_underworld__Game_21.yfm",
+      "triangles": 1545,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_underworld__Game_22.yfm",
+      "triangles": 498,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_underworld__Game_23.yfm",
+      "triangles": 1139,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "level_underworld__Game_ground_cover.yfm",
+      "triangles": 36000,
+      "treatment": "new procedural grass geometry"
+    },
+    {
+      "file": "level_underworld__Game_garden.yfm",
+      "triangles": 104103,
+      "treatment": "new modeled broad-leaf plants and flowers"
+    },
+    {
+      "file": "minilevel_demo_arena3__dem_0.yfm",
+      "triangles": 16,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_demo_arena3__dem_1.yfm",
+      "triangles": 1664,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_demo_arena3__dem_2.yfm",
+      "triangles": 294,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_demo_arena3__dem_3.yfm",
+      "triangles": 12740,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_demo_arena3__dem_4.yfm",
+      "triangles": 1716,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_demo_arena3__dem_5.yfm",
+      "triangles": 2240,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_demo_arena3__dem_6.yfm",
+      "triangles": 485,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_demo_arena3__dem_7.yfm",
+      "triangles": 1776,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_demo_arena3__dem_8.yfm",
+      "triangles": 1545,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_demo_arena3__dem_9.yfm",
+      "triangles": 3142,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_demo_arena3__dem_ground_cover.yfm",
+      "triangles": 36000,
+      "treatment": "new procedural grass geometry"
+    },
+    {
+      "file": "minilevel_demo_arena3__dem_garden.yfm",
+      "triangles": 104787,
+      "treatment": "new modeled broad-leaf plants and flowers"
+    },
+    {
+      "file": "minilevel_lava_Falls__Scene_0.yfm",
+      "triangles": 114,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_lava_Falls__Scene_1.yfm",
+      "triangles": 411,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_lava_Falls__Scene_2.yfm",
+      "triangles": 2340,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_lava_Falls__Scene_3.yfm",
+      "triangles": 7899,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_lava_Falls__Scene_4.yfm",
+      "triangles": 4422,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_lava_Falls__Scene_5.yfm",
+      "triangles": 32283,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_lava_Falls__Scene_6.yfm",
+      "triangles": 1812,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_lava_Falls__Scene_7.yfm",
+      "triangles": 208,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_lava_Falls__Scene_8.yfm",
+      "triangles": 21276,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_lava_Falls__Scene_9.yfm",
+      "triangles": 324,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_lava_Falls__Scene_10.yfm",
+      "triangles": 28061,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_lava_Falls__Scene_ground_cover.yfm",
+      "triangles": 36000,
+      "treatment": "new procedural grass geometry"
+    },
+    {
+      "file": "minilevel_lava_Falls__Scene_garden.yfm",
+      "triangles": 102665,
+      "treatment": "new modeled broad-leaf plants and flowers"
+    },
+    {
+      "file": "minilevel_ratpack__dem_0.yfm",
+      "triangles": 176,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_ratpack__dem_1.yfm",
+      "triangles": 945,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_ratpack__dem_2.yfm",
+      "triangles": 331,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_ratpack__dem_3.yfm",
+      "triangles": 260,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_ratpack__dem_4.yfm",
+      "triangles": 948,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_ratpack__dem_5.yfm",
+      "triangles": 6000,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_ratpack__dem_6.yfm",
+      "triangles": 840,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_ratpack__dem_7.yfm",
+      "triangles": 10389,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_ratpack__dem_8.yfm",
+      "triangles": 516,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_ratpack__dem_9.yfm",
+      "triangles": 1776,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_ratpack__dem_10.yfm",
+      "triangles": 897,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_ratpack__dem_11.yfm",
+      "triangles": 864,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_ratpack__dem_ground_cover.yfm",
+      "triangles": 3843,
+      "treatment": "new procedural grass geometry"
+    },
+    {
+      "file": "minilevel_ratpack__dem_garden.yfm",
+      "triangles": 35142,
+      "treatment": "new modeled broad-leaf plants and flowers"
+    },
+    {
+      "file": "minilevel_release_Demo__demo_0.yfm",
+      "triangles": 228,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_release_Demo__demo_1.yfm",
+      "triangles": 35,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_release_Demo__demo_2.yfm",
+      "triangles": 1593,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_release_Demo__demo_3.yfm",
+      "triangles": 1218,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_release_Demo__demo_4.yfm",
+      "triangles": 249,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_release_Demo__demo_5.yfm",
+      "triangles": 525,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_release_Demo__demo_6.yfm",
+      "triangles": 289,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_release_Demo__demo_7.yfm",
+      "triangles": 6016,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_release_Demo__demo_8.yfm",
+      "triangles": 1976,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_release_Demo__demo_9.yfm",
+      "triangles": 1958,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_release_Demo__demo_10.yfm",
+      "triangles": 1572,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_release_Demo__demo_11.yfm",
+      "triangles": 32400,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_release_Demo__demo_12.yfm",
+      "triangles": 1730,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_release_Demo__demo_13.yfm",
+      "triangles": 2520,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_release_Demo__demo_14.yfm",
+      "triangles": 7493,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_release_Demo__demo_15.yfm",
+      "triangles": 485,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_release_Demo__demo_16.yfm",
+      "triangles": 516,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_release_Demo__demo_17.yfm",
+      "triangles": 1776,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_release_Demo__demo_18.yfm",
+      "triangles": 1545,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_release_Demo__demo_19.yfm",
+      "triangles": 3142,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_release_Demo__demo_ground_cover.yfm",
+      "triangles": 36000,
+      "treatment": "new procedural grass geometry"
+    },
+    {
+      "file": "minilevel_release_Demo__demo_garden.yfm",
+      "triangles": 104470,
+      "treatment": "new modeled broad-leaf plants and flowers"
+    },
+    {
+      "file": "minilevel_the_Arena__Scene_0.yfm",
+      "triangles": 118,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_the_Arena__Scene_1.yfm",
+      "triangles": 14,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_the_Arena__Scene_2.yfm",
+      "triangles": 1807,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_the_Arena__Scene_3.yfm",
+      "triangles": 3794,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_the_Arena__Scene_4.yfm",
+      "triangles": 2507,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_the_Arena__Scene_5.yfm",
+      "triangles": 15164,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_the_Arena__Scene_6.yfm",
+      "triangles": 34,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_the_Arena__Scene_7.yfm",
+      "triangles": 910,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_the_Arena__Scene_8.yfm",
+      "triangles": 7092,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_the_Arena__Scene_9.yfm",
+      "triangles": 1872,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_the_Arena__Scene_10.yfm",
+      "triangles": 380,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_the_Arena__Scene_11.yfm",
+      "triangles": 15224,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_the_Arena__Scene_12.yfm",
+      "triangles": 1776,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_the_Arena__Scene_13.yfm",
+      "triangles": 1545,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_the_Arena__Scene_14.yfm",
+      "triangles": 1139,
+      "treatment": "Blender reconstructed original topology"
+    },
+    {
+      "file": "minilevel_the_Arena__Scene_ground_cover.yfm",
+      "triangles": 30363,
+      "treatment": "new procedural grass geometry"
+    },
+    {
+      "file": "minilevel_the_Arena__Scene_garden.yfm",
+      "triangles": 104180,
+      "treatment": "new modeled broad-leaf plants and flowers"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "level_1_home__island",
+      "blend": "art/frankie-realistic/level_1_home__island.blend",
+      "added_grass_triangles": 36000
+    },
+    {
+      "id": "level_1_home__lavaland",
+      "blend": "art/frankie-realistic/level_1_home__lavaland.blend",
+      "added_grass_triangles": 18846
+    },
+    {
+      "id": "level_lighthouse__island",
+      "blend": "art/frankie-realistic/level_lighthouse__island.blend",
+      "added_grass_triangles": 663
+    },
+    {
+      "id": "level_nut__Scene",
+      "blend": "art/frankie-realistic/level_nut__Scene.blend",
+      "added_grass_triangles": 36000
+    },
+    {
+      "id": "level_selector__island",
+      "blend": "art/frankie-realistic/level_selector__island.blend",
+      "added_grass_triangles": 24909
+    },
+    {
+      "id": "level_selector_other__island",
+      "blend": "art/frankie-realistic/level_selector_other__island.blend",
+      "added_grass_triangles": 23157
+    },
+    {
+      "id": "level_underworld__Game",
+      "blend": "art/frankie-realistic/level_underworld__Game.blend",
+      "added_grass_triangles": 36000
+    },
+    {
+      "id": "minilevel_demo_arena3__dem",
+      "blend": "art/frankie-realistic/minilevel_demo_arena3__dem.blend",
+      "added_grass_triangles": 36000
+    },
+    {
+      "id": "minilevel_lava_Falls__Scene",
+      "blend": "art/frankie-realistic/minilevel_lava_Falls__Scene.blend",
+      "added_grass_triangles": 36000
+    },
+    {
+      "id": "minilevel_ratpack__dem",
+      "blend": "art/frankie-realistic/minilevel_ratpack__dem.blend",
+      "added_grass_triangles": 3843
+    },
+    {
+      "id": "minilevel_release_Demo__demo",
+      "blend": "art/frankie-realistic/minilevel_release_Demo__demo.blend",
+      "added_grass_triangles": 36000
+    },
+    {
+      "id": "minilevel_the_Arena__Scene",
+      "blend": "art/frankie-realistic/minilevel_the_Arena__Scene.blend",
+      "added_grass_triangles": 30363
+    }
+  ]
+}

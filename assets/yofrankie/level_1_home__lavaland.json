@@ -1,0 +1,242 @@
+[
+  {
+    "properties": {
+      "kill": 1000
+    },
+    "position": [
+      -24.9332218170166,
+      3.8185369968414307,
+      -56.999755859375
+    ],
+    "name": "death_plane.001"
+  },
+  {
+    "properties": {
+      "maxrenderdist": 60.0,
+      "colldet": false
+    },
+    "position": [
+      -16.162139892578125,
+      9.36085033416748,
+      -67.61428833007812
+    ],
+    "name": "grass_002"
+  },
+  {
+    "properties": {
+      "portal_scene": "island",
+      "portal": "island_1st_position"
+    },
+    "position": [
+      -14.313448905944824,
+      9.089627265930176,
+      -62.13359451293945
+    ],
+    "name": "portal_lava_back"
+  },
+  {
+    "properties": {
+      "portal_scene": "island",
+      "portal": "island_2nd_position"
+    },
+    "position": [
+      -18.796268463134766,
+      8.809514045715332,
+      -43.271060943603516
+    ],
+    "name": "portal_island"
+  },
+  {
+    "properties": {
+      "ledge": true
+    },
+    "position": [
+      -39.210758209228516,
+      13.119998931884766,
+      -65.35406494140625
+    ],
+    "name": "ledge_grab_lava"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      -29.579500198364258,
+      5.985647678375244,
+      -63.54421615600586
+    ],
+    "name": "mountainRock2Platform"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      -29.579500198364258,
+      5.985647678375244,
+      -63.54421615600586
+    ],
+    "name": "mountainRock2.001"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      -29.579500198364258,
+      6.003192901611328,
+      -63.54421615600586
+    ],
+    "name": "lava_bridge_phys"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      -39.210758209228516,
+      13.119998931884766,
+      -65.35406494140625
+    ],
+    "name": "grass_brown"
+  },
+  {
+    "properties": {
+      "slip": true
+    },
+    "position": [
+      -22.461212158203125,
+      -1.7328505516052246,
+      0.31113433837890625
+    ],
+    "name": "lava_bounds_phys"
+  },
+  {
+    "properties": {
+      "dynamics": true,
+      "lod": 1,
+      "static": true
+    },
+    "position": [
+      -18.85761070251465,
+      9.774538040161133,
+      -43.05509948730469
+    ],
+    "name": "rocks_rock_02.003"
+  },
+  {
+    "properties": {
+      "dynamics": true,
+      "lod": 1,
+      "static": true
+    },
+    "position": [
+      -14.356607437133789,
+      9.74803638458252,
+      -61.987911224365234
+    ],
+    "name": "rocks_rock_02.002"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      23.223867416381836,
+      -0.08155155181884766,
+      -28.064456939697266
+    ],
+    "name": "loopland1_ground"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      -39.03313064575195,
+      11.517611503601074,
+      -71.9358901977539
+    ],
+    "name": "loopland2_innerloop"
+  },
+  {
+    "properties": {
+      "slip": true
+    },
+    "position": [
+      23.223867416381836,
+      -0.08155155181884766,
+      -28.064456939697266
+    ],
+    "name": "loopland_phys_invis"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      -24.725122451782227,
+      8.417501449584961,
+      -68.35586547851562
+    ],
+    "name": "loopland2.006"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      -25.060346603393555,
+      8.01046085357666,
+      -75.65787506103516
+    ],
+    "name": "loopland2_ground_phys"
+  },
+  {
+    "properties": {
+      "ledge": true
+    },
+    "position": [
+      -37.302303314208984,
+      11.74717903137207,
+      -59.716007232666016
+    ],
+    "name": "ledge_grab_stick"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      -37.302303314208984,
+      11.7628812789917,
+      -59.716007232666016
+    ],
+    "name": "stick1_ground_phys"
+  },
+  {
+    "properties": {
+      "time": 0.0
+    },
+    "position": [
+      -30.179414749145508,
+      6.184727668762207,
+      -58.72735595703125
+    ],
+    "name": "lava_gfx"
+  },
+  {
+    "properties": {
+      "liquid": true,
+      "kill": 100,
+      "lava": true
+    },
+    "position": [
+      -30.129714965820312,
+      6.184727668762207,
+      -59.07833480834961
+    ],
+    "name": "lava_phys"
+  }
+]

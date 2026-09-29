@@ -1,0 +1,125 @@
+[
+  {
+    "properties": {
+      "slip": true
+    },
+    "position": [
+      0.4200185537338257,
+      -0.19571885466575623,
+      -0.69771409034729
+    ],
+    "name": "boundry_phys"
+  },
+  {
+    "properties": {
+      "mini_level": false
+    },
+    "position": [
+      1.916839599609375,
+      0.0,
+      2.372285842895508
+    ],
+    "name": "dyn_warp_placer"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      4.205378532409668,
+      0.0,
+      -0.389386922121048
+    ],
+    "name": "mainland_phys"
+  },
+  {
+    "properties": {
+      "maxrenderdist": 60.0,
+      "colldet": false
+    },
+    "position": [
+      8.815728187561035,
+      9.145769119262695,
+      -10.551172256469727
+    ],
+    "name": "grass_002.027"
+  },
+  {
+    "properties": {
+      "maxrenderdist": 60.0,
+      "colldet": false
+    },
+    "position": [
+      10.866392135620117,
+      9.533292770385742,
+      -5.834074974060059
+    ],
+    "name": "grass_002.024"
+  },
+  {
+    "properties": {
+      "water": true
+    },
+    "position": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "name": "Plane.003"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      9.56549072265625,
+      9.303977966308594,
+      -3.060873031616211
+    ],
+    "name": "mushroom_red_001.020"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      9.875898361206055,
+      9.337738037109375,
+      -3.125664710998535
+    ],
+    "name": "mushroom_red_001.019"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      1.8762434720993042,
+      9.44321346282959,
+      7.864922046661377
+    ],
+    "name": "mushroom_red_001"
+  },
+  {
+    "properties": {
+      "Text": "to enter the level"
+    },
+    "position": [
+      3.630650758743286,
+      8.624784469604492,
+      -0.6993798613548279
+    ],
+    "name": "Plane.001"
+  },
+  {
+    "properties": {
+      "Text": "walk into a sign"
+    },
+    "position": [
+      3.6611430644989014,
+      8.813017845153809,
+      -0.7027772665023804
+    ],
+    "name": "Plane"
+  }
+]

@@ -1,0 +1,18 @@
+# pixi environments
+.pixi/*
+!.pixi/config.toml
+/build/
+
+/.deps/
+
+/saves/*
+!/saves/.gitkeep
+
+# Local agent state, credentials and Python caches
+/.agents/
+/.codex/
+/.aws/
+.env
+.env.*
+__pycache__/
+*.pyc

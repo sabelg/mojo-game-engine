@@ -1,0 +1,6 @@
+YoFrankie! (c) 2008, Blender Foundation, www.blender.org
+Original media and derivative remaster media: Creative Commons Attribution 3.0.
+Procedural remaster: generated natural materials, surface fibers, ground cover, and modern Blender reconstruction of original models/poses.
+Original source: third_party/yofrankie; original provenance: PROVENANCE.json there.
+Editable derivative files: art/frankie-realistic. Generation: scripts/remake_frankie_blender.py.
+See remake-report.json for asset treatments and source texture hashes.

@@ -1,0 +1,228 @@
+[
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      -0.6293182373046875,
+      11.25265121459961,
+      6.149024963378906
+    ],
+    "name": "terrain_obj.001"
+  },
+  {
+    "properties": {
+      "kill": 100
+    },
+    "position": [
+      -6.120920658111572,
+      7.819016456604004,
+      -25.084484100341797
+    ],
+    "name": "plane_death.001"
+  },
+  {
+    "properties": {
+      "portal_blend": "//ending.blend",
+      "portal": ""
+    },
+    "position": [
+      -40.59342956542969,
+      35.85533905029297,
+      -20.12026596069336
+    ],
+    "name": "portal_end_game"
+  },
+  {
+    "properties": {
+      "slip": true
+    },
+    "position": [
+      -12.101117134094238,
+      6.227602481842041,
+      -9.55483627319336
+    ],
+    "name": "terrain_slip_phys"
+  },
+  {
+    "properties": {
+      "ledge": true
+    },
+    "position": [
+      -36.80843734741211,
+      3.9861841201782227,
+      -8.093650817871094
+    ],
+    "name": "corde_phis"
+  },
+  {
+    "properties": {
+      "water": true,
+      "liquid": true
+    },
+    "position": [
+      4.796124458312988,
+      3.753999948501587,
+      3.3572874069213867
+    ],
+    "name": "lac"
+  },
+  {
+    "properties": {
+      "water": true,
+      "liquid": true
+    },
+    "position": [
+      0.0,
+      -200.0,
+      0.0
+    ],
+    "name": "mer"
+  },
+  {
+    "properties": {
+      "portal_blend": "//level_selector.blend",
+      "portal": ""
+    },
+    "position": [
+      35.18899917602539,
+      7.919000148773193,
+      25.832000732421875
+    ],
+    "name": "portal_selector"
+  },
+  {
+    "properties": {
+      "ground": 0.0,
+      "kill": 100
+    },
+    "position": [
+      -17.020858764648438,
+      11.29403305053711,
+      -9.982503890991211
+    ],
+    "name": "plane_death"
+  },
+  {
+    "properties": {
+      "slip": true
+    },
+    "position": [
+      -34.46550750732422,
+      21.063236236572266,
+      -20.509187698364258
+    ],
+    "name": "parois_obj"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      -20.195825576782227,
+      16.177549362182617,
+      -33.8696174621582
+    ],
+    "name": "asse"
+  },
+  {
+    "properties": {
+      "ledge": true,
+      "carrying": 0
+    },
+    "position": [
+      -20.322851181030273,
+      14.796022415161133,
+      -33.56776809692383
+    ],
+    "name": "ledge_detect"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      -0.12856629490852356,
+      2.509603261947632,
+      0.04791261628270149
+    ],
+    "name": "roches_herbes"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      -34.46550750732422,
+      21.0732364654541,
+      -20.509187698364258
+    ],
+    "name": "terrain_ground_phys"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      -37.71165466308594,
+      -0.08894143998622894,
+      -33.39144515991211
+    ],
+    "name": "pram_obj"
+  },
+  {
+    "properties": {
+      "ledge": 1
+    },
+    "position": [
+      -37.88071060180664,
+      1.8658722639083862,
+      -30.65325927734375
+    ],
+    "name": "bridge_01_ledge"
+  },
+  {
+    "properties": {
+      "ground": 1
+    },
+    "position": [
+      -37.88071060180664,
+      1.8658722639083862,
+      -30.65325927734375
+    ],
+    "name": "bridge_01_ground"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      -40.32179641723633,
+      21.986190795898438,
+      -21.61174774169922
+    ],
+    "name": "lighthouse_phys_floor"
+  },
+  {
+    "properties": {
+      "slip": true
+    },
+    "position": [
+      -40.32179641723633,
+      21.986190795898438,
+      -21.61174774169922
+    ],
+    "name": "lighthouse_phys_wall"
+  },
+  {
+    "properties": {
+      "ground": true
+    },
+    "position": [
+      -40.32179641723633,
+      21.986190795898438,
+      -21.61174774169922
+    ],
+    "name": "lighthouse_interior"
+  }
+]
