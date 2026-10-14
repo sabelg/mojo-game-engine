@@ -1,6 +1,7 @@
 """Small original 5x7 arcade font, rasterized by Mojo (no font library)."""
 
-def glyph(code: Int) -> UInt64:
+def glyph(var code: Int) -> UInt64:
+    if code>=97 and code<=122:code-=32
     # Rows are packed from top to bottom, five bits per row.
     if code == 65: return 15621670449  # A
     if code == 66: return 32801506878  # B

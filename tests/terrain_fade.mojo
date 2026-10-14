@@ -1,0 +1,83 @@
+"""Bounded terrain LOD overlap, elapsed-time progression and old-handle retirement."""
+from std.testing import assert_equal,assert_true,assert_raises
+from std.ffi import external_call
+from mojo_game import Graphics3D,TerrainConfig,TerrainLayer,WorldStreamer,Vec3,Mat4
+
+def main() raises:
+    var device=Graphics3D("Atlas terrain fades",320,240,True)
+    var config=TerrainConfig(radius=2,resolution=8,chunks_per_update=25)
+    var camera=Vec3(32,30,32)
+    var moved=Vec3(96,30,32)
+    var view=Mat4.perspective(1,320.0/240,.1,500)*Mat4.look_at(Vec3(0,30,80),Vec3(0,0,0))
+    for mode in range(2):
+        var stream=WorldStreamer(config,asynchronous=mode==1,transition_seconds=.2)
+        for _ in range(2000):
+            stream.update(device,camera,0)
+            if len(stream.chunks)==25:break
+            external_call["SDL_Delay",NoneType](UInt32(1))
+        assert_equal(len(stream.chunks),25)
+        var old=stream.chunks[stream.find(-1,0)].handle
+        for _ in range(2000):
+            stream.update(device,moved,0)
+            assert_true(stream.resident_bytes()+stream.transition_bytes()<=stream.mesh_byte_budget)
+            if stream.chunks[stream.find(-1,0)].previous_handle>=0:break
+            external_call["SDL_Delay",NoneType](UInt32(1))
+        var index=stream.find(-1,0)
+        assert_equal(stream.chunks[index].previous_handle,old)
+        assert_equal(stream.chunks[index].fade,Float64(0))
+        assert_equal(stream.chunks[index].lod,1)
+        stream.update(device,moved,.1)
+        assert_true(abs(stream.chunks[stream.find(-1,0)].fade-.5)<1e-9)
+        device.shadow_begin(Mat4())
+        stream.draw(device,camera,True,view,True)
+        device.begin(view)
+        stream.draw(device,camera,view_projection=view,cull=True)
+        device.snapshot("build/atlas-terrain-fade-"+String(mode)+".bmp")
+        device.present()
+        assert_equal(device.validation_errors(),0)
+        stream.update(device,moved,.1)
+        assert_equal(stream.chunks[stream.find(-1,0)].previous_handle,-1)
+        device.shadow_begin(Mat4());device.begin(view)
+        with assert_raises():device.draw(old,Mat4())
+        var count=len(stream.chunks)
+        with assert_raises():stream.update(device,moved,Float64("nan"))
+        assert_equal(len(stream.chunks),count)
+        # Eviction/close must retire both generations, including active fades.
+        stream.update(device,camera,0)
+        stream.clear(device)
+        assert_equal(stream.transition_bytes(),0)
+    var baseline=WorldStreamer(config)
+    var budget=baseline.resident_bytes()
+    baseline.clear(device)
+    var limited=WorldStreamer(config,mesh_byte_budget=budget,transition_seconds=.2)
+    limited.update(device,camera,0)
+    limited.update(device,moved,0)
+    assert_equal(limited.transition_count,0)
+    assert_equal(limited.transition_bytes(),0)
+    assert_true(limited.immediate_count>0)
+    limited.clear(device)
+    # Painting adds vertex colors while a fade retains its old mesh. Reject
+    # the revision atomically until overlap retires, then admit the same edit.
+    var paint=TerrainLayer()
+    paint.apply(paint.brush(camera,8,1,Vec3(.8,.2,.1),True))
+    var painted_config=config.copy()
+    painted_config.layer=paint.copy()
+    var painted_baseline=WorldStreamer(painted_config)
+    var painted_budget=painted_baseline.resident_bytes()
+    painted_baseline.clear(device)
+    var painting=WorldStreamer(config,mesh_byte_budget=painted_budget,transition_seconds=.2)
+    painting.update(device,camera,0)
+    var diagonal=Vec3(96,30,96)
+    painting.update(device,diagonal,0)
+    assert_true(painting.transition_bytes()>0)
+    with assert_raises():painting.set_layer(paint,1)
+    assert_equal(painting.revision,0)
+    assert_true(not painting.config.layer.has_paint)
+    assert_true(painting.resident_bytes()+painting.transition_bytes()<=painted_budget)
+    painting.advance(device,.2)
+    painting.set_layer(paint,1)
+    assert_equal(painting.revision,1)
+    painting.update(device,diagonal,0)
+    assert_true(painting.resident_bytes()+painting.transition_bytes()<=painted_budget)
+    painting.clear(device)
+    print("Terrain fades passed:",device.driver(),"sync/async overlap, timed progression, old-generation retirement, bounded overlap and immediate budget fallback")

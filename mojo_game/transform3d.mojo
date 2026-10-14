@@ -1,6 +1,6 @@
 """Right-handed transforms. Column-major matrices, column vectors, camera -Z."""
 from std.collections import Array
-from std.math import sin, cos, sqrt, tan
+from std.math import sin, cos, sqrt, tan, isfinite
 from .math3d import Vec3
 
 struct Quaternion(ImplicitlyCopyable, Movable):
@@ -16,10 +16,37 @@ struct Quaternion(ImplicitlyCopyable, Movable):
         self.w = w
 
     @staticmethod
+    def _axis_angle_from_sin_cos(axis: Vec3, sine: Float64, cosine: Float64) -> Self:
+        # Private shared CPU/device assembly. Exactly zero retains identity even
+        # with invalid trig coefficients, matching axis_angle's zero-axis rule.
+        if axis.x == 0 and axis.y == 0 and axis.z == 0: return Self()
+        if not isfinite(axis.x) or not isfinite(axis.y) or not isfinite(axis.z) or not isfinite(sine) or not isfinite(cosine):
+            var invalid = (axis.x-axis.x)+(axis.y-axis.y)+(axis.z-axis.z)+(sine-sine)+(cosine-cosine)
+            return Self(invalid, invalid, invalid, invalid)
+        # Ratios are bounded by one, so their squared norm cannot overflow or
+        # underflow. Direct division avoids an overflowing reciprocal of scale.
+        var scale = max(abs(axis.x), max(abs(axis.y), abs(axis.z)))
+        var x = axis.x/scale; var y = axis.y/scale; var z = axis.z/scale
+        var inverse_length = 1/sqrt(x*x+y*y+z*z)
+        return Self(x*inverse_length*sine, y*inverse_length*sine, z*inverse_length*sine, cosine)
+
+    @staticmethod
     def axis_angle(axis: Vec3, angle: Float64) -> Self:
-        if axis.length() < 1e-12: return Self()
-        var n = axis.unit()*sin(angle/2)
-        return Self(n.x, n.y, n.z, cos(angle/2))
+        """Construct a rotation from a direction and angle in radians.
+
+        Any finite nonzero Float64 axis is normalized with max-component scaling.
+        Exactly zero (including signed zero) returns identity, even for an invalid
+        angle. Other non-finite axes/angles return an all-NaN quaternion without
+        raising. Ratios and half-angles below binary64 range can round to zero.
+        This directional contract does not change Vec3.unit's near-zero policy.
+        """
+        # Finite nonzero axes are directions at any representable magnitude.
+        # Vec3.unit's application-specific near-zero cutoff does not apply here.
+        if axis.x == 0 and axis.y == 0 and axis.z == 0: return Self()
+        if not isfinite(angle):
+            var invalid = angle-angle
+            return Self._axis_angle_from_sin_cos(axis, invalid, invalid)
+        return Self._axis_angle_from_sin_cos(axis, sin(angle*.5), cos(angle*.5))
 
     def normalized(self) -> Self:
         var length = sqrt(self.x*self.x+self.y*self.y+self.z*self.z+self.w*self.w)
@@ -68,6 +95,43 @@ struct Mat4(ImplicitlyCopyable, Movable):
         return Vec3(Float64(self.data[0])*p.x+Float64(self.data[4])*p.y+Float64(self.data[8])*p.z+Float64(self.data[12]),
                     Float64(self.data[1])*p.x+Float64(self.data[5])*p.y+Float64(self.data[9])*p.z+Float64(self.data[13]),
                     Float64(self.data[2])*p.x+Float64(self.data[6])*p.y+Float64(self.data[10])*p.z+Float64(self.data[14]))
+
+    def direction(self, p: Vec3) -> Vec3:
+        return Vec3(self.data[0]*p.x+self.data[4]*p.y+self.data[8]*p.z,
+                    self.data[1]*p.x+self.data[5]*p.y+self.data[9]*p.z,
+                    self.data[2]*p.x+self.data[6]*p.y+self.data[10]*p.z)
+
+    def inverse(self) raises -> Self:
+        var rows=Array[Float64,32](fill=0)
+        for r in range(4):
+            for c in range(4):rows[r*8+c]=self.data[c*4+r]
+            rows[r*8+4+r]=1
+        for c in range(4):
+            var pivot=c
+            for r in range(c+1,4):
+                if abs(rows[r*8+c])>abs(rows[pivot*8+c]):pivot=r
+            if abs(rows[pivot*8+c])<1e-12:raise Error("Singular matrix")
+            if pivot!=c:
+                for j in range(8):
+                    var value=rows[c*8+j]
+                    rows[c*8+j]=rows[pivot*8+j]
+                    rows[pivot*8+j]=value
+            var divisor=rows[c*8+c]
+            for j in range(8):rows[c*8+j]/=divisor
+            for r in range(4):
+                if r==c:continue
+                var factor=rows[r*8+c]
+                for j in range(8):rows[r*8+j]-=factor*rows[c*8+j]
+        var result=Self()
+        for r in range(4):
+            for c in range(4):result.data[c*4+r]=rows[r*8+c+4]
+        return result
+
+    def normal(self,n: Vec3) raises -> Vec3:
+        var inverse=self.inverse()
+        return Vec3(inverse.data[0]*n.x+inverse.data[1]*n.y+inverse.data[2]*n.z,
+                    inverse.data[4]*n.x+inverse.data[5]*n.y+inverse.data[6]*n.z,
+                    inverse.data[8]*n.x+inverse.data[9]*n.y+inverse.data[10]*n.z)
 
     @staticmethod
     def perspective(fov: Float64, aspect: Float64, near: Float64, far: Float64) raises -> Self:

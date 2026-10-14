@@ -5,18 +5,12 @@ from mojo_game import sdl
 
 @fieldwise_init
 struct AudioSpec(RegisterPassable):
+    var format: Int32
+    var channels: Int32
     var frequency: Int32
-    var format: UInt16
-    var channels: UInt8
-    var silence: UInt8
-    var samples: UInt16
-    var padding: UInt16
-    var size: UInt32
-    var callback: sdl.NullableHandle
-    var userdata: sdl.NullableHandle
 
 struct SynthAudio:
-    var device: UInt32
+    var device: sdl.NullableHandle
     var initialized: Bool
     var muted: Bool
     var laser: Float64
@@ -26,7 +20,7 @@ struct SynthAudio:
     var noise: UInt32
 
     def __init__(out self, playback: Bool = True):
-        self.device = 0
+        self.device = None
         self.initialized = False
         self.muted = False
         self.laser = 0
@@ -35,22 +29,21 @@ struct SynthAudio:
         self.engine_phase = 0
         self.noise = 73
         if not playback: return
-        if external_call["SDL_InitSubSystem", Int32](UInt32(0x10)) < 0:
+        if not external_call["SDL_InitSubSystem", Bool](UInt32(0x10)):
             print("Audio unavailable; continuing silently:", sdl.error_message())
             return
         self.initialized = True
-        var desired = AudioSpec(22050, 0x8010, 1, 0, 512, 0, 0, None, None)
-        var obtained = AudioSpec(0, 0, 0, 0, 0, 0, 0, None, None)
-        self.device = external_call["SDL_OpenAudioDevice", UInt32](sdl.NullableHandle(None), Int32(0), Pointer(to=desired), Pointer(to=obtained), Int32(0))
-        if self.device == 0:
-            print("Audio unavailable; continuing silently:", sdl.error_message())
+        var desired=AudioSpec(0x8010,1,22050)
+        self.device=external_call["SDL_OpenAudioDeviceStream",sdl.NullableHandle](UInt32(0xFFFFFFFF),Pointer(to=desired),sdl.NullableHandle(None),sdl.NullableHandle(None))
+        if not self.device:
+            print("Audio unavailable; continuing silently:",sdl.error_message())
             return
-        external_call["SDL_PauseAudioDevice", NoneType](self.device, Int32(0))
+        if not external_call["SDL_ResumeAudioStreamDevice",Bool](self.device.value()):self.muted=True
 
     def close(mut self):
-        if self.device != 0:
-            external_call["SDL_CloseAudioDevice", NoneType](self.device)
-            self.device = 0
+        if self.device:
+            external_call["SDL_DestroyAudioStream", NoneType](self.device.value())
+            self.device = None
         if self.initialized:
             external_call["SDL_QuitSubSystem", NoneType](UInt32(0x10))
             self.initialized = False
@@ -82,16 +75,16 @@ struct SynthAudio:
 
     def update(mut self, speed: Float64, thrust: Bool, active: Bool, toggle: Bool):
         if toggle: self.muted = not self.muted
-        if self.device == 0: return
+        if not self.device: return
         if self.muted or not active:
-            external_call["SDL_ClearQueuedAudio", NoneType](self.device)
+            _ = external_call["SDL_ClearAudioStream", Bool](self.device.value())
             self.laser = 0
             self.explosion = 0
             return
         # Bound queued latency; synthesize at most 46 ms per video frame.
         for _ in range(4):
-            if external_call["SDL_GetQueuedAudioSize", UInt32](self.device) >= 1536: break
+            if external_call["SDL_GetAudioStreamQueued", Int32](self.device.value()) >= 1536: break
             var samples = self.synthesize(speed, thrust, 256)
-            if external_call["SDL_QueueAudio", Int32](self.device, samples.unsafe_ptr(), UInt32(512)) < 0:
+            if not external_call["SDL_PutAudioStreamData", Bool](self.device.value(), samples.unsafe_ptr(), Int32(512)):
                 self.muted = True
                 return

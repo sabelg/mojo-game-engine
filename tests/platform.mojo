@@ -1,4 +1,4 @@
-"""Run with SDL_VIDEODRIVER=dummy SDL_AUDIODRIVER=dummy."""
+"""Run with SDL_VIDEO_DRIVER=dummy SDL_AUDIO_DRIVER=dummy."""
 from std.testing import assert_true, assert_false, assert_equal, assert_raises
 from mojo_game import Window, Color, Rect, Vec3, Camera, SynthAudio, Engine, Game, Input
 from mojo_game import sdl

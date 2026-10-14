@@ -44,6 +44,13 @@ The World does not own stores and cannot clear them automatically.
 
 ## Physics
 
+The additive 3D rigid-body foundation exports `MassProperties3D` and
+`RigidBody3D` for checked principal inertia and linear/angular impulses. R02a adds
+transactional force/torque accumulation and explicit single-body pose integration
+(qualified finite CPU numerical profile). It does
+not replace the existing sphere or 2D simulation. See the
+[native Mojo physics roadmap and first numerical qualification](../docs/PHYSICS_ROADMAP.md).
+
 `Body2D(position, half, mass=1, restitution=0, sensor=False)` stores center,
 half extents, velocity, inverse mass, bounce and sensor state. A zero mass is
 static. Dimensions/mass must be nonnegative, restitution must be in [0,1].
@@ -103,5 +110,5 @@ audio; a custom game must pass its own activity state to audio updates.
 Window, Raster texture, and audio resources clean up automatically. Explicit
 `close()` is idempotent. Close audio before the window for deterministic
 shutdown. Window texture handles and platform methods must not be used after
-close. SDL's C ABI bindings target Linux x86-64. The package links to SDL2;
+close. SDL's C ABI bindings target Linux x86-64. The package links to SDL3;
 no Python runtime is required.

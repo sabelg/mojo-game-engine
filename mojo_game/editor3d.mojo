@@ -4,6 +4,7 @@ from .math3d import Vec3
 from .transform3d import Mat4, Quaternion
 from .scene3d import Scene3D
 from .input import Input
+from .durableio import object_id
 
 struct FlyCamera(ImplicitlyCopyable, Movable):
     var position: Vec3
@@ -104,6 +105,7 @@ struct SceneEditor:
             self.checkpoint(scene)
             var node = scene.nodes[self.selected].copy()
             node.name += " COPY"
+            node.persistent_id=object_id()
             node.transform.position.x += 3
             self.selected = scene.add(node^)
             self.status = "OBJECT DUPLICATED"

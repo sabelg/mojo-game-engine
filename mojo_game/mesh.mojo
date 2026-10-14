@@ -3,17 +3,29 @@ from .math3d import Vec3
 from std.math import isfinite
 from .math2d import Vec2
 
+struct MorphTarget(Copyable,Movable):
+    var deltas: List[Float32]
+    def __init__(out self):self.deltas=List[Float32]()
+
 struct Mesh(Copyable, Movable):
     var vertices: List[Float32]
     var indices: List[UInt32]
     var minimum: Vec3
     var maximum: Vec3
+    var tangents: List[Float32]
+    var colors: List[Float32]
+    var morphs: List[MorphTarget]
+    var morph_weights: List[Float64]
 
     def __init__(out self):
         self.vertices = List[Float32]()
         self.indices = List[UInt32]()
         self.minimum = Vec3(0, 0, 0)
         self.maximum = Vec3(0, 0, 0)
+        self.tangents=List[Float32]()
+        self.colors=List[Float32]()
+        self.morphs=List[MorphTarget]()
+        self.morph_weights=List[Float64]()
 
     def vertex(mut self, p: Vec3, normal: Vec3, uv: Vec2 = Vec2(0, 0)) -> UInt32:
         var index = UInt32(len(self.vertices)//8)
@@ -46,6 +58,48 @@ struct Mesh(Copyable, Movable):
             if not isfinite(value): raise Error("Non-finite mesh vertex")
         for index in self.indices:
             if Int(index) >= len(self.vertices)//8: raise Error("Mesh index out of bounds")
+        if len(self.tangents)!=0 and len(self.tangents)!=len(self.vertices)//2:raise Error("Mesh tangent count mismatch")
+        for value in self.tangents:
+            if not isfinite(value):raise Error("Non-finite mesh tangent")
+        if len(self.colors)!=0 and len(self.colors)!=len(self.vertices)//2:raise Error("Mesh color count mismatch")
+        for value in self.colors:
+            if not isfinite(value) or value<0 or value>1:raise Error("Invalid mesh vertex color")
+        if len(self.morphs)!=len(self.morph_weights):raise Error("Mesh morph default count mismatch")
+        for value in self.morph_weights:
+            if not isfinite(value):raise Error("Non-finite morph weight")
+        for target in self.morphs:
+            if len(target.deltas)!=len(self.vertices)//8*9:raise Error("Morph target count mismatch")
+            for value in target.deltas:
+                if not isfinite(value):raise Error("Non-finite morph delta")
+
+    def deform_morph(self,weights: List[Float64]) raises -> Self:
+        self.validate()
+        if len(weights)!=len(self.morphs):raise Error("Morph weight count mismatch")
+        for weight in weights:
+            if not isfinite(weight):raise Error("Non-finite morph weight")
+        var result=Self()
+        for i in range(len(self.vertices)//8):
+            var offset=i*8
+            var p=Vec3(Float64(self.vertices[offset]),Float64(self.vertices[offset+1]),Float64(self.vertices[offset+2]))
+            var normal=Vec3(Float64(self.vertices[offset+3]),Float64(self.vertices[offset+4]),Float64(self.vertices[offset+5]))
+            var tangent=Vec3(0,0,0)
+            if len(self.tangents)>0:tangent=Vec3(Float64(self.tangents[i*4]),Float64(self.tangents[i*4+1]),Float64(self.tangents[i*4+2]))
+            for j in range(len(weights)):
+                var delta=i*9
+                p=p+Vec3(Float64(self.morphs[j].deltas[delta]),Float64(self.morphs[j].deltas[delta+1]),Float64(self.morphs[j].deltas[delta+2]))*weights[j]
+                normal=normal+Vec3(Float64(self.morphs[j].deltas[delta+3]),Float64(self.morphs[j].deltas[delta+4]),Float64(self.morphs[j].deltas[delta+5]))*weights[j]
+                tangent=tangent+Vec3(Float64(self.morphs[j].deltas[delta+6]),Float64(self.morphs[j].deltas[delta+7]),Float64(self.morphs[j].deltas[delta+8]))*weights[j]
+            _=result.vertex(p,normal.unit(),Vec2(Float64(self.vertices[offset+6]),Float64(self.vertices[offset+7])))
+            if len(self.tangents)>0:
+                tangent=tangent.unit()
+                result.tangents.append(Float32(tangent.x))
+                result.tangents.append(Float32(tangent.y))
+                result.tangents.append(Float32(tangent.z))
+                result.tangents.append(self.tangents[i*4+3])
+        result.indices=self.indices.copy()
+        result.colors=self.colors.copy()
+        result.validate()
+        return result^
 
     @staticmethod
     def cube() -> Self:

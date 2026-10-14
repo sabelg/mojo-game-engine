@@ -79,8 +79,8 @@ struct Raster:
 
     def present(self, renderer: sdl.Handle):
         if not self.texture: return
-        _ = external_call["SDL_UpdateTexture", Int32](self.texture.value(), sdl.NullableHandle(None), self.pixels.unsafe_ptr(), Int32(WIDTH*4))
-        _ = external_call["SDL_RenderCopy", Int32](renderer, self.texture.value(), sdl.NullableHandle(None), sdl.NullableHandle(None))
+        _ = external_call["SDL_UpdateTexture", Bool](self.texture.value(), sdl.NullableHandle(None), self.pixels.unsafe_ptr(), Int32(WIDTH*4))
+        _ = external_call["SDL_RenderTexture", Bool](renderer, self.texture.value(), sdl.NullableHandle(None), sdl.NullableHandle(None))
 
     def dot(mut self, x: Int, y: Int, z: Float64, color: UInt32):
         if x < 0 or x >= WIDTH or y < 0 or y >= HEIGHT or z <= 0: return

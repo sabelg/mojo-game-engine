@@ -1,5 +1,8 @@
 # 3D and open-world API
 
+The asynchronous streaming, partition editor, stable assets, instancing and
+skeletal-animation APIs are detailed in [Atlas upgrades](ATLAS_UPGRADES.md).
+
 ## Coordinates and precision
 
 The new renderer uses a right-handed coordinate system: +Y is up, cameras face
@@ -41,26 +44,34 @@ Draws are queued on the CPU, validated, and recorded into Vulkan command buffers
 when a frame is rendered. `shadow_begin` starts a new frame and clears its queues;
 call it even when there are no shadow casters. Snapshot and presentation share the
 same rendered color image. A Vulkan swapchain is only used for visible windows.
-The backend currently serializes one frame in flight and uses host-visible mesh
-buffers; this favors correctness over peak throughput. See [Vulkan details](VULKAN.md).
+The backend uses two frames in flight with separate writable data banks and
+pooled coherent mesh buffers. Device-local uploads use a bounded staging ring.
+`MOJO_VK_FRAMES_IN_FLIGHT=1` selects the serial comparison mode. See [Vulkan details](VULKAN.md).
 
 `upload(mesh)` returns a generational GPU handle. `release(handle)` frees it;
-stale handles raise an error. There are 4096 mesh slots. Meshes are immutable;
-replace an asset by uploading a new mesh, switching references, then releasing
-the old one. Textures are window-owned, with 256 slots, and are released at close.
+stale handles raise an error. There are 4096 mesh slots. `update_mesh` changes
+vertices while preserving matching index topology; topology changes require a
+new upload and release. Textures are window-owned, with 256 slots, and are released at close.
 `texture(path)` accepts BMP, uploads sRGB pixels, and generates mipmaps.
 
 `Material(color,roughness,metallic,emission,texture)` uses linear RGB colors,
 roughness clamped to [0.045,1], metallic to [0,1], and nonnegative emission.
 The shader includes direct GGX lighting and a hemisphere ambient approximation.
-It has one directional sun and a 2048² shadow map; it has no environment-map
-IBL, cascades, temporal antialiasing, or deferred lighting.
+It has one directional sun and a 4096² shadow atlas. Optional linear FP16 HDR
+uses one final exposure/filmic/sRGB display pass and display-space UI.
+`Environment3D` provides diffuse and broad-reflection distant lighting from nine
+SH coefficients; sharp mirror maps, temporal antialiasing and deferred lighting
+remain open. Directional cascades are now
+available through `DirectionalShadows3D` and `Graphics3D.shadow_cascades`; the
+editor uses four by default and retains two/single-map quality settings. Their
+API and validation limits are described in [Atlas upgrades](ATLAS_UPGRADES.md).
 
 `Assets3D` caches meshes by key and stores bounds. `add(device,key,mesh)` and
 `load(device,path)` return stable asset-table indices. Saved `SceneNode.mesh`
-values refer to those indices. Populate the same asset table when loading a
-scene. `assets.draw(device,scene,origin,vp,shadow)` validates references, computes
-world transforms, culls transformed bounds and submits geometry. `pick` performs
+values refer to those indices for legacy callers. `SceneNode.asset_key` and
+`material_key` instead resolve stable manifest IDs independent of registration
+order. `assets.draw(device,scene,origin,vp,shadow)` validates references, computes
+world transforms once, culls transformed bounds and batches matching geometry. `pick` performs
 nearest world-AABB ray selection; it is not triangle-accurate. Close the cache
 before its device. Duplicate keys reuse the first uploaded asset.
 
@@ -72,13 +83,14 @@ transform. `world_matrix` composes ancestors. `remove` deactivates a subtree;
 indices are never recycled. Public node data is convenient for editing, but
 callers must preserve valid parent links and nonsingular transforms.
 
-`encode/decode` use the versioned, tab-separated `MOJO_SCENE_1` format, including
-names, parents, activity, transforms and material parameters. Names cannot
-contain tabs/newlines. Parsing rejects malformed records, non-finite numbers,
-singular transforms and invalid active hierarchies. `save` writes a sibling
-`.tmp` file then renames it over the destination. This provides atomic visibility,
-not crash durability (no fsync), and assumes a single writer. `load` constructs
-a new scene before callers replace their current scene.
+`encode/decode` use `MOJO_SCENE_3`, which includes persistent object IDs alongside
+asset/material keys. Versions 1 and 2 still load and migrate identities. Parsing
+rejects malformed records, non-finite numbers, singular transforms and invalid
+active hierarchies. `save` syncs a sibling temporary file before renaming it.
+`WorldStore` adds directory synchronization, a writer lock and redo transactions
+for durable multi-cell commits. `Scene3D.load` also accepts cooked `.sceneb` files.
+`compact()` explicitly removes tombstones and returns the old-to-new mapping;
+callers must reset/remap index-based history when using it.
 
 `SceneEditor` applies transform and selection commands to an application-owned
 scene. `checkpoint` captures a state before editing; undo history is bounded to
@@ -108,8 +120,10 @@ This hides cracks but is not geomorphing: LOD changes can pop.
 A radius R retains at most `(2R+1)²` chunks. Each update first evicts chunks
 outside the radius, then processes missing/replacement meshes in near-first
 rings up to the configured budget. Replacements are uploaded successfully
-before old meshes are released. Generation and upload happen synchronously.
-There is no worker pool, disk heightmap cache, or time-based job budget.
+before old meshes are released. Generation and upload happen synchronously by
+default. `asynchronous=True` prepares meshes on a bounded worker queue; an
+additional soft `upload_ms` budget bounds submission work. See the upgrade guide
+for cancellation, memory reservations and thread ownership. There is no disk heightmap cache.
 A teleport can temporarily show missing far chunks while residency catches up.
 
 ## Disk-backed world cells
@@ -132,8 +146,9 @@ partition.save()  # explicit flush before shutdown
 All root transforms in a cell are world-space. Applications decide which cell
 owns an object, handle transfers across boundaries, and establish the stable
 asset table for every file. Hierarchies cannot span files. Dirty tracking is
-explicit; the destructor cannot report failed saves. This API streams authored
-content separately from terrain; the demo currently edits one standalone scene.
+explicit; the destructor cannot report failed saves. `asynchronous=True` prepares
+reads and snapshot writes off-thread. `WorldEditor` implements hierarchy transfers
+and delta undo across cells; `atlas-world` demonstrates partition authoring.
 
 ## Simulation and lifecycle
 
@@ -164,6 +179,29 @@ The device remains alive after `run` so games can release their asset caches.
 | `transform3d`, `spatial` | Math, bounds, rays, frustum |
 | `scene3d`, `editor3d` | Hierarchy, serialization, editing, navigation |
 | `mesh`, `assets3d` | CPU meshes, OBJ import, cached GPU assets |
-| `graphics3d`, `native/graphics.c`, `shaders/` | Graphics ownership, Vulkan passes |
+| `graphics3d`, `native/mojo/runtime.mojo`, `shaders/` | Graphics ownership, Vulkan passes |
 | `world3d`, `partition` | Procedural terrain and authored cell residency |
 | `physics3d`, `engine3d` | Simulation and game lifecycle |
+
+## Imported collision
+
+`TriangleMesh3D(mesh, matrix)` builds a static triangle BVH using Float64 world
+coordinates. `TriangleMesh3D.load(path, matrix)` validates cooked BVH topology,
+bounds and dependencies before applying the transform. `CollisionWorld3D.add_mesh`
+and `add_collider` register geometry explicitly; collision ownership is separate
+from render handles. Capsule sweeps, stepping, recovery and moving supports work
+with boxes and triangle meshes. Removing a mesh frees its geometry and invalidates
+its generational support handle.
+
+`CollisionStreamer3D.update(world, assets, collision)` replaces complete cell
+revisions and evicts geometry with scene cells. `ready(world, assets, x, z)` reports
+whether collision matches the current scene and asset revisions. The Atlas editor
+checks destination-cell readiness before stepping its character. Applications
+must apply the same loading policy to keep characters out of unloaded collision.
+The manager bounds cells processed per call and live collision payload. Its file
+reads and validation run on the caller; a large cell can exceed a frame budget.
+Temporary preparation and binary-read buffers are outside the live payload budget.
+
+Cooked rigs describe bind-pose geometry. Use explicit static collision for scenery
+and character capsules for animated actors; a cooked collider does not track skin
+deformation automatically.

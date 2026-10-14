@@ -8,6 +8,10 @@ struct Bounds3D(ImplicitlyCopyable, Movable):
     var minimum: Vec3
     var maximum: Vec3
 
+    def padded(self,amount: Float64) -> Self:
+        var padding=Vec3(amount,amount,amount)
+        return Self(self.minimum-padding,self.maximum+padding)
+
     def transformed(self, matrix: Mat4) -> Self:
         var low = matrix.point(self.minimum)
         var high = low
@@ -48,6 +52,11 @@ struct Frustum:
                 self.coefficients[plane*4+col] = matrix.data[col*4+3]+sign*matrix.data[col*4+axis]
 
     def visible(self, bounds: Bounds3D, origin: Vec3 = Vec3(0,0,0)) -> Bool:
+        return self.relation(bounds,origin)>=0
+
+    def relation(self, bounds: Bounds3D, origin: Vec3 = Vec3(0,0,0)) -> Int:
+        """-1 outside, 0 intersecting, 1 fully inside all six planes."""
+        var inside=True
         for p in range(6):
             var x = self.coefficients[p*4]
             var y = self.coefficients[p*4+1]
@@ -55,5 +64,9 @@ struct Frustum:
             var vx = bounds.maximum.x if x >= 0 else bounds.minimum.x
             var vy = bounds.maximum.y if y >= 0 else bounds.minimum.y
             var vz = bounds.maximum.z if z >= 0 else bounds.minimum.z
-            if x*(vx-origin.x)+y*(vy-origin.y)+z*(vz-origin.z)+self.coefficients[p*4+3] < 0: return False
-        return True
+            if x*(vx-origin.x)+y*(vy-origin.y)+z*(vz-origin.z)+self.coefficients[p*4+3] < 0:return -1
+            var nx=bounds.minimum.x if x>=0 else bounds.maximum.x
+            var ny=bounds.minimum.y if y>=0 else bounds.maximum.y
+            var nz=bounds.minimum.z if z>=0 else bounds.maximum.z
+            if x*(nx-origin.x)+y*(ny-origin.y)+z*(nz-origin.z)+self.coefficients[p*4+3]<0:inside=False
+        return 1 if inside else 0

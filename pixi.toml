@@ -5,24 +5,42 @@ platforms = ["linux-64", "linux-aarch64"]
 version = "0.1.0"
 
 [tasks]
+ffmpeg-setup = "bash scripts/setup-ffmpeg.sh"
+ffmpeg-check = "python scripts/qualify-ffmpeg.py --inspect-only"
+ffmpeg-test = "python scripts/qualify-ffmpeg.py"
+ffmpeg = "bash scripts/ffmpeg.sh"
+ffprobe = "bash scripts/ffprobe.sh"
+usd-setup = "bash scripts/setup-usd-tools.sh"
+usd-test = { cmd = "python scripts/qualify-usd.py", depends-on = ["library-build"] }
+usd-test-hardware = { cmd = "python scripts/qualify-usd.py --hardware", depends-on = ["library-build"] }
+usd-view = { cmd = "bash scripts/run-vulkan.sh build/atlas-usd-scene", depends-on = ["library-build"] }
+usd-editor = { cmd = "bash scripts/run-vulkan.sh build/atlas-usd-editor", depends-on = ["library-build"] }
+usd-stage = "python scripts/usd-session.py"
+blender = "bash scripts/blender.sh"
 library-build = "bash scripts/build.sh"
 library-test = { cmd = "bash scripts/test.sh", depends-on = ["library-build"] }
-library-smoke = { cmd = "env SDL_VIDEODRIVER=dummy SDL_AUDIODRIVER=dummy bash scripts/smoke.sh", depends-on = ["library-build"] }
+library-smoke = { cmd = "env SDL_VIDEO_DRIVER=dummy SDL_AUDIO_DRIVER=dummy bash scripts/smoke.sh", depends-on = ["library-build"] }
 library-demo = { cmd = "build/orb-collector", depends-on = ["library-build"] }
-world-demo = { cmd = "bash scripts/run-vulkan.sh build/open-world", depends-on = ["library-build"] }
-world-smoke = { cmd = "env MOJO_VK_SOFTWARE=1 bash scripts/run-vulkan.sh build/open-world --smoke", depends-on = ["library-build"] }
+world-demo = { cmd = "bash scripts/run-vulkan.sh build/atlas-world", depends-on = ["library-build"] }
+world-smoke = { cmd = "env MOJO_VK_SOFTWARE=1 bash scripts/run-vulkan.sh build/atlas-world --smoke", depends-on = ["library-build"] }
 vulkan-test = { cmd = "env MOJO_VK_VALIDATION=1 VK_LAYER_VALIDATE_SYNC=1 bash scripts/test.sh", depends-on = ["library-build"] }
 vulkan-window-test = { cmd = "bash scripts/test-vulkan-window.sh", depends-on = ["library-build"] }
 frankie-build = { cmd = "bash scripts/build-frankie.sh", depends-on = ["library-build"] }
-frankie = { cmd = "bash scripts/run-vulkan.sh build/yo-frankie", depends-on = ["frankie-build"] }
+frankie = { cmd = "bash games/yo-frankie/scripts/run-vulkan.sh build/yo-frankie", depends-on = ["frankie-build"] }
 frankie-test = { cmd = "bash scripts/test-frankie.sh", depends-on = ["frankie-build"] }
 frankie-window-test = { cmd = "bash scripts/test-vulkan-window.sh --frankie", depends-on = ["frankie-build"] }
 play = { depends-on = ["frankie-polished"] }
-frankie-polished = { cmd = "bash scripts/run-vulkan.sh build/yo-frankie --polished", depends-on = ["frankie-build"] }
+play-hardware = { cmd = "env MOJO_VK_REQUIRE_HARDWARE=1 bash games/yo-frankie/scripts/run-vulkan.sh build/yo-frankie --polished", depends-on = ["frankie-build"] }
+frankie-polished = { cmd = "bash games/yo-frankie/scripts/run-vulkan.sh build/yo-frankie --polished", depends-on = ["frankie-build"] }
 frankie-remake-assets = "bash scripts/remake-frankie.sh"
 frankie-benchmark = { cmd = "python3 scripts/benchmark-frankie.py", depends-on = ["frankie-build"] }
-frankie-realistic = { cmd = "bash scripts/run-vulkan.sh build/yo-frankie --realistic", depends-on = ["frankie-build"] }
+frankie-realistic = { cmd = "bash games/yo-frankie/scripts/run-vulkan.sh build/yo-frankie --realistic", depends-on = ["frankie-build"] }
 frankie-realistic-test = { cmd = "bash scripts/test-frankie-realistic.sh", depends-on = ["frankie-build"] }
+
+character-demo = { cmd = "bash scripts/run-vulkan.sh build/atlas-character", depends-on = ["library-build"] }
+
+atlas-benchmark = { cmd = "bash scripts/benchmark-atlas.sh instanced", depends-on = ["library-build"] }
 
 [dependencies]
 mojo = ">=1.2.0.dev2026092905,<2"
+pillow = ">=11,<13"

@@ -10,7 +10,7 @@ if not compiler:
     raise SystemExit('Vulkan shader compiler missing: install glslc or set GLSLC')
 output = Path('build')
 output.mkdir(exist_ok=True)
-arrays = ['/* Generated SPIR-V. Rebuild from shaders/, do not edit. */', '#include <stdint.h>']
+arrays = ['"""Generated SPIR-V. Rebuild from shaders/, do not edit."""', 'from std.collections import Array', 'from std.builtin.globals import global_constant', 'from native.mojo.runtime_support import c_address']
 for path in sorted(Path('shaders').iterdir()):
     if path.suffix not in {'.vert', '.frag'}:
         continue
@@ -22,5 +22,5 @@ for path in sorted(Path('shaders').iterdir()):
     data = binary.read_bytes()
     words = struct.unpack('<' + 'I' * (len(data) // 4), data)
     name = path.name.replace('.', '_')
-    arrays.append(f'static const uint32_t {name}[] = {{' + ','.join(hex(w) for w in words) + '};')
-(output / 'shaders.h').write_text('\n'.join(arrays) + '\n')
+    arrays.extend([f'comptime data_{name}: Array[UInt32, {len(words)}] = [' + ','.join(hex(w) for w in words) + ']', f'def shader_{name}() -> UInt64:', f'    return c_address(Pointer(to=global_constant[data_{name}]()))', f'def shader_{name}_size() -> UInt64:', f'    return {len(data)}'])
+Path('native/mojo/shaders.mojo').write_text('\n'.join(arrays) + '\n')

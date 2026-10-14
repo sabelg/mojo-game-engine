@@ -1,0 +1,47 @@
+"""Typed binary parity and malicious lengths/values/dependency names."""
+from std.testing import assert_equal,assert_true,assert_raises
+from mojo_game import Scene3D,Skeleton,AnimationClip,SkinnedMesh,Assets3D,Graphics3D
+from mojo_game.meshio import load_mesh
+from mojo_game.assetio import BinaryAsset,ASSET_MANIFEST
+
+def main() raises:
+    var base=String("build/atlas-cook-test/cooked/fixture-")
+    var text=load_mesh(base+"node-1-primitive-0.atlasmesh")
+    var binary=load_mesh(base+"node-1-primitive-0.atlasmeshb")
+    assert_equal(text.vertices,binary.vertices)
+    assert_equal(text.indices,binary.indices)
+    var scene=Scene3D.load(base+"scene.scene")
+    var cooked=Scene3D.load(base+"scene.sceneb")
+    assert_equal(scene.encode(),cooked.encode())
+    var skeleton=Skeleton.load(base+"skin-0.atlasskeletonb")
+    var clip=AnimationClip.load(base+"animation-0.atlasclipb")
+    var skin=SkinnedMesh.load(base+"node-1-primitive-0.atlasmeshb",base+"node-1-primitive-0.atlasskinb")
+    var deformed=skin.deform(skeleton,clip.sample(skeleton,.5))
+    assert_true(abs(Float64(deformed.vertices[0])-1)<1e-5)
+    var sparse=load_mesh("build/atlas-cook-test/extended/sparse-node-0-primitive-0.atlasmeshb")
+    assert_equal(sparse.vertices,text.vertices)
+    var cubic=AnimationClip.load("build/atlas-cook-test/extended/cubic-animation-0.atlasclipb")
+    var cubic_text=AnimationClip.load("build/atlas-cook-test/extended/cubic-animation-0.atlasclip")
+    var sampled=cubic.sample(skeleton,1)
+    assert_true(abs(sampled[0].position.x-1.5)<1e-8)
+    assert_equal(sampled[0].position.x,cubic_text.sample(skeleton,1)[0].position.x)
+    assert_equal(cubic.sample(skeleton,2,False)[0].position.x,2.0)
+    assert_equal(cubic.sample(skeleton,0)[0].position.x,0.0)
+    var morph=load_mesh("build/atlas-cook-test/extended/morph-node-1-primitive-0.atlasmeshb")
+    assert_equal(len(morph.tangents),12)
+    assert_equal(morph.tangents[3],Float32(-1))
+    assert_equal(len(morph.morphs),1)
+    var shaped=morph.deform_morph(morph.morph_weights)
+    assert_equal(shaped.vertices[2],Float32(.5))
+    assert_equal(shaped.maximum.z,.5)
+    var colored=load_mesh("build/atlas-cook-test/extended/colors-node-1-primitive-0.atlasmeshb")
+    assert_equal(len(colored.colors),12)
+    assert_equal(colored.colors[0],Float32(.25))
+    for name in ["count","truncated","nan","index","kind","trailing"]:
+        with assert_raises():_=load_mesh("build/atlas-cook-test/bad-binary/"+name+".atlasmeshb")
+    with assert_raises():_=BinaryAsset("build/atlas-cook-test/bad-binary/path.atlasb",ASSET_MANIFEST)
+    var invalid=BinaryAsset("build/atlas-cook-test/bad-binary/utf8.atlasb",ASSET_MANIFEST)
+    _=invalid.uint(4)
+    _=invalid.uint(4)
+    with assert_raises():_=invalid.text()
+    print("Binary assets passed: mesh/scene/rig/clip parity; bounded counts, checksums, UTF-8 and dependency names")

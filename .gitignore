@@ -16,3 +16,9 @@
 .env.*
 __pycache__/
 *.pyc
+
+/games/*/build/
+/games/*/.pixi/
+/games/*/.deps/
+/games/*/saves/*
+!/games/*/saves/.gitkeep

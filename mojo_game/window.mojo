@@ -1,4 +1,4 @@
-"""Native Mojo renderer and input. SDL2 supplies only OS/graphics primitives."""
+"""Native Mojo renderer and input. SDL3 supplies only OS/graphics primitives."""
 from std.ffi import external_call
 from std.collections import Array
 from mojo_game import sdl
@@ -45,19 +45,17 @@ struct Window:
         self.smoke_frames = smoke_frames
         self.initialized = False
         try:
-            sdl.check(external_call["SDL_Init", Int32](UInt32(0x21)))
+            sdl.check(external_call["SDL_Init", Bool](UInt32(0x20)))
             self.initialized = True
             self.window = external_call["SDL_CreateWindow", sdl.NullableHandle](
                 title.as_c_string_span(),
-                Int32(0x2FFF0000), Int32(0x2FFF0000), Int32(1100), Int32(760), UInt32(8 if offscreen else (sdl.FULLSCREEN_DESKTOP if fullscreen else 0)))
+                Int32(1100), Int32(760), UInt64(8 if offscreen else (sdl.FULLSCREEN_DESKTOP if fullscreen else 0)))
             if not self.window: raise Error(sdl.error_message())
-            self.renderer = external_call["SDL_CreateRenderer", sdl.NullableHandle](self.window.value(), Int32(-1), UInt32(6))
-            if not self.renderer:
-                self.renderer = external_call["SDL_CreateRenderer", sdl.NullableHandle](self.window.value(), Int32(-1), UInt32(1))
+            self.renderer = external_call["SDL_CreateRenderer", sdl.NullableHandle](self.window.value(), sdl.NullableHandle(None))
             if not self.renderer: raise Error(sdl.error_message())
-            sdl.check(external_call["SDL_RenderSetLogicalSize", Int32](self.renderer.value(), Int32(1100), Int32(760)))
+            sdl.check(external_call["SDL_SetRenderLogicalPresentation", Bool](self.renderer.value(), Int32(1100), Int32(760), Int32(2)))
             self.raster.attach(self.renderer.value())
-            _ = external_call["SDL_ShowCursor", Int32](Int32(0))
+            _ = external_call["SDL_HideCursor", Bool]()
             self.last_tick = sdl.ticks()
         except err:
             self.close()
@@ -75,8 +73,8 @@ struct Window:
             external_call["SDL_DestroyWindow", NoneType](self.window.value())
             self.window = None
         if self.initialized:
-            _ = external_call["SDL_ShowCursor", Int32](Int32(1))
-            external_call["SDL_QuitSubSystem", NoneType](UInt32(0x21))
+            _ = external_call["SDL_ShowCursor", Bool]()
+            external_call["SDL_QuitSubSystem", NoneType](UInt32(0x20))
             self.initialized = False
 
     def __deinit__(deinit self):
@@ -93,19 +91,18 @@ struct Window:
         while event.poll():
             var kind = event.kind()
             if kind == sdl.QUIT: self.running = False
-            elif kind == sdl.WINDOWEVENT:
-                if event.byte(12) == 13:
-                    self.input.lose_focus()
-                    if self.started and self.smoke_frames == 0: self.paused = True
-                elif event.byte(12) == 14: self.running = False
+            elif kind == sdl.WINDOW_FOCUS_LOST:
+                self.input.lose_focus()
+                if self.started and self.smoke_frames == 0:self.paused=True
+            elif kind == sdl.WINDOW_CLOSE_REQUESTED:self.running=False
             elif kind == sdl.KEYDOWN or kind == sdl.KEYUP:
-                self.input.key(event.scancode(),kind == sdl.KEYDOWN,event.byte(13) != 0)
-        var mx = Int32(0)
-        var my = Int32(0)
+                self.input.key(event.scancode(),kind == sdl.KEYDOWN,event.repeat())
+        var mx = Float32(0)
+        var my = Float32(0)
         var buttons = external_call["SDL_GetMouseState", UInt32](Pointer(to=mx), Pointer(to=my))
         var lx = Float32(0)
         var ly = Float32(0)
-        external_call["SDL_RenderWindowToLogical", NoneType](self.renderer.value(), mx, my, Pointer(to=lx), Pointer(to=ly))
+        _ = external_call["SDL_RenderCoordinatesFromWindow", Bool](self.renderer.value(), mx, my, Pointer(to=lx), Pointer(to=ly))
         if self.input.focus_lost: buttons = 0
         self.input.mouse_state(Int(lx),Int(ly),buttons)
         if self.input.pressed(41): self.running = False
@@ -113,16 +110,16 @@ struct Window:
         if self.smoke_frames > 0 and self.frames >= self.smoke_frames: self.running = False
 
     def present(self):
-        external_call["SDL_RenderPresent", NoneType](self.renderer.value())
+        _ = external_call["SDL_RenderPresent", Bool](self.renderer.value())
 
     def present_3d(self):
         self.raster.present(self.renderer.value())
 
     def color(self, c: Color):
-        _ = external_call["SDL_SetRenderDrawColor", Int32](self.renderer.value(), c.r, c.g, c.b, UInt8(255))
+        _ = external_call["SDL_SetRenderDrawColor", Bool](self.renderer.value(), c.r, c.g, c.b, UInt8(255))
 
     def raw_line(self, a: Point, b: Point):
-        _ = external_call["SDL_RenderDrawLineF", Int32](self.renderer.value(), Float32(a.x), Float32(a.y), Float32(b.x), Float32(b.y))
+        _ = external_call["SDL_RenderLine", Bool](self.renderer.value(), Float32(a.x), Float32(a.y), Float32(b.x), Float32(b.y))
 
     def line(self, a: Point, b: Point, c: Color):
         self.color(Color(c.r/5, c.g/5, c.b/5))
@@ -135,8 +132,8 @@ struct Window:
 
     def box(self, x: Int, y: Int, w: Int, h: Int, c: Color):
         self.color(c)
-        var rect = sdl.Rect(Int32(x), Int32(y), Int32(w), Int32(h))
-        _ = external_call["SDL_RenderFillRect", Int32](self.renderer.value(), Pointer(to=rect))
+        var rect = sdl.FRect(Float32(x), Float32(y), Float32(w), Float32(h))
+        _ = external_call["SDL_RenderFillRect", Bool](self.renderer.value(), Pointer(to=rect))
 
     def text(self, message: String, x: Int, y: Int, c: Color, scale: Int = 2, center: Bool = False):
         var left = x
@@ -152,35 +149,23 @@ struct Window:
     def begin(mut self):
         self.raster.clear()
         self.color(Color(5, 10, 20))
-        _ = external_call["SDL_RenderClear", Int32](self.renderer.value())
+        _ = external_call["SDL_RenderClear", Bool](self.renderer.value())
     def snapshot(self, var path: String) raises:
-        var width = Int32(0)
-        var height = Int32(0)
-        sdl.check(external_call["SDL_GetRendererOutputSize", Int32](self.renderer.value(), Pointer(to=width), Pointer(to=height)))
-        var pixels = List[UInt32](length=Int(width)*Int(height), fill=0)
-        var rect = sdl.Rect(0, 0, width, height)
-        # SDL_PIXELFORMAT_ARGB8888: SDL_DEFINE_PIXELFORMAT(1,6,3,6,32,4).
-        sdl.check(external_call["SDL_RenderReadPixels", Int32](self.renderer.value(), Pointer(to=rect), UInt32(0x16362004), pixels.unsafe_ptr(), width*4))
-        var surface = external_call["SDL_CreateRGBSurfaceFrom", sdl.NullableHandle](pixels.unsafe_ptr(), width, height, Int32(32), width*4, UInt32(0x00FF0000), UInt32(0x0000FF00), UInt32(0x000000FF), UInt32(0xFF000000))
-        if not surface: raise Error(sdl.error_message())
-        try:
-            var stream = external_call["SDL_RWFromFile", sdl.NullableHandle](path.as_c_string_span(), "wb".as_c_string_span())
-            if not stream: raise Error(sdl.error_message())
-            sdl.check(external_call["SDL_SaveBMP_RW", Int32](surface.value(), stream.value(), Int32(1)))
+        var surface=external_call["SDL_RenderReadPixels",sdl.NullableHandle](self.renderer.value(),sdl.NullableHandle(None))
+        if not surface:raise Error(sdl.error_message())
+        try:sdl.check(external_call["SDL_SaveBMP",Bool](surface.value(),path.as_c_string_span()))
         except err:
-            external_call["SDL_FreeSurface", NoneType](surface.value())
+            external_call["SDL_DestroySurface",NoneType](surface.value())
             raise err
-        external_call["SDL_FreeSurface", NoneType](surface.value())
+        external_call["SDL_DestroySurface",NoneType](surface.value())
 
 
     def load_bitmap(mut self, var path: String) raises -> Int:
         """Load BMP into a window-owned texture; returns a stable texture ID."""
-        var stream = external_call["SDL_RWFromFile", sdl.NullableHandle](path.as_c_string_span(), "rb".as_c_string_span())
-        if not stream: raise Error(sdl.error_message())
-        var surface = external_call["SDL_LoadBMP_RW", sdl.NullableHandle](stream.value(), Int32(1))
+        var surface=external_call["SDL_LoadBMP",sdl.NullableHandle](path.as_c_string_span())
         if not surface: raise Error(sdl.error_message())
         var texture = external_call["SDL_CreateTextureFromSurface", sdl.NullableHandle](self.renderer.value(), surface.value())
-        external_call["SDL_FreeSurface", NoneType](surface.value())
+        external_call["SDL_DestroySurface", NoneType](surface.value())
         if not texture: raise Error(sdl.error_message())
         self.textures.append(texture)
         return len(self.textures)-1
@@ -190,4 +175,6 @@ struct Window:
         if texture < 0 or texture >= len(self.textures): raise Error("Invalid texture ID")
         if source.w <= 0 or source.h <= 0 or destination.w <= 0 or destination.h <= 0:
             raise Error("Sprite dimensions must be positive")
-        sdl.check(external_call["SDL_RenderCopyEx", Int32](self.renderer.value(), self.textures[texture].value(), Pointer(to=source), Pointer(to=destination), angle, sdl.NullableHandle(None), Int32(0)))
+        var src=sdl.FRect(Float32(source.x),Float32(source.y),Float32(source.w),Float32(source.h))
+        var dst=sdl.FRect(Float32(destination.x),Float32(destination.y),Float32(destination.w),Float32(destination.h))
+        sdl.check(external_call["SDL_RenderTextureRotated", Bool](self.renderer.value(), self.textures[texture].value(), Pointer(to=src), Pointer(to=dst), angle, sdl.NullableHandle(None), Int32(0)))

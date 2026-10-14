@@ -2,6 +2,7 @@
 from std.collections import Array
 
 struct Input(Copyable, Movable):
+    var text: String
     var held: Array[Bool,512]
     var presses: Array[Bool,512]
     var releases: Array[Bool,512]
@@ -9,6 +10,7 @@ struct Input(Copyable, Movable):
     var mouse_y: Int
     var mouse_dx: Int
     var mouse_dy: Int
+    var mouse_wheel: Int
     var mouse_presses: UInt32
     var mouse_releases: UInt32
     var mouse_buttons: UInt32
@@ -16,6 +18,7 @@ struct Input(Copyable, Movable):
     var focus_lost: Bool
 
     def __init__(out self):
+        self.text=String()
         self.held = Array[Bool,512](fill=False)
         self.presses = Array[Bool,512](fill=False)
         self.releases = Array[Bool,512](fill=False)
@@ -24,16 +27,19 @@ struct Input(Copyable, Movable):
         self.mouse_buttons = 0
         self.mouse_dx = 0
         self.mouse_dy = 0
+        self.mouse_wheel=0
         self.mouse_presses = 0
         self.mouse_releases = 0
         self.dt = 0
         self.focus_lost = False
 
     def clear_edges(mut self):
+        self.text=String()
         self.mouse_presses = 0
         self.mouse_releases = 0
         self.mouse_dx = 0
         self.mouse_dy = 0
+        self.mouse_wheel=0
         self.presses = Array[Bool,512](fill=False)
         self.releases = Array[Bool,512](fill=False)
         self.focus_lost = False
@@ -70,6 +76,7 @@ struct Input(Copyable, Movable):
 
     def lose_focus(mut self):
         self.focus_lost = True
+        self.text=String()
         self.mouse_releases |= self.mouse_buttons
         self.mouse_presses = 0
         self.mouse_buttons = 0
