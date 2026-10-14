@@ -1,0 +1,41 @@
+{
+  "status": "FRICTION_NEXT_STAGE_SOURCE_BASED_DESIGN_ONLY_SEALED",
+  "recorded_at_UTC": "2026-10-14T03:39:26.872333+00:00",
+  "design_sha256": "2737da8d746c8425440fb2efa53ab53c2c01165ee7e149a1118119b5d8e49962",
+  "code_changes": [],
+  "implementations": [],
+  "builds_or_native_replays": 0,
+  "benchmarks": 0,
+  "recommendation": "Frozen-pose reduced coupled patch proof first; separate opt-in flat non-tipping sliding/sticking owner only after physics/accuracy decisions; no rolling or rotating contacts.",
+  "accuracy_decision": "Recommend bounded physical stopping-time splits within existing finite segment ceiling, preserve four base intervals and all gates. Unsplit half-kicks can lose17.03125um atmu.2, above10um gate; explicit approval needed before coding the added stopping contract.",
+  "preservation": {
+    "protected_hashes": 18374,
+    "asset_save_identities": 5901,
+    "campaign_sources": 17,
+    "other_source_lock_hashes": 119,
+    "pins": [
+      {
+        "version": "1.2.0.dev2026092905",
+        "record_sha256": "40307d16e09c2e88bfe8085346d028d7479d93867fdd6e210305ed3fbaf9c534"
+      },
+      {
+        "version": "26.7.0.dev2026092905",
+        "record_sha256": "dab5b010e4a7b5f6b7dcc4f60f2e30f9e5e69b689ef2bd57e46025d251dc2403"
+      }
+    ],
+    "qualified_frictionless_owner_and_evidence_unchanged": true,
+    "H3": "paused",
+    "driver_power_security_profiling_permission_changes": [],
+    "counter_retry": false
+  },
+  "resources": {
+    "execution_slots": 1,
+    "reserve_GiB": 32,
+    "final_available_GiB": 113.56547927856445,
+    "no_GPU_execution": true
+  },
+  "cleanup": {
+    "owned_jobs": [],
+    "GPU_compute_apps": ""
+  }
+}

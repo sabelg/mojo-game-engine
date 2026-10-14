@@ -1,0 +1,39 @@
+# Sealed temporal-floor diagnosis
+
+The failed owner, strict reference, package, gates and budgets remain unchanged. Existing source/saved traces were read first. Missing per-correction data was obtained by one finite CPU-only instrumentation of the already-validated scalar evaluator, restricted to quiet support (fixture2) and elastic impact (fixture5). Its endpoints/error codes match saved native states within the existing1e-10 scaled comparison. No GPU replay, benchmark, budget sweep, new solver or acceptance claim.
+
+## Elastic impact: finite coupled convergence, not a moving restitution target
+
+The physical gap quadratic reaches t=0.0019807557555537062s. Actual segment-sized force integration produces vy=-1.0194312139619819m/s, omega=0 and all four point incoming velocities equal. All rows receive the same fixed target +1.0194312139619819m/s. `correct` does read intermediate point velocities for its Gauss-Seidel residual, but never recomputes the restitution target from them. Eight contact corrections occur in one impact group. No later support group, repeated restitution, remaining-time advance or second force kick occurs before rejection.
+
+At the flat face, every diagonal inverse effective mass is0.875kg^-1; the lever arms are the four(±.5,-.5,±.5)m corners. Off-diagonal coupling is0.5 for adjacent corners and0.125 for opposite corners. The full four-point matrix has rank3, including a checkerboard null mode. A diagonal independent-point solve is not a simultaneous four-point solution.
+
+The first corner update has deltaJ=2.3301284890559586kgm/s. It creates world spin momentum(1.1650642445279793,0,-1.1650642445279793)kgm²/s, omega(0.8737981833959845,0,-0.8737981833959845)rad/s, while kinetic energy remains1.03924J. This torque is the correct r×J for an off-centre impulse; it is a legitimate intermediate iterate, but must cancel before integration/acceptance.
+
+The second corner in sweep1 sees current point speed+0.1456330305659974m/s, still below the frozen target. Its deltaJ=0.9986264953096965kgm/s adds0.5817320116618079J; kinetic energy becomes1.6209720116618078J. This is the first group energy excess. After two sweeps, cancellation is incomplete: energy1.1391111418548334J, gain0.09987114185483326J, residual0.09292228493892063m/s and nonzero spin. This precedes any second collision/force application.
+
+An independent physical symmetry/momentum solution gives minimum-norm pressure1.0194312139619819kgm/s at each corner, outgoing COM vy+1.0194312139619819m/s, zero spin and zero elastic energy change. The saved pressure sum overshoots this solution by0.09292228493892107kgm/s. More decisively, the elastic identity
+
+    deltaK = 0.5 * sum(lambda_i * (v_plus_i - frozen_target_i))
+
+predicts0.09987114185483331J from the final residual. This accounts for the complete observed gain to rounding. Per-correction energy changes match deltaJ*vn +0.5*k*deltaJ² within2.23e-16J, and angular-momentum changes match r×J within1.67e-16kgm²/s. There is no sign, lever-arm, effective-mass or duplicate-impulse application error in this replay. Fixed restitution targets need a coherent coupled solve; recomputing them from intermediate updates would be the wrong fix.
+
+## Quiet support: underconverged drift plus invalid point activation
+
+The force ledger is eight half-kicks of h/2, total vertical external impulse-0.654kgm/s = m*g*(1/30). There is no gravity multiplication or missing/doubled half-kick. Start/end groups are separate physical force-boundary solves; the final four sweeps correctly retain the last end group's pressure and include negative delta corrections.
+
+The very first scalar corner correction has deltaJ0.046714285714285715kgm/s. It creates spin momentum(0.023357142857142858,0,-0.023357142857142858)kgm²/s and omega(0.017517857142857144,0,-0.017517857142857144)rad/s. Exact simultaneous support would instead distribute0.0204375kgm/s per corner per half-kick and retain zero velocity/spin. The first two-sweep group leaves residual0.0018629007748923137m/s. Advancing this intermediate state immediately rocks/lifts the box; that is the convergence-budget failure before any later geometry error.
+
+A separate contact-update defect then appears. At the first end group, corner clearances are[15.5242,9.25483,6.26940,0.0000312392]micrometres. The pair still has a near-touching corner, so retaining a pair episode is not itself a repeated-bounce bug. However, `correct` unconditionally constrains all four rows to zero normal speed, with no per-row gap/admission test. Three rows have separated; the first is even beyond the10micrometre penetration slop, which is not a declared positive contact activation offset. Later groups keep applying impulses there. The trace records54 positive-gap row updates across eight groups. By the last group, three gaps are62.5075/37.2908/25.2169micrometres, while one corner remains near zero.
+
+Thus quiet support is not merely a residual that needs more sweeps. Underconverged spin changes the geometric contact stencil, but the implementation continues solving the original full face. The CPU evaluator mirrors this same erroneous selection. Final normal residual1.55417e-7m/s, lift31.2533micrometres and orientation error bound45.0164microradians remain rejected. Contact corrections never add kinetic energy in this fixture; potential increases0.000613190319578294J as the box is lifted. Discrete half-kick work0.012829087097933798J and contact kinetic loss-0.012829087097918478J nearly cancel, leaving kinetic1.53e-14J. That bookkeeping identity does not establish physical energy correctness: it exposes an artificial elevation caused by advancing incomplete solves and then imposing separated rows.
+
+## Independence assessment and one recommendation
+
+The scalar CPU evaluator uses separate vector/tensor/quaternion arithmetic, another quadratic-root formulation and trigonometric rotation rather than the GPU primitive. It is an independent numerical implementation of the chosen recurrence. It is **not** an independent semantic oracle for contact admission, force-group scheduling or restitution latching: those branches, the unconditional four-corner stencil and ordered pressure updates were transcribed from the same design. It proves port agreement, not correct physical semantics. The symmetry, momentum, per-impulse energy identity, analytic TOI and independent contact-gap checks above supply the missing physical adjudication.
+
+Recommend one justified next solver change for review: replace ordered independent-corner corrections by a coherent, rank-aware normal **patch** solve for a certified simultaneous planar face, retaining frozen pre-impact targets, nonnegative accumulated pressure and delta-only application. Solve/validate the patch before drift rather than publishing a partial diagonal iterate. The current fixtures have an exact symmetric nonnegative solution, so preserving symmetry need not mean clamping angular motion. Any uncertified/noncoplanar/positive-gap stencil must be rejected or regenerated under the declared domain; a block solve on the stale four rows would not correct the admission defect. This is a proposal, not an implementation, budget increase or claim that a general block solver passes.
+
+Both observed failures are real: impact energy/spin follows incomplete coupled convergence; quiet support additionally reveals invalid separated-point constraints after that incomplete iterate is advanced. No evidence here implicates recomputed restitution targets or duplicate force/restitution impulses in the two saved failing fixtures. The failed owner stays sealed, unqualified and unpromoted. Stop after diagnosis.
+
+Evidence: diagnosis.json, fixture2/5 group JSON and per-correction JSONL, sealed-inputs.json and verification.json. No new GPU stage or owned job remains; prior reference/pins/identity data/unrelated work/H3 pause are preserved.

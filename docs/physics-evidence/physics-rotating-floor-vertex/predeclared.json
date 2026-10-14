@@ -1,0 +1,20 @@
+{
+  "primitive": "refresh all8 corners and frictionless uniquevertex frozenpose impact",
+  "domain": "arbitrary bounded unit body/shape quaternion; optional localcenter; fullomega andanisotropicI; infinite horizontalfloor; mu0",
+  "counts": {
+    "fixture_kinds": 40,
+    "variants": 4,
+    "enumerations": 16,
+    "records_each_path": 2560,
+    "source_and_fresh_package": true
+  },
+  "reference": "Decimal80 explicit fullworldtensor analytic impulse andinvariants; no productionoracle imports",
+  "gates": "unchanged1e-10scaledstate,1e-9scalednormal/energy,exactinput/rollback/canaries; geometry1e-9 certificate; noangularclamp",
+  "remaining": "No timeintegration/TOI/frictionalrolling/multibody/timing inthisstage",
+  "failure_policy": "Stopfirst substantive physicalfailure orcompletedboundedresult; retainreceipts",
+  "build_threads": 1,
+  "build_guard_s": 180,
+  "native_guard_s": 30,
+  "reserve_GiB": 32,
+  "H3": "paused"
+}

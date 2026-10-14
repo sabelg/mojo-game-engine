@@ -1,0 +1,9 @@
+{
+  "recorded_at_UTC": "2026-10-13T16:41:11.933830+00:00",
+  "design_sha256": "fe20cc22c383a671a1293f49b29f9b3c1cb6acb6bbc1e3bc65c78067d93e7387",
+  "accepted_record_difference": "none",
+  "extra_vsNTTT_bytes": 2304,
+  "additional_launches_vsNTTT": 0,
+  "baseline_coverage": 63,
+  "performance_started": false
+}

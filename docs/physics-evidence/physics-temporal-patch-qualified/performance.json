@@ -1,0 +1,4694 @@
+{
+  "methods": [
+    "temporal_patch",
+    "strict96_macro",
+    "four_full_strict96_substeps"
+  ],
+  "fixtures": [
+    {
+      "fixture": 0,
+      "label": "constant-force free flight",
+      "methods": [
+        {
+          "method": 0,
+          "plain_warmed_complete_advance_ms": {
+            "n": 24,
+            "median": 1.019818999338895,
+            "min": 1.0150020098080859,
+            "max": 1.8380059918854386
+          },
+          "plain_first_call_complete_advance_ms": {
+            "n": 3,
+            "median": 3.3781100064516068,
+            "min": 3.3682860084809363,
+            "max": 3.4989100095117465
+          },
+          "plain_per_block_warmed_median_ms": [
+            1.0174580020247959,
+            1.078154004062526,
+            1.0191620021942072
+          ],
+          "traced_warmed_metrics": {
+            "GPU_kernel_sum_ms": {
+              "n": 4,
+              "median": 0.923968,
+              "min": 0.92384,
+              "max": 0.9241280000000001
+            },
+            "GPU_copy_sum_ms": {
+              "n": 4,
+              "median": 0.005664,
+              "min": 0.005504,
+              "max": 0.0056960000000000005
+            },
+            "GPU_memset_sum_ms": {
+              "n": 4,
+              "median": 0.0019520000000000002,
+              "min": 0.00192,
+              "max": 0.002048
+            },
+            "GPU_activity_span_ms": {
+              "n": 4,
+              "median": 1.04216,
+              "min": 1.039104,
+              "max": 1.042752
+            },
+            "API_total_duration_ms": {
+              "n": 4,
+              "median": 1.0273119999999998,
+              "min": 1.024992,
+              "max": 1.028432
+            },
+            "API_launch_duration_ms": {
+              "n": 4,
+              "median": 0.013264000000000001,
+              "min": 0.013072,
+              "max": 0.013360000000000002
+            },
+            "API_synchronization_duration_ms": {
+              "n": 4,
+              "median": 0.9698319999999999,
+              "min": 0.9688319999999999,
+              "max": 0.9705439999999999
+            },
+            "NVTX_complete_advance_ms": {
+              "n": 4,
+              "median": 1.050272,
+              "min": 1.046992,
+              "max": 1.050992
+            },
+            "clock_complete_advance_ms": {
+              "n": 4,
+              "median": 1.0499945055926219,
+              "min": 1.0466990061104298,
+              "max": 1.0507150000194088
+            }
+          },
+          "traced_kernel_GPU_ms": {
+            "command_transaction": {
+              "n": 4,
+              "median": 0.002272,
+              "min": 0.002272,
+              "max": 0.002432
+            },
+            "copy_transaction": {
+              "n": 4,
+              "median": 0.0043040000000000005,
+              "min": 0.004288,
+              "max": 0.00432
+            },
+            "commit_transaction": {
+              "n": 4,
+              "median": 0.004496,
+              "min": 0.00448,
+              "max": 0.004512
+            },
+            "shape_transaction": {
+              "n": 4,
+              "median": 0.08544,
+              "min": 0.085376,
+              "max": 0.085472
+            },
+            "commit_temporal": {
+              "n": 4,
+              "median": 0.284368,
+              "min": 0.284288,
+              "max": 0.284384
+            },
+            "temporal_patch_floor": {
+              "n": 4,
+              "median": 0.543072,
+              "min": 0.543072,
+              "max": 0.543104
+            }
+          },
+          "traced_activity_samples": [
+            {
+              "frame": 0,
+              "metrics": {
+                "GPU_kernel_sum_ms": 1.731968,
+                "GPU_copy_sum_ms": 0.007616,
+                "GPU_memset_sum_ms": 0.002176,
+                "GPU_activity_span_ms": 4.298272,
+                "API_total_duration_ms": 4.232,
+                "API_launch_duration_ms": 1.3886079999999998,
+                "API_synchronization_duration_ms": 1.106256,
+                "NVTX_complete_advance_ms": 4.315872,
+                "clock_complete_advance_ms": 4.313113997341134
+              },
+              "counts": {
+                "kernels": 6,
+                "CUDA_APIs": 142,
+                "copies": 14,
+                "memsets": 4,
+                "copy_bytes": 19072,
+                "API_launches": 6,
+                "API_synchronizations": 25
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.011072,
+                "command_transaction": 0.003264,
+                "commit_transaction": 0.007776,
+                "shape_transaction": 0.08544,
+                "temporal_patch_floor": 0.969088,
+                "commit_temporal": 0.655328
+              }
+            },
+            {
+              "frame": 1,
+              "metrics": {
+                "GPU_kernel_sum_ms": 1.007936,
+                "GPU_copy_sum_ms": 0.007296,
+                "GPU_memset_sum_ms": 0.0022719999999999997,
+                "GPU_activity_span_ms": 1.138624,
+                "API_total_duration_ms": 1.121024,
+                "API_launch_duration_ms": 0.016592000000000003,
+                "API_synchronization_duration_ms": 1.050128,
+                "NVTX_complete_advance_ms": 1.151552,
+                "clock_complete_advance_ms": 1.1503779969643801
+              },
+              "counts": {
+                "kernels": 6,
+                "CUDA_APIs": 138,
+                "copies": 14,
+                "memsets": 4,
+                "copy_bytes": 19072,
+                "API_launches": 6,
+                "API_synchronizations": 25
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.004832,
+                "command_transaction": 0.003776,
+                "commit_transaction": 0.007904,
+                "shape_transaction": 0.16224,
+                "temporal_patch_floor": 0.54336,
+                "commit_temporal": 0.285824
+              }
+            },
+            {
+              "frame": 2,
+              "metrics": {
+                "GPU_kernel_sum_ms": 0.92384,
+                "GPU_copy_sum_ms": 0.005664,
+                "GPU_memset_sum_ms": 0.001952,
+                "GPU_activity_span_ms": 1.041856,
+                "API_total_duration_ms": 1.027424,
+                "API_launch_duration_ms": 0.013360000000000002,
+                "API_synchronization_duration_ms": 0.9688319999999999,
+                "NVTX_complete_advance_ms": 1.050368,
+                "clock_complete_advance_ms": 1.0499790078029037
+              },
+              "counts": {
+                "kernels": 6,
+                "CUDA_APIs": 138,
+                "copies": 14,
+                "memsets": 4,
+                "copy_bytes": 19072,
+                "API_launches": 6,
+                "API_synchronizations": 25
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.00432,
+                "command_transaction": 0.002272,
+                "commit_transaction": 0.004512,
+                "shape_transaction": 0.085376,
+                "temporal_patch_floor": 0.543072,
+                "commit_temporal": 0.284288
+              }
+            },
+            {
+              "frame": 3,
+              "metrics": {
+                "GPU_kernel_sum_ms": 0.923936,
+                "GPU_copy_sum_ms": 0.005664,
+                "GPU_memset_sum_ms": 0.00192,
+                "GPU_activity_span_ms": 1.039104,
+                "API_total_duration_ms": 1.024992,
+                "API_launch_duration_ms": 0.013344,
+                "API_synchronization_duration_ms": 0.9696319999999998,
+                "NVTX_complete_advance_ms": 1.046992,
+                "clock_complete_advance_ms": 1.0466990061104298
+              },
+              "counts": {
+                "kernels": 6,
+                "CUDA_APIs": 138,
+                "copies": 14,
+                "memsets": 4,
+                "copy_bytes": 19072,
+                "API_launches": 6,
+                "API_synchronizations": 25
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.00432,
+                "command_transaction": 0.002272,
+                "commit_transaction": 0.004512,
+                "shape_transaction": 0.085408,
+                "temporal_patch_floor": 0.543072,
+                "commit_temporal": 0.284352
+              }
+            },
+            {
+              "frame": 4,
+              "metrics": {
+                "GPU_kernel_sum_ms": 0.9241280000000001,
+                "GPU_copy_sum_ms": 0.005504,
+                "GPU_memset_sum_ms": 0.0019520000000000002,
+                "GPU_activity_span_ms": 1.042752,
+                "API_total_duration_ms": 1.028432,
+                "API_launch_duration_ms": 0.013184000000000001,
+                "API_synchronization_duration_ms": 0.9705439999999999,
+                "NVTX_complete_advance_ms": 1.050992,
+                "clock_complete_advance_ms": 1.0507150000194088
+              },
+              "counts": {
+                "kernels": 6,
+                "CUDA_APIs": 138,
+                "copies": 14,
+                "memsets": 4,
+                "copy_bytes": 19072,
+                "API_launches": 6,
+                "API_synchronizations": 25
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.004288,
+                "command_transaction": 0.002432,
+                "commit_transaction": 0.00448,
+                "shape_transaction": 0.085472,
+                "temporal_patch_floor": 0.543072,
+                "commit_temporal": 0.284384
+              }
+            },
+            {
+              "frame": 5,
+              "metrics": {
+                "GPU_kernel_sum_ms": 0.924,
+                "GPU_copy_sum_ms": 0.0056960000000000005,
+                "GPU_memset_sum_ms": 0.002048,
+                "GPU_activity_span_ms": 1.042464,
+                "API_total_duration_ms": 1.0272,
+                "API_launch_duration_ms": 0.013072,
+                "API_synchronization_duration_ms": 0.970032,
+                "NVTX_complete_advance_ms": 1.050176,
+                "clock_complete_advance_ms": 1.05001000338234
+              },
+              "counts": {
+                "kernels": 6,
+                "CUDA_APIs": 138,
+                "copies": 14,
+                "memsets": 4,
+                "copy_bytes": 19072,
+                "API_launches": 6,
+                "API_synchronizations": 25
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.004288,
+                "command_transaction": 0.002272,
+                "commit_transaction": 0.00448,
+                "shape_transaction": 0.085472,
+                "temporal_patch_floor": 0.543104,
+                "commit_temporal": 0.284384
+              }
+            }
+          ],
+          "accuracy_maxima": {
+            "matched_scalar_position_error_m": 8.882936087114456e-16,
+            "matched_scalar_velocity_error_mps": 1.788889374889859e-15,
+            "analytic_y_error_m": 8.881784197001252e-16,
+            "spin_radps": 0.0,
+            "angle_rad": 0.0,
+            "normal_residual_mps": 0.0,
+            "depth_m": 0.0,
+            "contact_KE_gain_J": 0.0
+          },
+          "source_package_no_numeric_changes": true,
+          "TOI_admissions": {
+            "plain_total": 0,
+            "per_trajectory": [
+              0,
+              0,
+              0
+            ],
+            "warm_total": 0
+          },
+          "work": {
+            "velocity_sweeps_per_macro": [
+              0
+            ],
+            "patch_corrections_per_macro": [
+              0
+            ],
+            "patch_solves_per_macro": [
+              0
+            ],
+            "points_per_macro": [
+              0
+            ],
+            "warm_kernel_launches_per_macro": 6
+          }
+        },
+        {
+          "method": 1,
+          "plain_warmed_complete_advance_ms": {
+            "n": 24,
+            "median": 1.7766545061022043,
+            "min": 1.7568070034030825,
+            "max": 3.0378070077858865
+          },
+          "plain_first_call_complete_advance_ms": {
+            "n": 3,
+            "median": 9.01979100308381,
+            "min": 8.778864998021163,
+            "max": 9.273228992242366
+          },
+          "plain_per_block_warmed_median_ms": [
+            1.7589740018593147,
+            1.7604540043976158,
+            1.8493579991627485
+          ],
+          "traced_warmed_metrics": {
+            "GPU_kernel_sum_ms": {
+              "n": 4,
+              "median": 1.627648,
+              "min": 1.627072,
+              "max": 1.704096
+            },
+            "GPU_copy_sum_ms": {
+              "n": 4,
+              "median": 0.008112000000000001,
+              "min": 0.008,
+              "max": 0.009408
+            },
+            "GPU_memset_sum_ms": {
+              "n": 4,
+              "median": 0.001984,
+              "min": 0.0019520000000000002,
+              "max": 0.002016
+            },
+            "GPU_activity_span_ms": {
+              "n": 4,
+              "median": 1.847776,
+              "min": 1.843552,
+              "max": 1.9256
+            },
+            "API_total_duration_ms": {
+              "n": 4,
+              "median": 1.820904,
+              "min": 1.815968,
+              "max": 1.897728
+            },
+            "API_launch_duration_ms": {
+              "n": 4,
+              "median": 0.042207999999999996,
+              "min": 0.041792,
+              "max": 0.043504
+            },
+            "API_synchronization_duration_ms": {
+              "n": 4,
+              "median": 1.7167759999999999,
+              "min": 1.7151520000000002,
+              "max": 1.794848
+            },
+            "NVTX_complete_advance_ms": {
+              "n": 4,
+              "median": 1.8593760000000001,
+              "min": 1.855264,
+              "max": 1.936576
+            },
+            "clock_complete_advance_ms": {
+              "n": 4,
+              "median": 1.8589905012049712,
+              "min": 1.8547580111771822,
+              "max": 1.9360380101716146
+            }
+          },
+          "traced_kernel_GPU_ms": {
+            "validate_box_response": {
+              "n": 4,
+              "median": 0.119552,
+              "min": 0.11952,
+              "max": 0.119552
+            },
+            "reduce_status_kernel": {
+              "n": 4,
+              "median": 0.012944,
+              "min": 0.012928,
+              "max": 0.013632
+            },
+            "integrate_live": {
+              "n": 4,
+              "median": 0.170848,
+              "min": 0.170816,
+              "max": 0.17376
+            },
+            "commit_step": {
+              "n": 4,
+              "median": 0.00416,
+              "min": 0.00416,
+              "max": 0.00432
+            },
+            "pair_geometry": {
+              "n": 4,
+              "median": 0.00096,
+              "min": 0.00096,
+              "max": 0.00096
+            },
+            "compact_detection": {
+              "n": 4,
+              "median": 0.199056,
+              "min": 0.199008,
+              "max": 0.200512
+            },
+            "box_pairs": {
+              "n": 4,
+              "median": 0.001968,
+              "min": 0.001856,
+              "max": 0.001984
+            },
+            "prepare_bounds": {
+              "n": 4,
+              "median": 0.06576,
+              "min": 0.065728,
+              "max": 0.065792
+            },
+            "project_box_response": {
+              "n": 4,
+              "median": 0.173248,
+              "min": 0.173216,
+              "max": 0.17328
+            },
+            "copy_projected": {
+              "n": 4,
+              "median": 0.00096,
+              "min": 0.00096,
+              "max": 0.000992
+            },
+            "command_transaction": {
+              "n": 4,
+              "median": 0.00224,
+              "min": 0.002208,
+              "max": 0.003488
+            },
+            "begin_box_response": {
+              "n": 4,
+              "median": 0.527632,
+              "min": 0.527584,
+              "max": 0.528416
+            },
+            "pack_box_response": {
+              "n": 4,
+              "median": 0.235264,
+              "min": 0.2352,
+              "max": 0.235264
+            },
+            "commit_response": {
+              "n": 4,
+              "median": 0.004128,
+              "min": 0.004128,
+              "max": 0.004128
+            },
+            "copy_transaction": {
+              "n": 4,
+              "median": 0.004352,
+              "min": 0.00432,
+              "max": 0.004672
+            },
+            "commit_transaction": {
+              "n": 4,
+              "median": 0.004496,
+              "min": 0.00448,
+              "max": 0.007936
+            },
+            "shape_transaction": {
+              "n": 4,
+              "median": 0.084912,
+              "min": 0.084896,
+              "max": 0.151552
+            },
+            "solve_box_response": {
+              "n": 4,
+              "median": 0.014816,
+              "min": 0.014816,
+              "max": 0.014848
+            }
+          },
+          "traced_activity_samples": [
+            {
+              "frame": 0,
+              "metrics": {
+                "GPU_kernel_sum_ms": 2.68448,
+                "GPU_copy_sum_ms": 0.011072,
+                "GPU_memset_sum_ms": 0.0019520000000000002,
+                "GPU_activity_span_ms": 8.904032,
+                "API_total_duration_ms": 8.407984,
+                "API_launch_duration_ms": 4.633312,
+                "API_synchronization_duration_ms": 0.6143840000000002,
+                "NVTX_complete_advance_ms": 8.923312,
+                "clock_complete_advance_ms": 8.919521991629153
+              },
+              "counts": {
+                "kernels": 20,
+                "CUDA_APIs": 246,
+                "copies": 20,
+                "memsets": 4,
+                "copy_bytes": 19264,
+                "API_launches": 20,
+                "API_synchronizations": 36
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.0112,
+                "command_transaction": 0.003232,
+                "commit_transaction": 0.007808,
+                "integrate_live": 0.172992,
+                "reduce_status_kernel": 0.02128,
+                "commit_step": 0.01056,
+                "shape_transaction": 0.161024,
+                "prepare_bounds": 0.071328,
+                "pair_geometry": 0.001376,
+                "compact_detection": 0.326688,
+                "box_pairs": 0.0033280000000000002,
+                "begin_box_response": 1.070208,
+                "project_box_response": 0.235712,
+                "pack_box_response": 0.365984,
+                "copy_projected": 0.001632,
+                "solve_box_response": 0.025184,
+                "validate_box_response": 0.184576,
+                "commit_response": 0.010368
+              }
+            },
+            {
+              "frame": 1,
+              "metrics": {
+                "GPU_kernel_sum_ms": 2.11936,
+                "GPU_copy_sum_ms": 0.01248,
+                "GPU_memset_sum_ms": 0.002336,
+                "GPU_activity_span_ms": 2.625824,
+                "API_total_duration_ms": 2.590864,
+                "API_launch_duration_ms": 0.047344,
+                "API_synchronization_duration_ms": 2.476288,
+                "NVTX_complete_advance_ms": 2.642672,
+                "clock_complete_advance_ms": 2.6415059983264655
+              },
+              "counts": {
+                "kernels": 20,
+                "CUDA_APIs": 222,
+                "copies": 20,
+                "memsets": 4,
+                "copy_bytes": 19264,
+                "API_launches": 20,
+                "API_synchronizations": 36
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.004928,
+                "command_transaction": 0.003456,
+                "commit_transaction": 0.00784,
+                "integrate_live": 0.173696,
+                "reduce_status_kernel": 0.013472,
+                "commit_step": 0.00416,
+                "shape_transaction": 0.158656,
+                "prepare_bounds": 0.068416,
+                "pair_geometry": 0.001664,
+                "compact_detection": 0.202752,
+                "box_pairs": 0.0024,
+                "begin_box_response": 0.92576,
+                "project_box_response": 0.174176,
+                "pack_box_response": 0.236416,
+                "copy_projected": 0.001248,
+                "solve_box_response": 0.016544,
+                "validate_box_response": 0.11952,
+                "commit_response": 0.004256
+              }
+            },
+            {
+              "frame": 2,
+              "metrics": {
+                "GPU_kernel_sum_ms": 1.704096,
+                "GPU_copy_sum_ms": 0.009408,
+                "GPU_memset_sum_ms": 0.001984,
+                "GPU_activity_span_ms": 1.9256,
+                "API_total_duration_ms": 1.897728,
+                "API_launch_duration_ms": 0.043504,
+                "API_synchronization_duration_ms": 1.794848,
+                "NVTX_complete_advance_ms": 1.936576,
+                "clock_complete_advance_ms": 1.9360380101716146
+              },
+              "counts": {
+                "kernels": 20,
+                "CUDA_APIs": 223,
+                "copies": 20,
+                "memsets": 4,
+                "copy_bytes": 19264,
+                "API_launches": 20,
+                "API_synchronizations": 36
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.004672,
+                "command_transaction": 0.003488,
+                "commit_transaction": 0.007936,
+                "integrate_live": 0.17376,
+                "reduce_status_kernel": 0.013632,
+                "commit_step": 0.00432,
+                "shape_transaction": 0.151552,
+                "prepare_bounds": 0.065728,
+                "pair_geometry": 0.00096,
+                "compact_detection": 0.200512,
+                "box_pairs": 0.0019519999999999997,
+                "begin_box_response": 0.527616,
+                "project_box_response": 0.173248,
+                "pack_box_response": 0.235264,
+                "copy_projected": 0.000992,
+                "solve_box_response": 0.014816,
+                "validate_box_response": 0.11952,
+                "commit_response": 0.004128
+              }
+            },
+            {
+              "frame": 3,
+              "metrics": {
+                "GPU_kernel_sum_ms": 1.627072,
+                "GPU_copy_sum_ms": 0.008096,
+                "GPU_memset_sum_ms": 0.002016,
+                "GPU_activity_span_ms": 1.84576,
+                "API_total_duration_ms": 1.818912,
+                "API_launch_duration_ms": 0.042384000000000005,
+                "API_synchronization_duration_ms": 1.7181440000000001,
+                "NVTX_complete_advance_ms": 1.85712,
+                "clock_complete_advance_ms": 1.856742994277738
+              },
+              "counts": {
+                "kernels": 20,
+                "CUDA_APIs": 223,
+                "copies": 20,
+                "memsets": 4,
+                "copy_bytes": 19264,
+                "API_launches": 20,
+                "API_synchronizations": 36
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.00432,
+                "command_transaction": 0.00224,
+                "commit_transaction": 0.00448,
+                "integrate_live": 0.170848,
+                "reduce_status_kernel": 0.012928,
+                "commit_step": 0.00416,
+                "shape_transaction": 0.084896,
+                "prepare_bounds": 0.06576,
+                "pair_geometry": 0.00096,
+                "compact_detection": 0.199008,
+                "box_pairs": 0.001856,
+                "begin_box_response": 0.527648,
+                "project_box_response": 0.173248,
+                "pack_box_response": 0.235264,
+                "copy_projected": 0.00096,
+                "solve_box_response": 0.014816,
+                "validate_box_response": 0.119552,
+                "commit_response": 0.004128
+              }
+            },
+            {
+              "frame": 4,
+              "metrics": {
+                "GPU_kernel_sum_ms": 1.628096,
+                "GPU_copy_sum_ms": 0.008,
+                "GPU_memset_sum_ms": 0.0019520000000000002,
+                "GPU_activity_span_ms": 1.849792,
+                "API_total_duration_ms": 1.822896,
+                "API_launch_duration_ms": 0.04203199999999999,
+                "API_synchronization_duration_ms": 1.7154079999999998,
+                "NVTX_complete_advance_ms": 1.861632,
+                "clock_complete_advance_ms": 1.8612380081322044
+              },
+              "counts": {
+                "kernels": 20,
+                "CUDA_APIs": 223,
+                "copies": 20,
+                "memsets": 4,
+                "copy_bytes": 19264,
+                "API_launches": 20,
+                "API_synchronizations": 36
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.00432,
+                "command_transaction": 0.002208,
+                "commit_transaction": 0.004512,
+                "integrate_live": 0.170848,
+                "reduce_status_kernel": 0.012928,
+                "commit_step": 0.00416,
+                "shape_transaction": 0.084928,
+                "prepare_bounds": 0.065792,
+                "pair_geometry": 0.00096,
+                "compact_detection": 0.199104,
+                "box_pairs": 0.001984,
+                "begin_box_response": 0.528416,
+                "project_box_response": 0.173216,
+                "pack_box_response": 0.235264,
+                "copy_projected": 0.00096,
+                "solve_box_response": 0.014816,
+                "validate_box_response": 0.119552,
+                "commit_response": 0.004128
+              }
+            },
+            {
+              "frame": 5,
+              "metrics": {
+                "GPU_kernel_sum_ms": 1.6272,
+                "GPU_copy_sum_ms": 0.008128,
+                "GPU_memset_sum_ms": 0.001984,
+                "GPU_activity_span_ms": 1.843552,
+                "API_total_duration_ms": 1.815968,
+                "API_launch_duration_ms": 0.041792,
+                "API_synchronization_duration_ms": 1.7151520000000002,
+                "NVTX_complete_advance_ms": 1.855264,
+                "clock_complete_advance_ms": 1.8547580111771822
+              },
+              "counts": {
+                "kernels": 20,
+                "CUDA_APIs": 224,
+                "copies": 20,
+                "memsets": 4,
+                "copy_bytes": 19264,
+                "API_launches": 20,
+                "API_synchronizations": 36
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.004384,
+                "command_transaction": 0.00224,
+                "commit_transaction": 0.00448,
+                "integrate_live": 0.170816,
+                "reduce_status_kernel": 0.01296,
+                "commit_step": 0.00416,
+                "shape_transaction": 0.084896,
+                "prepare_bounds": 0.06576,
+                "pair_geometry": 0.00096,
+                "compact_detection": 0.199008,
+                "box_pairs": 0.001984,
+                "begin_box_response": 0.527584,
+                "project_box_response": 0.17328,
+                "pack_box_response": 0.2352,
+                "copy_projected": 0.00096,
+                "solve_box_response": 0.014848,
+                "validate_box_response": 0.119552,
+                "commit_response": 0.004128
+              }
+            }
+          ],
+          "accuracy_maxima": {
+            "matched_scalar_position_error_m": 8.882936087114456e-16,
+            "matched_scalar_velocity_error_mps": 1.788889374889859e-15,
+            "analytic_y_error_m": 8.881784197001252e-16,
+            "spin_radps": 0.0,
+            "angle_rad": 0.0,
+            "normal_residual_mps": 0.0,
+            "depth_m": 0.0,
+            "contact_KE_gain_J": 0.0
+          },
+          "source_package_no_numeric_changes": true,
+          "TOI_admissions": "not exposed by strict response; no TOI or restitution-count inference from patch count",
+          "work": {
+            "velocity_sweeps_per_macro": [
+              0
+            ],
+            "patch_corrections_per_macro": [
+              0
+            ],
+            "patch_solves_per_macro": [
+              0
+            ],
+            "points_per_macro": [
+              0
+            ],
+            "warm_kernel_launches_per_macro": 20
+          }
+        },
+        {
+          "method": 2,
+          "plain_warmed_complete_advance_ms": {
+            "n": 24,
+            "median": 6.81285099562956,
+            "min": 6.549917001393624,
+            "max": 8.786432998022065
+          },
+          "plain_first_call_complete_advance_ms": {
+            "n": 3,
+            "median": 13.885413005482405,
+            "min": 13.671957000042312,
+            "max": 14.21869000478182
+          },
+          "plain_per_block_warmed_median_ms": [
+            6.589675998839084,
+            6.876650491904002,
+            6.909450501552783
+          ],
+          "traced_warmed_metrics": {
+            "GPU_kernel_sum_ms": {
+              "n": 4,
+              "median": 6.2548,
+              "min": 6.030912,
+              "max": 6.702432
+            },
+            "GPU_copy_sum_ms": {
+              "n": 4,
+              "median": 0.03376,
+              "min": 0.03232,
+              "max": 0.038272
+            },
+            "GPU_memset_sum_ms": {
+              "n": 4,
+              "median": 0.007968,
+              "min": 0.007744,
+              "max": 0.00816
+            },
+            "GPU_activity_span_ms": {
+              "n": 4,
+              "median": 7.23336,
+              "min": 6.750464,
+              "max": 8.930496
+            },
+            "API_total_duration_ms": {
+              "n": 4,
+              "median": 7.090536,
+              "min": 6.607696,
+              "max": 8.786736
+            },
+            "API_launch_duration_ms": {
+              "n": 4,
+              "median": 0.16784799999999997,
+              "min": 0.16585600000000006,
+              "max": 0.169248
+            },
+            "API_synchronization_duration_ms": {
+              "n": 4,
+              "median": 6.684576,
+              "min": 6.2047840000000045,
+              "max": 8.387039999999999
+            },
+            "NVTX_complete_advance_ms": {
+              "n": 4,
+              "median": 7.242856,
+              "min": 6.758816,
+              "max": 8.941184
+            },
+            "clock_complete_advance_ms": {
+              "n": 4,
+              "median": 7.2425070029567,
+              "min": 6.758396993973292,
+              "max": 8.940610001445748
+            }
+          },
+          "traced_kernel_GPU_ms": {
+            "validate_box_response": {
+              "n": 4,
+              "median": 0.473408,
+              "min": 0.473056,
+              "max": 0.47376
+            },
+            "reduce_status_kernel": {
+              "n": 4,
+              "median": 0.051664,
+              "min": 0.051328,
+              "max": 0.052351999999999996
+            },
+            "integrate_live": {
+              "n": 4,
+              "median": 0.217968,
+              "min": 0.21632,
+              "max": 0.221952
+            },
+            "commit_step": {
+              "n": 4,
+              "median": 0.016512,
+              "min": 0.016448,
+              "max": 0.016544
+            },
+            "pair_geometry": {
+              "n": 4,
+              "median": 0.0038079999999999998,
+              "min": 0.003744,
+              "max": 0.008128
+            },
+            "compact_detection": {
+              "n": 4,
+              "median": 0.8005120000000001,
+              "min": 0.7980480000000001,
+              "max": 0.836448
+            },
+            "box_pairs": {
+              "n": 4,
+              "median": 0.008096,
+              "min": 0.007104000000000001,
+              "max": 0.008384
+            },
+            "prepare_bounds": {
+              "n": 4,
+              "median": 0.269184,
+              "min": 0.26304,
+              "max": 0.2712
+            },
+            "project_box_response": {
+              "n": 4,
+              "median": 0.725472,
+              "min": 0.6928000000000001,
+              "max": 0.757984
+            },
+            "copy_projected": {
+              "n": 4,
+              "median": 0.0044,
+              "min": 0.00384,
+              "max": 0.00512
+            },
+            "command_transaction": {
+              "n": 4,
+              "median": 0.009632,
+              "min": 0.008927999999999998,
+              "max": 0.0152
+            },
+            "begin_box_response": {
+              "n": 4,
+              "median": 2.213984,
+              "min": 2.10752,
+              "max": 2.489312
+            },
+            "pack_box_response": {
+              "n": 4,
+              "median": 0.9386400000000001,
+              "min": 0.9361600000000001,
+              "max": 0.94096
+            },
+            "commit_response": {
+              "n": 4,
+              "median": 0.017008000000000002,
+              "min": 0.016576,
+              "max": 0.017472
+            },
+            "copy_transaction": {
+              "n": 4,
+              "median": 0.020784,
+              "min": 0.017184,
+              "max": 0.036288
+            },
+            "commit_transaction": {
+              "n": 4,
+              "median": 0.01976,
+              "min": 0.018015999999999997,
+              "max": 0.03536
+            },
+            "shape_transaction": {
+              "n": 4,
+              "median": 0.384096,
+              "min": 0.341824,
+              "max": 0.494016
+            },
+            "solve_box_response": {
+              "n": 4,
+              "median": 0.06015999999999999,
+              "min": 0.058496000000000006,
+              "max": 0.061856
+            }
+          },
+          "traced_activity_samples": [
+            {
+              "frame": 0,
+              "metrics": {
+                "GPU_kernel_sum_ms": 7.87872,
+                "GPU_copy_sum_ms": 0.04496,
+                "GPU_memset_sum_ms": 0.008384,
+                "GPU_activity_span_ms": 16.844256,
+                "API_total_duration_ms": 16.190928,
+                "API_launch_duration_ms": 4.902847999999996,
+                "API_synchronization_duration_ms": 7.982703999999999,
+                "NVTX_complete_advance_ms": 16.862064,
+                "clock_complete_advance_ms": 16.857018010341562
+              },
+              "counts": {
+                "kernels": 80,
+                "CUDA_APIs": 923,
+                "copies": 80,
+                "memsets": 16,
+                "copy_bytes": 77056,
+                "API_launches": 80,
+                "API_synchronizations": 144
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.03769600000000001,
+                "command_transaction": 0.01392,
+                "commit_transaction": 0.03142400000000001,
+                "integrate_live": 0.22755199999999998,
+                "reduce_status_kernel": 0.06064,
+                "commit_step": 0.023168,
+                "shape_transaction": 0.670592,
+                "prepare_bounds": 0.274464,
+                "pair_geometry": 0.004256,
+                "compact_detection": 1.012768,
+                "box_pairs": 0.009504,
+                "begin_box_response": 3.055264,
+                "project_box_response": 0.7568,
+                "pack_box_response": 1.0671680000000001,
+                "copy_projected": 0.005248,
+                "solve_box_response": 0.070688,
+                "validate_box_response": 0.53456,
+                "commit_response": 0.023008
+              }
+            },
+            {
+              "frame": 1,
+              "metrics": {
+                "GPU_kernel_sum_ms": 6.120704,
+                "GPU_copy_sum_ms": 0.033536,
+                "GPU_memset_sum_ms": 0.00928,
+                "GPU_activity_span_ms": 7.014688,
+                "API_total_duration_ms": 6.882192,
+                "API_launch_duration_ms": 0.169504,
+                "API_synchronization_duration_ms": 6.4808319999999995,
+                "NVTX_complete_advance_ms": 7.029424,
+                "clock_complete_advance_ms": 7.027756000752561
+              },
+              "counts": {
+                "kernels": 80,
+                "CUDA_APIs": 893,
+                "copies": 80,
+                "memsets": 16,
+                "copy_bytes": 77056,
+                "API_launches": 80,
+                "API_synchronizations": 144
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.017696,
+                "command_transaction": 0.010528,
+                "commit_transaction": 0.021376,
+                "integrate_live": 0.21644800000000003,
+                "reduce_status_kernel": 0.05184,
+                "commit_step": 0.016128,
+                "shape_transaction": 0.417728,
+                "prepare_bounds": 0.26464000000000004,
+                "pair_geometry": 0.003744,
+                "compact_detection": 0.7996480000000001,
+                "box_pairs": 0.00784,
+                "begin_box_response": 2.109056,
+                "project_box_response": 0.6937599999999999,
+                "pack_box_response": 0.936768,
+                "copy_projected": 0.004096,
+                "solve_box_response": 0.059584,
+                "validate_box_response": 0.47312,
+                "commit_response": 0.016704
+              }
+            },
+            {
+              "frame": 2,
+              "metrics": {
+                "GPU_kernel_sum_ms": 6.702432,
+                "GPU_copy_sum_ms": 0.038272,
+                "GPU_memset_sum_ms": 0.007744,
+                "GPU_activity_span_ms": 8.930496,
+                "API_total_duration_ms": 8.786736,
+                "API_launch_duration_ms": 0.16585600000000006,
+                "API_synchronization_duration_ms": 8.387039999999999,
+                "NVTX_complete_advance_ms": 8.941184,
+                "clock_complete_advance_ms": 8.940610001445748
+              },
+              "counts": {
+                "kernels": 80,
+                "CUDA_APIs": 892,
+                "copies": 80,
+                "memsets": 16,
+                "copy_bytes": 77056,
+                "API_launches": 80,
+                "API_synchronizations": 144
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.036288,
+                "command_transaction": 0.0152,
+                "commit_transaction": 0.03536,
+                "integrate_live": 0.221952,
+                "reduce_status_kernel": 0.052351999999999996,
+                "commit_step": 0.016448,
+                "shape_transaction": 0.494016,
+                "prepare_bounds": 0.2712,
+                "pair_geometry": 0.003744,
+                "compact_detection": 0.801216,
+                "box_pairs": 0.008384,
+                "begin_box_response": 2.489312,
+                "project_box_response": 0.757984,
+                "pack_box_response": 0.94096,
+                "copy_projected": 0.00512,
+                "solve_box_response": 0.06179199999999999,
+                "validate_box_response": 0.47366400000000003,
+                "commit_response": 0.01744
+              }
+            },
+            {
+              "frame": 3,
+              "metrics": {
+                "GPU_kernel_sum_ms": 6.030912,
+                "GPU_copy_sum_ms": 0.032576,
+                "GPU_memset_sum_ms": 0.008096,
+                "GPU_activity_span_ms": 6.750464,
+                "API_total_duration_ms": 6.607696,
+                "API_launch_duration_ms": 0.16721599999999998,
+                "API_synchronization_duration_ms": 6.2047840000000045,
+                "NVTX_complete_advance_ms": 6.758816,
+                "clock_complete_advance_ms": 6.758396993973292
+              },
+              "counts": {
+                "kernels": 80,
+                "CUDA_APIs": 887,
+                "copies": 80,
+                "memsets": 16,
+                "copy_bytes": 77056,
+                "API_launches": 80,
+                "API_synchronizations": 144
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.017184,
+                "command_transaction": 0.008992,
+                "commit_transaction": 0.018080000000000002,
+                "integrate_live": 0.21651199999999998,
+                "reduce_status_kernel": 0.051328,
+                "commit_step": 0.016544,
+                "shape_transaction": 0.341824,
+                "prepare_bounds": 0.26304,
+                "pair_geometry": 0.0038079999999999998,
+                "compact_detection": 0.7980480000000001,
+                "box_pairs": 0.007104000000000001,
+                "begin_box_response": 2.10752,
+                "project_box_response": 0.6928000000000001,
+                "pack_box_response": 0.9361600000000001,
+                "copy_projected": 0.00384,
+                "solve_box_response": 0.058496000000000006,
+                "validate_box_response": 0.473056,
+                "commit_response": 0.016576
+              }
+            },
+            {
+              "frame": 4,
+              "metrics": {
+                "GPU_kernel_sum_ms": 6.216032,
+                "GPU_copy_sum_ms": 0.034944,
+                "GPU_memset_sum_ms": 0.00784,
+                "GPU_activity_span_ms": 7.260448,
+                "API_total_duration_ms": 7.1159360000000005,
+                "API_launch_duration_ms": 0.169248,
+                "API_synchronization_duration_ms": 6.7088800000000015,
+                "NVTX_complete_advance_ms": 7.268416,
+                "clock_complete_advance_ms": 7.26812299399171
+              },
+              "counts": {
+                "kernels": 80,
+                "CUDA_APIs": 889,
+                "copies": 80,
+                "memsets": 16,
+                "copy_bytes": 77056,
+                "API_launches": 80,
+                "API_synchronizations": 144
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.024288,
+                "command_transaction": 0.010272,
+                "commit_transaction": 0.02144,
+                "integrate_live": 0.219424,
+                "reduce_status_kernel": 0.051872,
+                "commit_step": 0.016544,
+                "shape_transaction": 0.425856,
+                "prepare_bounds": 0.268672,
+                "pair_geometry": 0.0038079999999999998,
+                "compact_detection": 0.7998080000000001,
+                "box_pairs": 0.008288,
+                "begin_box_response": 2.10896,
+                "project_box_response": 0.757952,
+                "pack_box_response": 0.9408960000000001,
+                "copy_projected": 0.004864,
+                "solve_box_response": 0.061856,
+                "validate_box_response": 0.47376,
+                "commit_response": 0.017472
+              }
+            },
+            {
+              "frame": 5,
+              "metrics": {
+                "GPU_kernel_sum_ms": 6.2935680000000005,
+                "GPU_copy_sum_ms": 0.03232,
+                "GPU_memset_sum_ms": 0.00816,
+                "GPU_activity_span_ms": 7.206272,
+                "API_total_duration_ms": 7.065136,
+                "API_launch_duration_ms": 0.16847999999999996,
+                "API_synchronization_duration_ms": 6.660271999999999,
+                "NVTX_complete_advance_ms": 7.217296,
+                "clock_complete_advance_ms": 7.216891011921689
+              },
+              "counts": {
+                "kernels": 80,
+                "CUDA_APIs": 894,
+                "copies": 80,
+                "memsets": 16,
+                "copy_bytes": 77056,
+                "API_launches": 80,
+                "API_synchronizations": 144
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.01728,
+                "command_transaction": 0.008927999999999998,
+                "commit_transaction": 0.018015999999999997,
+                "integrate_live": 0.21632,
+                "reduce_status_kernel": 0.051456,
+                "commit_step": 0.016479999999999998,
+                "shape_transaction": 0.342336,
+                "prepare_bounds": 0.269696,
+                "pair_geometry": 0.008128,
+                "compact_detection": 0.836448,
+                "box_pairs": 0.007904000000000001,
+                "begin_box_response": 2.319008,
+                "project_box_response": 0.692992,
+                "pack_box_response": 0.9363840000000001,
+                "copy_projected": 0.003936,
+                "solve_box_response": 0.058528,
+                "validate_box_response": 0.47315199999999996,
+                "commit_response": 0.016576
+              }
+            }
+          ],
+          "accuracy_maxima": {
+            "matched_scalar_position_error_m": 8.882936087114456e-16,
+            "matched_scalar_velocity_error_mps": 1.788889374889859e-15,
+            "analytic_y_error_m": 8.881784197001252e-16,
+            "spin_radps": 0.0,
+            "angle_rad": 0.0,
+            "normal_residual_mps": 0.0,
+            "depth_m": 0.0,
+            "contact_KE_gain_J": 0.0
+          },
+          "source_package_no_numeric_changes": true,
+          "TOI_admissions": "not exposed by strict response; no TOI or restitution-count inference from patch count",
+          "work": {
+            "velocity_sweeps_per_macro": [
+              0
+            ],
+            "patch_corrections_per_macro": [
+              0
+            ],
+            "patch_solves_per_macro": [
+              0
+            ],
+            "points_per_macro": [
+              0
+            ],
+            "warm_kernel_launches_per_macro": 80
+          }
+        }
+      ],
+      "actual_performance": {
+        "candidate_vs_strict_macro_time_ratio": 0.5740108703386975,
+        "candidate_vs_four_strict_time_ratio": 0.14969048934038162
+      }
+    },
+    {
+      "fixture": 1,
+      "label": "quiet support with constant downward force",
+      "methods": [
+        {
+          "method": 0,
+          "plain_warmed_complete_advance_ms": {
+            "n": 24,
+            "median": 8.19750750088133,
+            "min": 7.768790004774928,
+            "max": 9.510427000350319
+          },
+          "plain_first_call_complete_advance_ms": {
+            "n": 3,
+            "median": 10.571495004114695,
+            "min": 10.167033004108816,
+            "max": 10.981654006172903
+          },
+          "plain_per_block_warmed_median_ms": [
+            8.191298999008723,
+            8.192604000214487,
+            8.199116004107054
+          ],
+          "traced_warmed_metrics": {
+            "GPU_kernel_sum_ms": {
+              "n": 4,
+              "median": 8.174848,
+              "min": 7.76544,
+              "max": 9.330912
+            },
+            "GPU_copy_sum_ms": {
+              "n": 4,
+              "median": 0.007552,
+              "min": 0.0060160000000000005,
+              "max": 0.036864
+            },
+            "GPU_memset_sum_ms": {
+              "n": 4,
+              "median": 0.001968,
+              "min": 0.00192,
+              "max": 0.022976
+            },
+            "GPU_activity_span_ms": {
+              "n": 4,
+              "median": 8.370096,
+              "min": 7.871648,
+              "max": 9.48096
+            },
+            "API_total_duration_ms": {
+              "n": 4,
+              "median": 8.36388,
+              "min": 7.855872,
+              "max": 9.4692
+            },
+            "API_launch_duration_ms": {
+              "n": 4,
+              "median": 0.012976000000000001,
+              "min": 0.012751999999999998,
+              "max": 0.013551999999999998
+            },
+            "API_synchronization_duration_ms": {
+              "n": 4,
+              "median": 8.306936,
+              "min": 7.798208,
+              "max": 9.411952
+            },
+            "NVTX_complete_advance_ms": {
+              "n": 4,
+              "median": 8.387167999999999,
+              "min": 7.878736,
+              "max": 9.492096
+            },
+            "clock_complete_advance_ms": {
+              "n": 4,
+              "median": 8.386853005504236,
+              "min": 7.878407996031456,
+              "max": 9.491760007222183
+            }
+          },
+          "traced_kernel_GPU_ms": {
+            "command_transaction": {
+              "n": 4,
+              "median": 0.002752,
+              "min": 0.00224,
+              "max": 0.007712
+            },
+            "copy_transaction": {
+              "n": 4,
+              "median": 0.004608,
+              "min": 0.004288,
+              "max": 0.007744
+            },
+            "commit_transaction": {
+              "n": 4,
+              "median": 0.0066879999999999995,
+              "min": 0.00448,
+              "max": 0.013632
+            },
+            "shape_transaction": {
+              "n": 4,
+              "median": 0.12363199999999999,
+              "min": 0.085536,
+              "max": 0.272064
+            },
+            "commit_temporal": {
+              "n": 4,
+              "median": 0.46422399999999997,
+              "min": 0.284256,
+              "max": 0.645376
+            },
+            "temporal_patch_floor": {
+              "n": 4,
+              "median": 7.5111360000000005,
+              "min": 7.30256,
+              "max": 8.59008
+            }
+          },
+          "traced_activity_samples": [
+            {
+              "frame": 0,
+              "metrics": {
+                "GPU_kernel_sum_ms": 8.616608,
+                "GPU_copy_sum_ms": 0.00768,
+                "GPU_memset_sum_ms": 0.0019520000000000002,
+                "GPU_activity_span_ms": 10.347072,
+                "API_total_duration_ms": 10.299648,
+                "API_launch_duration_ms": 1.1319679999999999,
+                "API_synchronization_duration_ms": 0.803632,
+                "NVTX_complete_advance_ms": 10.359536,
+                "clock_complete_advance_ms": 10.35738798964303
+              },
+              "counts": {
+                "kernels": 6,
+                "CUDA_APIs": 141,
+                "copies": 14,
+                "memsets": 4,
+                "copy_bytes": 19072,
+                "API_launches": 6,
+                "API_synchronizations": 25
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.004352,
+                "command_transaction": 0.002144,
+                "commit_transaction": 0.004448,
+                "shape_transaction": 0.085504,
+                "temporal_patch_floor": 7.865024,
+                "commit_temporal": 0.655136
+              }
+            },
+            {
+              "frame": 1,
+              "metrics": {
+                "GPU_kernel_sum_ms": 8.801248,
+                "GPU_copy_sum_ms": 0.013312,
+                "GPU_memset_sum_ms": 0.0022719999999999997,
+                "GPU_activity_span_ms": 8.945664,
+                "API_total_duration_ms": 8.934272,
+                "API_launch_duration_ms": 0.014128,
+                "API_synchronization_duration_ms": 8.872064,
+                "NVTX_complete_advance_ms": 8.961808,
+                "clock_complete_advance_ms": 8.960961989942007
+              },
+              "counts": {
+                "kernels": 6,
+                "CUDA_APIs": 138,
+                "copies": 14,
+                "memsets": 4,
+                "copy_bytes": 19072,
+                "API_launches": 6,
+                "API_synchronizations": 25
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.004864,
+                "command_transaction": 0.003264,
+                "commit_transaction": 0.008832,
+                "shape_transaction": 0.161856,
+                "temporal_patch_floor": 7.935968,
+                "commit_temporal": 0.686464
+              }
+            },
+            {
+              "frame": 2,
+              "metrics": {
+                "GPU_kernel_sum_ms": 7.902944000000001,
+                "GPU_copy_sum_ms": 0.036864,
+                "GPU_memset_sum_ms": 0.022976,
+                "GPU_activity_span_ms": 8.173376,
+                "API_total_duration_ms": 8.176064,
+                "API_launch_duration_ms": 0.013136000000000002,
+                "API_synchronization_duration_ms": 8.118496,
+                "NVTX_complete_advance_ms": 8.199488,
+                "clock_complete_advance_ms": 8.199174000765197
+              },
+              "counts": {
+                "kernels": 6,
+                "CUDA_APIs": 139,
+                "copies": 14,
+                "memsets": 4,
+                "copy_bytes": 19072,
+                "API_launches": 6,
+                "API_synchronizations": 25
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.007744,
+                "command_transaction": 0.007712,
+                "commit_transaction": 0.013632,
+                "shape_transaction": 0.272064,
+                "temporal_patch_floor": 7.31744,
+                "commit_temporal": 0.284352
+              }
+            },
+            {
+              "frame": 3,
+              "metrics": {
+                "GPU_kernel_sum_ms": 9.330912,
+                "GPU_copy_sum_ms": 0.008512,
+                "GPU_memset_sum_ms": 0.0019520000000000002,
+                "GPU_activity_span_ms": 9.48096,
+                "API_total_duration_ms": 9.4692,
+                "API_launch_duration_ms": 0.012751999999999998,
+                "API_synchronization_duration_ms": 9.411952,
+                "NVTX_complete_advance_ms": 9.492096,
+                "clock_complete_advance_ms": 9.491760007222183
+              },
+              "counts": {
+                "kernels": 6,
+                "CUDA_APIs": 139,
+                "copies": 14,
+                "memsets": 4,
+                "copy_bytes": 19072,
+                "API_launches": 6,
+                "API_synchronizations": 25
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.004384,
+                "command_transaction": 0.002272,
+                "commit_transaction": 0.00448,
+                "shape_transaction": 0.0856,
+                "temporal_patch_floor": 8.59008,
+                "commit_temporal": 0.644096
+              }
+            },
+            {
+              "frame": 4,
+              "metrics": {
+                "GPU_kernel_sum_ms": 7.76544,
+                "GPU_copy_sum_ms": 0.006592,
+                "GPU_memset_sum_ms": 0.001984,
+                "GPU_activity_span_ms": 7.871648,
+                "API_total_duration_ms": 7.855872,
+                "API_launch_duration_ms": 0.013551999999999998,
+                "API_synchronization_duration_ms": 7.798208,
+                "NVTX_complete_advance_ms": 7.878736,
+                "clock_complete_advance_ms": 7.878407996031456
+              },
+              "counts": {
+                "kernels": 6,
+                "CUDA_APIs": 138,
+                "copies": 14,
+                "memsets": 4,
+                "copy_bytes": 19072,
+                "API_launches": 6,
+                "API_synchronizations": 25
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.004832,
+                "command_transaction": 0.003232,
+                "commit_transaction": 0.008896,
+                "shape_transaction": 0.161664,
+                "temporal_patch_floor": 7.30256,
+                "commit_temporal": 0.284256
+              }
+            },
+            {
+              "frame": 5,
+              "metrics": {
+                "GPU_kernel_sum_ms": 8.446752,
+                "GPU_copy_sum_ms": 0.0060160000000000005,
+                "GPU_memset_sum_ms": 0.00192,
+                "GPU_activity_span_ms": 8.566816,
+                "API_total_duration_ms": 8.551696,
+                "API_launch_duration_ms": 0.012816000000000001,
+                "API_synchronization_duration_ms": 8.495375999999998,
+                "NVTX_complete_advance_ms": 8.574848,
+                "clock_complete_advance_ms": 8.574532010243274
+              },
+              "counts": {
+                "kernels": 6,
+                "CUDA_APIs": 138,
+                "copies": 14,
+                "memsets": 4,
+                "copy_bytes": 19072,
+                "API_launches": 6,
+                "API_synchronizations": 25
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.004288,
+                "command_transaction": 0.00224,
+                "commit_transaction": 0.00448,
+                "shape_transaction": 0.085536,
+                "temporal_patch_floor": 7.704832,
+                "commit_temporal": 0.645376
+              }
+            }
+          ],
+          "accuracy_maxima": {
+            "matched_scalar_position_error_m": 0.0,
+            "matched_scalar_velocity_error_mps": 1.3877787807814457e-17,
+            "analytic_y_error_m": 0.0,
+            "spin_radps": 7.359808400080195e-18,
+            "angle_rad": 9.019102454063948e-19,
+            "normal_residual_mps": 1.734723475976807e-17,
+            "depth_m": 0.0,
+            "contact_KE_gain_J": 0.0
+          },
+          "source_package_no_numeric_changes": true,
+          "TOI_admissions": {
+            "plain_total": 0,
+            "per_trajectory": [
+              0,
+              0,
+              0
+            ],
+            "warm_total": 0
+          },
+          "work": {
+            "velocity_sweeps_per_macro": [
+              0
+            ],
+            "patch_corrections_per_macro": [
+              20
+            ],
+            "patch_solves_per_macro": [
+              1
+            ],
+            "points_per_macro": [
+              4
+            ],
+            "warm_kernel_launches_per_macro": 6
+          }
+        },
+        {
+          "method": 1,
+          "plain_warmed_complete_advance_ms": {
+            "n": 24,
+            "median": 4.1585455037420616,
+            "min": 3.8329399976646528,
+            "max": 5.817536992253736
+          },
+          "plain_first_call_complete_advance_ms": {
+            "n": 3,
+            "median": 12.32870300009381,
+            "min": 11.543521002749912,
+            "max": 12.509180000051856
+          },
+          "plain_per_block_warmed_median_ms": [
+            3.987226496974472,
+            4.639487000531517,
+            3.955194501031656
+          ],
+          "traced_warmed_metrics": {
+            "GPU_kernel_sum_ms": {
+              "n": 4,
+              "median": 4.055104,
+              "min": 3.72384,
+              "max": 5.06224
+            },
+            "GPU_copy_sum_ms": {
+              "n": 4,
+              "median": 0.008576,
+              "min": 0.008096,
+              "max": 0.011936
+            },
+            "GPU_memset_sum_ms": {
+              "n": 4,
+              "median": 0.001968,
+              "min": 0.00192,
+              "max": 0.001984
+            },
+            "GPU_activity_span_ms": {
+              "n": 4,
+              "median": 4.272399999999999,
+              "min": 3.93872,
+              "max": 6.536672
+            },
+            "API_total_duration_ms": {
+              "n": 4,
+              "median": 4.242512,
+              "min": 3.9083840000000003,
+              "max": 6.503504
+            },
+            "API_launch_duration_ms": {
+              "n": 4,
+              "median": 0.04307999999999999,
+              "min": 0.04166399999999999,
+              "max": 0.044752
+            },
+            "API_synchronization_duration_ms": {
+              "n": 4,
+              "median": 4.137672,
+              "min": 3.8053760000000008,
+              "max": 6.399856000000001
+            },
+            "NVTX_complete_advance_ms": {
+              "n": 4,
+              "median": 4.282432,
+              "min": 3.950176,
+              "max": 6.543952
+            },
+            "clock_complete_advance_ms": {
+              "n": 4,
+              "median": 4.281930501747411,
+              "min": 3.949644000385888,
+              "max": 6.543438998050988
+            }
+          },
+          "traced_kernel_GPU_ms": {
+            "validate_box_response": {
+              "n": 4,
+              "median": 0.127808,
+              "min": 0.127776,
+              "max": 0.194176
+            },
+            "reduce_status_kernel": {
+              "n": 4,
+              "median": 0.013295999999999999,
+              "min": 0.012992,
+              "max": 0.013568
+            },
+            "integrate_live": {
+              "n": 4,
+              "median": 0.139312,
+              "min": 0.134176,
+              "max": 0.20912
+            },
+            "commit_step": {
+              "n": 4,
+              "median": 0.00416,
+              "min": 0.00416,
+              "max": 0.00416
+            },
+            "pair_geometry": {
+              "n": 4,
+              "median": 0.0015040000000000001,
+              "min": 0.001248,
+              "max": 0.024992
+            },
+            "compact_detection": {
+              "n": 4,
+              "median": 0.20024,
+              "min": 0.199392,
+              "max": 0.409728
+            },
+            "box_pairs": {
+              "n": 4,
+              "median": 0.208896,
+              "min": 0.20588800000000002,
+              "max": 0.216096
+            },
+            "prepare_bounds": {
+              "n": 4,
+              "median": 0.06720000000000001,
+              "min": 0.066912,
+              "max": 0.081728
+            },
+            "project_box_response": {
+              "n": 4,
+              "median": 0.180288,
+              "min": 0.180096,
+              "max": 0.181504
+            },
+            "copy_projected": {
+              "n": 4,
+              "median": 0.000992,
+              "min": 0.000992,
+              "max": 0.001184
+            },
+            "command_transaction": {
+              "n": 4,
+              "median": 0.002768,
+              "min": 0.002208,
+              "max": 0.0032
+            },
+            "begin_box_response": {
+              "n": 4,
+              "median": 0.5312,
+              "min": 0.531072,
+              "max": 1.003904
+            },
+            "pack_box_response": {
+              "n": 4,
+              "median": 2.042544,
+              "min": 2.028448,
+              "max": 2.546048
+            },
+            "commit_response": {
+              "n": 4,
+              "median": 0.00416,
+              "min": 0.00416,
+              "max": 0.008224
+            },
+            "copy_transaction": {
+              "n": 4,
+              "median": 0.004576,
+              "min": 0.004448,
+              "max": 0.004704
+            },
+            "commit_transaction": {
+              "n": 4,
+              "median": 0.006624,
+              "min": 0.004448,
+              "max": 0.008928
+            },
+            "shape_transaction": {
+              "n": 4,
+              "median": 0.119136,
+              "min": 0.085312,
+              "max": 0.159136
+            },
+            "solve_box_response": {
+              "n": 4,
+              "median": 0.133296,
+              "min": 0.123136,
+              "max": 0.533024
+            }
+          },
+          "traced_activity_samples": [
+            {
+              "frame": 0,
+              "metrics": {
+                "GPU_kernel_sum_ms": 5.212256,
+                "GPU_copy_sum_ms": 0.010176,
+                "GPU_memset_sum_ms": 0.002016,
+                "GPU_activity_span_ms": 11.59216,
+                "API_total_duration_ms": 11.039935999999999,
+                "API_launch_duration_ms": 4.755104,
+                "API_synchronization_duration_ms": 0.5988319999999999,
+                "NVTX_complete_advance_ms": 11.606928,
+                "clock_complete_advance_ms": 11.602244994719513
+              },
+              "counts": {
+                "kernels": 20,
+                "CUDA_APIs": 245,
+                "copies": 20,
+                "memsets": 4,
+                "copy_bytes": 19264,
+                "API_launches": 20,
+                "API_synchronizations": 36
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.00432,
+                "command_transaction": 0.002144,
+                "commit_transaction": 0.004448,
+                "integrate_live": 0.173536,
+                "reduce_status_kernel": 0.021376,
+                "commit_step": 0.010656,
+                "shape_transaction": 0.161312,
+                "prepare_bounds": 0.070496,
+                "pair_geometry": 0.001984,
+                "compact_detection": 0.327456,
+                "box_pairs": 0.21983999999999998,
+                "begin_box_response": 1.070432,
+                "project_box_response": 0.245152,
+                "pack_box_response": 2.51744,
+                "copy_projected": 0.001632,
+                "solve_box_response": 0.175872,
+                "validate_box_response": 0.193632,
+                "commit_response": 0.010528
+              }
+            },
+            {
+              "frame": 1,
+              "metrics": {
+                "GPU_kernel_sum_ms": 4.75824,
+                "GPU_copy_sum_ms": 0.011392,
+                "GPU_memset_sum_ms": 0.0022719999999999997,
+                "GPU_activity_span_ms": 5.28,
+                "API_total_duration_ms": 5.239072,
+                "API_launch_duration_ms": 0.05344,
+                "API_synchronization_duration_ms": 5.115808,
+                "NVTX_complete_advance_ms": 5.297264,
+                "clock_complete_advance_ms": 5.2958449959987774
+              },
+              "counts": {
+                "kernels": 20,
+                "CUDA_APIs": 230,
+                "copies": 20,
+                "memsets": 4,
+                "copy_bytes": 19264,
+                "API_launches": 20,
+                "API_synchronizations": 36
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.005024,
+                "command_transaction": 0.00336,
+                "commit_transaction": 0.008704,
+                "integrate_live": 0.173984,
+                "reduce_status_kernel": 0.013536,
+                "commit_step": 0.004192,
+                "shape_transaction": 0.15904,
+                "prepare_bounds": 0.06809599999999999,
+                "pair_geometry": 0.001504,
+                "compact_detection": 0.200608,
+                "box_pairs": 0.22288000000000002,
+                "begin_box_response": 1.046624,
+                "project_box_response": 0.181952,
+                "pack_box_response": 2.3856,
+                "copy_projected": 0.001568,
+                "solve_box_response": 0.149184,
+                "validate_box_response": 0.127776,
+                "commit_response": 0.004608
+              }
+            },
+            {
+              "frame": 2,
+              "metrics": {
+                "GPU_kernel_sum_ms": 3.912096,
+                "GPU_copy_sum_ms": 0.008992,
+                "GPU_memset_sum_ms": 0.0019520000000000002,
+                "GPU_activity_span_ms": 4.132256,
+                "API_total_duration_ms": 4.102,
+                "API_launch_duration_ms": 0.04321599999999999,
+                "API_synchronization_duration_ms": 3.998864,
+                "NVTX_complete_advance_ms": 4.142368,
+                "clock_complete_advance_ms": 4.141899000387639
+              },
+              "counts": {
+                "kernels": 20,
+                "CUDA_APIs": 231,
+                "copies": 20,
+                "memsets": 4,
+                "copy_bytes": 19264,
+                "API_launches": 20,
+                "API_synchronizations": 36
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.004704,
+                "command_transaction": 0.0032,
+                "commit_transaction": 0.008928,
+                "integrate_live": 0.20912,
+                "reduce_status_kernel": 0.013536,
+                "commit_step": 0.00416,
+                "shape_transaction": 0.152928,
+                "prepare_bounds": 0.067456,
+                "pair_geometry": 0.001536,
+                "compact_detection": 0.201056,
+                "box_pairs": 0.21190399999999998,
+                "begin_box_response": 0.531072,
+                "project_box_response": 0.18048,
+                "pack_box_response": 2.056256,
+                "copy_projected": 0.000992,
+                "solve_box_response": 0.1328,
+                "validate_box_response": 0.127808,
+                "commit_response": 0.00416
+              }
+            },
+            {
+              "frame": 3,
+              "metrics": {
+                "GPU_kernel_sum_ms": 3.72384,
+                "GPU_copy_sum_ms": 0.008096,
+                "GPU_memset_sum_ms": 0.001984,
+                "GPU_activity_span_ms": 3.93872,
+                "API_total_duration_ms": 3.9083840000000003,
+                "API_launch_duration_ms": 0.042944,
+                "API_synchronization_duration_ms": 3.8053760000000008,
+                "NVTX_complete_advance_ms": 3.950176,
+                "clock_complete_advance_ms": 3.949644000385888
+              },
+              "counts": {
+                "kernels": 20,
+                "CUDA_APIs": 231,
+                "copies": 20,
+                "memsets": 4,
+                "copy_bytes": 19264,
+                "API_launches": 20,
+                "API_synchronizations": 36
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.004448,
+                "command_transaction": 0.002336,
+                "commit_transaction": 0.00448,
+                "integrate_live": 0.140704,
+                "reduce_status_kernel": 0.013056,
+                "commit_step": 0.00416,
+                "shape_transaction": 0.085312,
+                "prepare_bounds": 0.066912,
+                "pair_geometry": 0.001248,
+                "compact_detection": 0.199424,
+                "box_pairs": 0.20588800000000002,
+                "begin_box_response": 0.531232,
+                "project_box_response": 0.180096,
+                "pack_box_response": 2.028448,
+                "copy_projected": 0.000992,
+                "solve_box_response": 0.123136,
+                "validate_box_response": 0.127808,
+                "commit_response": 0.00416
+              }
+            },
+            {
+              "frame": 4,
+              "metrics": {
+                "GPU_kernel_sum_ms": 4.198112,
+                "GPU_copy_sum_ms": 0.00816,
+                "GPU_memset_sum_ms": 0.00192,
+                "GPU_activity_span_ms": 4.412544,
+                "API_total_duration_ms": 4.383024,
+                "API_launch_duration_ms": 0.044752,
+                "API_synchronization_duration_ms": 4.276480000000001,
+                "NVTX_complete_advance_ms": 4.422496,
+                "clock_complete_advance_ms": 4.421962003107183
+              },
+              "counts": {
+                "kernels": 20,
+                "CUDA_APIs": 231,
+                "copies": 20,
+                "memsets": 4,
+                "copy_bytes": 19264,
+                "API_launches": 20,
+                "API_synchronizations": 36
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.004576,
+                "command_transaction": 0.002208,
+                "commit_transaction": 0.004448,
+                "integrate_live": 0.134176,
+                "reduce_status_kernel": 0.012992,
+                "commit_step": 0.00416,
+                "shape_transaction": 0.085344,
+                "prepare_bounds": 0.066944,
+                "pair_geometry": 0.001472,
+                "compact_detection": 0.199392,
+                "box_pairs": 0.20588800000000002,
+                "begin_box_response": 0.531168,
+                "project_box_response": 0.180096,
+                "pack_box_response": 2.028832,
+                "copy_projected": 0.000992,
+                "solve_box_response": 0.533024,
+                "validate_box_response": 0.194176,
+                "commit_response": 0.008224
+              }
+            },
+            {
+              "frame": 5,
+              "metrics": {
+                "GPU_kernel_sum_ms": 5.06224,
+                "GPU_copy_sum_ms": 0.011936,
+                "GPU_memset_sum_ms": 0.001984,
+                "GPU_activity_span_ms": 6.536672,
+                "API_total_duration_ms": 6.503504,
+                "API_launch_duration_ms": 0.04166399999999999,
+                "API_synchronization_duration_ms": 6.399856000000001,
+                "NVTX_complete_advance_ms": 6.543952,
+                "clock_complete_advance_ms": 6.543438998050988
+              },
+              "counts": {
+                "kernels": 20,
+                "CUDA_APIs": 231,
+                "copies": 20,
+                "memsets": 4,
+                "copy_bytes": 19264,
+                "API_launches": 20,
+                "API_synchronizations": 36
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.004576,
+                "command_transaction": 0.0032,
+                "commit_transaction": 0.008768,
+                "integrate_live": 0.13792,
+                "reduce_status_kernel": 0.013568,
+                "commit_step": 0.00416,
+                "shape_transaction": 0.159136,
+                "prepare_bounds": 0.081728,
+                "pair_geometry": 0.024992,
+                "compact_detection": 0.409728,
+                "box_pairs": 0.216096,
+                "begin_box_response": 1.003904,
+                "project_box_response": 0.181504,
+                "pack_box_response": 2.546048,
+                "copy_projected": 0.001184,
+                "solve_box_response": 0.133792,
+                "validate_box_response": 0.127776,
+                "commit_response": 0.00416
+              }
+            }
+          ],
+          "accuracy_maxima": {
+            "matched_scalar_position_error_m": 5.551115123125783e-17,
+            "matched_scalar_velocity_error_mps": 1.3877787807814457e-16,
+            "analytic_y_error_m": 1.0000000000065512e-05,
+            "spin_radps": 5.551115123125783e-17,
+            "angle_rad": 4.649001378828107e-18,
+            "normal_residual_mps": 1.6653345369377348e-16,
+            "depth_m": 1.0000000000065512e-05,
+            "contact_KE_gain_J": 0.0
+          },
+          "source_package_no_numeric_changes": true,
+          "TOI_admissions": "not exposed by strict response; no TOI or restitution-count inference from patch count",
+          "work": {
+            "velocity_sweeps_per_macro": [
+              1
+            ],
+            "patch_corrections_per_macro": [
+              0
+            ],
+            "patch_solves_per_macro": [
+              1
+            ],
+            "points_per_macro": [
+              4
+            ],
+            "warm_kernel_launches_per_macro": 20
+          }
+        },
+        {
+          "method": 2,
+          "plain_warmed_complete_advance_ms": {
+            "n": 24,
+            "median": 17.282657499890774,
+            "min": 15.85348199296277,
+            "max": 18.279069001437165
+          },
+          "plain_first_call_complete_advance_ms": {
+            "n": 3,
+            "median": 24.65444199333433,
+            "min": 24.416603991994634,
+            "max": 25.74653500050772
+          },
+          "plain_per_block_warmed_median_ms": [
+            17.2128500053077,
+            17.379681499733124,
+            16.768206500273664
+          ],
+          "traced_warmed_metrics": {
+            "GPU_kernel_sum_ms": {
+              "n": 4,
+              "median": 16.37472,
+              "min": 16.096128,
+              "max": 16.571264
+            },
+            "GPU_copy_sum_ms": {
+              "n": 4,
+              "median": 0.036464,
+              "min": 0.03344,
+              "max": 0.042592
+            },
+            "GPU_memset_sum_ms": {
+              "n": 4,
+              "median": 0.008128,
+              "min": 0.007936,
+              "max": 0.009216
+            },
+            "GPU_activity_span_ms": {
+              "n": 4,
+              "median": 17.422832,
+              "min": 16.886752,
+              "max": 18.295456
+            },
+            "API_total_duration_ms": {
+              "n": 4,
+              "median": 17.270104,
+              "min": 16.73424,
+              "max": 18.144047999999998
+            },
+            "API_launch_duration_ms": {
+              "n": 4,
+              "median": 0.16831999999999997,
+              "min": 0.16721600000000003,
+              "max": 0.17075200000000001
+            },
+            "API_synchronization_duration_ms": {
+              "n": 4,
+              "median": 16.849671999999998,
+              "min": 16.31224,
+              "max": 17.725519999999996
+            },
+            "NVTX_complete_advance_ms": {
+              "n": 4,
+              "median": 17.432935999999998,
+              "min": 16.897504,
+              "max": 18.306832
+            },
+            "clock_complete_advance_ms": {
+              "n": 4,
+              "median": 17.432478998671286,
+              "min": 16.89697000256274,
+              "max": 18.306482990738004
+            }
+          },
+          "traced_kernel_GPU_ms": {
+            "validate_box_response": {
+              "n": 4,
+              "median": 0.509968,
+              "min": 0.5088,
+              "max": 0.514208
+            },
+            "reduce_status_kernel": {
+              "n": 4,
+              "median": 0.052128,
+              "min": 0.051840000000000004,
+              "max": 0.052576000000000005
+            },
+            "integrate_live": {
+              "n": 4,
+              "median": 0.172576,
+              "min": 0.170272,
+              "max": 0.180608
+            },
+            "commit_step": {
+              "n": 4,
+              "median": 0.0164,
+              "min": 0.016224,
+              "max": 0.016512
+            },
+            "pair_geometry": {
+              "n": 4,
+              "median": 0.0054719999999999994,
+              "min": 0.00528,
+              "max": 0.005632
+            },
+            "compact_detection": {
+              "n": 4,
+              "median": 0.8003039999999999,
+              "min": 0.799392,
+              "max": 0.801696
+            },
+            "box_pairs": {
+              "n": 4,
+              "median": 0.8454079999999999,
+              "min": 0.842016,
+              "max": 0.84752
+            },
+            "prepare_bounds": {
+              "n": 4,
+              "median": 0.269536,
+              "min": 0.26915199999999995,
+              "max": 0.273952
+            },
+            "project_box_response": {
+              "n": 4,
+              "median": 0.7228,
+              "min": 0.7222719999999999,
+              "max": 0.7872319999999999
+            },
+            "copy_projected": {
+              "n": 4,
+              "median": 0.0052320000000000005,
+              "min": 0.0048319999999999995,
+              "max": 0.005888
+            },
+            "command_transaction": {
+              "n": 4,
+              "median": 0.010672,
+              "min": 0.010112,
+              "max": 0.011295999999999999
+            },
+            "begin_box_response": {
+              "n": 4,
+              "median": 2.3121280000000004,
+              "min": 2.1192,
+              "max": 2.505152
+            },
+            "pack_box_response": {
+              "n": 4,
+              "median": 9.579215999999999,
+              "min": 9.488864,
+              "max": 9.639488
+            },
+            "commit_response": {
+              "n": 4,
+              "median": 0.017888,
+              "min": 0.01744,
+              "max": 0.018175999999999998
+            },
+            "copy_transaction": {
+              "n": 4,
+              "median": 0.024032,
+              "min": 0.017728,
+              "max": 0.024352
+            },
+            "commit_transaction": {
+              "n": 4,
+              "median": 0.024512,
+              "min": 0.022208,
+              "max": 0.026591999999999998
+            },
+            "shape_transaction": {
+              "n": 4,
+              "median": 0.470512,
+              "min": 0.41744000000000003,
+              "max": 0.494432
+            },
+            "solve_box_response": {
+              "n": 4,
+              "median": 0.507136,
+              "min": 0.50688,
+              "max": 0.529728
+            }
+          },
+          "traced_activity_samples": [
+            {
+              "frame": 0,
+              "metrics": {
+                "GPU_kernel_sum_ms": 17.508704,
+                "GPU_copy_sum_ms": 0.03744,
+                "GPU_memset_sum_ms": 0.007776,
+                "GPU_activity_span_ms": 25.209728,
+                "API_total_duration_ms": 24.531472,
+                "API_launch_duration_ms": 5.009696000000003,
+                "API_synchronization_duration_ms": 13.67352,
+                "NVTX_complete_advance_ms": 25.222688,
+                "clock_complete_advance_ms": 25.218511000275612
+              },
+              "counts": {
+                "kernels": 80,
+                "CUDA_APIs": 938,
+                "copies": 80,
+                "memsets": 16,
+                "copy_bytes": 77056,
+                "API_launches": 80,
+                "API_synchronizations": 144
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.023712,
+                "command_transaction": 0.009856,
+                "commit_transaction": 0.022304000000000004,
+                "integrate_live": 0.228128,
+                "reduce_status_kernel": 0.059776,
+                "commit_step": 0.023008,
+                "shape_transaction": 0.496064,
+                "prepare_bounds": 0.271264,
+                "pair_geometry": 0.006016,
+                "compact_detection": 0.9251840000000001,
+                "box_pairs": 0.85392,
+                "begin_box_response": 2.6831679999999998,
+                "project_box_response": 0.7928000000000001,
+                "pack_box_response": 9.9224,
+                "copy_projected": 0.005952,
+                "solve_box_response": 0.589472,
+                "validate_box_response": 0.571776,
+                "commit_response": 0.023903999999999998
+              }
+            },
+            {
+              "frame": 1,
+              "metrics": {
+                "GPU_kernel_sum_ms": 16.263424,
+                "GPU_copy_sum_ms": 0.034624,
+                "GPU_memset_sum_ms": 0.008512,
+                "GPU_activity_span_ms": 16.983104,
+                "API_total_duration_ms": 16.909152,
+                "API_launch_duration_ms": 0.17255999999999996,
+                "API_synchronization_duration_ms": 16.489295999999992,
+                "NVTX_complete_advance_ms": 17.068912,
+                "clock_complete_advance_ms": 17.067577005946077
+              },
+              "counts": {
+                "kernels": 80,
+                "CUDA_APIs": 922,
+                "copies": 80,
+                "memsets": 16,
+                "copy_bytes": 77056,
+                "API_launches": 80,
+                "API_synchronizations": 144
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.024,
+                "command_transaction": 0.010239999999999999,
+                "commit_transaction": 0.022304000000000004,
+                "integrate_live": 0.17164799999999997,
+                "reduce_status_kernel": 0.05180799999999999,
+                "commit_step": 0.016544,
+                "shape_transaction": 0.418976,
+                "prepare_bounds": 0.268768,
+                "pair_geometry": 0.005344,
+                "compact_detection": 0.799648,
+                "box_pairs": 0.835136,
+                "begin_box_response": 2.3665920000000003,
+                "project_box_response": 0.7281280000000001,
+                "pack_box_response": 9.494624,
+                "copy_projected": 0.005056,
+                "solve_box_response": 0.518112,
+                "validate_box_response": 0.50896,
+                "commit_response": 0.017536
+              }
+            },
+            {
+              "frame": 2,
+              "metrics": {
+                "GPU_kernel_sum_ms": 16.494976,
+                "GPU_copy_sum_ms": 0.03344,
+                "GPU_memset_sum_ms": 0.008064,
+                "GPU_activity_span_ms": 17.820512,
+                "API_total_duration_ms": 17.668864,
+                "API_launch_duration_ms": 0.17075200000000001,
+                "API_synchronization_duration_ms": 17.246911999999995,
+                "NVTX_complete_advance_ms": 17.831824,
+                "clock_complete_advance_ms": 17.831349003245123
+              },
+              "counts": {
+                "kernels": 80,
+                "CUDA_APIs": 924,
+                "copies": 80,
+                "memsets": 16,
+                "copy_bytes": 77056,
+                "API_launches": 80,
+                "API_synchronizations": 144
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.017728,
+                "command_transaction": 0.010112,
+                "commit_transaction": 0.022208,
+                "integrate_live": 0.170336,
+                "reduce_status_kernel": 0.051904,
+                "commit_step": 0.016224,
+                "shape_transaction": 0.41744000000000003,
+                "prepare_bounds": 0.26940800000000004,
+                "pair_geometry": 0.005344,
+                "compact_detection": 0.799392,
+                "box_pairs": 0.8434879999999999,
+                "begin_box_response": 2.505152,
+                "project_box_response": 0.722272,
+                "pack_box_response": 9.605952,
+                "copy_projected": 0.0048319999999999995,
+                "solve_box_response": 0.50688,
+                "validate_box_response": 0.5088639999999999,
+                "commit_response": 0.01744
+              }
+            },
+            {
+              "frame": 3,
+              "metrics": {
+                "GPU_kernel_sum_ms": 16.254464,
+                "GPU_copy_sum_ms": 0.042592,
+                "GPU_memset_sum_ms": 0.007936,
+                "GPU_activity_span_ms": 17.025152,
+                "API_total_duration_ms": 16.871344,
+                "API_launch_duration_ms": 0.16721600000000003,
+                "API_synchronization_duration_ms": 16.452431999999998,
+                "NVTX_complete_advance_ms": 17.034048,
+                "clock_complete_advance_ms": 17.03360899409745
+              },
+              "counts": {
+                "kernels": 80,
+                "CUDA_APIs": 922,
+                "copies": 80,
+                "memsets": 16,
+                "copy_bytes": 77056,
+                "API_launches": 80,
+                "API_synchronizations": 144
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.024,
+                "command_transaction": 0.011167999999999999,
+                "commit_transaction": 0.026591999999999998,
+                "integrate_live": 0.174816,
+                "reduce_status_kernel": 0.052576000000000005,
+                "commit_step": 0.016512,
+                "shape_transaction": 0.494432,
+                "prepare_bounds": 0.26915199999999995,
+                "pair_geometry": 0.0056,
+                "compact_detection": 0.8011839999999999,
+                "box_pairs": 0.847328,
+                "begin_box_response": 2.123136,
+                "project_box_response": 0.723328,
+                "pack_box_response": 9.639488,
+                "copy_projected": 0.005504,
+                "solve_box_response": 0.507328,
+                "validate_box_response": 0.514208,
+                "commit_response": 0.018112
+              }
+            },
+            {
+              "frame": 4,
+              "metrics": {
+                "GPU_kernel_sum_ms": 16.571264,
+                "GPU_copy_sum_ms": 0.035104,
+                "GPU_memset_sum_ms": 0.008192,
+                "GPU_activity_span_ms": 18.295456,
+                "API_total_duration_ms": 18.144047999999998,
+                "API_launch_duration_ms": 0.16857599999999995,
+                "API_synchronization_duration_ms": 17.725519999999996,
+                "NVTX_complete_advance_ms": 18.306832,
+                "clock_complete_advance_ms": 18.306482990738004
+              },
+              "counts": {
+                "kernels": 80,
+                "CUDA_APIs": 924,
+                "copies": 80,
+                "memsets": 16,
+                "copy_bytes": 77056,
+                "API_launches": 80,
+                "API_synchronizations": 144
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.024352,
+                "command_transaction": 0.010176,
+                "commit_transaction": 0.022432,
+                "integrate_live": 0.170272,
+                "reduce_status_kernel": 0.051840000000000004,
+                "commit_step": 0.01648,
+                "shape_transaction": 0.44934399999999997,
+                "prepare_bounds": 0.273952,
+                "pair_geometry": 0.00528,
+                "compact_detection": 0.799424,
+                "box_pairs": 0.842016,
+                "begin_box_response": 2.5011200000000002,
+                "project_box_response": 0.7872319999999999,
+                "pack_box_response": 9.55248,
+                "copy_projected": 0.005888,
+                "solve_box_response": 0.529728,
+                "validate_box_response": 0.511072,
+                "commit_response": 0.018175999999999998
+              }
+            },
+            {
+              "frame": 5,
+              "metrics": {
+                "GPU_kernel_sum_ms": 16.096128,
+                "GPU_copy_sum_ms": 0.037824,
+                "GPU_memset_sum_ms": 0.009216,
+                "GPU_activity_span_ms": 16.886752,
+                "API_total_duration_ms": 16.73424,
+                "API_launch_duration_ms": 0.16806399999999996,
+                "API_synchronization_duration_ms": 16.31224,
+                "NVTX_complete_advance_ms": 16.897504,
+                "clock_complete_advance_ms": 16.89697000256274
+              },
+              "counts": {
+                "kernels": 80,
+                "CUDA_APIs": 922,
+                "copies": 80,
+                "memsets": 16,
+                "copy_bytes": 77056,
+                "API_launches": 80,
+                "API_synchronizations": 144
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.024064000000000002,
+                "command_transaction": 0.011295999999999999,
+                "commit_transaction": 0.026591999999999998,
+                "integrate_live": 0.180608,
+                "reduce_status_kernel": 0.052352,
+                "commit_step": 0.01632,
+                "shape_transaction": 0.49168,
+                "prepare_bounds": 0.269664,
+                "pair_geometry": 0.005632,
+                "compact_detection": 0.801696,
+                "box_pairs": 0.84752,
+                "begin_box_response": 2.1192,
+                "project_box_response": 0.7222719999999999,
+                "pack_box_response": 9.488864,
+                "copy_projected": 0.00496,
+                "solve_box_response": 0.5069440000000001,
+                "validate_box_response": 0.5088,
+                "commit_response": 0.017664
+              }
+            }
+          ],
+          "accuracy_maxima": {
+            "matched_scalar_position_error_m": 5.551115123125783e-17,
+            "matched_scalar_velocity_error_mps": 3.8163916471489756e-17,
+            "analytic_y_error_m": 9.99999999995449e-06,
+            "spin_radps": 2.4532694666933986e-17,
+            "angle_rad": 3.0631776196019646e-18,
+            "normal_residual_mps": 5.204170427930421e-17,
+            "depth_m": 1.0000000000065512e-05,
+            "contact_KE_gain_J": 0.0
+          },
+          "source_package_no_numeric_changes": true,
+          "TOI_admissions": "not exposed by strict response; no TOI or restitution-count inference from patch count",
+          "work": {
+            "velocity_sweeps_per_macro": [
+              4
+            ],
+            "patch_corrections_per_macro": [
+              0
+            ],
+            "patch_solves_per_macro": [
+              4
+            ],
+            "points_per_macro": [
+              16
+            ],
+            "warm_kernel_launches_per_macro": 80
+          }
+        }
+      ],
+      "actual_performance": {
+        "candidate_vs_strict_macro_time_ratio": 1.9712439105222759,
+        "candidate_vs_four_strict_time_ratio": 0.474319849301714
+      }
+    },
+    {
+      "fixture": 2,
+      "label": "inelastic-impact-start consecutive support trajectory",
+      "methods": [
+        {
+          "method": 0,
+          "plain_warmed_complete_advance_ms": {
+            "n": 24,
+            "median": 8.078213497356046,
+            "min": 7.774917001370341,
+            "max": 9.702955998363905
+          },
+          "plain_first_call_complete_advance_ms": {
+            "n": 3,
+            "median": 11.178949003806338,
+            "min": 11.114036009530537,
+            "max": 12.02218999969773
+          },
+          "plain_per_block_warmed_median_ms": [
+            7.86989299376728,
+            8.205892503610812,
+            8.377124002436176
+          ],
+          "traced_warmed_metrics": {
+            "GPU_kernel_sum_ms": {
+              "n": 4,
+              "median": 8.108864,
+              "min": 7.762336,
+              "max": 9.36704
+            },
+            "GPU_copy_sum_ms": {
+              "n": 4,
+              "median": 0.007152,
+              "min": 0.006464,
+              "max": 0.008416
+            },
+            "GPU_memset_sum_ms": {
+              "n": 4,
+              "median": 0.0021920000000000004,
+              "min": 0.001984,
+              "max": 0.003392
+            },
+            "GPU_activity_span_ms": {
+              "n": 4,
+              "median": 8.244016,
+              "min": 7.885408,
+              "max": 9.51408
+            },
+            "API_total_duration_ms": {
+              "n": 4,
+              "median": 8.230751999999999,
+              "min": 7.871744,
+              "max": 9.502752000000001
+            },
+            "API_launch_duration_ms": {
+              "n": 4,
+              "median": 0.012752,
+              "min": 0.01256,
+              "max": 0.013312000000000001
+            },
+            "API_synchronization_duration_ms": {
+              "n": 4,
+              "median": 8.174567999999999,
+              "min": 7.812352,
+              "max": 9.447168000000001
+            },
+            "NVTX_complete_advance_ms": {
+              "n": 4,
+              "median": 8.253696000000001,
+              "min": 7.896704,
+              "max": 9.525248
+            },
+            "clock_complete_advance_ms": {
+              "n": 4,
+              "median": 8.253286498074885,
+              "min": 7.896216993685812,
+              "max": 9.524736000457779
+            }
+          },
+          "traced_kernel_GPU_ms": {
+            "command_transaction": {
+              "n": 4,
+              "median": 0.002704,
+              "min": 0.002208,
+              "max": 0.003488
+            },
+            "copy_transaction": {
+              "n": 4,
+              "median": 0.00456,
+              "min": 0.004288,
+              "max": 0.004864
+            },
+            "commit_transaction": {
+              "n": 4,
+              "median": 0.0066560000000000005,
+              "min": 0.004448,
+              "max": 0.008928
+            },
+            "shape_transaction": {
+              "n": 4,
+              "median": 0.122624,
+              "min": 0.08528,
+              "max": 0.160864
+            },
+            "commit_temporal": {
+              "n": 4,
+              "median": 0.46593599999999996,
+              "min": 0.285248,
+              "max": 0.647104
+            },
+            "temporal_patch_floor": {
+              "n": 4,
+              "median": 7.505792,
+              "min": 7.300128,
+              "max": 8.623712
+            }
+          },
+          "traced_activity_samples": [
+            {
+              "frame": 0,
+              "metrics": {
+                "GPU_kernel_sum_ms": 9.505503999999998,
+                "GPU_copy_sum_ms": 0.007744,
+                "GPU_memset_sum_ms": 0.0019520000000000002,
+                "GPU_activity_span_ms": 11.242816,
+                "API_total_duration_ms": 11.191775999999999,
+                "API_launch_duration_ms": 1.131152,
+                "API_synchronization_duration_ms": 0.8051679999999999,
+                "NVTX_complete_advance_ms": 11.25536,
+                "clock_complete_advance_ms": 11.252839001826942
+              },
+              "counts": {
+                "kernels": 6,
+                "CUDA_APIs": 141,
+                "copies": 14,
+                "memsets": 4,
+                "copy_bytes": 19072,
+                "API_launches": 6,
+                "API_synchronizations": 25
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.00432,
+                "command_transaction": 0.002144,
+                "commit_transaction": 0.004416,
+                "shape_transaction": 0.085216,
+                "temporal_patch_floor": 8.752256,
+                "commit_temporal": 0.657152
+              }
+            },
+            {
+              "frame": 1,
+              "metrics": {
+                "GPU_kernel_sum_ms": 8.573088,
+                "GPU_copy_sum_ms": 0.008960000000000001,
+                "GPU_memset_sum_ms": 0.002272,
+                "GPU_activity_span_ms": 8.701216,
+                "API_total_duration_ms": 8.685424,
+                "API_launch_duration_ms": 0.014384000000000001,
+                "API_synchronization_duration_ms": 8.624544,
+                "NVTX_complete_advance_ms": 8.711904,
+                "clock_complete_advance_ms": 8.711267990292981
+              },
+              "counts": {
+                "kernels": 6,
+                "CUDA_APIs": 138,
+                "copies": 14,
+                "memsets": 4,
+                "copy_bytes": 19072,
+                "API_launches": 6,
+                "API_synchronizations": 25
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.004928,
+                "command_transaction": 0.0032,
+                "commit_transaction": 0.008672,
+                "shape_transaction": 0.158592,
+                "temporal_patch_floor": 7.751648,
+                "commit_temporal": 0.646048
+              }
+            },
+            {
+              "frame": 2,
+              "metrics": {
+                "GPU_kernel_sum_ms": 7.762336,
+                "GPU_copy_sum_ms": 0.006464,
+                "GPU_memset_sum_ms": 0.002304,
+                "GPU_activity_span_ms": 7.912864,
+                "API_total_duration_ms": 7.900848,
+                "API_launch_duration_ms": 0.012912,
+                "API_synchronization_duration_ms": 7.843967999999999,
+                "NVTX_complete_advance_ms": 7.924032,
+                "clock_complete_advance_ms": 7.923591998405755
+              },
+              "counts": {
+                "kernels": 6,
+                "CUDA_APIs": 139,
+                "copies": 14,
+                "memsets": 4,
+                "copy_bytes": 19072,
+                "API_launches": 6,
+                "API_synchronizations": 25
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.004864,
+                "command_transaction": 0.003168,
+                "commit_transaction": 0.0088,
+                "shape_transaction": 0.159968,
+                "temporal_patch_floor": 7.300288,
+                "commit_temporal": 0.285248
+              }
+            },
+            {
+              "frame": 3,
+              "metrics": {
+                "GPU_kernel_sum_ms": 9.36704,
+                "GPU_copy_sum_ms": 0.008416,
+                "GPU_memset_sum_ms": 0.0020800000000000003,
+                "GPU_activity_span_ms": 9.51408,
+                "API_total_duration_ms": 9.502752000000001,
+                "API_launch_duration_ms": 0.01256,
+                "API_synchronization_duration_ms": 9.447168000000001,
+                "NVTX_complete_advance_ms": 9.525248,
+                "clock_complete_advance_ms": 9.524736000457779
+              },
+              "counts": {
+                "kernels": 6,
+                "CUDA_APIs": 139,
+                "copies": 14,
+                "memsets": 4,
+                "copy_bytes": 19072,
+                "API_launches": 6,
+                "API_synchronizations": 25
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.004288,
+                "command_transaction": 0.002208,
+                "commit_transaction": 0.004448,
+                "shape_transaction": 0.08528,
+                "temporal_patch_floor": 8.623712,
+                "commit_temporal": 0.647104
+              }
+            },
+            {
+              "frame": 4,
+              "metrics": {
+                "GPU_kernel_sum_ms": 7.76352,
+                "GPU_copy_sum_ms": 0.007232000000000001,
+                "GPU_memset_sum_ms": 0.003392,
+                "GPU_activity_span_ms": 7.885408,
+                "API_total_duration_ms": 7.871744,
+                "API_launch_duration_ms": 0.013312000000000001,
+                "API_synchronization_duration_ms": 7.812352,
+                "NVTX_complete_advance_ms": 7.896704,
+                "clock_complete_advance_ms": 7.896216993685812
+              },
+              "counts": {
+                "kernels": 6,
+                "CUDA_APIs": 138,
+                "copies": 14,
+                "memsets": 4,
+                "copy_bytes": 19072,
+                "API_launches": 6,
+                "API_synchronizations": 25
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.004832,
+                "command_transaction": 0.003488,
+                "commit_transaction": 0.008928,
+                "shape_transaction": 0.160864,
+                "temporal_patch_floor": 7.300128,
+                "commit_temporal": 0.28528
+              }
+            },
+            {
+              "frame": 5,
+              "metrics": {
+                "GPU_kernel_sum_ms": 8.454208,
+                "GPU_copy_sum_ms": 0.007072,
+                "GPU_memset_sum_ms": 0.001984,
+                "GPU_activity_span_ms": 8.575168,
+                "API_total_duration_ms": 8.560656,
+                "API_launch_duration_ms": 0.012592,
+                "API_synchronization_duration_ms": 8.505168,
+                "NVTX_complete_advance_ms": 8.58336,
+                "clock_complete_advance_ms": 8.582980997744016
+              },
+              "counts": {
+                "kernels": 6,
+                "CUDA_APIs": 138,
+                "copies": 14,
+                "memsets": 4,
+                "copy_bytes": 19072,
+                "API_launches": 6,
+                "API_synchronizations": 25
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.004288,
+                "command_transaction": 0.00224,
+                "commit_transaction": 0.004512,
+                "shape_transaction": 0.08528,
+                "temporal_patch_floor": 7.711296,
+                "commit_temporal": 0.646592
+              }
+            }
+          ],
+          "accuracy_maxima": {
+            "matched_scalar_position_error_m": 0.0,
+            "matched_scalar_velocity_error_mps": 2.0816681711721685e-17,
+            "analytic_y_error_m": 0.0,
+            "spin_radps": 4.690975831039127e-18,
+            "angle_rad": 3.976229246228111e-19,
+            "normal_residual_mps": 2.3418766925686896e-17,
+            "depth_m": 0.0,
+            "contact_KE_gain_J": 4.513898307157584e-36
+          },
+          "source_package_no_numeric_changes": true,
+          "TOI_admissions": {
+            "plain_total": 3,
+            "per_trajectory": [
+              1,
+              1,
+              1
+            ],
+            "warm_total": 0
+          },
+          "work": {
+            "velocity_sweeps_per_macro": [
+              0
+            ],
+            "patch_corrections_per_macro": [
+              20,
+              22
+            ],
+            "patch_solves_per_macro": [
+              1
+            ],
+            "points_per_macro": [
+              4
+            ],
+            "warm_kernel_launches_per_macro": 6
+          }
+        },
+        {
+          "method": 1,
+          "plain_warmed_complete_advance_ms": {
+            "n": 24,
+            "median": 3.9728505071252584,
+            "min": 3.8307469949359074,
+            "max": 5.8438879932509735
+          },
+          "plain_first_call_complete_advance_ms": {
+            "n": 3,
+            "median": 11.147475990583189,
+            "min": 11.134706990560517,
+            "max": 11.349492007866502
+          },
+          "plain_per_block_warmed_median_ms": [
+            4.063329499331303,
+            3.965290503401775,
+            4.10489799833158
+          ],
+          "traced_warmed_metrics": {
+            "GPU_kernel_sum_ms": {
+              "n": 4,
+              "median": 3.9264959999999998,
+              "min": 3.717056,
+              "max": 4.432992
+            },
+            "GPU_copy_sum_ms": {
+              "n": 4,
+              "median": 0.008736,
+              "min": 0.008128,
+              "max": 0.009856
+            },
+            "GPU_memset_sum_ms": {
+              "n": 4,
+              "median": 0.001968,
+              "min": 0.0018880000000000001,
+              "max": 0.002208
+            },
+            "GPU_activity_span_ms": {
+              "n": 4,
+              "median": 4.124256,
+              "min": 3.890528,
+              "max": 5.394464
+            },
+            "API_total_duration_ms": {
+              "n": 4,
+              "median": 4.093432,
+              "min": 3.86112,
+              "max": 5.366624
+            },
+            "API_launch_duration_ms": {
+              "n": 4,
+              "median": 0.04172,
+              "min": 0.040944,
+              "max": 0.042544000000000005
+            },
+            "API_synchronization_duration_ms": {
+              "n": 4,
+              "median": 3.9894240000000005,
+              "min": 3.7575520000000004,
+              "max": 5.262912
+            },
+            "NVTX_complete_advance_ms": {
+              "n": 4,
+              "median": 4.134624,
+              "min": 3.901424,
+              "max": 5.405888
+            },
+            "clock_complete_advance_ms": {
+              "n": 4,
+              "median": 4.134194998187013,
+              "min": 3.900987998349592,
+              "max": 5.405459989560768
+            }
+          },
+          "traced_kernel_GPU_ms": {
+            "validate_box_response": {
+              "n": 4,
+              "median": 0.12670399999999998,
+              "min": 0.126656,
+              "max": 0.128832
+            },
+            "reduce_status_kernel": {
+              "n": 4,
+              "median": 0.012832,
+              "min": 0.012768,
+              "max": 0.013504
+            },
+            "integrate_live": {
+              "n": 4,
+              "median": 0.135744,
+              "min": 0.133696,
+              "max": 0.14736
+            },
+            "commit_step": {
+              "n": 4,
+              "median": 0.004128,
+              "min": 0.004096,
+              "max": 0.004512
+            },
+            "pair_geometry": {
+              "n": 4,
+              "median": 0.001264,
+              "min": 0.001248,
+              "max": 0.001536
+            },
+            "compact_detection": {
+              "n": 4,
+              "median": 0.19950400000000001,
+              "min": 0.199488,
+              "max": 0.20112
+            },
+            "box_pairs": {
+              "n": 4,
+              "median": 0.205872,
+              "min": 0.205824,
+              "max": 0.21561599999999997
+            },
+            "prepare_bounds": {
+              "n": 4,
+              "median": 0.066976,
+              "min": 0.06678400000000001,
+              "max": 0.067712
+            },
+            "project_box_response": {
+              "n": 4,
+              "median": 0.180624,
+              "min": 0.180576,
+              "max": 0.18208
+            },
+            "copy_projected": {
+              "n": 4,
+              "median": 0.001136,
+              "min": 0.000992,
+              "max": 0.001888
+            },
+            "command_transaction": {
+              "n": 4,
+              "median": 0.002256,
+              "min": 0.00224,
+              "max": 0.003264
+            },
+            "begin_box_response": {
+              "n": 4,
+              "median": 0.529968,
+              "min": 0.529888,
+              "max": 0.531232
+            },
+            "pack_box_response": {
+              "n": 4,
+              "median": 2.17664,
+              "min": 2.029696,
+              "max": 2.730272
+            },
+            "commit_response": {
+              "n": 4,
+              "median": 0.0041919999999999995,
+              "min": 0.004128,
+              "max": 0.005024
+            },
+            "copy_transaction": {
+              "n": 4,
+              "median": 0.004384,
+              "min": 0.00432,
+              "max": 0.005024
+            },
+            "commit_transaction": {
+              "n": 4,
+              "median": 0.004496,
+              "min": 0.00448,
+              "max": 0.008896
+            },
+            "shape_transaction": {
+              "n": 4,
+              "median": 0.085568,
+              "min": 0.085536,
+              "max": 0.161152
+            },
+            "solve_box_response": {
+              "n": 4,
+              "median": 0.128848,
+              "min": 0.123424,
+              "max": 0.135904
+            }
+          },
+          "traced_activity_samples": [
+            {
+              "frame": 0,
+              "metrics": {
+                "GPU_kernel_sum_ms": 5.197472,
+                "GPU_copy_sum_ms": 0.010304,
+                "GPU_memset_sum_ms": 0.0019520000000000002,
+                "GPU_activity_span_ms": 11.936608,
+                "API_total_duration_ms": 11.43112,
+                "API_launch_duration_ms": 5.11464,
+                "API_synchronization_duration_ms": 0.6058079999999999,
+                "NVTX_complete_advance_ms": 11.950832,
+                "clock_complete_advance_ms": 11.946786995395087
+              },
+              "counts": {
+                "kernels": 20,
+                "CUDA_APIs": 245,
+                "copies": 20,
+                "memsets": 4,
+                "copy_bytes": 19264,
+                "API_launches": 20,
+                "API_synchronizations": 36
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.004288,
+                "command_transaction": 0.002144,
+                "commit_transaction": 0.004448,
+                "integrate_live": 0.173216,
+                "reduce_status_kernel": 0.020672,
+                "commit_step": 0.010656,
+                "shape_transaction": 0.162464,
+                "prepare_bounds": 0.070368,
+                "pair_geometry": 0.001952,
+                "compact_detection": 0.325088,
+                "box_pairs": 0.219392,
+                "begin_box_response": 1.078848,
+                "project_box_response": 0.2448,
+                "pack_box_response": 2.500544,
+                "copy_projected": 0.001792,
+                "solve_box_response": 0.176352,
+                "validate_box_response": 0.190016,
+                "commit_response": 0.010432
+              }
+            },
+            {
+              "frame": 1,
+              "metrics": {
+                "GPU_kernel_sum_ms": 4.202144,
+                "GPU_copy_sum_ms": 0.009696,
+                "GPU_memset_sum_ms": 0.0022719999999999997,
+                "GPU_activity_span_ms": 4.435296,
+                "API_total_duration_ms": 4.397136,
+                "API_launch_duration_ms": 0.047824,
+                "API_synchronization_duration_ms": 4.280192,
+                "NVTX_complete_advance_ms": 4.453792,
+                "clock_complete_advance_ms": 4.4525699922814965
+              },
+              "counts": {
+                "kernels": 20,
+                "CUDA_APIs": 231,
+                "copies": 20,
+                "memsets": 4,
+                "copy_bytes": 19264,
+                "API_launches": 20,
+                "API_synchronizations": 36
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.004832,
+                "command_transaction": 0.003456,
+                "commit_transaction": 0.008736,
+                "integrate_live": 0.173824,
+                "reduce_status_kernel": 0.013344,
+                "commit_step": 0.004128,
+                "shape_transaction": 0.160032,
+                "prepare_bounds": 0.067264,
+                "pair_geometry": 0.001536,
+                "compact_detection": 0.2008,
+                "box_pairs": 0.213408,
+                "begin_box_response": 0.530912,
+                "project_box_response": 0.181888,
+                "pack_box_response": 2.362752,
+                "copy_projected": 0.001184,
+                "solve_box_response": 0.143232,
+                "validate_box_response": 0.126656,
+                "commit_response": 0.00416
+              }
+            },
+            {
+              "frame": 2,
+              "metrics": {
+                "GPU_kernel_sum_ms": 3.730688,
+                "GPU_copy_sum_ms": 0.008128,
+                "GPU_memset_sum_ms": 0.002208,
+                "GPU_activity_span_ms": 3.949888,
+                "API_total_duration_ms": 3.92224,
+                "API_launch_duration_ms": 0.042544000000000005,
+                "API_synchronization_duration_ms": 3.8176480000000006,
+                "NVTX_complete_advance_ms": 3.962336,
+                "clock_complete_advance_ms": 3.961883994634263
+              },
+              "counts": {
+                "kernels": 20,
+                "CUDA_APIs": 231,
+                "copies": 20,
+                "memsets": 4,
+                "copy_bytes": 19264,
+                "API_launches": 20,
+                "API_synchronizations": 36
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.004416,
+                "command_transaction": 0.00224,
+                "commit_transaction": 0.00448,
+                "integrate_live": 0.14736,
+                "reduce_status_kernel": 0.012864,
+                "commit_step": 0.004512,
+                "shape_transaction": 0.085568,
+                "prepare_bounds": 0.06707199999999999,
+                "pair_geometry": 0.001248,
+                "compact_detection": 0.19952,
+                "box_pairs": 0.20588800000000002,
+                "begin_box_response": 0.529984,
+                "project_box_response": 0.18064,
+                "pack_box_response": 2.029696,
+                "copy_projected": 0.000992,
+                "solve_box_response": 0.123424,
+                "validate_box_response": 0.126656,
+                "commit_response": 0.004128
+              }
+            },
+            {
+              "frame": 3,
+              "metrics": {
+                "GPU_kernel_sum_ms": 4.432992,
+                "GPU_copy_sum_ms": 0.009856,
+                "GPU_memset_sum_ms": 0.0019520000000000002,
+                "GPU_activity_span_ms": 5.394464,
+                "API_total_duration_ms": 5.366624,
+                "API_launch_duration_ms": 0.041712,
+                "API_synchronization_duration_ms": 5.262912,
+                "NVTX_complete_advance_ms": 5.405888,
+                "clock_complete_advance_ms": 5.405459989560768
+              },
+              "counts": {
+                "kernels": 20,
+                "CUDA_APIs": 231,
+                "copies": 20,
+                "memsets": 4,
+                "copy_bytes": 19264,
+                "API_launches": 20,
+                "API_synchronizations": 36
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.004352,
+                "command_transaction": 0.00224,
+                "commit_transaction": 0.004512,
+                "integrate_live": 0.133696,
+                "reduce_status_kernel": 0.012768,
+                "commit_step": 0.004128,
+                "shape_transaction": 0.085536,
+                "prepare_bounds": 0.06678400000000001,
+                "pair_geometry": 0.001248,
+                "compact_detection": 0.199488,
+                "box_pairs": 0.20585599999999998,
+                "begin_box_response": 0.529888,
+                "project_box_response": 0.180576,
+                "pack_box_response": 2.730272,
+                "copy_projected": 0.001888,
+                "solve_box_response": 0.135904,
+                "validate_box_response": 0.128832,
+                "commit_response": 0.005024
+              }
+            },
+            {
+              "frame": 4,
+              "metrics": {
+                "GPU_kernel_sum_ms": 4.122304,
+                "GPU_copy_sum_ms": 0.009152,
+                "GPU_memset_sum_ms": 0.0018880000000000001,
+                "GPU_activity_span_ms": 4.298624,
+                "API_total_duration_ms": 4.2646239999999995,
+                "API_launch_duration_ms": 0.041728,
+                "API_synchronization_duration_ms": 4.1612,
+                "NVTX_complete_advance_ms": 4.306912,
+                "clock_complete_advance_ms": 4.306506001739763
+              },
+              "counts": {
+                "kernels": 20,
+                "CUDA_APIs": 231,
+                "copies": 20,
+                "memsets": 4,
+                "copy_bytes": 19264,
+                "API_launches": 20,
+                "API_synchronizations": 36
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.005024,
+                "command_transaction": 0.003264,
+                "commit_transaction": 0.008896,
+                "integrate_live": 0.137792,
+                "reduce_status_kernel": 0.013504,
+                "commit_step": 0.004128,
+                "shape_transaction": 0.161152,
+                "prepare_bounds": 0.067712,
+                "pair_geometry": 0.001536,
+                "compact_detection": 0.20112,
+                "box_pairs": 0.21561599999999997,
+                "begin_box_response": 0.531232,
+                "project_box_response": 0.18208,
+                "pack_box_response": 2.322816,
+                "copy_projected": 0.00128,
+                "solve_box_response": 0.134208,
+                "validate_box_response": 0.12672,
+                "commit_response": 0.004224
+              }
+            },
+            {
+              "frame": 5,
+              "metrics": {
+                "GPU_kernel_sum_ms": 3.717056,
+                "GPU_copy_sum_ms": 0.008320000000000001,
+                "GPU_memset_sum_ms": 0.001984,
+                "GPU_activity_span_ms": 3.890528,
+                "API_total_duration_ms": 3.86112,
+                "API_launch_duration_ms": 0.040944,
+                "API_synchronization_duration_ms": 3.7575520000000004,
+                "NVTX_complete_advance_ms": 3.901424,
+                "clock_complete_advance_ms": 3.900987998349592
+              },
+              "counts": {
+                "kernels": 20,
+                "CUDA_APIs": 231,
+                "copies": 20,
+                "memsets": 4,
+                "copy_bytes": 19264,
+                "API_launches": 20,
+                "API_synchronizations": 36
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.00432,
+                "command_transaction": 0.002272,
+                "commit_transaction": 0.00448,
+                "integrate_live": 0.133696,
+                "reduce_status_kernel": 0.0128,
+                "commit_step": 0.004096,
+                "shape_transaction": 0.085568,
+                "prepare_bounds": 0.06688,
+                "pair_geometry": 0.00128,
+                "compact_detection": 0.199488,
+                "box_pairs": 0.205824,
+                "begin_box_response": 0.529952,
+                "project_box_response": 0.180608,
+                "pack_box_response": 2.030464,
+                "copy_projected": 0.000992,
+                "solve_box_response": 0.123488,
+                "validate_box_response": 0.126688,
+                "commit_response": 0.00416
+              }
+            }
+          ],
+          "accuracy_maxima": {
+            "matched_scalar_position_error_m": 5.551115123125783e-17,
+            "matched_scalar_velocity_error_mps": 4.440892098500626e-16,
+            "analytic_y_error_m": 9.99999999995449e-06,
+            "spin_radps": 6.206335383118183e-17,
+            "angle_rad": 6.865259323833042e-18,
+            "normal_residual_mps": 4.440892098500626e-16,
+            "depth_m": 9.99999999995449e-06,
+            "contact_KE_gain_J": 0.0
+          },
+          "source_package_no_numeric_changes": true,
+          "TOI_admissions": "not exposed by strict response; no TOI or restitution-count inference from patch count",
+          "work": {
+            "velocity_sweeps_per_macro": [
+              1
+            ],
+            "patch_corrections_per_macro": [
+              0
+            ],
+            "patch_solves_per_macro": [
+              1
+            ],
+            "points_per_macro": [
+              4
+            ],
+            "warm_kernel_launches_per_macro": 20
+          }
+        },
+        {
+          "method": 2,
+          "plain_warmed_complete_advance_ms": {
+            "n": 24,
+            "median": 17.672720001428388,
+            "min": 15.694251997047104,
+            "max": 20.350260005216114
+          },
+          "plain_first_call_complete_advance_ms": {
+            "n": 3,
+            "median": 25.49948099476751,
+            "min": 24.327276987605728,
+            "max": 25.611603996367194
+          },
+          "plain_per_block_warmed_median_ms": [
+            17.288210001424886,
+            16.81718149484368,
+            18.77766800316749
+          ],
+          "traced_warmed_metrics": {
+            "GPU_kernel_sum_ms": {
+              "n": 4,
+              "median": 16.046352,
+              "min": 15.662848,
+              "max": 16.568512
+            },
+            "GPU_copy_sum_ms": {
+              "n": 4,
+              "median": 0.035408,
+              "min": 0.034176,
+              "max": 0.035936
+            },
+            "GPU_memset_sum_ms": {
+              "n": 4,
+              "median": 0.00784,
+              "min": 0.0075840000000000005,
+              "max": 0.009056
+            },
+            "GPU_activity_span_ms": {
+              "n": 4,
+              "median": 17.357424,
+              "min": 16.956096,
+              "max": 17.598528
+            },
+            "API_total_duration_ms": {
+              "n": 4,
+              "median": 17.208488,
+              "min": 16.80584,
+              "max": 17.44888
+            },
+            "API_launch_duration_ms": {
+              "n": 4,
+              "median": 0.16709599999999997,
+              "min": 0.16635200000000008,
+              "max": 0.16870400000000002
+            },
+            "API_synchronization_duration_ms": {
+              "n": 4,
+              "median": 16.798704,
+              "min": 16.398016,
+              "max": 17.038768000000005
+            },
+            "NVTX_complete_advance_ms": {
+              "n": 4,
+              "median": 17.36844,
+              "min": 16.966768,
+              "max": 17.60792
+            },
+            "clock_complete_advance_ms": {
+              "n": 4,
+              "median": 17.367807995469775,
+              "min": 16.966185998171568,
+              "max": 17.607271001907066
+            }
+          },
+          "traced_kernel_GPU_ms": {
+            "validate_box_response": {
+              "n": 4,
+              "median": 0.5090079999999999,
+              "min": 0.508544,
+              "max": 0.509088
+            },
+            "reduce_status_kernel": {
+              "n": 4,
+              "median": 0.0516,
+              "min": 0.051488,
+              "max": 0.060352
+            },
+            "integrate_live": {
+              "n": 4,
+              "median": 0.170432,
+              "min": 0.17017600000000002,
+              "max": 0.17984
+            },
+            "commit_step": {
+              "n": 4,
+              "median": 0.016512,
+              "min": 0.016224000000000002,
+              "max": 0.02352
+            },
+            "pair_geometry": {
+              "n": 4,
+              "median": 0.00528,
+              "min": 0.005248,
+              "max": 0.005504
+            },
+            "compact_detection": {
+              "n": 4,
+              "median": 0.7974559999999999,
+              "min": 0.7974399999999999,
+              "max": 0.90144
+            },
+            "box_pairs": {
+              "n": 4,
+              "median": 0.8348960000000001,
+              "min": 0.83424,
+              "max": 0.8550399999999999
+            },
+            "prepare_bounds": {
+              "n": 4,
+              "median": 0.269024,
+              "min": 0.268128,
+              "max": 0.27155199999999996
+            },
+            "project_box_response": {
+              "n": 4,
+              "median": 0.723664,
+              "min": 0.7232959999999999,
+              "max": 0.7910400000000001
+            },
+            "copy_projected": {
+              "n": 4,
+              "median": 0.0049440000000000005,
+              "min": 0.004512,
+              "max": 0.005088
+            },
+            "command_transaction": {
+              "n": 4,
+              "median": 0.01008,
+              "min": 0.009984,
+              "max": 0.010688
+            },
+            "begin_box_response": {
+              "n": 4,
+              "median": 2.3079520000000002,
+              "min": 2.114752,
+              "max": 2.504576
+            },
+            "pack_box_response": {
+              "n": 4,
+              "median": 9.338975999999999,
+              "min": 9.177536,
+              "max": 9.499744
+            },
+            "commit_response": {
+              "n": 4,
+              "median": 0.017568,
+              "min": 0.016896,
+              "max": 0.017632
+            },
+            "copy_transaction": {
+              "n": 4,
+              "median": 0.017744,
+              "min": 0.0176,
+              "max": 0.018112
+            },
+            "commit_transaction": {
+              "n": 4,
+              "median": 0.022448000000000003,
+              "min": 0.022400000000000003,
+              "max": 0.026624000000000002
+            },
+            "shape_transaction": {
+              "n": 4,
+              "median": 0.416736,
+              "min": 0.41536,
+              "max": 0.416864
+            },
+            "solve_box_response": {
+              "n": 4,
+              "median": 0.511088,
+              "min": 0.505664,
+              "max": 0.517056
+            }
+          },
+          "traced_activity_samples": [
+            {
+              "frame": 0,
+              "metrics": {
+                "GPU_kernel_sum_ms": 17.867776,
+                "GPU_copy_sum_ms": 0.038848,
+                "GPU_memset_sum_ms": 0.00784,
+                "GPU_activity_span_ms": 25.009568,
+                "API_total_duration_ms": 24.263887999999998,
+                "API_launch_duration_ms": 4.920272,
+                "API_synchronization_duration_ms": 12.824591999999999,
+                "NVTX_complete_advance_ms": 25.025904,
+                "clock_complete_advance_ms": 25.021553999977186
+              },
+              "counts": {
+                "kernels": 80,
+                "CUDA_APIs": 937,
+                "copies": 80,
+                "memsets": 16,
+                "copy_bytes": 77056,
+                "API_launches": 80,
+                "API_synchronizations": 144
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.023712,
+                "command_transaction": 0.009824000000000001,
+                "commit_transaction": 0.022368,
+                "integrate_live": 0.214368,
+                "reduce_status_kernel": 0.059872,
+                "commit_step": 0.023039999999999998,
+                "shape_transaction": 0.49267199999999994,
+                "prepare_bounds": 0.271744,
+                "pair_geometry": 0.006272,
+                "compact_detection": 0.9251520000000001,
+                "box_pairs": 0.854528,
+                "begin_box_response": 2.661248,
+                "project_box_response": 0.787232,
+                "pack_box_response": 9.893312,
+                "copy_projected": 0.004768,
+                "solve_box_response": 0.9532480000000001,
+                "validate_box_response": 0.6371199999999999,
+                "commit_response": 0.027296
+              }
+            },
+            {
+              "frame": 1,
+              "metrics": {
+                "GPU_kernel_sum_ms": 15.714176,
+                "GPU_copy_sum_ms": 0.035584,
+                "GPU_memset_sum_ms": 0.009504,
+                "GPU_activity_span_ms": 16.991904,
+                "API_total_duration_ms": 16.847296,
+                "API_launch_duration_ms": 0.17008000000000004,
+                "API_synchronization_duration_ms": 16.437599999999996,
+                "NVTX_complete_advance_ms": 17.006832,
+                "clock_complete_advance_ms": 17.005322995828465
+              },
+              "counts": {
+                "kernels": 80,
+                "CUDA_APIs": 924,
+                "copies": 80,
+                "memsets": 16,
+                "copy_bytes": 77056,
+                "API_launches": 80,
+                "API_synchronizations": 144
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.01792,
+                "command_transaction": 0.010304,
+                "commit_transaction": 0.022272,
+                "integrate_live": 0.17040000000000002,
+                "reduce_status_kernel": 0.051776,
+                "commit_step": 0.016256,
+                "shape_transaction": 0.41536,
+                "prepare_bounds": 0.26825599999999994,
+                "pair_geometry": 0.005472,
+                "compact_detection": 0.7973760000000001,
+                "box_pairs": 0.8355520000000001,
+                "begin_box_response": 2.116544,
+                "project_box_response": 0.724,
+                "pack_box_response": 9.221855999999999,
+                "copy_projected": 0.005216,
+                "solve_box_response": 0.50928,
+                "validate_box_response": 0.508896,
+                "commit_response": 0.017439999999999997
+              }
+            },
+            {
+              "frame": 2,
+              "metrics": {
+                "GPU_kernel_sum_ms": 16.4168,
+                "GPU_copy_sum_ms": 0.034176,
+                "GPU_memset_sum_ms": 0.007712,
+                "GPU_activity_span_ms": 17.598528,
+                "API_total_duration_ms": 17.44888,
+                "API_launch_duration_ms": 0.16635200000000008,
+                "API_synchronization_duration_ms": 17.038768000000005,
+                "NVTX_complete_advance_ms": 17.60792,
+                "clock_complete_advance_ms": 17.607271001907066
+              },
+              "counts": {
+                "kernels": 80,
+                "CUDA_APIs": 923,
+                "copies": 80,
+                "memsets": 16,
+                "copy_bytes": 77056,
+                "API_launches": 80,
+                "API_synchronizations": 144
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.018112,
+                "command_transaction": 0.010688,
+                "commit_transaction": 0.026624000000000002,
+                "integrate_live": 0.17984,
+                "reduce_status_kernel": 0.060352,
+                "commit_step": 0.02352,
+                "shape_transaction": 0.41683200000000004,
+                "prepare_bounds": 0.26976,
+                "pair_geometry": 0.00528,
+                "compact_detection": 0.7974399999999999,
+                "box_pairs": 0.8355520000000001,
+                "begin_box_response": 2.501088,
+                "project_box_response": 0.723968,
+                "pack_box_response": 9.499744,
+                "copy_projected": 0.005088,
+                "solve_box_response": 0.516288,
+                "validate_box_response": 0.509056,
+                "commit_response": 0.017568
+              }
+            },
+            {
+              "frame": 3,
+              "metrics": {
+                "GPU_kernel_sum_ms": 15.662848,
+                "GPU_copy_sum_ms": 0.035616,
+                "GPU_memset_sum_ms": 0.0075840000000000005,
+                "GPU_activity_span_ms": 17.261568,
+                "API_total_duration_ms": 17.112432,
+                "API_launch_duration_ms": 0.16870400000000002,
+                "API_synchronization_duration_ms": 16.702335999999995,
+                "NVTX_complete_advance_ms": 17.273552,
+                "clock_complete_advance_ms": 17.272935991059057
+              },
+              "counts": {
+                "kernels": 80,
+                "CUDA_APIs": 924,
+                "copies": 80,
+                "memsets": 16,
+                "copy_bytes": 77056,
+                "API_launches": 80,
+                "API_synchronizations": 144
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.0176,
+                "command_transaction": 0.009984,
+                "commit_transaction": 0.022400000000000003,
+                "integrate_live": 0.17024,
+                "reduce_status_kernel": 0.051616,
+                "commit_step": 0.016224000000000002,
+                "shape_transaction": 0.416864,
+                "prepare_bounds": 0.26828799999999997,
+                "pair_geometry": 0.00528,
+                "compact_detection": 0.7974399999999999,
+                "box_pairs": 0.83424,
+                "begin_box_response": 2.1148160000000003,
+                "project_box_response": 0.7232959999999999,
+                "pack_box_response": 9.177536,
+                "copy_projected": 0.004832,
+                "solve_box_response": 0.505664,
+                "validate_box_response": 0.50896,
+                "commit_response": 0.017568
+              }
+            },
+            {
+              "frame": 4,
+              "metrics": {
+                "GPU_kernel_sum_ms": 16.568512,
+                "GPU_copy_sum_ms": 0.035936,
+                "GPU_memset_sum_ms": 0.009056,
+                "GPU_activity_span_ms": 17.45328,
+                "API_total_duration_ms": 17.304544,
+                "API_launch_duration_ms": 0.167248,
+                "API_synchronization_duration_ms": 16.895072000000003,
+                "NVTX_complete_advance_ms": 17.463328,
+                "clock_complete_advance_ms": 17.462679999880493
+              },
+              "counts": {
+                "kernels": 80,
+                "CUDA_APIs": 922,
+                "copies": 80,
+                "memsets": 16,
+                "copy_bytes": 77056,
+                "API_launches": 80,
+                "API_synchronizations": 144
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.017728,
+                "command_transaction": 0.010176000000000001,
+                "commit_transaction": 0.022464000000000005,
+                "integrate_live": 0.17017600000000002,
+                "reduce_status_kernel": 0.051584,
+                "commit_step": 0.016544,
+                "shape_transaction": 0.41536,
+                "prepare_bounds": 0.27155199999999996,
+                "pair_geometry": 0.005248,
+                "compact_detection": 0.90144,
+                "box_pairs": 0.8550399999999999,
+                "begin_box_response": 2.504576,
+                "project_box_response": 0.7910400000000001,
+                "pack_box_response": 9.486752,
+                "copy_projected": 0.005056,
+                "solve_box_response": 0.517056,
+                "validate_box_response": 0.509088,
+                "commit_response": 0.017632
+              }
+            },
+            {
+              "frame": 5,
+              "metrics": {
+                "GPU_kernel_sum_ms": 15.675904000000001,
+                "GPU_copy_sum_ms": 0.0352,
+                "GPU_memset_sum_ms": 0.007968,
+                "GPU_activity_span_ms": 16.956096,
+                "API_total_duration_ms": 16.80584,
+                "API_launch_duration_ms": 0.16694399999999995,
+                "API_synchronization_duration_ms": 16.398016,
+                "NVTX_complete_advance_ms": 16.966768,
+                "clock_complete_advance_ms": 16.966185998171568
+              },
+              "counts": {
+                "kernels": 80,
+                "CUDA_APIs": 924,
+                "copies": 80,
+                "memsets": 16,
+                "copy_bytes": 77056,
+                "API_launches": 80,
+                "API_synchronizations": 144
+              },
+              "kernel_GPU_ms": {
+                "copy_transaction": 0.017759999999999998,
+                "command_transaction": 0.009984,
+                "commit_transaction": 0.022432,
+                "integrate_live": 0.170624,
+                "reduce_status_kernel": 0.051488,
+                "commit_step": 0.016479999999999998,
+                "shape_transaction": 0.41664,
+                "prepare_bounds": 0.268128,
+                "pair_geometry": 0.005504,
+                "compact_detection": 0.797472,
+                "box_pairs": 0.83424,
+                "begin_box_response": 2.114752,
+                "project_box_response": 0.72336,
+                "pack_box_response": 9.1912,
+                "copy_projected": 0.004512,
+                "solve_box_response": 0.505888,
+                "validate_box_response": 0.508544,
+                "commit_response": 0.016896
+              }
+            }
+          ],
+          "accuracy_maxima": {
+            "matched_scalar_position_error_m": 0.0,
+            "matched_scalar_velocity_error_mps": 2.0816681711721685e-17,
+            "analytic_y_error_m": 1.0000000000010001e-05,
+            "spin_radps": 2.0888836804026048e-17,
+            "angle_rad": 2.887191458376894e-18,
+            "normal_residual_mps": 3.885780586188048e-16,
+            "depth_m": 1.0000000000065512e-05,
+            "contact_KE_gain_J": 0.0
+          },
+          "source_package_no_numeric_changes": true,
+          "TOI_admissions": "not exposed by strict response; no TOI or restitution-count inference from patch count",
+          "work": {
+            "velocity_sweeps_per_macro": [
+              4
+            ],
+            "patch_corrections_per_macro": [
+              0
+            ],
+            "patch_solves_per_macro": [
+              4
+            ],
+            "points_per_macro": [
+              16
+            ],
+            "warm_kernel_launches_per_macro": 80
+          }
+        }
+      ],
+      "actual_performance": {
+        "candidate_vs_strict_macro_time_ratio": 2.0333545102862214,
+        "candidate_vs_four_strict_time_ratio": 0.45710074604832357
+      }
+    }
+  ],
+  "all_numeric_records_passed": true,
+  "CUDA_instrumentation": "Nsight Systems CUDA/NVTX; no CPU sampling, context switches, memory usage or CUDA event tracing; no Compute counters",
+  "resource_metadata": {
+    "m0/copy_transaction": {
+      "symbol": "gpu_temporal_patch_api_lifecycl6A6A_7b99dbb97bde3a5d",
+      "grid": [
+        4,
+        1,
+        1
+      ],
+      "block": [
+        64,
+        1,
+        1
+      ],
+      "registers_per_thread": 26,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 42467328
+    },
+    "m0/command_transaction": {
+      "symbol": "gpu_temporal_patch_api_lifecycl6A6A_ed1dcfad2c014f79",
+      "grid": [
+        1,
+        1,
+        1
+      ],
+      "block": [
+        1,
+        1,
+        1
+      ],
+      "registers_per_thread": 56,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 56623104
+    },
+    "m0/commit_transaction": {
+      "symbol": "gpu_temporal_patch_api_lifecycl6A6A_52e5d6dac52367d8",
+      "grid": [
+        4,
+        1,
+        1
+      ],
+      "block": [
+        64,
+        1,
+        1
+      ],
+      "registers_per_thread": 26,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 42467328
+    },
+    "m0/shape_transaction": {
+      "symbol": "gpu_temporal_patch_api_shape_ke6A6A_50c74bdec3a1991b",
+      "grid": [
+        1,
+        1,
+        1
+      ],
+      "block": [
+        1,
+        1,
+        1
+      ],
+      "registers_per_thread": 38,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 42467328
+    },
+    "m0/temporal_patch_floor": {
+      "symbol": "gpu_temporal_patch_api_temporal6A6A_3c62d91cba1c39e7",
+      "grid": [
+        1,
+        1,
+        1
+      ],
+      "block": [
+        1,
+        1,
+        1
+      ],
+      "registers_per_thread": 239,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 152567808
+    },
+    "m0/commit_temporal": {
+      "symbol": "gpu_temporal_patch_api_temporal6A6A_17680a74c88edca0",
+      "grid": [
+        1,
+        1,
+        1
+      ],
+      "block": [
+        1,
+        1,
+        1
+      ],
+      "registers_per_thread": 26,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 42467328
+    },
+    "m1/copy_transaction": {
+      "symbol": "gpu_temporal_patch_api_lifecycl6A6A_7b99dbb97bde3a5d",
+      "grid": [
+        4,
+        1,
+        1
+      ],
+      "block": [
+        64,
+        1,
+        1
+      ],
+      "registers_per_thread": 26,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 42467328
+    },
+    "m1/command_transaction": {
+      "symbol": "gpu_temporal_patch_api_lifecycl6A6A_ed1dcfad2c014f79",
+      "grid": [
+        1,
+        1,
+        1
+      ],
+      "block": [
+        1,
+        1,
+        1
+      ],
+      "registers_per_thread": 56,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 56623104
+    },
+    "m1/commit_transaction": {
+      "symbol": "gpu_temporal_patch_api_lifecycl6A6A_52e5d6dac52367d8",
+      "grid": [
+        4,
+        1,
+        1
+      ],
+      "block": [
+        64,
+        1,
+        1
+      ],
+      "registers_per_thread": 26,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 42467328
+    },
+    "m1/integrate_live": {
+      "symbol": "gpu_temporal_patch_api_lifecycl6A6A_c69f13724cc8d390",
+      "grid": [
+        4,
+        1,
+        1
+      ],
+      "block": [
+        64,
+        1,
+        1
+      ],
+      "registers_per_thread": 156,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 56623104
+    },
+    "m1/reduce_status_kernel": {
+      "symbol": "gpu_temporal_patch_api_kernels6A6A6A_0eaaf4dd135368ba",
+      "grid": [
+        1,
+        1,
+        1
+      ],
+      "block": [
+        1,
+        1,
+        1
+      ],
+      "registers_per_thread": 16,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 42467328
+    },
+    "m1/commit_step": {
+      "symbol": "gpu_temporal_patch_api_lifecycl6A6A_0d983b1a19e352ab",
+      "grid": [
+        4,
+        1,
+        1
+      ],
+      "block": [
+        64,
+        1,
+        1
+      ],
+      "registers_per_thread": 22,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 42467328
+    },
+    "m1/shape_transaction": {
+      "symbol": "gpu_temporal_patch_api_shape_ke6A6A_50c74bdec3a1991b",
+      "grid": [
+        1,
+        1,
+        1
+      ],
+      "block": [
+        1,
+        1,
+        1
+      ],
+      "registers_per_thread": 38,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 42467328
+    },
+    "m1/prepare_bounds": {
+      "symbol": "gpu_temporal_patch_api_shape_ke6A6A_e6572d9121dd6943",
+      "grid": [
+        1,
+        1,
+        1
+      ],
+      "block": [
+        64,
+        1,
+        1
+      ],
+      "registers_per_thread": 96,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 42467328
+    },
+    "m1/pair_geometry": {
+      "symbol": "gpu_temporal_patch_api_shape_ke6A6A_9b535c347163bb79",
+      "grid": [
+        64,
+        1,
+        1
+      ],
+      "block": [
+        64,
+        1,
+        1
+      ],
+      "registers_per_thread": 66,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 42467328
+    },
+    "m1/compact_detection": {
+      "symbol": "gpu_temporal_patch_api_shape_ke6A6A_7a9d102120405b9c",
+      "grid": [
+        1,
+        1,
+        1
+      ],
+      "block": [
+        1,
+        1,
+        1
+      ],
+      "registers_per_thread": 40,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 42467328
+    },
+    "m1/box_pairs": {
+      "symbol": "gpu_temporal_patch_api_box_box_6A6A_0ff48c01c509472f",
+      "grid": [
+        64,
+        1,
+        1
+      ],
+      "block": [
+        64,
+        1,
+        1
+      ],
+      "registers_per_thread": 182,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 139984896
+    },
+    "m1/begin_box_response": {
+      "symbol": "gpu_temporal_patch_api_box_resp6A6A_2b72580084bf465a",
+      "grid": [
+        1,
+        1,
+        1
+      ],
+      "block": [
+        1,
+        1,
+        1
+      ],
+      "registers_per_thread": 55,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 42467328
+    },
+    "m1/project_box_response": {
+      "symbol": "gpu_temporal_patch_api_box_resp6A6A_099397fe1c9b91a9",
+      "grid": [
+        1,
+        1,
+        1
+      ],
+      "block": [
+        1,
+        1,
+        1
+      ],
+      "registers_per_thread": 128,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 56623104
+    },
+    "m1/pack_box_response": {
+      "symbol": "gpu_temporal_patch_api_box_resp6A6A_c3fa23464d6be4e2",
+      "grid": [
+        1,
+        1,
+        1
+      ],
+      "block": [
+        1,
+        1,
+        1
+      ],
+      "registers_per_thread": 204,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 580386816
+    },
+    "m1/copy_projected": {
+      "symbol": "gpu_temporal_patch_api_stabilit6A6A_d37ca68261be2bec",
+      "grid": [
+        24,
+        1,
+        1
+      ],
+      "block": [
+        256,
+        1,
+        1
+      ],
+      "registers_per_thread": 16,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 42467328
+    },
+    "m1/solve_box_response": {
+      "symbol": "gpu_temporal_patch_api_box_resp6A6A_aaf2f507d39b16b4",
+      "grid": [
+        1,
+        1,
+        1
+      ],
+      "block": [
+        1,
+        1,
+        1
+      ],
+      "registers_per_thread": 255,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 237502464
+    },
+    "m1/validate_box_response": {
+      "symbol": "gpu_temporal_patch_api_box_resp6A6A_f060739d477c753a",
+      "grid": [
+        1,
+        1,
+        1
+      ],
+      "block": [
+        1,
+        1,
+        1
+      ],
+      "registers_per_thread": 120,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 42467328
+    },
+    "m1/commit_response": {
+      "symbol": "gpu_temporal_patch_api_response6A6A_f90261878d3fdffb",
+      "grid": [
+        4,
+        1,
+        1
+      ],
+      "block": [
+        64,
+        1,
+        1
+      ],
+      "registers_per_thread": 22,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 42467328
+    },
+    "m2/copy_transaction": {
+      "symbol": "gpu_temporal_patch_api_lifecycl6A6A_7b99dbb97bde3a5d",
+      "grid": [
+        4,
+        1,
+        1
+      ],
+      "block": [
+        64,
+        1,
+        1
+      ],
+      "registers_per_thread": 26,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 42467328
+    },
+    "m2/command_transaction": {
+      "symbol": "gpu_temporal_patch_api_lifecycl6A6A_ed1dcfad2c014f79",
+      "grid": [
+        1,
+        1,
+        1
+      ],
+      "block": [
+        1,
+        1,
+        1
+      ],
+      "registers_per_thread": 56,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 56623104
+    },
+    "m2/commit_transaction": {
+      "symbol": "gpu_temporal_patch_api_lifecycl6A6A_52e5d6dac52367d8",
+      "grid": [
+        4,
+        1,
+        1
+      ],
+      "block": [
+        64,
+        1,
+        1
+      ],
+      "registers_per_thread": 26,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 42467328
+    },
+    "m2/integrate_live": {
+      "symbol": "gpu_temporal_patch_api_lifecycl6A6A_c69f13724cc8d390",
+      "grid": [
+        4,
+        1,
+        1
+      ],
+      "block": [
+        64,
+        1,
+        1
+      ],
+      "registers_per_thread": 156,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 56623104
+    },
+    "m2/reduce_status_kernel": {
+      "symbol": "gpu_temporal_patch_api_kernels6A6A6A_0eaaf4dd135368ba",
+      "grid": [
+        1,
+        1,
+        1
+      ],
+      "block": [
+        1,
+        1,
+        1
+      ],
+      "registers_per_thread": 16,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 42467328
+    },
+    "m2/commit_step": {
+      "symbol": "gpu_temporal_patch_api_lifecycl6A6A_0d983b1a19e352ab",
+      "grid": [
+        4,
+        1,
+        1
+      ],
+      "block": [
+        64,
+        1,
+        1
+      ],
+      "registers_per_thread": 22,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 42467328
+    },
+    "m2/shape_transaction": {
+      "symbol": "gpu_temporal_patch_api_shape_ke6A6A_50c74bdec3a1991b",
+      "grid": [
+        1,
+        1,
+        1
+      ],
+      "block": [
+        1,
+        1,
+        1
+      ],
+      "registers_per_thread": 38,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 42467328
+    },
+    "m2/prepare_bounds": {
+      "symbol": "gpu_temporal_patch_api_shape_ke6A6A_e6572d9121dd6943",
+      "grid": [
+        1,
+        1,
+        1
+      ],
+      "block": [
+        64,
+        1,
+        1
+      ],
+      "registers_per_thread": 96,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 42467328
+    },
+    "m2/pair_geometry": {
+      "symbol": "gpu_temporal_patch_api_shape_ke6A6A_9b535c347163bb79",
+      "grid": [
+        64,
+        1,
+        1
+      ],
+      "block": [
+        64,
+        1,
+        1
+      ],
+      "registers_per_thread": 66,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 42467328
+    },
+    "m2/compact_detection": {
+      "symbol": "gpu_temporal_patch_api_shape_ke6A6A_7a9d102120405b9c",
+      "grid": [
+        1,
+        1,
+        1
+      ],
+      "block": [
+        1,
+        1,
+        1
+      ],
+      "registers_per_thread": 40,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 42467328
+    },
+    "m2/box_pairs": {
+      "symbol": "gpu_temporal_patch_api_box_box_6A6A_0ff48c01c509472f",
+      "grid": [
+        64,
+        1,
+        1
+      ],
+      "block": [
+        64,
+        1,
+        1
+      ],
+      "registers_per_thread": 182,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 139984896
+    },
+    "m2/begin_box_response": {
+      "symbol": "gpu_temporal_patch_api_box_resp6A6A_2b72580084bf465a",
+      "grid": [
+        1,
+        1,
+        1
+      ],
+      "block": [
+        1,
+        1,
+        1
+      ],
+      "registers_per_thread": 55,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 42467328
+    },
+    "m2/project_box_response": {
+      "symbol": "gpu_temporal_patch_api_box_resp6A6A_099397fe1c9b91a9",
+      "grid": [
+        1,
+        1,
+        1
+      ],
+      "block": [
+        1,
+        1,
+        1
+      ],
+      "registers_per_thread": 128,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 56623104
+    },
+    "m2/pack_box_response": {
+      "symbol": "gpu_temporal_patch_api_box_resp6A6A_c3fa23464d6be4e2",
+      "grid": [
+        1,
+        1,
+        1
+      ],
+      "block": [
+        1,
+        1,
+        1
+      ],
+      "registers_per_thread": 204,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 580386816
+    },
+    "m2/copy_projected": {
+      "symbol": "gpu_temporal_patch_api_stabilit6A6A_d37ca68261be2bec",
+      "grid": [
+        24,
+        1,
+        1
+      ],
+      "block": [
+        256,
+        1,
+        1
+      ],
+      "registers_per_thread": 16,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 42467328
+    },
+    "m2/solve_box_response": {
+      "symbol": "gpu_temporal_patch_api_box_resp6A6A_aaf2f507d39b16b4",
+      "grid": [
+        1,
+        1,
+        1
+      ],
+      "block": [
+        1,
+        1,
+        1
+      ],
+      "registers_per_thread": 255,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 237502464
+    },
+    "m2/validate_box_response": {
+      "symbol": "gpu_temporal_patch_api_box_resp6A6A_f060739d477c753a",
+      "grid": [
+        1,
+        1,
+        1
+      ],
+      "block": [
+        1,
+        1,
+        1
+      ],
+      "registers_per_thread": 120,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 42467328
+    },
+    "m2/commit_response": {
+      "symbol": "gpu_temporal_patch_api_response6A6A_f90261878d3fdffb",
+      "grid": [
+        4,
+        1,
+        1
+      ],
+      "block": [
+        64,
+        1,
+        1
+      ],
+      "registers_per_thread": 22,
+      "static_shared_bytes": 0,
+      "dynamic_shared_bytes": 0,
+      "CUPTI_local_memory_per_thread": 0,
+      "CUPTI_local_memory_total": 42467328
+    }
+  },
+  "limits": [
+    "Only single-box free flight or axis-aligned planar-floor zero-friction cases; no stack/friction/rotating-contact claim",
+    "Warm inelastic-start trajectory samples are later support frames; first impact call reported separately",
+    "Each complete advance includes force submission and all existing API integration,response,reconciliation,commit,status maps/synchronizations; four-substep force submission repeated4times. Context/setup and extra diagnostics excluded.",
+    "Strict macro/substep endpoints retain original1e-5m penetration slop; candidate ends at analytic zero gap. No claim of exact inter-method trajectory identity; each preserves own strict state gates and meets approved temporal bounds.",
+    "CUDA synchronization durations overlap GPU execution; not additive overhead. Device kernel sums and activity span are different quantities.",
+    "CUPTI local-memory fields are metadata, not measured dynamic spills/stalls or allocator footprint. No denied-counter retry.",
+    "Finite24 warmed plain samples per method/fixture and4 warmed traced samples; no tail latency or broad parity claim."
+  ],
+  "retained_unsupported_cases": [
+    {
+      "kind": 6,
+      "error": 303,
+      "scope": "Reused source/package exact rejection+rollback receipt; excluded from timing"
+    },
+    {
+      "kind": 7,
+      "error": 301,
+      "scope": "Reused source/package exact rejection+rollback receipt; excluded from timing"
+    },
+    {
+      "kind": 8,
+      "error": 301,
+      "scope": "Reused source/package exact rejection+rollback receipt; excluded from timing"
+    },
+    {
+      "kind": 9,
+      "error": 304,
+      "scope": "Reused source/package exact rejection+rollback receipt; excluded from timing"
+    },
+    {
+      "kind": 10,
+      "error": 301,
+      "scope": "Reused source/package exact rejection+rollback receipt; excluded from timing"
+    },
+    {
+      "kind": 11,
+      "error": 300,
+      "scope": "Reused source/package exact rejection+rollback receipt; excluded from timing"
+    }
+  ],
+  "further_excluded_domains": [
+    "friction, additional bodies/stacks, initial floor rotation or contact torque, initial overlap, footprint escape, wrong macro dt",
+    "Elastic impacts remain previously candidate-qualified; not benchmarked against endpoint-response strict methods as a shared TOI accuracy claim."
+  ]
+}

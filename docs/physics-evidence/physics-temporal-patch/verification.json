@@ -1,0 +1,313 @@
+{
+  "status": "TEMPORAL_PATCH_STOPPED_ON_SHAPE_REPLACEMENT_LIFECYCLE_GATE",
+  "recorded_at_UTC": "2026-10-14T03:01:30.653967+00:00",
+  "API": "experimental.physics_gpu.temporal_patch_floor.GpuTemporalPatchFloorAdvance",
+  "contract": {
+    "macro_dt": 0.03333333333333333,
+    "base_intervals": 4,
+    "interval_dt": 0.008333333333333333,
+    "start_normal_sweeps": 2,
+    "end_normal_sweeps": 2,
+    "final_unbiased_sweeps": 4,
+    "final_group_impulses_retained": true,
+    "impact_normal_sweeps": 2,
+    "max_impact_batches": 4,
+    "TOI": "physical segment-entry quadratic gap, actual event-sized force half-kicks; physical incoming restitution once per episode",
+    "solver": "existing GPU normal_block spectral active-set minimum-norm patch solve; independent CPU scalar row-elimination/nullspace reference; net impulse/torque deltas only, no spin/symmetry clamp",
+    "domain": "single dynamic box with optional stationary axis-aligned planar box floor; no other active body/shape; no initial overlap; floor-lane zero initial angular velocity/contact torque; free-flight lane allows general torque",
+    "physical_gate": "independent matched temporal CPU/GPU 1e-10*(1+abs(reference)); actual final normal residual 1e-9*(1+abs(input normal speed)); penetration1e-5+1e-9; quiet and isolated symmetric impact spin/analytic checks1e-10 scaled",
+    "approved_temporal_gate": {
+      "per_macro": [
+        1e-05,
+        0.0001,
+        1e-05,
+        0.0001
+      ],
+      "one_second": [
+        0.0001,
+        0.001,
+        0.001,
+        0.001
+      ]
+    },
+    "rollback": "macro-entry bodies, forces/torques and committed episode bytes exact; prior registry commands retained",
+    "fixtures": [
+      "free gravity/constant force",
+      "free torque with independent convergence evidence",
+      "quiet multipoint support",
+      "isolated floor impacts e0,.5,1",
+      "unsupported domain/force/TOI/identity/config rollback"
+    ],
+    "failure_policy": "stop on physical failure without budget/gate/algorithm tuning",
+    "packing": false,
+    "warm_starting": false,
+    "precision": "Float64",
+    "build_threads": 1,
+    "build_guard_s": 180,
+    "native_guard_s": 30,
+    "memory_reserve_GiB": 32,
+    "H3": "paused",
+    "counter_retry": false,
+    "contact_admission": "all four exact current gaps within[-SLOP-POS_TOL,+POS_TOL] and spread<=POS_TOL; finite-floor footprint; reject invalid stencil; clear pair touching when true min gap>POS_TOL",
+    "permutations": 24,
+    "variants": [
+      {
+        "mass": 2,
+        "inertia": [
+          1.3333333333333333,
+          1.3333333333333333,
+          1.3333333333333333
+        ],
+        "half": [
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "mass": 0.1,
+        "inertia": [
+          0.01,
+          0.02,
+          0.025
+        ],
+        "half": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      {
+        "mass": 100,
+        "inertia": [
+          10,
+          100,
+          100
+        ],
+        "half": [
+          0.75,
+          0.5,
+          0.25
+        ]
+      },
+      {
+        "mass": 2,
+        "inertia": [
+          0.2,
+          0.3,
+          0.4
+        ],
+        "half": [
+          0.5,
+          0.5,
+          0.5
+        ]
+      }
+    ],
+    "initial_no_overlap_certificate": "gap>=-POS_TOL; tolerance covers roundoff only, no pose snapping",
+    "floor_initial_zero_state": "orientation/omega within strict analytic1e-10, face certified, no torque",
+    "first_stage": "failed quiet and elastic fixtures, all variants24orders source; stop any physical failure; then fresh package and broader narrow qualification",
+    "timing": "only after correctness; matched1/30 macro versus strict96 macro and4strict96 substeps; bounded elementary cases"
+  },
+  "result": "Coherent certified normal patch corrects the prior quiet/elastic failures and passes bounded source/package first and one-second physical checks, but shape replacement lifecycle invariant fails. Candidate stopped without repair or timing.",
+  "correctness": {
+    "status": "STOPPED_ON_SHAPE_REPLACEMENT_LIFECYCLE_INVARIANT",
+    "first_and_full_source_package_canonical_equality": true,
+    "failed_native_stage": "lifecycle-source-native",
+    "failed_case": {
+      "kind": 7,
+      "error": 0,
+      "events": 1,
+      "physical_pass": 0
+    },
+    "frozen_expectation": "Replacing the shape while quietly supported must retain zero impact-event count and analytic support state. Test expected events=0; actual events=1. No predicate changed after observation.",
+    "record_limitation": "Lifecycle JSON records the accepted code, event count and combined predicate, but does not contain the post-replacement full state. That state is not claimed physically qualified. No repeat diagnostic job was launched.",
+    "prior_quiet_entry_verified_state": [
+      2.0,
+      1.3333333333333333,
+      1.3333333333333333,
+      1.3333333333333333,
+      0.0,
+      0.5,
+      0.0,
+      1.0842021724855045e-20,
+      1.7536755757746032e-56,
+      -1.0842021724855048e-20,
+      1.0,
+      0.0,
+      -2.0816681711721685e-17,
+      0.0,
+      0.0,
+      -7.83036536159823e-54,
+      -2.6020852139652106e-18,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "prior_quiet_vertical_speed_mps": -2.0816681711721685e-17,
+    "source_based_trigger": "Shape generation replacement changes the 11-word episode key. The saved touching flag is then unavailable. Fallback support admission uses b.linear.y==0 exactly; verified prior quiet state has a nonzero Float64 roundoff velocity. A zero-gap descending TOI can therefore enter the fresh-event path, incrementing summary[2], rather than direct support. This is a source-based causal inference, not an additional measured post-replacement trace.",
+    "restitution_threshold": "The event path sets target=-e*incoming only for incoming<-.2, otherwise target=0. A recorded event count alone does not prove a rebound or repeated restitution impulse.",
+    "retained_results": {
+      "first_source": 192,
+      "first_package": 192,
+      "units_source_package": 192,
+      "narrow_source_package": 24,
+      "consecutive_frames_source_package": 420,
+      "lifecycle_rows": 8,
+      "lifecycle_passed": 7,
+      "lifecycle_failed": 1,
+      "lifecycle_not_reached": [
+        8
+      ]
+    },
+    "candidate_owner_kernel_unchanged_since_first_build": true,
+    "after_failure": [
+      "No native replay, new package lifecycle build, timing, counter query, gate relaxation, budget tuning or candidate repair. Only saved-source/receipt analysis and cleanup verification."
+    ],
+    "unqualified": [
+      "Shape replacement lifecycle transition",
+      "remaining lifecycle case",
+      "package lifecycle gates",
+      "matched-duration reference comparison",
+      "API/GPU performance",
+      "broader contacts/friction/stacks/general rotating CCD"
+    ],
+    "timing_run": false
+  },
+  "independent_CPU_checks": {
+    "first_cases": 192,
+    "units": 96,
+    "narrow_cases": 12,
+    "trajectory_frames": 210,
+    "physical_gates_passed": true,
+    "max_matched_state_ratio": 5.245381519435204e-05,
+    "max_force_momentum_error": 2.5365820555123264e-13,
+    "first_pressure_ratio": 6.83588029891595e-06,
+    "rotation_refinement": {
+      "8": {
+        "angle_rad": 1.4922891301074608e-05,
+        "angular_speed_error_radps": 6.8258186112504835e-06,
+        "lever_m": 1.8708286933869707,
+        "angle_gate_rad": 5.345224838248488e-05
+      },
+      "16": {
+        "angle_rad": 1.8653642336001154e-05,
+        "angular_speed_error_radps": 8.532299395251364e-06,
+        "lever_m": 1.8708286933869707,
+        "angle_gate_rad": 5.345224838248488e-05
+      },
+      "32": {
+        "angle_rad": 1.9586331862705283e-05,
+        "angular_speed_error_radps": 8.958921213502981e-06,
+        "lever_m": 1.8708286933869707,
+        "angle_gate_rad": 5.345224838248488e-05
+      },
+      "successive_angle_differences_rad": [
+        1.4922891301074608e-05,
+        3.7307510349542686e-06,
+        9.326895267132252e-07
+      ]
+    }
+  },
+  "implementation_sources": {
+    "experimental/physics_gpu/temporal_patch_floor.mojo": "82c72484ef59a01e4a9a1bfe8eb8e827160e1e95de7c642e38cca20d72fb1acb",
+    "experimental/physics_gpu/temporal_patch_floor_kernels.mojo": "dc929d5cf260f2f827f31642d2f2293e726997b92fa4b4f2781fa3b60dca09db",
+    "experimental/physics_gpu/test_temporal_patch_first.mojo": "2380e0dc40db26dadd7ddc95bc53f2b355b435709df14255c5871f50c9482702",
+    "experimental/physics_gpu/test_temporal_patch_qualification.mojo": "7c44a007096646406dbafb4cc67917517c71dcd22540903270d90ea0cbd9c83c",
+    "experimental/physics_gpu/test_temporal_patch_lifecycle.mojo": "a64fd24cdacdf72d6273fa7b6238b3c23b6199d5c60e6af31ba0312c4681b159"
+  },
+  "package_sha256": "a7ccef469e7255454a014d7c1c96adf39c4229250eceee0db637cf5cc7814aa0",
+  "dependency_only_package": [
+    "box_box",
+    "box_box_kernels",
+    "box_box_reference",
+    "box_oracle",
+    "box_response",
+    "box_response_kernels",
+    "box_response_math",
+    "box_response_reference",
+    "collision",
+    "contact_history",
+    "contact_oracle",
+    "core",
+    "friction_kernels",
+    "friction_reference",
+    "friction_response",
+    "history_kernels",
+    "kernels",
+    "lifecycle",
+    "lifecycle_kernels",
+    "normal_response",
+    "response_kernels",
+    "response_reference",
+    "shape_kernels",
+    "stability_kernels",
+    "temporal_patch_floor",
+    "temporal_patch_floor_kernels",
+    "test_box_interactions",
+    "test_box_response",
+    "__init__"
+  ],
+  "exact_rollback": "Six unsupported source/package probes and four rejection cases starting from a committed episode assert body/force/torque and committed episode/last-state exact preservation; successful prior registry commands remain committed. Unit invalid-stencil checks reject without modifying body or pressures.",
+  "not_qualified": [
+    "Shape replacement lifecycle transition",
+    "remaining lifecycle case",
+    "package lifecycle gates",
+    "matched-duration reference comparison",
+    "API/GPU performance",
+    "broader contacts/friction/stacks/general rotating CCD"
+  ],
+  "performance": "Not measured; lifecycle barrier failed. No timing/speedup/real-time claim. Dynamic GPU spills/stalls remain unmeasured.",
+  "preservation": {
+    "protected_hashes": 17683,
+    "asset_save_identities": 5901,
+    "campaign_sources": 17,
+    "other_source_lock_hashes": 119,
+    "pins": [
+      {
+        "version": "1.2.0.dev2026092905",
+        "record_sha256": "40307d16e09c2e88bfe8085346d028d7479d93867fdd6e210305ed3fbaf9c534"
+      },
+      {
+        "version": "26.7.0.dev2026092905",
+        "record_sha256": "dab5b010e4a7b5f6b7dcc4f60f2e30f9e5e69b689ef2bd57e46025d251dc2403"
+      }
+    ],
+    "changes": []
+  },
+  "resources": {
+    "single_execution_slot": true,
+    "build_threads": 1,
+    "precompile_one_CPU": true,
+    "build_guard_s": 180,
+    "native_guard_s": 30,
+    "reserve_GiB": 32,
+    "minimum_sampled_available_GiB": 111.16365051269531,
+    "current_available_GiB": 113.61793518066406,
+    "explicit_owner_added_bytes": 48824,
+    "new_owner_buffers": 8
+  },
+  "scope": {
+    "strict_reference_changed": false,
+    "old_failed_candidate_changed": false,
+    "other_owners_changed": false,
+    "original_trajectory_accounting": "63/70 unchanged",
+    "candidate_solver_or_budget_tuned_after_first_native": false,
+    "spin_clamped": false,
+    "warm_starting": false,
+    "packing": false,
+    "defaults_or_precision_changed": false,
+    "dependencies_driver_power_security_profiling_permissions_changed": false,
+    "H3_resumed": false,
+    "counter_retry": false
+  },
+  "negative_frontend_evidence": "Three compile-only failures retained with original test input; repaired Quaternion API spelling/Int32 comparisons. No candidate physics arithmetic, budgets, gates, or default changed after native observations.",
+  "cleanup": {
+    "owned_jobs": [],
+    "GPU_compute_apps": "",
+    "remaining_blocker": "Shape replacement accepted but recorded one event where frozen lifecycle oracle requires zero; broad candidate qualification incomplete. Stop for review before any implementation/gate revision."
+  }
+}

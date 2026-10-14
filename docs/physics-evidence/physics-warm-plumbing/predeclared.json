@@ -1,0 +1,23 @@
+{
+  "invariants_sha256": "ef33f4fb3bf9a74e3e3ccbd722d61c923a331936807e31be7b2ac5502ee20dcb",
+  "seeds_enabled": false,
+  "exact_to": "physics-shared-operator",
+  "anchor_band_fraction": 0.05,
+  "normal_dot": 0.9999,
+  "cache_max_patches": 16,
+  "cache_max_points": 64,
+  "timing_paths": [
+    "source",
+    "packaged"
+  ],
+  "timing_batches": 4,
+  "timing_measured_per_mode_fixture": 12,
+  "timing_fixtures": [
+    "difficult",
+    "zero-friction",
+    "rebound",
+    "empty",
+    "unique edge/edge consecutive contact"
+  ],
+  "no_timing_before_correctness": true
+}

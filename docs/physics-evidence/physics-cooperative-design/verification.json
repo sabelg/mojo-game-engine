@@ -1,0 +1,96 @@
+{
+  "status": "DESIGN_CHECKPOINT_COMPLETE",
+  "recorded_at_UTC": "2026-10-13T17:38:41.720970+00:00",
+  "scope": "Read-only source/evidence inspection and bounded cooperative feasibility design; stop before implementation",
+  "deliverable": "build/physics-cooperative-design/DESIGN.md",
+  "design_sha256": "0ef0ac04cee68a2e8df058ab71386753a62cdc644b2918a2f507fc6f9e939386",
+  "recommendation": {
+    "operation": "Per-point disk residual and two Jacobian rows after serial pressure and dP/dx assembly",
+    "configuration": "One persistent ordinary block of32lanes; atmost4active point lanes; leaderordered control",
+    "serial_dependencies_retained": [
+      "ascending mask selection and ties",
+      "per-output ordered dot products",
+      "residual norms/scales",
+      "complete pivot and null-space reductions",
+      "Newton and first accepted halving decisions",
+      "ordered point/body/patch/sweep feedback",
+      "validation and publication"
+    ],
+    "explicit_shared_scratch_budget_bytes": 4192,
+    "new_shared_scope": "One evaluation/patch; compiler local/spill storage additional",
+    "bit_identical_feasible_but_unproven": true,
+    "automatic_selector": false,
+    "parallel_islands_implemented": false
+  },
+  "feasibility_limits": [
+    "Pinned shared allocation/barrier APIs not compiled or exercised; initial future proof gate",
+    "Per-point parallel width atmost4, count1hasno root parallelism; branch divergence/serial fraction/resource overhead unmeasured",
+    "Invalid partial-output assembly must match original prefix exactly",
+    "Subroutine wall share and cooperative integrated speedup unknown; no performance promise",
+    "No independent islands available inside current connected targets"
+  ],
+  "future_acceptance": "Primitive proof, staged evaluator binary64 equality,140original source/package trajectories plus all existing invariants, fixed240call three-mode comparison before expansion;seeDESIGN.md",
+  "current_execution": {
+    "Mojo_source_changes": false,
+    "compiler_invocations": 0,
+    "native_physics_runs": 0,
+    "GPU_kernel_runs": 0,
+    "new_dependencies": false,
+    "copied_reference_source": false
+  },
+  "references": [
+    {
+      "url": "https://docs.nvidia.com/cuda/cuda-programming-guide/02-basics/writing-cuda-kernels.html",
+      "purpose": "Block scope and synchronization model; read-only"
+    },
+    {
+      "url": "https://docs.nvidia.com/cuda/floating-point/index.html",
+      "purpose": "Arithmetic ordering and fusion rounding caveat;read-only"
+    },
+    {
+      "url": "https://mojolang.org/docs/std/memory/stack_allocation/stack_allocation/",
+      "purpose": "Address-space allocation reference;displayed1.1.0notpinnedAPIproof;read-only"
+    }
+  ],
+  "reference_access_limits": "GPU-specific Modular/MAX and source URLs attempted viaweb were unavailable; no snippets copied or dependencies fetched",
+  "preservation": {
+    "protected_source_evidence_hashes": 223,
+    "protected_changes": [],
+    "asset_save_identities": 5901,
+    "asset_save_changes": [],
+    "campaign_sources": 17,
+    "campaign_changes": [],
+    "unrelated_sources_locks": 119,
+    "unrelated_changes": [],
+    "pins": [
+      {
+        "version": "1.2.0.dev2026092905",
+        "metadata_sha256": "40307d16e09c2e88bfe8085346d028d7479d93867fdd6e210305ed3fbaf9c534"
+      },
+      {
+        "version": "26.7.0.dev2026092905",
+        "metadata_sha256": "dab5b010e4a7b5f6b7dcc4f60f2e30f9e5e69b689ef2bd57e46025d251dc2403"
+      }
+    ],
+    "SDK_campaign_dirtywork_locks_original_baselines_preserved": true
+  },
+  "original_coverage": "63/70 unchanged",
+  "retained_limits": [
+    "strictSAME-TIME translatedcase68failure",
+    "two baseline64convergence rejects",
+    "four oldledgefixtureswithoutdetachment",
+    "separate12/12ledge and75/75translation suites notadded to63/70",
+    "bounded expensive serial optin only"
+  ],
+  "cleanup": {
+    "owned_native_GPU_jobs": [],
+    "GPU_compute_apps": "",
+    "final_available_memory_GiB": 114.45505142211914,
+    "H3_resumed": false,
+    "normal_settings_unchanged": true,
+    "OS_driver_firmware_changes": false,
+    "installs_or_publication": false,
+    "checkpoint_blockers": [],
+    "implementation_stopped_as_requested": true
+  }
+}

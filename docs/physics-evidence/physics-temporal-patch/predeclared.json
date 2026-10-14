@@ -1,0 +1,107 @@
+{
+  "macro_dt": 0.03333333333333333,
+  "base_intervals": 4,
+  "interval_dt": 0.008333333333333333,
+  "start_normal_sweeps": 2,
+  "end_normal_sweeps": 2,
+  "final_unbiased_sweeps": 4,
+  "final_group_impulses_retained": true,
+  "impact_normal_sweeps": 2,
+  "max_impact_batches": 4,
+  "TOI": "physical segment-entry quadratic gap, actual event-sized force half-kicks; physical incoming restitution once per episode",
+  "solver": "existing GPU normal_block spectral active-set minimum-norm patch solve; independent CPU scalar row-elimination/nullspace reference; net impulse/torque deltas only, no spin/symmetry clamp",
+  "domain": "single dynamic box with optional stationary axis-aligned planar box floor; no other active body/shape; no initial overlap; floor-lane zero initial angular velocity/contact torque; free-flight lane allows general torque",
+  "physical_gate": "independent matched temporal CPU/GPU 1e-10*(1+abs(reference)); actual final normal residual 1e-9*(1+abs(input normal speed)); penetration1e-5+1e-9; quiet and isolated symmetric impact spin/analytic checks1e-10 scaled",
+  "approved_temporal_gate": {
+    "per_macro": [
+      1e-05,
+      0.0001,
+      1e-05,
+      0.0001
+    ],
+    "one_second": [
+      0.0001,
+      0.001,
+      0.001,
+      0.001
+    ]
+  },
+  "rollback": "macro-entry bodies, forces/torques and committed episode bytes exact; prior registry commands retained",
+  "fixtures": [
+    "free gravity/constant force",
+    "free torque with independent convergence evidence",
+    "quiet multipoint support",
+    "isolated floor impacts e0,.5,1",
+    "unsupported domain/force/TOI/identity/config rollback"
+  ],
+  "failure_policy": "stop on physical failure without budget/gate/algorithm tuning",
+  "packing": false,
+  "warm_starting": false,
+  "precision": "Float64",
+  "build_threads": 1,
+  "build_guard_s": 180,
+  "native_guard_s": 30,
+  "memory_reserve_GiB": 32,
+  "H3": "paused",
+  "counter_retry": false,
+  "contact_admission": "all four exact current gaps within[-SLOP-POS_TOL,+POS_TOL] and spread<=POS_TOL; finite-floor footprint; reject invalid stencil; clear pair touching when true min gap>POS_TOL",
+  "permutations": 24,
+  "variants": [
+    {
+      "mass": 2,
+      "inertia": [
+        1.3333333333333333,
+        1.3333333333333333,
+        1.3333333333333333
+      ],
+      "half": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "mass": 0.1,
+      "inertia": [
+        0.01,
+        0.02,
+        0.025
+      ],
+      "half": [
+        0.25,
+        0.5,
+        0.75
+      ]
+    },
+    {
+      "mass": 100,
+      "inertia": [
+        10,
+        100,
+        100
+      ],
+      "half": [
+        0.75,
+        0.5,
+        0.25
+      ]
+    },
+    {
+      "mass": 2,
+      "inertia": [
+        0.2,
+        0.3,
+        0.4
+      ],
+      "half": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "initial_no_overlap_certificate": "gap>=-POS_TOL; tolerance covers roundoff only, no pose snapping",
+  "floor_initial_zero_state": "orientation/omega within strict analytic1e-10, face certified, no torque",
+  "first_stage": "failed quiet and elastic fixtures, all variants24orders source; stop any physical failure; then fresh package and broader narrow qualification",
+  "timing": "only after correctness; matched1/30 macro versus strict96 macro and4strict96 substeps; bounded elementary cases"
+}

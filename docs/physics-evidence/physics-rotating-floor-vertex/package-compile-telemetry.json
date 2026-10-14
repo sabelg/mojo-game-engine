@@ -1,0 +1,162 @@
+{
+  "stage": "package-compile",
+  "command": [
+    "/home/user/mojo-game-engine/.deps/physics-gpu-g01/.pixi/envs/default/bin/mojo",
+    "build",
+    "--num-threads",
+    "1",
+    "/home/user/mojo-game-engine/build/physics-rotating-floor-vertex/test-packaged.mojo",
+    "-I",
+    "/home/user/mojo-game-engine/build/physics-rotating-floor-vertex/package",
+    "-I",
+    "/home/user/mojo-game-engine",
+    "-o",
+    "/home/user/mojo-game-engine/build/physics-rotating-floor-vertex/packaged"
+  ],
+  "deadline_s": 180,
+  "elapsed_s": 4.753,
+  "returncode": 0,
+  "fault": null,
+  "samples": [
+    {
+      "available_kB": 118718588,
+      "GPU_C": 35,
+      "GPU_utilization": 3,
+      "sensors_C": {
+        "thermal_zone2": 40.4,
+        "thermal_zone0": 40.4,
+        "thermal_zone5": 38.2,
+        "thermal_zone3": 35.9,
+        "thermal_zone1": 36.2,
+        "thermal_zone6": 37.5,
+        "thermal_zone4": 35.5
+      }
+    },
+    {
+      "available_kB": 118742880,
+      "GPU_C": 35,
+      "GPU_utilization": 3,
+      "sensors_C": {
+        "thermal_zone2": 40.2,
+        "thermal_zone0": 40.2,
+        "thermal_zone5": 38.3,
+        "thermal_zone3": 35.9,
+        "thermal_zone1": 36.2,
+        "thermal_zone6": 37.7,
+        "thermal_zone4": 35.5
+      }
+    },
+    {
+      "available_kB": 118600712,
+      "GPU_C": 35,
+      "GPU_utilization": 3,
+      "sensors_C": {
+        "thermal_zone2": 38.2,
+        "thermal_zone0": 39.5,
+        "thermal_zone5": 38.1,
+        "thermal_zone3": 36.2,
+        "thermal_zone1": 36.0,
+        "thermal_zone6": 37.3,
+        "thermal_zone4": 39.5
+      }
+    },
+    {
+      "available_kB": 118606808,
+      "GPU_C": 35,
+      "GPU_utilization": 6,
+      "sensors_C": {
+        "thermal_zone2": 36.8,
+        "thermal_zone0": 42.2,
+        "thermal_zone5": 38.1,
+        "thermal_zone3": 36.4,
+        "thermal_zone1": 35.9,
+        "thermal_zone6": 36.4,
+        "thermal_zone4": 42.2
+      }
+    },
+    {
+      "available_kB": 118554740,
+      "GPU_C": 35,
+      "GPU_utilization": 6,
+      "sensors_C": {
+        "thermal_zone2": 36.1,
+        "thermal_zone0": 43.7,
+        "thermal_zone5": 38.1,
+        "thermal_zone3": 36.6,
+        "thermal_zone1": 35.8,
+        "thermal_zone6": 36.5,
+        "thermal_zone4": 43.7
+      }
+    },
+    {
+      "available_kB": 118548356,
+      "GPU_C": 35,
+      "GPU_utilization": 6,
+      "sensors_C": {
+        "thermal_zone2": 35.6,
+        "thermal_zone0": 44.5,
+        "thermal_zone5": 38.0,
+        "thermal_zone3": 36.6,
+        "thermal_zone1": 35.8,
+        "thermal_zone6": 36.6,
+        "thermal_zone4": 44.5
+      }
+    },
+    {
+      "available_kB": 118456928,
+      "GPU_C": 35,
+      "GPU_utilization": 10,
+      "sensors_C": {
+        "thermal_zone2": 35.5,
+        "thermal_zone0": 45.3,
+        "thermal_zone5": 38.1,
+        "thermal_zone3": 36.7,
+        "thermal_zone1": 36.0,
+        "thermal_zone6": 36.7,
+        "thermal_zone4": 45.3
+      }
+    },
+    {
+      "available_kB": 118430056,
+      "GPU_C": 35,
+      "GPU_utilization": 9,
+      "sensors_C": {
+        "thermal_zone2": 35.5,
+        "thermal_zone0": 45.7,
+        "thermal_zone5": 38.0,
+        "thermal_zone3": 36.7,
+        "thermal_zone1": 35.9,
+        "thermal_zone6": 36.7,
+        "thermal_zone4": 45.7
+      }
+    },
+    {
+      "available_kB": 118450424,
+      "GPU_C": 35,
+      "GPU_utilization": 7,
+      "sensors_C": {
+        "thermal_zone2": 35.7,
+        "thermal_zone0": 45.9,
+        "thermal_zone5": 38.1,
+        "thermal_zone3": 36.8,
+        "thermal_zone1": 35.8,
+        "thermal_zone6": 36.7,
+        "thermal_zone4": 45.9
+      }
+    },
+    {
+      "available_kB": 118441092,
+      "GPU_C": 35,
+      "GPU_utilization": 6,
+      "sensors_C": {
+        "thermal_zone2": 35.5,
+        "thermal_zone0": 45.9,
+        "thermal_zone5": 38.2,
+        "thermal_zone3": 36.8,
+        "thermal_zone1": 35.8,
+        "thermal_zone6": 36.7,
+        "thermal_zone4": 45.9
+      }
+    }
+  ]
+}

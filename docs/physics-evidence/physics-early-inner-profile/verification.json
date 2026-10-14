@@ -1,0 +1,69 @@
+{
+  "status": "READ_ONLY_EARLY_INNER_PROFILE_DIAGNOSIS_SEALED_COUNTER_ACCESS_DENIED",
+  "recorded_at_UTC": "2026-10-13T22:03:14.264499+00:00",
+  "analysis_sha256": "422622ce8c4379f23dd945ffac4556d88a387a8c17c3b242a2b9c5080e9a62cc",
+  "static_evidence_sha256": "02c9b80daf1724d9e1394fcc951f73035ef93232239367ebad9ff9d17c016582",
+  "counter_query_receipt_sha256": "9e930ad2ff47bd9d642461d1ac05ce15a96d3842adff2618529b5d4ccf743386",
+  "qualified_502ms_checkpoint_unchanged": true,
+  "physics_or_performance_solver_launches_in_this_task": 0,
+  "static_compile_only": true,
+  "recommendation_only_not_implemented": {
+    "implemented": false,
+    "name": "Resolve-local shared storage for the leader256Float64mask-operator table",
+    "scope": "Separate opt-in layout variant based on qualified early-inner. Stage the already packed immutable256Float64operator entries once per patch solve into the existing unused shared offsets113..368(2048bytes);replace the private local table and its reads with shared-address-space access. Keep valid_masks private for this first experiment.",
+    "unchanged": "Same FP64 values,mask enumeration,minimal-norm selection/tie order,complete pivots,pressure/dP arithmetic order,fallback and body commit. Same1percentfirst8rule,96outer sweeps,8Newton/16trial caps,64disk bisection,all final residual,1e-10physical-state,energy/cone/rollback gates. No precision/mask skipping/dispatch change.",
+    "barriers_and_memory": "Keep all existing barriers and4176bytes allocation;source audit and source/fresh-package qualification must establish patch lifetime and visibility before pressure/dP/fallback reads. No reuse across mutable patches or resolves.",
+    "hypothesis": "Eliminate statically proven2048byteaddressed-local table/copy and redirect repeated serial small-matrix reads;may lower local traffic. Not a confirmed spill reduction or proven speedup.",
+    "why_over_further_nested_work": "Current candidate still evaluates2102times;cached_normal_block scans up to16masks per four-point patch in serial leader work. Rebound executes192evaluations with zero Newton/line-search/active-disk work yet its solver remains45.3ms. The common pressure/operator path is a broader target without widening the qualified inexact policy.",
+    "alternatives": {
+      "nested_work": "Saved retained-cooperative traces show673856pointdisk bisection iterations implied by logged branch counts,plus unlogged terminal calls. Candidate-specific stagnation/bisection counts were not captured. A bit-preserving frozen-bracket early exit could be a later bounded experiment;final gates and64cap would remain. Its benefit is unknown and it cannot address rebound zero-active-disk work. Do not reuse reference late-sweep counts as candidate measurements.",
+      "serial_matrix_algorithms": "Active-mask-first,batched factorization or pivot cooperation could save arithmetic but change selection/reduction/ties and need stronger new proof. Prefer storage-only access first;preserve full mask scan and complete pivot rank semantics.",
+      "validated_mixed_precision": "Potential FP64hardware advantage cannot predict this application without measured utilization. FP32alone cannot meet1e-10state/near1e-14inner criteria or preserve near-singular rank/minimum-norm decisions. A future confined8x8FP32correction would need FP64rank/null-space safeguards,residual/refinement,automatic FP64fallback and complete original physical/gate qualification. Keep geometry,contact activation and authoritative acceptance FP64. Higher correctness risk;not the next experiment."
+    },
+    "qualification_required": "Source/fresh-package original trajectory/controller/rejection,basis/rank,cache/lifecycle/rollback and affected regressions. For storage-only change require exact numeric/work/controller equivalence to the qualified early-inner route,not merely tolerance agreement;then frozen four-fixture interleaved GPU/API/memory timing. Report regressions/nulls."
+  },
+  "preservation": {
+    "protected_hashes": 8490,
+    "changes": [],
+    "asset_save_identities": 5901,
+    "campaign_sources": 17,
+    "other_sources_locks": 119,
+    "pins": [
+      {
+        "version": "1.2.0.dev2026092905",
+        "metadata_sha256": "40307d16e09c2e88bfe8085346d028d7479d93867fdd6e210305ed3fbaf9c534"
+      },
+      {
+        "version": "26.7.0.dev2026092905",
+        "metadata_sha256": "dab5b010e4a7b5f6b7dcc4f60f2e30f9e5e69b689ef2bd57e46025d251dc2403"
+      }
+    ],
+    "original_coverage": "63/70 unchanged",
+    "all_reference_modes_dirtywork_SDK_locks_and_prior_checkpoints_unchanged": true
+  },
+  "resources": {
+    "code_generation_threads": 1,
+    "static_compile_guard_s": 180,
+    "capability_query_timeout_s": 30,
+    "profile_budget_s": 30,
+    "profile_budget_unused_after_denial": true,
+    "reserve_GiB": 32,
+    "minimum_static_compile_sampled_available_GiB": 113.79415512084961,
+    "final_available_GiB": 114.42307662963867
+  },
+  "cleanup": {
+    "owned_GPU_native_jobs": [],
+    "GPU_compute_apps": "",
+    "H3_resumed": false,
+    "security_counter_permissions_installs_OS_driver_firmware_clock_cache_or_reboot_changes": false,
+    "new_candidates_or_early_inner_gate_policy_precision_changes": false
+  },
+  "remaining_limitations": [
+    "dependency/scoreboard/issue stalls",
+    "active-lane/warp efficiency and achieved occupancy",
+    "FP64instruction counts/throughput/pipeline utilization",
+    "register spills and executed local-memory bytes/cache traffic"
+  ],
+  "counter_blocker": "ERR_NVGPUCTRPERM under UID1000; no further counter attempt or permission change",
+  "report_sha256": "985f939b79bcd3db4cf68a67cbdaea47c2a9b9ca2aff20f701699249b1c52ea5"
+}

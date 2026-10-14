@@ -1,0 +1,57 @@
+{
+  "status": "WRONG_ZERO_EVENT_ORACLE_VALID_COLD_DISCOVERY_NO_DUPLICATE_RESTITUTION",
+  "recorded_at_UTC": "2026-10-14T03:09:44.654219+00:00",
+  "diagnostic_only": true,
+  "conclusion": "Sealed replacement fixture is valid new-generation cold contact discovery without duplicate restitution. All physical/identity gates pass; frozen zero-TOI-counter predicate alone is wrong.",
+  "diagnosis_sha256": "d5922d52e7b351bbb285768163d123fc932278579325668021fa5e9ddd3703df",
+  "reproducer_executable_sha256": "48456f6fffdef69347e66d2202f5a8221e288392dbe102ffff65e7d391b8f7e7",
+  "native_replay_invocations": 1,
+  "macro_calls": 2,
+  "no_performance_benchmark": true,
+  "candidate_and_oracle_changes": [],
+  "proposed_minimal_correction": {
+    "file": "experimental/physics_gpu/test_temporal_patch_lifecycle.mojo",
+    "line": 46,
+    "old": "events==Int32(1 if kind==5 else 0)",
+    "new": "events==Int32(1 if kind==5 or kind==7 else 0)",
+    "reason": "For this exact saved negative-velocity zero-gap replacement fixture, one TOI admission is the independently verified expected value. Change only case7 counter oracle; do not modify candidate, state, tolerances, budgets, or other cases. Clarify local counter name as toi_batches and retain zero restitution target/no-bounce/new-key checks.",
+    "required_followup_before_promotion": "Separately authorize/apply oracle correction, then complete missing source/package lifecycle qualification including case8. This diagnostic does not promote candidate or run performance."
+  },
+  "promotion": false,
+  "original_candidate_verification_sha256": "71bdb8a3b97625a0c915de8ef2ab69e5193efcd40fb89d987b678e494f283e8b",
+  "preservation": {
+    "protected_hashes": 17806,
+    "asset_save_identities": 5901,
+    "campaign_sources": 17,
+    "other_source_lock_hashes": 119,
+    "pins": [
+      {
+        "version": "1.2.0.dev2026092905",
+        "record_sha256": "40307d16e09c2e88bfe8085346d028d7479d93867fdd6e210305ed3fbaf9c534"
+      },
+      {
+        "version": "26.7.0.dev2026092905",
+        "record_sha256": "dab5b010e4a7b5f6b7dcc4f60f2e30f9e5e69b689ef2bd57e46025d251dc2403"
+      }
+    ],
+    "prior_candidate_evidence_unchanged": true,
+    "H3": "paused",
+    "hardware_driver_power_security_permission_changes": [],
+    "counter_retry": false,
+    "dynamic_spills_stalls": "unmeasured"
+  },
+  "resources": {
+    "execution_slots": 1,
+    "build_threads": 1,
+    "build_guard_s": 180,
+    "native_guard_s": 30,
+    "memory_reserve_GiB": 32,
+    "minimum_sampled_available_GiB": 111.86508560180664,
+    "final_available_GiB": 113.63966369628906
+  },
+  "cleanup": {
+    "owned_jobs": [],
+    "GPU_compute_apps": ""
+  },
+  "remaining_work": "Proposed test correction was not applied. Missing source/package lifecycle qualification and any separately authorized duration/timing comparison remain unexecuted."
+}

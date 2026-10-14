@@ -1,0 +1,895 @@
+{
+  "status": "qualified_bounded_response_with_retained_baseline_policy_counterexample",
+  "qualified_at_UTC": "2026-10-13T09:49:32.740101+00:00",
+  "API": "experimental.physics_gpu.box_response.GpuBoxResponse",
+  "scope": "separate experimental box-only serial cold multi-point response; not general stable stacks, normal SDK/campaign adoption, history/island/sleep or performance qualification",
+  "implementation": {
+    "reduction": "convex projected footprint -> max-area inscribed <=4 points, triangle or farthest line/single point; canonical order and unreduced post-validation",
+    "normal": "PSD unilateral patch block, <=16 active sets, scaled Jacobi spectral pseudoinverse and feasible minimum-norm nonnegative impulse; rank-three face gauge, no artificial compliance",
+    "friction": "existing circular Coulomb maximum-dissipation disk law, common midpoint and both world inverse inertias; coefficient uniform [0,2]",
+    "transaction": "fresh geometry; private mass-weighted COM projection; rebuilt projected geometry; fresh operators and cold velocity/friction solve; unreduced depth/target, energy/profile checks; one authoritative body commit",
+    "within_call_operator_reuse": "fresh operators recomputed each call; no warm impulses or persistent contact/operator cache"
+  },
+  "original_gate_and_configuration": {
+    "design": {
+      "recorded_at_UTC": "2026-10-13T08:04:41.875570+00:00",
+      "design_path": "/home/user/mojo-game-engine/experimental/physics_gpu/BOX_RESPONSE_DESIGN.md",
+      "sha256": "7a9cae47982ea0306d2a886dedcf27a58c27f55cf5a0f0d7a6a697cda9777ece",
+      "qualification_started": false,
+      "gates_must_not_be_relaxed_after_failure": true
+    },
+    "unchanged_gate": true,
+    "scene": "three centered m=2 cubes, fixed floor, gravity9.81, dt1/30, no substeps",
+    "policy": 64,
+    "failure_frame": 0,
+    "error": 114,
+    "normal_residual_approx": 2.19977e-09,
+    "normal_gate": 1.327e-09,
+    "rollback": "all authoritative body bytes at response entry unchanged; source/precompiled CPU/GPU agree",
+    "retained_evidence": "/home/user/mojo-game-engine/build/physics-box-response/resume-baseline64-evidence"
+  },
+  "diagnosis": {
+    "classification": "convergence-budget exhaustion; independently solved well-defined small equilibrium",
+    "independent_reference": "/home/user/mojo-game-engine/build/physics-box-response/small-system-diagnosis.json",
+    "precision_digits": 80,
+    "matrix": [
+      [
+        "0.5",
+        "-0.5",
+        "0"
+      ],
+      [
+        "-0.5",
+        "1",
+        "-0.5"
+      ],
+      [
+        "0",
+        "-0.5",
+        "1"
+      ]
+    ],
+    "condition_number": 16.393731622284385,
+    "contraction": 0.75,
+    "residual_formula": "0.5*g*dt*(0.75)^(sweep-1)",
+    "mass_load_timestep_scaling": "GPU/CPU histories match independent predictions; uniform mass scaling changes impulses, not velocity convergence"
+  },
+  "distinct_policy": {
+    "explicit_constructor": "GpuBoxResponse(velocity_budget=96)",
+    "requested_sweeps": "resolve(...velocity_iterations=96,position_iterations=64)",
+    "default_policy_unchanged": 64,
+    "default_requested_sweeps": 32,
+    "extra_maximum_patch_visits_percent": 50,
+    "original_case_first_passing_sweep": 66,
+    "original_case_extra_sweeps": 2,
+    "original_case_extra_visits_percent": 3.125,
+    "unchanged_inputs_and_gates": true,
+    "no_substeps_or_fallback": true
+  },
+  "qualified_domain": {
+    "one_two_centered_rest_cubes": "2 seconds, 30/60/120/240Hz with baseline64",
+    "three_centered_rest_cubes_baseline64": "2 seconds at60/120/240Hz; original30Hz safely rejects",
+    "three_centered_rest_cubes_explicit96": "same2-second original30Hz scene passes at66 sweeps",
+    "friction": "one-cube flat-floor0.2 motion and frictionless2-second trajectories at30/60/120/240; one-step0/.2/.6 shared/support/impact fixtures",
+    "limits": "256 bodies/64 shapes, <=16 dynamic patches/64 selected points; inherited physical profile; neither policy guarantees convergence for every admitted combination",
+    "unqualified": [
+      "general/large/frictional/perturbed stacks",
+      "arbitrary mass-ratio/geometry/impact combinations",
+      "long-duration stability or performance",
+      "persistent manifold/impulse reuse",
+      "mixed sphere response through this owner",
+      "warm start/parallelism/new geometry/sleep adoption"
+    ]
+  },
+  "coverage": {
+    "source_groups": 24,
+    "precompiled_groups": 24,
+    "GPU_diagnostic_steps": 12,
+    "independent_oracles": [
+      "corner/constructive input geometry",
+      "scalar elimination/null-space normal solve",
+      "spectral Coulomb disk reference",
+      "80-digit directly solved small system",
+      "independent discrete friction stopping-distance sum"
+    ],
+    "fixtures": [
+      "symmetric pressure and no spurious torque",
+      "centered/offset support, face/edge restitution impacts",
+      "shared dynamic momentum/angular balance and energy",
+      "duplicate/redundant constraints and footprint reduction",
+      "32 seeded nearly parallel response cases",
+      "config/profile/mixed/stale/capacity/iteration/depth/energy/topology/closed rejection and byte rollback",
+      "16 patches/64 points and zero capacities",
+      "fixed-body and pending force/torque preservation",
+      "rest and force/load/mass/timestep/sweep histories",
+      "physical drift/jitter/depth/energy/gravity/projection-work/refinement"
+    ],
+    "conditioning_reference": "differing GPU face convention accepted only after independent representation-scale gap-tie/normal-alignment checks; CPU reconstructs input normals/points and response without device normal/point/solved-state reuse",
+    "motion_analysis": {
+      "method": "independent sum of discrete Coulomb deceleration velocities; box positions integrate before each cold response; no source/reference solver calls",
+      "rows": [
+        {
+          "hz": 30,
+          "final_x": 0.27173333335759803,
+          "discrete_force_law_x": 0.2717333333333333,
+          "discrete_position_error": 2.4264701359300034e-11,
+          "continuum_stop_x": 0.254841997961264,
+          "continuum_position_error": 0.01689133539633403,
+          "final_vx": 4.388638748584325e-18,
+          "final_angular_speed": 6.880071789887653e-17
+        },
+        {
+          "hz": 60,
+          "final_x": 0.2632416666899332,
+          "discrete_force_law_x": 0.2632416666666667,
+          "discrete_position_error": 2.3266499837859556e-11,
+          "continuum_stop_x": 0.254841997961264,
+          "continuum_position_error": 0.008399668728669207,
+          "final_vx": 2.2499117080032925e-18,
+          "final_angular_speed": 8.807836590935405e-18
+        },
+        {
+          "hz": 120,
+          "final_x": 0.25901791666949037,
+          "discrete_force_law_x": 0.25901791666666674,
+          "discrete_position_error": 2.8236302185291606e-12,
+          "continuum_stop_x": 0.254841997961264,
+          "continuum_position_error": 0.004175918708226367,
+          "final_vx": -1.5756607349013424e-18,
+          "final_angular_speed": 5.185390411097385e-18
+        },
+        {
+          "hz": 240,
+          "final_x": 0.25692906250170244,
+          "discrete_force_law_x": 0.25692906249999997,
+          "discrete_position_error": 1.7024714971114463e-12,
+          "continuum_stop_x": 0.254841997961264,
+          "continuum_position_error": 0.0020870645404384436,
+          "final_vx": -3.883693322349016e-18,
+          "final_angular_speed": 7.73758990251234e-18
+        }
+      ],
+      "gate": "reported refinement and physical accounting; solver residual, energy, cone and source/reference state gates unchanged"
+    }
+  },
+  "qualification_receipts": [
+    {
+      "mode": "test",
+      "path": "/home/user/mojo-game-engine/build/physics-box-response/test-qualification.json",
+      "sha256": "5496dab00bb0ebd3ba2c743bdf0224b020d2f47bdd77836c76de6f364e95bfb4",
+      "groups": [
+        "basic",
+        "conditioning",
+        "convergence",
+        "rest-1-30",
+        "rest-1-60",
+        "rest-1-120",
+        "rest-1-240",
+        "rest-2-30",
+        "rest-2-60",
+        "rest-2-120",
+        "rest-2-240",
+        "rest-3-30",
+        "rest-3-60",
+        "rest-3-120",
+        "rest-3-240",
+        "rest-3-30-96",
+        "slide-30",
+        "slide-60",
+        "slide-120",
+        "slide-240",
+        "free-30",
+        "free-60",
+        "free-120",
+        "free-240"
+      ],
+      "stage_count": 25
+    },
+    {
+      "mode": "packaged",
+      "path": "/home/user/mojo-game-engine/build/physics-box-response/packaged-qualification.json",
+      "sha256": "9d588c4be75e7df87ad41a1b91051ae8e1363c7a1641f5be5512dbff5fc39995",
+      "groups": [
+        "basic",
+        "conditioning",
+        "convergence",
+        "rest-1-30",
+        "rest-1-60",
+        "rest-1-120",
+        "rest-1-240",
+        "rest-2-30",
+        "rest-2-60",
+        "rest-2-120",
+        "rest-2-240",
+        "rest-3-30",
+        "rest-3-60",
+        "rest-3-120",
+        "rest-3-240",
+        "rest-3-30-96",
+        "slide-30",
+        "slide-60",
+        "slide-120",
+        "slide-240",
+        "free-30",
+        "free-60",
+        "free-120",
+        "free-240"
+      ],
+      "stage_count": 26
+    },
+    {
+      "mode": "demo",
+      "path": "/home/user/mojo-game-engine/build/physics-box-response/demo-qualification.json",
+      "sha256": "d0ee463af3ec2c60a681db77a87f599c5abee73c02984589dfd1465f6c13edbf",
+      "groups": [
+        "demo"
+      ],
+      "stage_count": 2
+    }
+  ],
+  "group_result_evidence": {
+    "test": [
+      {
+        "group": "basic",
+        "result_lines": [],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/test-basic-run.log"
+      },
+      {
+        "group": "conditioning",
+        "result_lines": [
+          "BOX_CONDITION_RESULT 32 0 seeded near-parallel reduced-patch independent pressure/state or explicit rollback outcomes"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/test-conditioning-run.log"
+      },
+      {
+        "group": "convergence",
+        "result_lines": [
+          "BOX_CONVERGENCE_RESULT 30 1.0 1.0 64 16 used 16 failure 114 gate 1.327e-09",
+          "BOX_CONVERGENCE_RESULT 30 1.0 1.0 64 32 used 32 failure 114 gate 1.327e-09",
+          "BOX_CONVERGENCE_RESULT 30 1.0 1.0 64 64 used 64 failure 114 gate 1.327e-09",
+          "BOX_CONVERGENCE_RESULT 30 1.0 1.0 96 96 used 66 failure 0 gate 1.327e-09",
+          "BOX_CONVERGENCE_RESULT 60 1.0 1.0 64 64 used 64 failure 0 gate 1.1635e-09",
+          "BOX_CONVERGENCE_RESULT 120 1.0 1.0 64 64 used 62 failure 0 gate 1.0817500000000001e-09",
+          "BOX_CONVERGENCE_RESULT 240 1.0 1.0 64 64 used 60 failure 0 gate 1.040875e-09",
+          "BOX_CONVERGENCE_RESULT 30 0.25 1.0 64 64 used 64 failure 114 gate 1.327e-09",
+          "BOX_CONVERGENCE_RESULT 30 0.25 1.0 96 96 used 66 failure 0 gate 1.327e-09",
+          "BOX_CONVERGENCE_RESULT 30 4.0 1.0 64 64 used 64 failure 114 gate 1.327e-09",
+          "BOX_CONVERGENCE_RESULT 30 4.0 1.0 96 96 used 66 failure 0 gate 1.327e-09",
+          "BOX_CONVERGENCE_RESULT 30 1.0 0.5 64 64 used 64 failure 0 gate 1.1635e-09",
+          "BOX_CONVERGENCE_RESULT 30 1.0 0.5 96 96 used 64 failure 0 gate 1.1635e-09",
+          "BOX_CONVERGENCE_RESULT 30 1.0 2.0 64 64 used 64 failure 114 gate 1.654e-09",
+          "BOX_CONVERGENCE_RESULT 30 1.0 2.0 96 96 used 68 failure 0 gate 1.654e-09"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/test-convergence-run.log"
+      },
+      {
+        "group": "rest-1-30",
+        "result_lines": [
+          "BOX_MOTION_END 30 0.0 False 0.0 0.0 5.0515910130503314e-17",
+          "BOX_REST_RESULT 1 30 mu 0.0 sliding False completed 60 blocker 0 drift 1.1102230246251565e-16 jitter 1.1816510524180758e-16 angle 1.2615329803526284e-16 depth 1.0000000000065512e-05 projection_work 6.415740000000017 normal_dissipation 6.415740000000002 accounted_energy_gain 0.0 velocity_sweeps 1"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/test-rest-1-30-run.log"
+      },
+      {
+        "group": "rest-1-60",
+        "result_lines": [
+          "BOX_MOTION_END 60 0.0 False 0.0 0.0 2.1942709178604383e-17",
+          "BOX_REST_RESULT 1 60 mu 0.0 sliding False completed 120 blocker 0 drift 1.1102230246251565e-16 jitter 7.351626287044711e-17 angle 7.963380121180903e-17 depth 1.0000000000065512e-05 projection_work 3.20787000000003 normal_dissipation 3.2078699999999913 accounted_energy_gain 0.0 velocity_sweeps 1"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/test-rest-1-60-run.log"
+      },
+      {
+        "group": "rest-1-120",
+        "result_lines": [
+          "BOX_MOTION_END 120 0.0 False 0.0 0.0 2.6251129656189234e-17",
+          "BOX_REST_RESULT 1 120 mu 0.0 sliding False completed 240 blocker 0 drift 1.1102230246251565e-16 jitter 3.9557781533026204e-17 angle 3.455513477989813e-17 depth 1.0000000000065512e-05 projection_work 1.6039349999999466 normal_dissipation 1.6039350000000017 accounted_energy_gain 7.460698725481052e-14 velocity_sweeps 1"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/test-rest-1-120-run.log"
+      },
+      {
+        "group": "rest-1-240",
+        "result_lines": [
+          "BOX_MOTION_END 240 0.0 False 0.0 0.0 5.275955480050203e-18",
+          "BOX_REST_RESULT 1 240 mu 0.0 sliding False completed 480 blocker 0 drift 0.0 jitter 1.3714193236627738e-17 angle 1.866680220955883e-17 depth 1.0000000000065512e-05 projection_work 0.8019675000002735 normal_dissipation 0.8019675000000039 accounted_energy_gain 0.0 velocity_sweeps 1"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/test-rest-1-240-run.log"
+      },
+      {
+        "group": "rest-2-30",
+        "result_lines": [
+          "BOX_MOTION_END 30 0.0 False 0.0 0.0 1.2502050154909845e-16",
+          "BOX_REST_RESULT 2 30 mu 0.0 sliding False completed 60 blocker 0 drift 6.496907456466878e-10 jitter 1.2181701689042703e-09 angle 2.626954738789643e-16 depth 1.0000649690700136e-05 projection_work 12.8314800685147 normal_dissipation 12.831480094008597 accounted_energy_gain 3.552713678800501e-14 velocity_sweeps 28"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/test-rest-2-30-run.log"
+      },
+      {
+        "group": "rest-2-60",
+        "result_lines": [
+          "BOX_MOTION_END 60 0.0 False 0.0 0.0 3.456412047208338e-17",
+          "BOX_REST_RESULT 2 60 mu 0.0 sliding False completed 120 blocker 0 drift 6.49690967691199e-10 jitter 6.090850879214571e-10 angle 1.9338764700979806e-16 depth 1.0000649691033203e-05 projection_work 6.415740021908547 normal_dissipation 6.415740047402635 accounted_energy_gain 2.1227464230832993e-13 velocity_sweeps 28"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/test-rest-2-60-run.log"
+      },
+      {
+        "group": "rest-2-120",
+        "result_lines": [
+          "BOX_MOTION_END 120 0.0 False 0.0 0.0 2.3602760066180786e-17",
+          "BOX_REST_RESULT 2 120 mu 0.0 sliding False completed 240 blocker 0 drift 6.496920779142101e-10 jitter 6.090850462880937e-10 angle 1.2095573555751381e-16 depth 1.0000649691921382e-05 projection_work 3.207870022107649 normal_dissipation 3.2078700476018063 accounted_energy_gain 2.4646951146678475e-13 velocity_sweeps 27"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/test-rest-2-120-run.log"
+      },
+      {
+        "group": "rest-2-240",
+        "result_lines": [
+          "BOX_MOTION_END 240 0.0 False 0.0 0.0 1.1932136261860047e-17",
+          "BOX_REST_RESULT 2 240 mu 0.0 sliding False completed 480 blocker 0 drift 6.496956306278889e-10 jitter 6.090850124609859e-10 angle 5.3159852101196496e-17 depth 1.000064969569614e-05 projection_work 1.6039350222082263 normal_dissipation 1.6039350477014145 accounted_energy_gain 3.9256792261355145e-15 velocity_sweeps 26"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/test-rest-2-240-run.log"
+      },
+      {
+        "group": "rest-3-30",
+        "result_lines": [
+          "BOX_REST_BLOCKER 3 30 0 114 normal_residual 2.19977070586852e-09 normal_gate 1.327e-09 CPU_residual 2.199770629540687e-09 position_residual 8.680649077411209e-10",
+          "BOX_MOTION_END 30 0.0 False 0.0 0.0 0.0",
+          "BOX_REST_RESULT 3 30 mu 0.0 sliding False completed 0 blocker 114 drift 0.0 jitter 0.0 angle 0.0 depth 0.0 projection_work 0.0 normal_dissipation 0.0 accounted_energy_gain 0.0 velocity_sweeps 0"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/test-rest-3-30-run.log"
+      },
+      {
+        "group": "rest-3-60",
+        "result_lines": [
+          "BOX_MOTION_END 60 0.0 False 0.0 0.0 5.477442613274737e-17",
+          "BOX_REST_RESULT 3 60 mu 0.0 sliding False completed 120 blocker 0 drift 1.371758262536423e-09 jitter 1.6498280276666697e-09 angle 2.39706135359557e-16 depth 1.0000914505647884e-05 projection_work 9.62361009942967 normal_dissipation 9.623610171199322 accounted_energy_gain 0.0 velocity_sweeps 64"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/test-rest-3-60-run.log"
+      },
+      {
+        "group": "rest-3-120",
+        "result_lines": [
+          "BOX_MOTION_END 120 0.0 False 0.0 0.0 2.3320191224450785e-17",
+          "BOX_REST_RESULT 3 120 mu 0.0 sliding False completed 240 blocker 0 drift 1.4451495555789506e-09 jitter 1.4665137368363796e-09 angle 1.6175059197270327e-16 depth 1.0000963432954535e-05 projection_work 4.81180507720741 normal_dissipation 4.811805152816589 accounted_energy_gain 3.8902214782865485e-13 velocity_sweeps 62"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/test-rest-3-120-run.log"
+      },
+      {
+        "group": "rest-3-240",
+        "result_lines": [
+          "BOX_MOTION_END 240 0.0 False 0.0 0.0 2.643675322774904e-17",
+          "BOX_REST_RESULT 3 240 mu 0.0 sliding False completed 480 blocker 0 drift 1.1418568313104096e-09 jitter 1.3035677598124962e-09 angle 1.0430992034166943e-16 depth 1.0000761237805023e-05 projection_work 2.4059025763828146 normal_dissipation 2.405902636121151 accounted_energy_gain 5.392387925073905e-15 velocity_sweeps 60"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/test-rest-3-240-run.log"
+      },
+      {
+        "group": "rest-3-30-96",
+        "result_lines": [
+          "BOX_MOTION_END 30 0.0 False 0.0 0.0 5.951866591810006e-17",
+          "BOX_REST_RESULT 3 30 mu 0.0 sliding False completed 60 blocker 0 drift 1.3020977629452101e-09 jitter 1.8560566486525584e-09 angle 3.4543426496130075e-16 depth 1.0000868065018764e-05 projection_work 19.247220122854984 normal_dissipation 19.247220190980762 accounted_energy_gain 3.552713678800501e-14 velocity_sweeps 66"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/test-rest-3-30-96-run.log"
+      },
+      {
+        "group": "slide-30",
+        "result_lines": [
+          "BOX_MOTION_END 30 0.2 True 0.27173333335759803 4.388638748584325e-18 6.880071789887653e-17",
+          "BOX_REST_RESULT 1 30 mu 0.2 sliding True completed 60 blocker 0 drift 0.0 jitter 1.1509110382563851e-09 angle 2.427671727749518e-10 depth 1.0000000000065512e-05 projection_work 6.415740002150809 normal_dissipation 7.415740000000001 accounted_energy_gain 3.197442310920451e-14 velocity_sweeps 17"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/test-slide-30-run.log"
+      },
+      {
+        "group": "slide-60",
+        "result_lines": [
+          "BOX_MOTION_END 60 0.2 True 0.2632416666899332 2.2499117080032925e-18 8.807836590935405e-18",
+          "BOX_REST_RESULT 1 60 mu 0.2 sliding True completed 120 blocker 0 drift 0.0 jitter 1.64520720135547e-09 angle 5.842609532477859e-11 depth 1.0000000000065512e-05 projection_work 3.207870000742844 normal_dissipation 4.2078699999999865 accounted_energy_gain 1.199040866595169e-14 velocity_sweeps 13"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/test-slide-60-run.log"
+      },
+      {
+        "group": "slide-120",
+        "result_lines": [
+          "BOX_MOTION_END 120 0.2 True 0.25901791666949037 -1.5756607349013424e-18 5.185390411097385e-18",
+          "BOX_REST_RESULT 1 120 mu 0.2 sliding True completed 240 blocker 0 drift 0.0 jitter 0.0026500000000007564 angle 4.9296930180694767e-11 depth 1.0000000000065512e-05 projection_work 1.6039350002280521 normal_dissipation 2.6039350000000097 accounted_energy_gain 1.056932319443149e-13 velocity_sweeps 25"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/test-slide-120-run.log"
+      },
+      {
+        "group": "slide-240",
+        "result_lines": [
+          "BOX_MOTION_END 240 0.2 True 0.25692906250170244 -3.883693322349016e-18 7.73758990251234e-18",
+          "BOX_REST_RESULT 1 240 mu 0.2 sliding True completed 480 blocker 0 drift 0.0 jitter 0.010824999999999875 angle 1.2541318774292854e-10 depth 1.0000000000065512e-05 projection_work 0.8019675011276242 normal_dissipation 1.801967499999965 accounted_energy_gain 3.8968828164342995e-13 velocity_sweeps 14"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/test-slide-240-run.log"
+      },
+      {
+        "group": "free-30",
+        "result_lines": [
+          "BOX_MOTION_END 30 0.0 True 1.9999999999999953 1.0 2.8609792490763984e-17",
+          "BOX_REST_RESULT 1 30 mu 0.0 sliding True completed 60 blocker 0 drift 0.0 jitter 1.0 angle 1.1685210875835084e-16 depth 1.0000000000065512e-05 projection_work 6.415740000000003 normal_dissipation 6.415740000000003 accounted_energy_gain 0.0 velocity_sweeps 1"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/test-free-30-run.log"
+      },
+      {
+        "group": "free-60",
+        "result_lines": [
+          "BOX_MOTION_END 60 0.0 True 1.9999999999999953 1.0 3.291406376790657e-17",
+          "BOX_REST_RESULT 1 60 mu 0.0 sliding True completed 120 blocker 0 drift 0.0 jitter 1.0 angle 6.687640864640629e-17 depth 1.0000000000065512e-05 projection_work 3.20787000000003 normal_dissipation 3.2078700000000113 accounted_energy_gain 0.0 velocity_sweeps 1"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/test-free-60-run.log"
+      },
+      {
+        "group": "free-120",
+        "result_lines": [
+          "BOX_MOTION_END 120 0.0 True 1.9999999999999953 1.0 2.5018537765542006e-17",
+          "BOX_REST_RESULT 1 120 mu 0.0 sliding True completed 240 blocker 0 drift 0.0 jitter 1.0 angle 3.369272101448573e-17 depth 1.0000000000065512e-05 projection_work 1.6039349999999484 normal_dissipation 1.603935000000014 accounted_energy_gain 8.615330671091215e-14 velocity_sweeps 1"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/test-free-120-run.log"
+      },
+      {
+        "group": "free-240",
+        "result_lines": [
+          "BOX_MOTION_END 240 0.0 True 1.9999999999999942 1.0 1.0408340855860843e-17",
+          "BOX_REST_RESULT 1 240 mu 0.0 sliding True completed 480 blocker 0 drift 0.0 jitter 1.0 angle 1.675877858271308e-17 depth 1.0000000000065512e-05 projection_work 0.8019675000002735 normal_dissipation 0.8019674999999538 accounted_energy_gain 0.0 velocity_sweeps 1"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/test-free-240-run.log"
+      }
+    ],
+    "packaged": [
+      {
+        "group": "basic",
+        "result_lines": [],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/packaged-basic-run.log"
+      },
+      {
+        "group": "conditioning",
+        "result_lines": [
+          "BOX_CONDITION_RESULT 32 0 seeded near-parallel reduced-patch independent pressure/state or explicit rollback outcomes"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/packaged-conditioning-run.log"
+      },
+      {
+        "group": "convergence",
+        "result_lines": [
+          "BOX_CONVERGENCE_RESULT 30 1.0 1.0 64 16 used 16 failure 114 gate 1.327e-09",
+          "BOX_CONVERGENCE_RESULT 30 1.0 1.0 64 32 used 32 failure 114 gate 1.327e-09",
+          "BOX_CONVERGENCE_RESULT 30 1.0 1.0 64 64 used 64 failure 114 gate 1.327e-09",
+          "BOX_CONVERGENCE_RESULT 30 1.0 1.0 96 96 used 66 failure 0 gate 1.327e-09",
+          "BOX_CONVERGENCE_RESULT 60 1.0 1.0 64 64 used 64 failure 0 gate 1.1635e-09",
+          "BOX_CONVERGENCE_RESULT 120 1.0 1.0 64 64 used 62 failure 0 gate 1.0817500000000001e-09",
+          "BOX_CONVERGENCE_RESULT 240 1.0 1.0 64 64 used 60 failure 0 gate 1.040875e-09",
+          "BOX_CONVERGENCE_RESULT 30 0.25 1.0 64 64 used 64 failure 114 gate 1.327e-09",
+          "BOX_CONVERGENCE_RESULT 30 0.25 1.0 96 96 used 66 failure 0 gate 1.327e-09",
+          "BOX_CONVERGENCE_RESULT 30 4.0 1.0 64 64 used 64 failure 114 gate 1.327e-09",
+          "BOX_CONVERGENCE_RESULT 30 4.0 1.0 96 96 used 66 failure 0 gate 1.327e-09",
+          "BOX_CONVERGENCE_RESULT 30 1.0 0.5 64 64 used 64 failure 0 gate 1.1635e-09",
+          "BOX_CONVERGENCE_RESULT 30 1.0 0.5 96 96 used 64 failure 0 gate 1.1635e-09",
+          "BOX_CONVERGENCE_RESULT 30 1.0 2.0 64 64 used 64 failure 114 gate 1.654e-09",
+          "BOX_CONVERGENCE_RESULT 30 1.0 2.0 96 96 used 68 failure 0 gate 1.654e-09"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/packaged-convergence-run.log"
+      },
+      {
+        "group": "rest-1-30",
+        "result_lines": [
+          "BOX_MOTION_END 30 0.0 False 0.0 0.0 5.0515910130503314e-17",
+          "BOX_REST_RESULT 1 30 mu 0.0 sliding False completed 60 blocker 0 drift 1.1102230246251565e-16 jitter 1.1816510524180758e-16 angle 1.2615329803526284e-16 depth 1.0000000000065512e-05 projection_work 6.415740000000017 normal_dissipation 6.415740000000002 accounted_energy_gain 0.0 velocity_sweeps 1"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/packaged-rest-1-30-run.log"
+      },
+      {
+        "group": "rest-1-60",
+        "result_lines": [
+          "BOX_MOTION_END 60 0.0 False 0.0 0.0 2.1942709178604383e-17",
+          "BOX_REST_RESULT 1 60 mu 0.0 sliding False completed 120 blocker 0 drift 1.1102230246251565e-16 jitter 7.351626287044711e-17 angle 7.963380121180903e-17 depth 1.0000000000065512e-05 projection_work 3.20787000000003 normal_dissipation 3.2078699999999913 accounted_energy_gain 0.0 velocity_sweeps 1"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/packaged-rest-1-60-run.log"
+      },
+      {
+        "group": "rest-1-120",
+        "result_lines": [
+          "BOX_MOTION_END 120 0.0 False 0.0 0.0 2.6251129656189234e-17",
+          "BOX_REST_RESULT 1 120 mu 0.0 sliding False completed 240 blocker 0 drift 1.1102230246251565e-16 jitter 3.9557781533026204e-17 angle 3.455513477989813e-17 depth 1.0000000000065512e-05 projection_work 1.6039349999999466 normal_dissipation 1.6039350000000017 accounted_energy_gain 7.460698725481052e-14 velocity_sweeps 1"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/packaged-rest-1-120-run.log"
+      },
+      {
+        "group": "rest-1-240",
+        "result_lines": [
+          "BOX_MOTION_END 240 0.0 False 0.0 0.0 5.275955480050203e-18",
+          "BOX_REST_RESULT 1 240 mu 0.0 sliding False completed 480 blocker 0 drift 0.0 jitter 1.3714193236627738e-17 angle 1.866680220955883e-17 depth 1.0000000000065512e-05 projection_work 0.8019675000002735 normal_dissipation 0.8019675000000039 accounted_energy_gain 0.0 velocity_sweeps 1"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/packaged-rest-1-240-run.log"
+      },
+      {
+        "group": "rest-2-30",
+        "result_lines": [
+          "BOX_MOTION_END 30 0.0 False 0.0 0.0 1.2502050154909845e-16",
+          "BOX_REST_RESULT 2 30 mu 0.0 sliding False completed 60 blocker 0 drift 6.496907456466878e-10 jitter 1.2181701689042703e-09 angle 2.626954738789643e-16 depth 1.0000649690700136e-05 projection_work 12.8314800685147 normal_dissipation 12.831480094008597 accounted_energy_gain 3.552713678800501e-14 velocity_sweeps 28"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/packaged-rest-2-30-run.log"
+      },
+      {
+        "group": "rest-2-60",
+        "result_lines": [
+          "BOX_MOTION_END 60 0.0 False 0.0 0.0 3.456412047208338e-17",
+          "BOX_REST_RESULT 2 60 mu 0.0 sliding False completed 120 blocker 0 drift 6.49690967691199e-10 jitter 6.090850879214571e-10 angle 1.9338764700979806e-16 depth 1.0000649691033203e-05 projection_work 6.415740021908547 normal_dissipation 6.415740047402635 accounted_energy_gain 2.1227464230832993e-13 velocity_sweeps 28"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/packaged-rest-2-60-run.log"
+      },
+      {
+        "group": "rest-2-120",
+        "result_lines": [
+          "BOX_MOTION_END 120 0.0 False 0.0 0.0 2.3602760066180786e-17",
+          "BOX_REST_RESULT 2 120 mu 0.0 sliding False completed 240 blocker 0 drift 6.496920779142101e-10 jitter 6.090850462880937e-10 angle 1.2095573555751381e-16 depth 1.0000649691921382e-05 projection_work 3.207870022107649 normal_dissipation 3.2078700476018063 accounted_energy_gain 2.4646951146678475e-13 velocity_sweeps 27"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/packaged-rest-2-120-run.log"
+      },
+      {
+        "group": "rest-2-240",
+        "result_lines": [
+          "BOX_MOTION_END 240 0.0 False 0.0 0.0 1.1932136261860047e-17",
+          "BOX_REST_RESULT 2 240 mu 0.0 sliding False completed 480 blocker 0 drift 6.496956306278889e-10 jitter 6.090850124609859e-10 angle 5.3159852101196496e-17 depth 1.000064969569614e-05 projection_work 1.6039350222082263 normal_dissipation 1.6039350477014145 accounted_energy_gain 3.9256792261355145e-15 velocity_sweeps 26"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/packaged-rest-2-240-run.log"
+      },
+      {
+        "group": "rest-3-30",
+        "result_lines": [
+          "BOX_REST_BLOCKER 3 30 0 114 normal_residual 2.19977070586852e-09 normal_gate 1.327e-09 CPU_residual 2.199770629540687e-09 position_residual 8.680649077411209e-10",
+          "BOX_MOTION_END 30 0.0 False 0.0 0.0 0.0",
+          "BOX_REST_RESULT 3 30 mu 0.0 sliding False completed 0 blocker 114 drift 0.0 jitter 0.0 angle 0.0 depth 0.0 projection_work 0.0 normal_dissipation 0.0 accounted_energy_gain 0.0 velocity_sweeps 0"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/packaged-rest-3-30-run.log"
+      },
+      {
+        "group": "rest-3-60",
+        "result_lines": [
+          "BOX_MOTION_END 60 0.0 False 0.0 0.0 5.477442613274737e-17",
+          "BOX_REST_RESULT 3 60 mu 0.0 sliding False completed 120 blocker 0 drift 1.371758262536423e-09 jitter 1.6498280276666697e-09 angle 2.39706135359557e-16 depth 1.0000914505647884e-05 projection_work 9.62361009942967 normal_dissipation 9.623610171199322 accounted_energy_gain 0.0 velocity_sweeps 64"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/packaged-rest-3-60-run.log"
+      },
+      {
+        "group": "rest-3-120",
+        "result_lines": [
+          "BOX_MOTION_END 120 0.0 False 0.0 0.0 2.3320191224450785e-17",
+          "BOX_REST_RESULT 3 120 mu 0.0 sliding False completed 240 blocker 0 drift 1.4451495555789506e-09 jitter 1.4665137368363796e-09 angle 1.6175059197270327e-16 depth 1.0000963432954535e-05 projection_work 4.81180507720741 normal_dissipation 4.811805152816589 accounted_energy_gain 3.8902214782865485e-13 velocity_sweeps 62"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/packaged-rest-3-120-run.log"
+      },
+      {
+        "group": "rest-3-240",
+        "result_lines": [
+          "BOX_MOTION_END 240 0.0 False 0.0 0.0 2.643675322774904e-17",
+          "BOX_REST_RESULT 3 240 mu 0.0 sliding False completed 480 blocker 0 drift 1.1418568313104096e-09 jitter 1.3035677598124962e-09 angle 1.0430992034166943e-16 depth 1.0000761237805023e-05 projection_work 2.4059025763828146 normal_dissipation 2.405902636121151 accounted_energy_gain 5.392387925073905e-15 velocity_sweeps 60"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/packaged-rest-3-240-run.log"
+      },
+      {
+        "group": "rest-3-30-96",
+        "result_lines": [
+          "BOX_MOTION_END 30 0.0 False 0.0 0.0 5.951866591810006e-17",
+          "BOX_REST_RESULT 3 30 mu 0.0 sliding False completed 60 blocker 0 drift 1.3020977629452101e-09 jitter 1.8560566486525584e-09 angle 3.4543426496130075e-16 depth 1.0000868065018764e-05 projection_work 19.247220122854984 normal_dissipation 19.247220190980762 accounted_energy_gain 3.552713678800501e-14 velocity_sweeps 66"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/packaged-rest-3-30-96-run.log"
+      },
+      {
+        "group": "slide-30",
+        "result_lines": [
+          "BOX_MOTION_END 30 0.2 True 0.27173333335759803 4.388638748584325e-18 6.880071789887653e-17",
+          "BOX_REST_RESULT 1 30 mu 0.2 sliding True completed 60 blocker 0 drift 0.0 jitter 1.1509110382563851e-09 angle 2.427671727749518e-10 depth 1.0000000000065512e-05 projection_work 6.415740002150809 normal_dissipation 7.415740000000001 accounted_energy_gain 3.197442310920451e-14 velocity_sweeps 17"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/packaged-slide-30-run.log"
+      },
+      {
+        "group": "slide-60",
+        "result_lines": [
+          "BOX_MOTION_END 60 0.2 True 0.2632416666899332 2.2499117080032925e-18 8.807836590935405e-18",
+          "BOX_REST_RESULT 1 60 mu 0.2 sliding True completed 120 blocker 0 drift 0.0 jitter 1.64520720135547e-09 angle 5.842609532477859e-11 depth 1.0000000000065512e-05 projection_work 3.207870000742844 normal_dissipation 4.2078699999999865 accounted_energy_gain 1.199040866595169e-14 velocity_sweeps 13"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/packaged-slide-60-run.log"
+      },
+      {
+        "group": "slide-120",
+        "result_lines": [
+          "BOX_MOTION_END 120 0.2 True 0.25901791666949037 -1.5756607349013424e-18 5.185390411097385e-18",
+          "BOX_REST_RESULT 1 120 mu 0.2 sliding True completed 240 blocker 0 drift 0.0 jitter 0.0026500000000007564 angle 4.9296930180694767e-11 depth 1.0000000000065512e-05 projection_work 1.6039350002280521 normal_dissipation 2.6039350000000097 accounted_energy_gain 1.056932319443149e-13 velocity_sweeps 25"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/packaged-slide-120-run.log"
+      },
+      {
+        "group": "slide-240",
+        "result_lines": [
+          "BOX_MOTION_END 240 0.2 True 0.25692906250170244 -3.883693322349016e-18 7.73758990251234e-18",
+          "BOX_REST_RESULT 1 240 mu 0.2 sliding True completed 480 blocker 0 drift 0.0 jitter 0.010824999999999875 angle 1.2541318774292854e-10 depth 1.0000000000065512e-05 projection_work 0.8019675011276242 normal_dissipation 1.801967499999965 accounted_energy_gain 3.8968828164342995e-13 velocity_sweeps 14"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/packaged-slide-240-run.log"
+      },
+      {
+        "group": "free-30",
+        "result_lines": [
+          "BOX_MOTION_END 30 0.0 True 1.9999999999999953 1.0 2.8609792490763984e-17",
+          "BOX_REST_RESULT 1 30 mu 0.0 sliding True completed 60 blocker 0 drift 0.0 jitter 1.0 angle 1.1685210875835084e-16 depth 1.0000000000065512e-05 projection_work 6.415740000000003 normal_dissipation 6.415740000000003 accounted_energy_gain 0.0 velocity_sweeps 1"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/packaged-free-30-run.log"
+      },
+      {
+        "group": "free-60",
+        "result_lines": [
+          "BOX_MOTION_END 60 0.0 True 1.9999999999999953 1.0 3.291406376790657e-17",
+          "BOX_REST_RESULT 1 60 mu 0.0 sliding True completed 120 blocker 0 drift 0.0 jitter 1.0 angle 6.687640864640629e-17 depth 1.0000000000065512e-05 projection_work 3.20787000000003 normal_dissipation 3.2078700000000113 accounted_energy_gain 0.0 velocity_sweeps 1"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/packaged-free-60-run.log"
+      },
+      {
+        "group": "free-120",
+        "result_lines": [
+          "BOX_MOTION_END 120 0.0 True 1.9999999999999953 1.0 2.5018537765542006e-17",
+          "BOX_REST_RESULT 1 120 mu 0.0 sliding True completed 240 blocker 0 drift 0.0 jitter 1.0 angle 3.369272101448573e-17 depth 1.0000000000065512e-05 projection_work 1.6039349999999484 normal_dissipation 1.603935000000014 accounted_energy_gain 8.615330671091215e-14 velocity_sweeps 1"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/packaged-free-120-run.log"
+      },
+      {
+        "group": "free-240",
+        "result_lines": [
+          "BOX_MOTION_END 240 0.0 True 1.9999999999999942 1.0 1.0408340855860843e-17",
+          "BOX_REST_RESULT 1 240 mu 0.0 sliding True completed 480 blocker 0 drift 0.0 jitter 1.0 angle 1.675877858271308e-17 depth 1.0000000000065512e-05 projection_work 0.8019675000002735 normal_dissipation 0.8019674999999538 accounted_energy_gain 0.0 velocity_sweeps 1"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/packaged-free-240-run.log"
+      }
+    ],
+    "demo": [
+      {
+        "group": "demo",
+        "result_lines": [
+          "BOX_RESPONSE_DEMO 12 projection_work 3.8494439674808945 normal_dissipation 3.849444035606587 CPU_replay True baseline64_30Hz_failure_retained True"
+        ],
+        "log": "/home/user/mojo-game-engine/build/physics-box-response/demo-demo-run.log"
+      }
+    ]
+  },
+  "regression_stage_count": 52,
+  "regression_receipt": "/home/user/mojo-game-engine/build/physics-box-response/regressions.json",
+  "frozen_regression_receipts": [
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-response/final-regression-receipts/physics-g01/test-qualification.json",
+      "sha256": "3ae5298073a1a8e9485fa35644512e5beee966caea286392e7b29380facdd8cb"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-response/final-regression-receipts/physics-g02/test-qualification.json",
+      "sha256": "c01e75013bca9abc703e56c4d8a2b2abaab56087d5a3fff16a030ef504d5db9f"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-response/final-regression-receipts/physics-g02/packaged-qualification.json",
+      "sha256": "9933b80a4767d1c6bb585e2da380ab62649a167769c20ac27f507d634936567c"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-response/final-regression-receipts/physics-g03/test-qualification.json",
+      "sha256": "5be64fa5a37cf36f3309672bb87106cce3c9cc6e3d307639b2a1c444f71d04a8"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-response/final-regression-receipts/physics-g03/packaged-qualification.json",
+      "sha256": "c20c362a4f2e4b37270a0e46e256ee13dee5f0d4328254cc8b5aee3e49f3c3fa"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-response/final-regression-receipts/physics-g03b/test-qualification.json",
+      "sha256": "1bc59b919f3578979da658393e93918dbbd505e50060a7bc4be68f80c7825263"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-response/final-regression-receipts/physics-g03b/packaged-qualification.json",
+      "sha256": "641b2a4baeaef98a41476a9579ae4c03f787680a021d05c9002860c609508e9c"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-response/final-regression-receipts/physics-g03c/test-qualification.json",
+      "sha256": "f2ee001cae32ff927d03df2ca817a4deb7c486da8d864051d73d6177393d8c66"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-response/final-regression-receipts/physics-g03c/packaged-qualification.json",
+      "sha256": "e218dba316b5982b72c5a8ff0b6ca6d7d4ce27d1764c7e6993c4878f04985c66"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-response/final-regression-receipts/physics-g04a/test-qualification.json",
+      "sha256": "c25975d41f5e244b21332a8c7455301255449853bd1c120a695477c5292ec4cd"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-response/final-regression-receipts/physics-g04a/packaged-qualification.json",
+      "sha256": "7ed8d6d9635d585d84e994ca695568f722408dec868bfc1ea4b2fadb6ee95d7d"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-response/final-regression-receipts/physics-g04b/test-qualification.json",
+      "sha256": "f4afdceedfd54e574e6c821379c09f394a61fab817062895426ac2634334077f"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-response/final-regression-receipts/physics-g04b/packaged-qualification.json",
+      "sha256": "5db4d5cc6c9155add42514a74982f78ebdf43e4391425db10ef201c63bb3be84"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-response/final-regression-receipts/physics-g04-stability/test-qualification.json",
+      "sha256": "a50e633d1146b2db0f6aa469872cf031897faaa98fa2b7f6e2ad38f26389b613"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-response/final-regression-receipts/physics-g04-stability/packaged-qualification.json",
+      "sha256": "0dfae9b6816cb9e8a9c6dfa7a1fa88d13291a3d6dfe6262ad21d0ab20ad19481"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-response/final-regression-receipts/physics-gpu-recommended/test-qualification.json",
+      "sha256": "ab468fc8aa8541a87b221038a1a21581b62e460d99ae647815c0cdfbd8e346ee"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-response/final-regression-receipts/physics-gpu-recommended/packaged-qualification.json",
+      "sha256": "0780a57bf717837b4d2186bebcce6c4e82ebde171edfada127f4d84fb34c5e10"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-response/final-regression-receipts/physics-gpu-recommended/demo-qualification.json",
+      "sha256": "7aebe7f6f123ceeab97e8887ce1c059f5a3d96288fea9861e4d205e1246df79f"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-response/final-regression-receipts/physics-g05-islands/test-qualification.json",
+      "sha256": "67ab12438e319759f346b165fd80a34eb79581702ed1c6059b43bccacb85d364"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-response/final-regression-receipts/physics-g05-islands/packaged-qualification.json",
+      "sha256": "e8da92420497d1c0dc8b720c87de0ec18d9e08d9c0d63dfcdd57f48835e0dedb"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-response/final-regression-receipts/physics-g05-islands/demo-qualification.json",
+      "sha256": "06fc88e09d851549c25069ad143a646c5d119a4c93c11b166dde4d702f752142"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-response/final-regression-receipts/physics-g05-sleep/test-qualification.json",
+      "sha256": "c317c8095e7fd767349e929f6f829ddc128298f595d5a0088048f170c8996b9c"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-response/final-regression-receipts/physics-g05-sleep/packaged-qualification.json",
+      "sha256": "7e58d91d2f5fa7a2a48bbedb425b7dd8102d7fbe0cadda28364459e473fabdcc"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-response/final-regression-receipts/physics-g05-sleep/demo-qualification.json",
+      "sha256": "46365a5b0171af4b4ba12bb68691c5df4c91574ac92abbf6ac251c1a3e26ca10"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-response/final-regression-receipts/physics-box-box/test-qualification.json",
+      "sha256": "48e85981dd61d8a705cf5f15eb1887f4c0603d543448a2b9d1c8ba73468de517"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-response/final-regression-receipts/physics-box-box/packaged-qualification.json",
+      "sha256": "f22cfa5958cb267a7810f56bd3e14d30aab0bea63b01b2d4b8475f058b759352"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-response/final-regression-receipts/physics-box-box/demo-qualification.json",
+      "sha256": "f5e6f90ac22a810683e68ccefe8963d83b96394405f757835475a8d8027dadda"
+    }
+  ],
+  "source_hashes": {
+    "experimental/physics_gpu/box_response.mojo": "2374c6a8d39b17d508c13d5e9994ba9224489e6ca03da2aa6abdfb69ac99f596",
+    "experimental/physics_gpu/box_response_kernels.mojo": "19a2c32301b0569541c6082b61007c575b8c8227d140debe467da47260da105b",
+    "experimental/physics_gpu/box_response_math.mojo": "b19e2d43d1fd6190f6fbc2556118198d012909c9f779965e5916a53b80e7d7ed",
+    "experimental/physics_gpu/box_response_reference.mojo": "44c9960e78c59981ee9ac0f33b7aa84bde3dd9dd534cb30c673e40e7b67e941e",
+    "experimental/physics_gpu/test_box_response.mojo": "d9253ef9cc3d561e505544e128b3042f73e9862c0e3958e45a4ba91f09a30fd6",
+    "experimental/physics_gpu/box_response_diagnostic.mojo": "1d9999c1119118eeb7993e964c2be270eaf07a988201a7c2251f60b2a2f7b081",
+    "experimental/physics_gpu/BOX_RESPONSE_DESIGN.md": "7a9cae47982ea0306d2a886dedcf27a58c27f55cf5a0f0d7a6a697cda9777ece",
+    "experimental/physics_gpu/BOX_RESPONSE.md": "19deb3670f55f4674bfb86c27275ba1e25827f73d4599fb44032495e7297cd52",
+    "experimental/physics_gpu/README.md": "a21a9a7c75d6296b8b3cd84ae9e832448e76ebe832054eb8975267e897bfc66e",
+    "scripts/qualify-box-response.py": "57574b7f63b75c0a3dcc4ba4d9b1a063873e8d81c2b1651909b351e91031d4d4",
+    "docs/PHYSICS_ROADMAP.md": "c0492431cb76d62788ff260c783b2b64de6be8d2e358afe4b4655a0add2b7f9e"
+  },
+  "preservation": {
+    "baseline_entries_checked": 86,
+    "intentional_differences": [
+      "experimental/physics_gpu/README.md",
+      "docs/PHYSICS_ROADMAP.md",
+      "build/mojo-game-source.tar.gz",
+      "build/atlas-release-manifest.json"
+    ],
+    "intentional_artifact_hashes": {
+      "experimental/physics_gpu/README.md": {
+        "before": "d698a0b62b3cb82e077410cf425b15d765029294785e6984498b889d8b2e4a68",
+        "after": "a21a9a7c75d6296b8b3cd84ae9e832448e76ebe832054eb8975267e897bfc66e"
+      },
+      "docs/PHYSICS_ROADMAP.md": {
+        "before": "1ff55a3ea9493dcd1c8b3ff528cf218dc2b52049be44ce0cb826e83aa8c5003e",
+        "after": "c0492431cb76d62788ff260c783b2b64de6be8d2e358afe4b4655a0add2b7f9e"
+      },
+      "build/mojo-game-source.tar.gz": {
+        "before": "f9561e157cf8142d9ccfed1736b6821676d024620f88da10a7fcee7de3368e7e",
+        "after": "976e89418bb7b4d5e99acb9bfd5bae1886dd2b50533490ab9d4e9f25d7654f07"
+      },
+      "build/atlas-release-manifest.json": {
+        "before": "a0d6bb1a4423020a0fd87d859e9411d1034f12fab644de6c8b98b2cf5d1a9309",
+        "after": "b90e0312b79bd9742401c39ea0725fd6db2b75775fff2977d13ad01ffb2eaa81"
+      }
+    },
+    "prior_unrelated_sources_locks_checked": 119,
+    "unrelated_changes": [],
+    "asset_save_identities_checked": 5901,
+    "asset_save_changes": [],
+    "campaign_sources_checked": 17,
+    "campaign_changes": [],
+    "original_sphere_detection_response_island_sleep_sources_and_gates_unchanged": true,
+    "root_GPU_pins_locks_unchanged": true,
+    "normal_compiled_module_archive_game_unchanged": true,
+    "SDK_manifest_delta": {
+      "added": [],
+      "removed": [],
+      "changed": [
+        "docs/PHYSICS_ROADMAP.md"
+      ]
+    },
+    "supported_SDK_workflow": "scripts/package-atlas.py; documentation-only roadmap delta; experimental response qualified via isolated package",
+    "original_G04_failures_240Hz_pass_and_numeric_gates_retained": true,
+    "original240_and_recommended_numeric_receipts_exactly_unchanged": true,
+    "recommended_review": {
+      "status": "passed",
+      "milestone": "recommended-G04-stability",
+      "device": "NVIDIA GB10",
+      "frames": 60,
+      "substeps_per_frame": 1,
+      "physics_hz": 60,
+      "sequential_GPU_worlds": 2,
+      "live_GPU_friction": true,
+      "entrypoint": "experimental.physics_gpu.recommended.GpuPhysicsResponse",
+      "solver": "GpuStableFrictionResponse",
+      "ordinary_engine_campaign_opt_in": false,
+      "low_mu": 0.02,
+      "high_mu": 0.8,
+      "low_final_x": 0.9035349999999964,
+      "high_final_x": -0.14573566588127745,
+      "low_final_vx": 2.8037999999999936,
+      "high_final_vx": 1.742837200942464,
+      "low_final_contact_slip": 3.71330700714285,
+      "high_final_contact_slip": -2.489802998522129e-05,
+      "low_final_kinetic_energy": 4.096087819208373,
+      "high_final_kinetic_energy": 2.1262544137014117,
+      "surface_slip_gate": 0.001,
+      "analytic_scene_laws_passed": true,
+      "rendered_snapshot_frames": [
+        0,
+        20,
+        40,
+        59
+      ],
+      "maximum_velocity_iterations": 1,
+      "maximum_cone_excess": 0.0,
+      "CPU_reference": "all 120 rendered-frame position/orientation/velocity/angular states, counts and energy reports after render; one CPU physics step per frame",
+      "fixed_bodies_unchanged": true,
+      "persistent_body_storage": true,
+      "warm_start": false,
+      "separate_static_dynamic_coefficients": false,
+      "solver_parallelism": "serial GPU contact sweeps",
+      "integration_response_separate_commits": true,
+      "validation_errors": 0,
+      "campaign_rules_changed": false
+    },
+    "normal_build_state": "Atlas engine source, archive and compiled API match.\nYo Frankie build matches game source and the explicit Atlas engine dependency.",
+    "community_source_fixture_dependency_adoption": false,
+    "prior_partial_checkpoint": "/home/user/mojo-game-engine/build/physics-box-response/partial-checkpoint.json",
+    "prior_regression_receipts": "/home/user/mojo-game-engine/build/physics-box-response/previous-regression-receipts"
+  },
+  "resolved_issues": {
+    "old_executable_misrun": "invalidated; fingerprint/result-marker checks added; not counted as trajectory evidence",
+    "uncached_240Hz_timeout": "preserved; same30-second stage completes using within-call static operators without warm start",
+    "reference_movable_records": "compiler ownership/initialization corrections",
+    "independent_reference_review": "touched-body energy, tangential-only residual and omitted-vertex restitution targets corrected",
+    "nearparallel_face_convention": "original failed strict comparison retained; conditional equivalent-feature check/reconstruction fixes ambiguous expectation without changing detector or comparison gate",
+    "package_probe": "standalone capability main excluded from generated library; no production code change"
+  },
+  "resources": {
+    "compile_threads": 1,
+    "compile_deadline_s": 180,
+    "each_group_run_deadline_s": 30,
+    "memory_reserve_GiB": 32,
+    "minimum_observed_available_GiB": 111.86617279052734,
+    "maximum_observed_GPU_C": 41,
+    "thermal_policy": "observation only; no retired cutoffs"
+  },
+  "cleanup": {
+    "remaining_owned_native_or_qualification_commands": [],
+    "GPU_compute_apps": "",
+    "H3_resumed": false,
+    "host_boot_id": "22ae0bec-f40a-4c98-b2d7-c1312a226dea",
+    "settings_driver_firmware_OS_power_changes": false,
+    "dirty_work_and_prior_evidence_preserved": true,
+    "GPU_buffers": "scoped DeviceContext owners exited"
+  },
+  "remaining_operational_blockers": [],
+  "retained_numerical_limit": "original baseline64 three-cube30Hz configuration rejects; explicit96 bounded alternative qualified",
+  "stop_checkpoint": "bounded box response qualification complete; stop before further physics features"
+}

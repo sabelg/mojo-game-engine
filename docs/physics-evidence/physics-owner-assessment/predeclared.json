@@ -1,0 +1,57 @@
+{
+  "recorded_at_UTC": "2026-10-13T17:20:20.016494+00:00",
+  "design_sha256": "2d3d07077217f57bdadd750480c838bcf9c8ec2d90abba297a960029488604d5",
+  "fixtures": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "batches": 4,
+  "owners": [
+    "original",
+    "invariant",
+    "tangent"
+  ],
+  "first_calls_excluded_per_owner_batch": 1,
+  "warmups_excluded_per_owner_batch": 1,
+  "warmed_samples_per_owner_fixture": 12,
+  "order_even": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      1,
+      2,
+      0
+    ],
+    [
+      2,
+      0,
+      1
+    ]
+  ],
+  "order_odd": [
+    [
+      0,
+      2,
+      1
+    ],
+    [
+      2,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      2
+    ]
+  ],
+  "total_calls": 180,
+  "repeatability_rule": "atleast10of12 pairedsigns andall4batchmedians agree;limitedprotocol notstatisticalconfidence",
+  "execution_started": false,
+  "algorithm_policy_changes": false
+}

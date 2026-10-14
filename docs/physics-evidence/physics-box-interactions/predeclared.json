@@ -1,0 +1,8 @@
+{
+  "recorded_at_UTC": "2026-10-13T10:26:20.952360+00:00",
+  "design_path": "/home/user/mojo-game-engine/experimental/physics_gpu/BOX_INTERACTIONS_DESIGN.md",
+  "design_sha256": "d8e0e5e2e7311b257af0f7ffc46f18d6a3fe1083928b5129d71d2cd08c09d603",
+  "case_matrix_sha256": "35ab67a804d193a204e50911fe9257ab0d1a10b99d9cfa6cd11fb8acc22065d3",
+  "case_count": 70,
+  "execution_started": false
+}

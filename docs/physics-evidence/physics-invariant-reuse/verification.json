@@ -1,0 +1,224 @@
+{
+  "status": "bounded_opt_in_resolve_local_invariant_reuse_verified_exact_records_and_measured_improvement",
+  "recorded_at_UTC": "2026-10-13T16:14:35.332945+00:00",
+  "scope": "only per-patch NT/TT effective-mass assembly reused across unchanged outer attempts within one resolve",
+  "API": "experimental.physics_gpu.cached_coupled_response.GpuCachedCoupledBoxResponse",
+  "isolated_opt_in": true,
+  "original_default_recommended_API_and_sources_changed": false,
+  "new_repository_files": [
+    "experimental/physics_gpu/cached_coupled_kernels.mojo",
+    "experimental/physics_gpu/cached_coupled_response.mojo",
+    "experimental/physics_gpu/test_cached_helpers.mojo",
+    "experimental/physics_gpu/test_cached_coupled.mojo",
+    "experimental/physics_gpu/CACHED_METRICS.md"
+  ],
+  "new_files_sha256": {
+    "cached_coupled_kernels.mojo": "36ccbd66b956e4f5e5c2d6d7773fb8fb13677f2d3937b45964ff07bdf896e0af",
+    "cached_coupled_response.mojo": "e4486779f99bcd0b5125fa8580a6b986c0e3c918c9368ca568a8f1da3f4fb38d",
+    "test_cached_helpers.mojo": "309b62deb8edf9b6f1dca47c4100612e34876038926cce4338ade2a1ef726c18",
+    "test_cached_coupled.mojo": "2006bcd8cfa78fe8c9b49c9a3f68550d921708b679c44edd6dcf20ffa30b2708",
+    "CACHED_METRICS.md": "9ad872a78b87b73325eb5b4e662cb2f1adc54a6314b1abe05ae210897d0a07e0"
+  },
+  "invariance_proof": {
+    "fixed_inputs": [
+      "body mass/inertia",
+      "postprojection COM/orientation",
+      "reconstructed selected points/normal",
+      "tangent basis"
+    ],
+    "dynamic_inputs_not_cached": [
+      "velocity",
+      "normal/tangent impulses",
+      "pressure and active-normal selection",
+      "disk radii/material law",
+      "Newton iterates/residual/Jacobian"
+    ],
+    "cache_populated_after": [
+      "position projection",
+      "new private bounds/box pairs",
+      "point reduction/constraint packing"
+    ],
+    "cross_resolve_reuse": false,
+    "payload_clear_every_positive_mu_resolve": true,
+    "generation_revision_pose_shape_material_basis_edits_freshly_repacked": true,
+    "live_mass_inertia_edit": "existingerror15 immutable-mass rejection; supported remove/recreate changes generation",
+    "fallback_and_residual_tangent_metric_original_order_retained": true,
+    "direct_old_metric_reassembly_postsolve_all_bits_exact": true
+  },
+  "unchanged_policy": {
+    "precision": "Float64",
+    "velocity_policies": [
+      64,
+      96
+    ],
+    "position_budget": 64,
+    "local_Newton_max": 8,
+    "halving_max": 16,
+    "complete_pivot_rank_threshold": "256binary64eps times original scale",
+    "original_physical_residual_depth_Coulomb_energy_profile_rollback_gates": true,
+    "timestep_integration_projection_contact_law_and_sweep_order": true,
+    "broader_parallelism_added": false
+  },
+  "correctness": {
+    "all140_original_case_initial_result_traces_bytes_identical": true,
+    "original_full_coverage_per_path": 63,
+    "original_cases_per_path": 70,
+    "all320_profile_canonical_raw_states_impulses_histories_reports_work_identical": true,
+    "correctness_only_samples_before_timing": 80,
+    "timed_AB_samples": 240,
+    "target_tangent_bases_per_path": 3,
+    "seed61rank3_and_permutation_source_precompiled_passed": true,
+    "conditioning_Jacobian_nonfinite_configuration_body_metadata_rollback_passed": true,
+    "cache_mutation_and_pad_canary_cases_per_path": 9,
+    "non_bitwise_difference_accepted": false,
+    "receipt": "/home/user/mojo-game-engine/build/physics-invariant-reuse/correctness-comparison.json"
+  },
+  "performance": {
+    "method": "one first-call/two excluded warmups/seven warmed independent resets per4fixtures/2variants/3paths; source/freshprecompiled actualGPU; CUDA/NVTX kernel timing via correlation IDs; compile/setup/cold separated",
+    "source_target_original_host_s": {
+      "n": 7,
+      "median": 1.3502517770102713,
+      "min": 1.347673794007278,
+      "max": 1.3590347900026245
+    },
+    "source_target_cached_host_s": {
+      "n": 7,
+      "median": 1.1353239829913946,
+      "min": 1.079577930009691,
+      "max": 1.1408252969995374
+    },
+    "source_observed_median_reduction_fraction": 0.15917608677010597,
+    "precompiled_target_original_host_s": {
+      "n": 7,
+      "median": 1.3673950109950965,
+      "min": 1.354873393996968,
+      "max": 1.3753035230038222
+    },
+    "precompiled_target_cached_host_s": {
+      "n": 7,
+      "median": 1.1528239619947271,
+      "min": 1.140480383997783,
+      "max": 1.1582324790069833
+    },
+    "precompiled_observed_median_reduction_fraction": 0.15691957866967732,
+    "GPU_solver_original_ms": {
+      "n": 7,
+      "median": 1341.900544,
+      "min": 1339.908256,
+      "max": 1352.6984
+    },
+    "GPU_solver_cached_ms": {
+      "n": 7,
+      "median": 1127.899104,
+      "min": 1124.480192,
+      "max": 1137.697408
+    },
+    "cache_pack_GPU_ms": {
+      "n": 7,
+      "median": 1.975968,
+      "min": 1.973408,
+      "max": 2.352576
+    },
+    "work_counts_unchanged": [
+      192,
+      192,
+      0,
+      505,
+      2707,
+      505,
+      1853,
+      4016,
+      8,
+      0
+    ],
+    "actual_velocity_sweeps": 96,
+    "actual_position_sweeps": 23,
+    "other_fixtures_and_phase_costs": "/home/user/mojo-game-engine/build/physics-invariant-reuse/measured-AB.json",
+    "cheap_controls_benefit_claim": false,
+    "p95_statistical_population_broad_scenes_real_time_PhysX_claim": false,
+    "limits": "finite paired measurements only; synchronization APIs overlap kernels, diagnostics excluded; no instruction/spill attribution; sampled memory not guaranteed peak"
+  },
+  "cache_overhead": {
+    "extra_explicit_bytes": 12304,
+    "payload_words": 1536,
+    "canary_words": 2,
+    "extra_constructor_buffers": 1,
+    "positive_mu_extra_kernel_launch": 1,
+    "mu0_extra_kernel_launch": 0,
+    "target_cache_matrix_assemblies": 2,
+    "original_target_matrix_assemblies": 192,
+    "original_API_readback_bytes_and_synchronization_count25_unchanged": true,
+    "sampled_process_memory": {
+      "baseline": {
+        "maximum_sampled_device_MiB": 983,
+        "maximum_sampled_host_RSS_kB": 3047612
+      },
+      "cached": {
+        "maximum_sampled_device_MiB": 929,
+        "maximum_sampled_host_RSS_kB": 2991612
+      }
+    }
+  },
+  "retained_limits": [
+    "original strict same-time translated case68 failure remains",
+    "two baseline64 convergence rejects remain",
+    "four old ledge scenes still do not establish detachment",
+    "separate12/12ledge and75/75translation qualification not added to63/70",
+    "expensive bounded opt-in serial solver; no arbitrary stacks/PhysX parity"
+  ],
+  "test_diagnostic": {
+    "retained": "/home/user/mojo-game-engine/build/physics-invariant-reuse/cache-attempt-1",
+    "existing_error15_on_unsupported_mass_update": "test corrected to verify rollback and remove/recreate, no optimization mismatch or gate relaxation"
+  },
+  "historical_launcher_fingerprints_preserved": [
+    {
+      "build": "source-target-build.json",
+      "dependency": "build/physics-invariant-reuse/run-checks.py",
+      "exact_preserved_at": "/home/user/mojo-game-engine/build/physics-invariant-reuse/run-checks-v1-preserved.py"
+    },
+    {
+      "build": "source-matrix-build.json",
+      "dependency": "build/physics-invariant-reuse/run-checks.py",
+      "exact_preserved_at": "/home/user/mojo-game-engine/build/physics-invariant-reuse/run-checks-v1-preserved.py"
+    }
+  ],
+  "preservation": {
+    "protected_hashes": 121,
+    "protected_changes": [],
+    "unrelated_sources_locks": 119,
+    "unrelated_changes": [],
+    "asset_save_identities": 5901,
+    "asset_save_changes": [],
+    "campaign_sources": 17,
+    "campaign_changes": [],
+    "pins": [
+      {
+        "version": "1.2.0.dev2026092905",
+        "metadata_sha256": "40307d16e09c2e88bfe8085346d028d7479d93867fdd6e210305ed3fbaf9c534"
+      },
+      {
+        "version": "26.7.0.dev2026092905",
+        "metadata_sha256": "dab5b010e4a7b5f6b7dcc4f60f2e30f9e5e69b689ef2bd57e46025d251dc2403"
+      }
+    ],
+    "original_code_exes_baselines_receipts_SDK_campaign_dirty_work_locks_preserved": true
+  },
+  "resources": {
+    "compile_threads": 1,
+    "compile_guard_s": 180,
+    "run_guard_s": 30,
+    "memory_reserve_GiB": 32,
+    "minimum_observed_available_GiB": 110.85536575317383,
+    "normal_settings_unchanged": true,
+    "retired_thermal_cutoffs_reintroduced": false
+  },
+  "cleanup": {
+    "owned_jobs": [],
+    "GPU_compute_apps": "",
+    "boot_id": "22ae0bec-f40a-4c98-b2d7-c1312a226dea",
+    "H3_resumed": false,
+    "OS_driver_firmware_settings_changes": false,
+    "dependency_installs": false,
+    "publication": false
+  }
+}

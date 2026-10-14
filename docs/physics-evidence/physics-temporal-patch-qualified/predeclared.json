@@ -1,0 +1,40 @@
+{
+  "reuse": "384 first cases,192 units,24 narrow probes,420 genuine consecutive frames from source/package sealed receipts; source lifecycle0..6 unchanged and retained; package closure unchanged reused",
+  "remaining_native_lifecycle": "source cases7..8; packaged cases0..8 with explicit no-bounce/fresh-key assertions",
+  "physics_changes": false,
+  "benchmark_after_correctness_only": {
+    "dt": 0.03333333333333333,
+    "methods": [
+      "temporal_patch",
+      "strict96_macro",
+      "four_full_strict96_substeps"
+    ],
+    "fixtures": [
+      "free constant force",
+      "quiet floor support",
+      "inelastic floor impact"
+    ],
+    "preflight_frames": 8,
+    "plain_blocks": 3,
+    "timed_frames_per_block": 10,
+    "excluded_first_frames": 2,
+    "method_order": "[0,1,2],[2,0,1],[1,2,0] balanced sequential processes per fixture",
+    "trace_frames_per_method_fixture": 6,
+    "GPU": "Nsight Systems CUDA/NVTX no counter collection",
+    "cost_scope": "every force submission; complete integration/response or temporal advance including existing registry reconciliation, commit, synchronization and scalar API readbacks; diagnostics/validation after scope",
+    "quality": "Same1/30 simulated duration; approve only methods meeting independent analytic/matched4-substep physical state, temporal1e-5m/1e-4mps/1e-5rad/1e-4radps +fixed residual/energy/rollback; reject benchmark case if any method does not share domain",
+    "disallowed": [
+      "friction",
+      "stacks",
+      "rotating contacts",
+      "warm seeds",
+      "packing",
+      "counter retry"
+    ]
+  },
+  "build_threads": 1,
+  "build_guard_s": 180,
+  "native_guard_s": 30,
+  "memory_reserve_GiB": 32,
+  "H3": "paused"
+}

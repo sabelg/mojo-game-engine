@@ -1,0 +1,70 @@
+{
+  "candidate_qualified_receipt_SHA256": "9c015876a693aab8ca8f0bb1348c0d8766878aa519d9f34cd99ca484d90d8670",
+  "methods": [
+    "qualified unilateral temporal candidate",
+    "strict96 macro endpoint response",
+    "four strict96 endpoint substeps"
+  ],
+  "fixtures": [
+    "steady axial sliding .3mps",
+    "within-frame stop .0327mps",
+    "static holding withnormaldownforce4N",
+    "oblique inelastic impact .5mps gap.002m vy-1mps"
+  ],
+  "physical_inputs": {
+    "mass": 2,
+    "inertia": [
+      1.3333333333333333,
+      1.3333333333333333,
+      1.3333333333333333
+    ],
+    "half": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "mu": 0.2,
+    "e": 0,
+    "gravity": [
+      0,
+      -9.81,
+      0
+    ],
+    "duration": 0.03333333333333333
+  },
+  "protocol": "Identical reset physical body state eachsample outsideNVTX/API clock; forcecommand inside clock; contextconstruction outside; cold contactgroups unchanged. Constructorinitial/resetwarmthreported. Benchmarking repeated matched calls only, consecutive trajectories reusequalifiedreceipt.",
+  "preflight_samples_per_case_method_path": 3,
+  "plain_blocks": 3,
+  "plain_frames_per_block": 10,
+  "excluded_first_frames_per_process": 2,
+  "orders": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      2,
+      0,
+      1
+    ],
+    [
+      1,
+      2,
+      0
+    ]
+  ],
+  "source_package": true,
+  "traced_frames": 6,
+  "traced_excluded_first": 2,
+  "GPU_timing": "Nsight Systems CUDA/NVTX runtime correlation; no counters",
+  "gates": "Original fixed solver gates and1e-10scaled independent method-equation state gates, no relaxation. Common target separatelychecked1e-5m/1e-4mps/1e-5rad/1e-4radps; endpointreferenceswith integrationdistance differences mustnotbe presentedas sharedphysicalwins. Exclude method-equation failure from acceptedtiming.",
+  "runtime": "oneGPUslot; singlethread build;180scompile/30snative;32GiBreserve; pinsunchanged;H3paused",
+  "not_allowed": [
+    "optimization",
+    "accuracychanges",
+    "newdefault",
+    "driver/power/securitychanges",
+    "counterretry"
+  ]
+}

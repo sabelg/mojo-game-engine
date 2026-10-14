@@ -1,0 +1,229 @@
+{
+  "status": "canonical_exact_correctness_passed_before_performance",
+  "recorded_at_UTC": "2026-10-13T19:19:28.914224+00:00",
+  "final_physics_sources": {
+    "experimental/physics_gpu/coupled_geometry_reference.mojo": "a7edca5b18db94efd1003d16148e3409a6afd88885eb87c121b2d3210e4ba41b",
+    "experimental/physics_gpu/cached_tangent_response.mojo": "a024f38db3810c0e2e4836f07bcdca91a2745bbf50c8d3afd3881770a979c235",
+    "experimental/physics_gpu/box_response_diagnostic.mojo": "1d9999c1119118eeb7993e964c2be270eaf07a988201a7c2251f60b2a2f7b081",
+    "experimental/physics_gpu/test_cached_coupled.mojo": "2006bcd8cfa78fe8c9b49c9a3f68550d921708b679c44edd6dcf20ffa30b2708",
+    "experimental/physics_gpu/test_cached_helpers.mojo": "309b62deb8edf9b6f1dca47c4100612e34876038926cce4338ade2a1ef726c18",
+    "experimental/physics_gpu/cooperative_math.mojo": "ed445442937674cd1657405062bbc22c73103b1cce6029269e6f2d1d483d3ccf",
+    "experimental/physics_gpu/test_box_friction_diagnosis.mojo": "f9bfd94e8a6465cf3015054cf4f06f40ae95ffb6047241b96b090c0f09698dcd",
+    "experimental/physics_gpu/friction_response.mojo": "fdb4a3a039d48ad02d774a15d6e045fad71f191081fe5c02a71c13a20238a99e",
+    "experimental/physics_gpu/response_kernels.mojo": "3237b81df7cd797554920d24e2b621e0d13cf0fa7ae6802cd645d4b115baf291",
+    "experimental/physics_gpu/contact_oracle.mojo": "d0486cc489286bf4ce56146adb3d7066cf6db60a8cf6c57d55842ea8963c81ac",
+    "experimental/physics_gpu/test_g04b.mojo": "03e065914f6c78e1e212247d7b834c2988a6295a713789560775e7a84d99448d",
+    "experimental/physics_gpu/box_response.mojo": "2374c6a8d39b17d508c13d5e9994ba9224489e6ca03da2aa6abdfb69ac99f596",
+    "experimental/physics_gpu/stable_friction.mojo": "51a23796145d11670bf06fd526ec2fd10335f1ace7e30bf81971514f4de68f21",
+    "experimental/physics_gpu/test_g03b.mojo": "f8c04152ed73cd9940937e1221a5664ccbe245ce06f9a8c0bf6160f15cf532fc",
+    "experimental/physics_gpu/box_response_kernels.mojo": "19a2c32301b0569541c6082b61007c575b8c8227d140debe467da47260da105b",
+    "experimental/physics_gpu/sleep_reference.mojo": "13b970347f30e26d6f65b282d1a5b63df90b1b4194c90885d2f5f7a70c5cf919",
+    "experimental/physics_gpu/box_box.mojo": "986b02793c9fa02cd78d6291f9703adbbd0b2c90968d433076d93acd349b8242",
+    "experimental/physics_gpu/stability_kernels.mojo": "33f887ce94ea6d479f839674050b4802177b3ab4ad95db6ab8bdce4bbe364c05",
+    "experimental/physics_gpu/response_reference.mojo": "58744e78c161bb1dbeea43f7fe2ded77f382c1bb0980ebf5519d35557d2563b6",
+    "experimental/physics_gpu/cached_coupled_response.mojo": "e4486779f99bcd0b5125fa8580a6b986c0e3c918c9368ca568a8f1da3f4fb38d",
+    "experimental/physics_gpu/boundary_reference.mojo": "ebe6849d1cf0e4f09d09194dac59af59f41938d1de431485904ab8d381295694",
+    "experimental/physics_gpu/test_coupled_rank.mojo": "7ad839fba99b59cf1ec547c812ee6c7ea8041c4a704f8d3bf2d120b79d78f7b6",
+    "experimental/physics_gpu/test_g03.mojo": "3627186566dbfa320411a1d07a6785cd05515700730d7805762409e019e9b44f",
+    "experimental/physics_gpu/island_kernels.mojo": "ab557f9d0a5e8ed5c273070e08ec7fff08c16c95f8039da3cc9c03da9504f608",
+    "experimental/physics_gpu/contact_reference.mojo": "7afa1279abd56509f15ef0fcf9d53321bbd0829a5943b40b7de97f8c35742cdb",
+    "experimental/physics_gpu/test.mojo": "dfd16e3de353d46e2ad34658109d3fb535a1fb43202fbc4ded95db638c470fef",
+    "experimental/physics_gpu/test_box_coupled.mojo": "c93897bb18e51a0e6edaa24ba79b4668d216a3f7dc7bb127f7a118981dc3cfea",
+    "experimental/physics_gpu/cooperative_response.mojo": "8c9293db11e753024467391e0651843189bce1f29f350077b4326975b2b360b5",
+    "experimental/physics_gpu/test_coupled_validation.mojo": "5e109db152e3f31d187f423ae0def7365d5a983089f4526e9cdf21bd3419bdce",
+    "experimental/physics_gpu/test_box_interactions.mojo": "c3ad0bf3e662c71e3eaf7b108af1cb3a5f584cf40d3cddfc816d729c3f04d4c5",
+    "experimental/physics_gpu/test_box_response.mojo": "d9253ef9cc3d561e505544e128b3042f73e9862c0e3958e45a4ba91f09a30fd6",
+    "experimental/physics_gpu/__init__.mojo": "56a24fd8faae2389d1e4708ac3aadcf75f6a5690300df36200ad5bc741ff2683",
+    "experimental/physics_gpu/core.mojo": "5d08412fa579ddf734eade6d50ddd850af5197af20cfd3741c8bae8540974e01",
+    "experimental/physics_gpu/test_cached_tangent_helpers.mojo": "ca5a4733a5a17200f5f93e2112ab7a2e68f12205e6c2248beea840bd484f26b2",
+    "experimental/physics_gpu/sleep_kernels.mojo": "326c37fb82be809b9fad76a3c78132ba0916b240a7e5d4ba8b0bdd491f32eaba",
+    "experimental/physics_gpu/host.mojo": "ab74f43f05acaa0fa56c9839dc6611f66806f352aac3245862d6774f18568512",
+    "experimental/physics_gpu/test_islands.mojo": "54a38f6c22fdad6f6fdc581e77912e7b2286a627df5ccbbe5a12294dde75df24",
+    "experimental/physics_gpu/islands.mojo": "55db9d03d76a116d678cfa3b63631ed13ac367f6c8422aa0504397fe5c391fc8",
+    "experimental/physics_gpu/box_oracle.mojo": "97d0dd9fed3a66d8bbc6a136c67dcce7c9ff069f7746d7381a42699891f2db89",
+    "experimental/physics_gpu/shape_kernels.mojo": "336fcda9ffe176c04fb2723b184be858e3c78b04d3dae97e230b9ffbe8755976",
+    "experimental/physics_gpu/stable_reference.mojo": "e5e869df26968e28f0571b955f98730274b04bc6fe034070fd901043f5940a7a",
+    "experimental/physics_gpu/capability.mojo": "ac357c8b9f7aed2690f47f2ca90be33cbbce1f72f3dde8eddb2955c8b0c35e50",
+    "experimental/physics_gpu/box_box_reference.mojo": "d4cf129f16545f49fa4fd3bab4cb1803545ebf69605eebbfdffac169fbf51081",
+    "experimental/physics_gpu/normal_response.mojo": "06b08eff1bf18a94d855909b2a9a6a3dd1b4aea8d27d7019af6ad37323b50d6d",
+    "experimental/physics_gpu/friction_kernels.mojo": "892987eb45579ff4b5427c6112e2ec2ad5b9ca999702e811ede27d677fe8f58c",
+    "experimental/physics_gpu/box_response_math.mojo": "b19e2d43d1fd6190f6fbc2556118198d012909c9f779965e5916a53b80e7d7ed",
+    "experimental/physics_gpu/sleep.mojo": "e1fb5432e258af6f2d40c24b1db89bb187f99f8a8a71e84ec481d142f61d2101",
+    "experimental/physics_gpu/coupled_box_reference.mojo": "218787a0d43885cb7e5e40c52ce2f4091e9d9266829859eb01f8ad5d91fba061",
+    "experimental/physics_gpu/test_g04a.mojo": "bedc0ccfb76d08d2f2b32f5df651384e4f119854a07cb69dc1fe4aa32e3f799d",
+    "experimental/physics_gpu/cached_coupled_kernels.mojo": "36ccbd66b956e4f5e5c2d6d7773fb8fb13677f2d3937b45964ff07bdf896e0af",
+    "experimental/physics_gpu/box_response_reference.mojo": "44c9960e78c59981ee9ac0f33b7aa84bde3dd9dd534cb30c673e40e7b67e941e",
+    "experimental/physics_gpu/contact_history.mojo": "a5afe114b88eb6011e367d63ef8194b4bd3204505441e472d151332f62dc18a9",
+    "experimental/physics_gpu/sleep_diagnostic.mojo": "761c63b7dda73ca7670dae5f0329f467ce37d91ad55077b1a3dd0a5e8da6cc53",
+    "experimental/physics_gpu/box_box_diagnostic.mojo": "5fc19858eabec7a9964e33d0f2c18158ab053d149fb08db9e12718f2e1bcda52",
+    "experimental/physics_gpu/test_box_box.mojo": "74e83c3d738e898e9463d15441c54bed99cf25238323ccc30768270cd9ff0c58",
+    "experimental/physics_gpu/collision.mojo": "249c631e84dfcfe7c1001a79fb271e344efcb053588cc5a6e39b6776f0a270b2",
+    "experimental/physics_gpu/test_g03c.mojo": "cfd6207f6d2d8013ede003bbde53745ad73359840742df31dd16a8fda55af68a",
+    "experimental/physics_gpu/test_cooperative_helpers.mojo": "f9028c40b15dc14b0a1b558b3c307736d8119989ed700e3e9ca4ef8f3d7eb142",
+    "experimental/physics_gpu/lifecycle_kernels.mojo": "f269cc930e2b98ca5d0abea792b3dc19146bc7d99d45128d9e7e1f38c1632ef1",
+    "experimental/physics_gpu/cooperative_kernels.mojo": "eb6115aeea5a8fffa0255195aad7be1232d109d1736788b8a1657ab92a979020",
+    "experimental/physics_gpu/coupled_friction_math.mojo": "25c20e6a26e3409e7099f24041e7f963909077b1fe88558d824aef22697395c8",
+    "experimental/physics_gpu/coupled_box_response.mojo": "3a152462e7d5e1d4686d130bb960d93ecf49bd4a019b5536123851568173cc83",
+    "experimental/physics_gpu/island_diagnostic.mojo": "40ae419a56c0c833d7962e034a9d4daa12bab876e012d97426082b5146c096ba",
+    "experimental/physics_gpu/lifecycle.mojo": "410e537cfaab77a8e7256c04bcc0d797d805241b323240c854fa5d71264aeb36",
+    "experimental/physics_gpu/cached_tangent_kernels.mojo": "bcb5cc79899b15e2c1d93f9f55f56bf0eeb2412965958bdf3b0596a1cd94e23a",
+    "experimental/physics_gpu/coupled_box_kernels.mojo": "bf513d26a7c37a037704f7f4ab2ba6cc4bb852c6624c9c3e471436abf67ea937",
+    "experimental/physics_gpu/recommended.mojo": "49105f157c8547cd68da991e8fdd3d6604e7463cab45bf0ca42290863d297d32",
+    "experimental/physics_gpu/test_translation_boundary.mojo": "a4d009c497efd6a216155d23dbaeaeab40cdde4b33cebfc719f35ab4e91617b7",
+    "experimental/physics_gpu/box_box_kernels.mojo": "192f8077c88fa8aabdbe79e9ae38f5a5be96e098b96f7a4f933e971bc4772276",
+    "experimental/physics_gpu/test_cached_tangent.mojo": "06ae1b91f30ddd40c776cb4eb314cb961338fd2ca835544fe55494d13008f02c",
+    "experimental/physics_gpu/kernels.mojo": "622340afdb094fee435d6c71ef8d14b24b4ebc4966cf8cf99795b4b4f979865c",
+    "experimental/physics_gpu/coupled_friction_reference.mojo": "13aacfb408331710b3544dd6c36813aa566f702cf504144ffa3dd70945a5db54",
+    "experimental/physics_gpu/history_kernels.mojo": "1056b153ecf17a6839a9ceb0ce18dc6cd2ab08e2219730bf05d3faa3fb75d4cc",
+    "experimental/physics_gpu/friction_reference.mojo": "2f57ac0680a02cd389e4e45d49e079d462065fe52e9abda1710786d3e43d15d8",
+    "experimental/physics_gpu/test_g02.mojo": "14b655c69c599dcb43eec3f1dae559b30fa0b6e5f16effe26667376c2bb5d692",
+    "experimental/physics_gpu/test_ledge_events.mojo": "9eafc32d2c4fa80659c438c9fa2ba0953a5825eec5ee9572f94f05987bbd0988",
+    "experimental/physics_gpu/test_stability.mojo": "354ccc4c2e642864502c61ca6c111cca869acc2b3479c27faa7aa7703959b00a",
+    "experimental/physics_gpu/test_coupled_helpers.mojo": "a80b1a74684bb76408785813f5e852006f0d9ef448777454f59353c22799260d",
+    "experimental/physics_gpu/test_sleep.mojo": "f082f76e4bf947b35e6d8f7f20ea9d0c76c7fb8131339c2fd185acae828be318",
+    "mojo_game/math3d.mojo": "f4d40f2f702c204f260e4c05022af3eb20c4f3567d2f5dd182b290cb705d55e4",
+    "mojo_game/transform3d.mojo": "c78700e7b736d733f6f222aded03cd985376e199e9120c3d1df0a5b6266b0d05",
+    "mojo_game/rigidbody3d.mojo": "4c38e1af58bf5f3b80601d0883f98d5c8a62adeebddf83fbe253b58f62e894f3",
+    "pixi.lock": "025aa9df305f20ec4762fc5f8a3f0b02e208f8ea08a5a358d1060eda1fc44a25",
+    ".deps/physics-gpu-g01/pixi.lock": "70e04692d582d8474ed72d4fdb455411e5d71e7643933c23c95f809c876bf081"
+  },
+  "package_sha256": "79463e754103eebd6012aec3f52bfd8d38a4f0262906a25f3ef9fb7ea4de5876",
+  "qualification": {
+    "matrix": [
+      {
+        "mode": "source",
+        "variant": "coop",
+        "cases": 70,
+        "inputs_complete_traces_results_byte_identical": true
+      },
+      {
+        "mode": "packaged",
+        "variant": "coop",
+        "cases": 70,
+        "inputs_complete_traces_results_byte_identical": true
+      },
+      {
+        "mode": "source",
+        "variant": "leader",
+        "cases": 70,
+        "inputs_complete_traces_results_byte_identical": true
+      },
+      {
+        "mode": "packaged",
+        "variant": "leader",
+        "cases": 70,
+        "inputs_complete_traces_results_byte_identical": true
+      }
+    ],
+    "total_full_matrix_trajectories": 280,
+    "target_bases": [
+      {
+        "mode": "source",
+        "variant": "coop",
+        "basis": 0,
+        "binary64_exact_except_timing": true
+      },
+      {
+        "mode": "source",
+        "variant": "coop",
+        "basis": 1,
+        "binary64_exact_except_timing": true
+      },
+      {
+        "mode": "source",
+        "variant": "coop",
+        "basis": 2,
+        "binary64_exact_except_timing": true
+      },
+      {
+        "mode": "packaged",
+        "variant": "coop",
+        "basis": 0,
+        "binary64_exact_except_timing": true
+      },
+      {
+        "mode": "packaged",
+        "variant": "coop",
+        "basis": 1,
+        "binary64_exact_except_timing": true
+      },
+      {
+        "mode": "packaged",
+        "variant": "coop",
+        "basis": 2,
+        "binary64_exact_except_timing": true
+      },
+      {
+        "mode": "source",
+        "variant": "leader",
+        "basis": 0,
+        "binary64_exact_except_timing": true
+      },
+      {
+        "mode": "source",
+        "variant": "leader",
+        "basis": 1,
+        "binary64_exact_except_timing": true
+      },
+      {
+        "mode": "source",
+        "variant": "leader",
+        "basis": 2,
+        "binary64_exact_except_timing": true
+      },
+      {
+        "mode": "packaged",
+        "variant": "leader",
+        "basis": 0,
+        "binary64_exact_except_timing": true
+      },
+      {
+        "mode": "packaged",
+        "variant": "leader",
+        "basis": 1,
+        "binary64_exact_except_timing": true
+      },
+      {
+        "mode": "packaged",
+        "variant": "leader",
+        "basis": 2,
+        "binary64_exact_except_timing": true
+      }
+    ],
+    "source_uniform_controller_corpus_records_each_mode": 2448,
+    "source_controller_modes_byte_identical_to_protected_corpus": true,
+    "cooperative_rank_permutation_source_and_fresh_package_pass": true,
+    "derivative_configuration_profile_energy_and_transactional_rollback_source_package_both_modes_pass": true,
+    "cache_mutation_stale_foreign_generation_immutable_mass_and_reuse_source_package_both_modes_pass": true,
+    "clock_disabled_full_state_report_history_impulse_work_records_exact": 160,
+    "retained_records_explicitly_checked": 560
+  },
+  "fresh_package_controller_corpus_records_each_mode": 2448,
+  "total_controller_exact_records": 9792,
+  "affected_regressions": {
+    "translation_source_package_each": 75,
+    "ledge_source_package_each": 12,
+    "retained_unchanged_dependency_runs": 12,
+    "total": 186
+  },
+  "numerical_mismatches": [],
+  "all_prior_records_inputs_traces_work_decisions_failure_accounting_unchanged": true,
+  "full_solver_audit_sha256": "b1665854a848001c581c658d2ba92c81aa83ceb423a1671ce10a06ff1d940d42",
+  "generated_behavior_sha256": "0644a1eafe51bd2a49c8a0e2d7c16164d116508d5a64fe9af0b9ece1833248f9",
+  "uninstrumented_debug_kernel_added": false,
+  "instrumentation_measurement_addendum_sha256": "436bd6aec1d2ce82cc303940c351afbff77dd3bcb96c59eb1ea75cf95d7ef432",
+  "original_coverage": "63/70 unchanged",
+  "known_limits": [
+    "strictSAME-TIME translatedcase68failure",
+    "two baseline64convergence rejects",
+    "four oldledgefixtureswithoutdetachment",
+    "separate12/12ledge and75/75translation suites notadded to63/70",
+    "bounded expensive serial optin only"
+  ],
+  "limits": [
+    "Finite input coverage and source barrier audit; not exhaustive race proof",
+    "Invalid-direction and final BR_ENERGY branches not separately forced; source uniformity audited",
+    "Single pinned GPU/toolchain numerical contract; no cross-architecture claim"
+  ],
+  "performance_not_started_when_sealed": true
+}

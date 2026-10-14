@@ -1,0 +1,185 @@
+{
+  "status": "bounded_translation_boundary_numerical_contract_checkpoint_complete_with_original_strict_failure_retained",
+  "recorded_at_UTC": "2026-10-13T14:58:14.432848+00:00",
+  "scope": "one original translated collision SAME-TIME boundary; independent exact proof and separate predeclared robust-domain tests; no production correction justified",
+  "API": "experimental.physics_gpu.coupled_box_response.GpuCoupledBoxResponse",
+  "opt_in": true,
+  "production_changes": [],
+  "new_repository_files": [
+    "experimental/physics_gpu/test_translation_boundary.mojo",
+    "experimental/physics_gpu/TRANSLATION_BOUNDARY.md",
+    "scripts/qualify-translation-boundary.py"
+  ],
+  "diagnosis": {
+    "arithmetic": "Python standard-library exact Fractions and 110-digit decimal display",
+    "initial_separation_shift_exact": "-2.220446049250313080847263336181640625E-16",
+    "first_geometry_difference": "initial encoded coordinates",
+    "first_activation_response_difference_frame": 5,
+    "proof": [
+      {
+        "case_index": 35,
+        "initial_encoded_gap_exact": "0.100000000000000088817841970012523233890533447265625",
+        "continuum_crossing_from_stored_inputs_s": "0.100000000000000088817841970012523233890533447265625",
+        "exact_sample_time_s": "0.099999999999999998612221219218554324470460414886474609375",
+        "exact_stored_input_gap_at_sample": "9.0205620750793968909420073032379150390625E-17",
+        "saved_frame5_gap_exact": "4.44089209850062616169452667236328125E-16",
+        "gap_binary64_hex": "3cc0000000000000",
+        "relative_SAT_error_exact": "0",
+        "substep_reconstruction_bits_equal": true,
+        "stored_input_exact_event_at_frame5": false,
+        "saved_event_at_frame5": false,
+        "first_contact_frame": 6,
+        "first_contact_time_s": 0.11666666666666667
+      },
+      {
+        "case_index": 68,
+        "initial_encoded_gap_exact": "0.0999999999999998667732370449812151491641998291015625",
+        "continuum_crossing_from_stored_inputs_s": "0.0999999999999998667732370449812151491641998291015625",
+        "exact_sample_time_s": "0.099999999999999998612221219218554324470460414886474609375",
+        "exact_stored_input_gap_at_sample": "-1.31838984174237339175306260585784912109375E-16",
+        "saved_frame5_gap_exact": "-2.4424906541753443889319896697998046875E-15",
+        "gap_binary64_hex": "bce6000000000000",
+        "relative_SAT_error_exact": "0",
+        "substep_reconstruction_bits_equal": true,
+        "stored_input_exact_event_at_frame5": true,
+        "saved_event_at_frame5": true,
+        "first_contact_frame": 5,
+        "first_contact_time_s": 0.1
+      }
+    ],
+    "correction_justified": false,
+    "strict_failure_retained": true
+  },
+  "strict_original_requalification": [
+    {
+      "mode": "source",
+      "case_index": 68,
+      "strict_same_time_status": "retained_failed",
+      "max_gate_ratio": 4999330920.7693815,
+      "first_activation_and_response_difference_frame": 5,
+      "fresh_original_trajectory_bytes_identical": true
+    },
+    {
+      "mode": "packaged",
+      "case_index": 68,
+      "strict_same_time_status": "retained_failed",
+      "max_gate_ratio": 4999330920.7693815,
+      "first_activation_and_response_difference_frame": 5,
+      "fresh_original_trajectory_bytes_identical": true
+    }
+  ],
+  "original_coverage": {
+    "case_count_per_path": 70,
+    "fully_qualified_cases_per_path": 63,
+    "coverage_receipt_unchanged": true,
+    "original_failed_strict_case68_excluded": true,
+    "baseline64_policies_and_rejections_preserved": true
+  },
+  "new_coverage": {
+    "cases_per_path": 75,
+    "passed_per_path": 75,
+    "static_cases_per_path": 45,
+    "dynamic_cases_per_path": 30,
+    "observed_states_per_path": 450,
+    "source_precompiled_records_and_binary64_traces_exact": true,
+    "maximum_CPU_state_gate_ratio": 3.3306690738754684e-06,
+    "maximum_translation_gate_ratio": 0.0050936933816345285,
+    "maximum_analytic_gate_ratio": 0.004984793767493385,
+    "minimum_dynamic_observed_abs_gap_m": 0.006999999999995232,
+    "maximum_relative_gap_error_vs_exact_m": 4.163336342344337e-16,
+    "declared_eligibility_margin_m": 1.4551915228366852e-11,
+    "conservative_accumulation_error_bound_m": 3.709033080667723e-12,
+    "integration_substeps_per_body": 36,
+    "predeclared_design_clarification": "The frozen design counts outer observations (<=18); existing integrator executes 36 substeps per body in .3s. At <=2^-44 ulp, pair accumulation is <=36ulp plus bounded input/subtraction rounding, within the predeclared64ulp envelope. No margin, fixture or gate change.",
+    "original70case_fully_qualified": 63,
+    "strict_original_case68_still_failed": true
+  },
+  "new_coverage_receipt": "/home/user/mojo-game-engine/build/physics-translation-boundary/new-coverage.json",
+  "regressions": {
+    "passed_runs": 14,
+    "retained_API_dependency_verified_actual_GPU_runs": 8,
+    "fresh_source_and_precompiled_original_repro_runs": 4,
+    "fresh_source_and_precompiled_rank_runs": 2,
+    "receipt": "/home/user/mojo-game-engine/build/physics-translation-boundary/regressions.json"
+  },
+  "numerical_contract": {
+    "SAT": "strict evaluated binary64 signed gap; positive separates and nonpositive contacts",
+    "near_zero_arbitrary_translation_same_observation_invariance": "unsupported; original failure remains",
+    "resolved_domain": "Cartesian mass2 cubes h=.125/.5/2; common(T,T/2,-T/4), T=0/\u00b12/\u00b1256; unforced zero spin/transverse speed; restitution.5/coefficient.2/explicit96 velocity64 position sweeps",
+    "margin_m": 1.4551915228366852e-11,
+    "margin_changes_contact_computation": false,
+    "exact_touching": "separate dyadic Cartesian constructed inputs only",
+    "physical_state_gate": "original1e-10*(1+abs(reference)); also checked after translation removal",
+    "all_original_energy_residual_Coulomb_depth_profile_rollback_gates_unchanged": true,
+    "event_time_scope": "discrete observations with brackets; no CCD"
+  },
+  "separate_remaining_limits": [
+    "two original baseline64 convergence rejects at30/60Hz",
+    "original strict same-time translated collision failure",
+    "four original one-second ledge fixtures do not establish detachment",
+    "independent ledge suite12/12 per path remains separate from63/70",
+    "finite expensive opt-in coupled solver; no general stacks, performance, real-time or broad PhysX parity claim"
+  ],
+  "frozen_design": {
+    "recorded_at_UTC": "2026-10-13T14:38:38.043885+00:00",
+    "design": "experimental/physics_gpu/TRANSLATION_BOUNDARY_DESIGN.md",
+    "design_sha256": "80b38dc08d9ee191975c8efdf4e77554adadd822c322e2c6a6e21321cd584d49",
+    "cases_sha256": "b85a80823e9e29d92a7b91855e8899384797070d0213d9297e53c99b52ac8889",
+    "native_fixture_execution_started": false,
+    "old_strict_test_assertion_unchanged": true,
+    "production_change": false
+  },
+  "retained_compile_diagnostic": {
+    "path": "/home/user/mojo-game-engine/build/physics-translation-boundary/compile-attempt-1",
+    "reason": "test-only CpuPatch field spelled separation rather than gap; corrected before any fixture execution",
+    "GPU_fixture_failures_removed_or_reclassified": false
+  },
+  "preservation": {
+    "baseline_hashes_checked": 103,
+    "baseline_changes": [],
+    "unrelated_sources_and_locks_checked": 119,
+    "unrelated_changes": [],
+    "asset_save_identities": 5901,
+    "asset_save_changes": [],
+    "campaign_sources": 17,
+    "campaign_changes": [],
+    "pins": [
+      {
+        "metadata": ".deps/physics-gpu-g01/.pixi/envs/default/conda-meta/mojo-compiler-1.2.0.dev2026092905-release.json",
+        "version": "1.2.0.dev2026092905",
+        "sha256": "40307d16e09c2e88bfe8085346d028d7479d93867fdd6e210305ed3fbaf9c534"
+      },
+      {
+        "metadata": ".deps/physics-gpu-g01/.pixi/envs/default/conda-meta/max-core-26.7.0.dev2026092905-release.json",
+        "version": "26.7.0.dev2026092905",
+        "sha256": "dab5b010e4a7b5f6b7dcc4f60f2e30f9e5e69b689ef2bd57e46025d251dc2403"
+      }
+    ],
+    "SDK_campaign_baselines_locks_dirty_work_preserved": true,
+    "previous_verification_and_coverage_hashes": {
+      "build/physics-seed61/final/verification.json": "3e5cd08bd43e3c61b752a11c8c7a16dc6367228b033493a2f0292d8d3fe0ae25",
+      "build/physics-seed61/final/COVERAGE.md": "35aebc3ac1df32494f3ce223d5cf7c45c11fa11349f0b11aa8b14b0beed01b46",
+      "build/physics-seed61/final/coverage-matrix.json": "1840c6ddae103729f15765203e51330a21ddb0c4b76e7aafe8b5391a9f8b1dfc",
+      "build/physics-ledge-events/verification.json": "431f4f8fb9ba6fc9e6c2a021d01a29c1412ce75c628823013a1c47ec1d7a75a8"
+    }
+  },
+  "resources": {
+    "compile_threads": 1,
+    "compile_guard_s": 180,
+    "fixture_run_guard_s": 30,
+    "available_memory_reserve_GiB": 32,
+    "minimum_observed_available_GiB": 111.01800918579102,
+    "normal_settings_unchanged": true,
+    "retired_thermal_cutoffs_reintroduced": false,
+    "GPU_only_timing_or_performance_claim": false
+  },
+  "cleanup": {
+    "owned_jobs": [],
+    "GPU_compute_apps": "",
+    "boot_id": "22ae0bec-f40a-4c98-b2d7-c1312a226dea",
+    "H3_resumed": false,
+    "OS_driver_firmware_settings_changes": false,
+    "installs_dependencies_or_community_code_copying": false,
+    "publication": false
+  }
+}

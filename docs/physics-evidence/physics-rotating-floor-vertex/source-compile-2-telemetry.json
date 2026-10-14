@@ -1,0 +1,160 @@
+{
+  "stage": "source-compile-2",
+  "command": [
+    ".deps/physics-gpu-g01/.pixi/envs/default/bin/mojo",
+    "build",
+    "--num-threads",
+    "1",
+    "experimental/physics_gpu/test_rotating_floor_vertex_impact.mojo",
+    "-I",
+    ".",
+    "-o",
+    "build/physics-rotating-floor-vertex/source"
+  ],
+  "deadline_s": 180,
+  "elapsed_s": 4.757,
+  "returncode": 0,
+  "fault": null,
+  "samples": [
+    {
+      "available_kB": 119337172,
+      "GPU_C": 34,
+      "GPU_utilization": 6,
+      "sensors_C": {
+        "thermal_zone2": 38.8,
+        "thermal_zone0": 38.8,
+        "thermal_zone5": 36.8,
+        "thermal_zone3": 35.0,
+        "thermal_zone1": 34.6,
+        "thermal_zone6": 35.0,
+        "thermal_zone4": 34.9
+      }
+    },
+    {
+      "available_kB": 119339448,
+      "GPU_C": 34,
+      "GPU_utilization": 6,
+      "sensors_C": {
+        "thermal_zone2": 38.6,
+        "thermal_zone0": 38.6,
+        "thermal_zone5": 36.8,
+        "thermal_zone3": 35.0,
+        "thermal_zone1": 34.7,
+        "thermal_zone6": 35.0,
+        "thermal_zone4": 34.9
+      }
+    },
+    {
+      "available_kB": 119220760,
+      "GPU_C": 34,
+      "GPU_utilization": 12,
+      "sensors_C": {
+        "thermal_zone2": 36.7,
+        "thermal_zone0": 38.8,
+        "thermal_zone5": 36.9,
+        "thermal_zone3": 35.3,
+        "thermal_zone1": 34.7,
+        "thermal_zone6": 35.2,
+        "thermal_zone4": 38.8
+      }
+    },
+    {
+      "available_kB": 119202608,
+      "GPU_C": 34,
+      "GPU_utilization": 6,
+      "sensors_C": {
+        "thermal_zone2": 35.6,
+        "thermal_zone0": 41.7,
+        "thermal_zone5": 36.9,
+        "thermal_zone3": 35.5,
+        "thermal_zone1": 34.8,
+        "thermal_zone6": 35.5,
+        "thermal_zone4": 41.7
+      }
+    },
+    {
+      "available_kB": 119135424,
+      "GPU_C": 34,
+      "GPU_utilization": 6,
+      "sensors_C": {
+        "thermal_zone2": 35.1,
+        "thermal_zone0": 43.2,
+        "thermal_zone5": 37.0,
+        "thermal_zone3": 35.7,
+        "thermal_zone1": 34.9,
+        "thermal_zone6": 35.6,
+        "thermal_zone4": 43.2
+      }
+    },
+    {
+      "available_kB": 119125824,
+      "GPU_C": 34,
+      "GPU_utilization": 6,
+      "sensors_C": {
+        "thermal_zone2": 34.6,
+        "thermal_zone0": 43.6,
+        "thermal_zone5": 37.2,
+        "thermal_zone3": 35.7,
+        "thermal_zone1": 34.9,
+        "thermal_zone6": 35.7,
+        "thermal_zone4": 43.6
+      }
+    },
+    {
+      "available_kB": 119007896,
+      "GPU_C": 34,
+      "GPU_utilization": 6,
+      "sensors_C": {
+        "thermal_zone2": 34.3,
+        "thermal_zone0": 44.1,
+        "thermal_zone5": 37.4,
+        "thermal_zone3": 35.9,
+        "thermal_zone1": 34.8,
+        "thermal_zone6": 35.7,
+        "thermal_zone4": 44.1
+      }
+    },
+    {
+      "available_kB": 118989760,
+      "GPU_C": 34,
+      "GPU_utilization": 7,
+      "sensors_C": {
+        "thermal_zone2": 34.2,
+        "thermal_zone0": 44.7,
+        "thermal_zone5": 37.6,
+        "thermal_zone3": 35.8,
+        "thermal_zone1": 34.9,
+        "thermal_zone6": 35.7,
+        "thermal_zone4": 44.7
+      }
+    },
+    {
+      "available_kB": 118975172,
+      "GPU_C": 34,
+      "GPU_utilization": 6,
+      "sensors_C": {
+        "thermal_zone2": 34.3,
+        "thermal_zone0": 44.9,
+        "thermal_zone5": 37.6,
+        "thermal_zone3": 35.8,
+        "thermal_zone1": 34.9,
+        "thermal_zone6": 35.7,
+        "thermal_zone4": 44.9
+      }
+    },
+    {
+      "available_kB": 118983272,
+      "GPU_C": 34,
+      "GPU_utilization": 6,
+      "sensors_C": {
+        "thermal_zone2": 34.4,
+        "thermal_zone0": 45.1,
+        "thermal_zone5": 37.6,
+        "thermal_zone3": 35.8,
+        "thermal_zone1": 34.8,
+        "thermal_zone6": 35.7,
+        "thermal_zone4": 45.1
+      }
+    }
+  ]
+}

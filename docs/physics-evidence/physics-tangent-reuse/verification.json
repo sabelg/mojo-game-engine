@@ -1,0 +1,207 @@
+{
+  "status": "bounded_opt_in_original_tangent_basis_local_metric_reuse_exact_records_and_measured_gain",
+  "recorded_at_UTC": "2026-10-13T17:13:01.860321+00:00",
+  "scope": "only original tangent_axes per selectedpatch and original tangent_metric per selectedpoint reused within each positivefriction resolve, atop retainedNT/TTcache",
+  "API": "experimental.physics_gpu.cached_tangent_response.GpuCachedTangentBoxResponse",
+  "separate_opt_in_path": true,
+  "unoptimized_and_NTTT_only_paths_code_exes_receipts_preserved": true,
+  "default_recommended_SDK_API_changed": false,
+  "new_repository_files": [
+    "experimental/physics_gpu/cached_tangent_kernels.mojo",
+    "experimental/physics_gpu/cached_tangent_response.mojo",
+    "experimental/physics_gpu/test_cached_tangent_helpers.mojo",
+    "experimental/physics_gpu/test_cached_tangent.mojo",
+    "experimental/physics_gpu/CACHED_TANGENTS.md"
+  ],
+  "new_files_sha256": {
+    "cached_tangent_kernels.mojo": "bcb5cc79899b15e2c1d93f9f55f56bf0eeb2412965958bdf3b0596a1cd94e23a",
+    "cached_tangent_response.mojo": "a024f38db3810c0e2e4836f07bcdca91a2745bbf50c8d3afd3881770a979c235",
+    "test_cached_tangent_helpers.mojo": "ca5a4733a5a17200f5f93e2112ab7a2e68f12205e6c2248beea840bd484f26b2",
+    "test_cached_tangent.mojo": "06ae1b91f30ddd40c776cb4eb314cb961338fd2ca835544fe55494d13008f02c",
+    "CACHED_TANGENTS.md": "86aae1698e30359ed92c4c8d44735e13bf3777ddb2cd8e6d037749821f22c0e3"
+  },
+  "invariance": {
+    "fixed": "postprojection COM/orientation,mass/inertia,reconstructed selectedpoint/normal,basis parameters",
+    "packing_after_projection_bounds_SAT_reconstruction_every_positive_mu_resolve": true,
+    "all1824_payload_words_cleared_each_pack": true,
+    "previous_frame_revision_generation_material_basis_shape_pose_never_trusted": true,
+    "mu0_cache_not_consumed": true,
+    "terminal_point_span_order_unchanged": true,
+    "original_function_arithmetic_retained_no_TT_diagonal_substitution": true,
+    "dynamic_velocity_free_pressure_masks_radius_disk_roots_Jacobian_factorization_and_line_search_not_cached": true
+  },
+  "no_other_changes": {
+    "solver_law_precision_timestep_sweeps_stopping_slop_rank_rule": true,
+    "factorization_reuse": false,
+    "Jacobian_tables": false,
+    "parallelism_features_or_installation": false
+  },
+  "correctness": {
+    "all140_original_case_initial_result_fulltraces_bytes_exact": true,
+    "original_full_coverage_per_path": 63,
+    "original_case_count": 70,
+    "prior320_samples_explicitly_matched": 320,
+    "new320_samples_canonical_raw_body_impulse_history_report_work_exact": true,
+    "clock_disabled_samples_before_timing": 80,
+    "timed_AB_samples": 240,
+    "tangent_targets_perpath": 3,
+    "seed61rank3_completepivot256eps_permutations_conditioning_passed": true,
+    "original_Jacobian_nonfinite_configuration_Coulomb_energy_depth_profile_and_body_meta_rollback_passed": true,
+    "basis_metric_reassembly_canary_pad_mutation_cases_perpath": 10,
+    "all8_point_basis_metric_span_indices_in_multi_patch_target_proved": true,
+    "fields0_to10_bitwise_unchanged_through_velocity_solve": true,
+    "accepted_bit_differences": 0,
+    "receipt": "/home/user/mojo-game-engine/build/physics-tangent-reuse/correctness-comparison.json"
+  },
+  "performance": {
+    "method": "pairedNT/TT-only versusextended;onefirstcall/twoexcludedwarmups/sevenwarmed independentresets on4fixtures in source/plain,CUDA-NVTX andfreshprecompiled;compile/setup/cold/hostAPI/device/readback separated",
+    "source_target_NTTT_host_s": {
+      "n": 7,
+      "median": 1.145786056003999,
+      "min": 1.1421806110010948,
+      "max": 1.1546914159844164
+    },
+    "source_target_extended_host_s": {
+      "n": 7,
+      "median": 1.1018036099994788,
+      "min": 1.0973702040064381,
+      "max": 1.1094482980115572
+    },
+    "source_observed_median_reduction_fraction": 0.0383862639748922,
+    "precompiled_target_NTTT_host_s": {
+      "n": 7,
+      "median": 1.1502633670024807,
+      "min": 1.1467299340147292,
+      "max": 1.1561579150147736
+    },
+    "precompiled_target_extended_host_s": {
+      "n": 7,
+      "median": 1.115837361998274,
+      "min": 1.1097191239969106,
+      "max": 1.1250964000064414
+    },
+    "precompiled_observed_median_reduction_fraction": 0.029928802387160114,
+    "GPU_solver_NTTT_ms": {
+      "n": 7,
+      "median": 1123.708096,
+      "min": 1118.190912,
+      "max": 1135.602496
+    },
+    "GPU_solver_extended_ms": {
+      "n": 7,
+      "median": 1090.37088,
+      "min": 1087.743616,
+      "max": 1096.527008
+    },
+    "GPU_packing_NTTT_ms": {
+      "n": 7,
+      "median": 2.160032,
+      "min": 1.972896,
+      "max": 2.604096
+    },
+    "GPU_packing_extended_ms": {
+      "n": 7,
+      "median": 2.455328,
+      "min": 2.266944,
+      "max": 3.08
+    },
+    "work_counts_unchanged": [
+      192,
+      192,
+      0,
+      505,
+      2707,
+      505,
+      1853,
+      4016,
+      8,
+      0
+    ],
+    "actual_velocity_sweeps": 96,
+    "actual_position_sweeps": 23,
+    "cheap_controls": "mixedoverlapping hostranges;emptycontact precompiledmedian+10.3% inthisrun;no blanketbenefit",
+    "all_workloads_memory_overhead_and_ranges": "/home/user/mojo-game-engine/build/physics-tangent-reuse/measured-AB.json",
+    "source_estimated_evaluation_reduction_used_as_speedup": false,
+    "timing_limits": "finite7samples;no p95/statisticalpopulation/broadscene/real-time/PhysX extrapolation;wait APIs overlapkernels;extra diagnostics excluded;no instruction/spill attribution"
+  },
+  "cache_overhead": {
+    "buffer_old_words": 1538,
+    "buffer_new_words": 1826,
+    "buffer_old_bytes": 12304,
+    "buffer_new_bytes": 14608,
+    "extra_bytes": 2304,
+    "payload_words": 1824,
+    "canaries": 2,
+    "extra_buffers": 0,
+    "extra_launches": 0,
+    "positive_mu_kernel_launches": 18,
+    "mu0_kernel_launches": 17,
+    "API_wait_count25_and_copy_bytes_unchanged": true,
+    "sampled_process_memory": {
+      "baseline": {
+        "maximum_sampled_device_MiB": 929,
+        "maximum_sampled_host_RSS_kB": 2992060
+      },
+      "cached": {
+        "maximum_sampled_device_MiB": 929,
+        "maximum_sampled_host_RSS_kB": 2991944
+      }
+    }
+  },
+  "retained_limits": [
+    "strictSAME-TIME translatedcase68failure",
+    "two baseline64convergence rejects",
+    "four oldledgefixtureswithoutdetachment",
+    "separate12/12ledge and75/75translation suites notadded to63/70",
+    "bounded expensive serial optin only"
+  ],
+  "generator_diagnostic": {
+    "status": "corrected_before_any_source_generation_or_GPU_run",
+    "reason": "initial Python generator string literal was unterminated; fixed standalone make-candidate.py emitted the intended sources",
+    "numeric_or_policy_difference": false
+  },
+  "historical_non_target_proof_source_preserved": [
+    {
+      "build": "source-target-build.json",
+      "source": "experimental/physics_gpu/test_cached_tangent.mojo",
+      "exact_historical_proof_source": "/home/user/mojo-game-engine/build/physics-tangent-reuse/test_cached_tangent-v1-preserved.mojo"
+    }
+  ],
+  "preservation": {
+    "protected_hashes": 134,
+    "protected_changes": [],
+    "unrelated_sources_locks": 119,
+    "asset_save_identities": 5901,
+    "asset_save_changes": [],
+    "campaign_sources": 17,
+    "campaign_changes": [],
+    "pins": [
+      {
+        "version": "1.2.0.dev2026092905",
+        "metadata_sha256": "40307d16e09c2e88bfe8085346d028d7479d93867fdd6e210305ed3fbaf9c534"
+      },
+      {
+        "version": "26.7.0.dev2026092905",
+        "metadata_sha256": "dab5b010e4a7b5f6b7dcc4f60f2e30f9e5e69b689ef2bd57e46025d251dc2403"
+      }
+    ],
+    "original_baselines_SDK_campaign_assets_saves_dirtywork_locks_unchanged": true
+  },
+  "resources": {
+    "compile_threads": 1,
+    "compile_guard_s": 180,
+    "run_guard_s": 30,
+    "available_memory_reserve_GiB": 32,
+    "minimum_observed_available_GiB": 110.98268508911133,
+    "normal_settings_unchanged": true,
+    "retired_thermal_cutoffs_reintroduced": false
+  },
+  "cleanup": {
+    "owned_jobs": [],
+    "GPU_compute_apps": "",
+    "boot_id": "22ae0bec-f40a-4c98-b2d7-c1312a226dea",
+    "H3_resumed": false,
+    "OS_driver_firmware_settings_changes": false,
+    "installs_or_publication": false
+  }
+}

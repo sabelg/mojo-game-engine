@@ -1,0 +1,46 @@
+{
+  "scope": "Separate opt-in one dynamic box and optional fixed planar floor; no benchmark; preserve qualified frictionless and frozen block sources.",
+  "dt": 0.03333333333333333,
+  "base_intervals": 4,
+  "base_dt": 0.008333333333333333,
+  "segment_ceiling_per_base": 6,
+  "TOI_admissions_cap": 4,
+  "stop_cap": 4,
+  "onset_cap": 4,
+  "caps": "Constructor permits only lowering stop/segment caps for explicit transactional rejection checks; no increase.",
+  "domain": "axis-aligned positive-pressure certified face; near-zero physical omega and zero applied contact torque; constant normal acceleration<=0; force collinear with slip or rest; reject turning slip/reversal/tipping/unsupported rotation/overflow; gravity0 withnormalbudget0 supported",
+  "event_schedule": [
+    "At physical segment entry, before full interval half-kicks, compute speed/direction, force projection and friction drag=mu*(-ay).",
+    "When speed>1e-10 and netdeceleration>0, stoproot=speed/deceleration. Admit ifroot<=remaining+64eps*(1+remaining). Ifabs(root-remaining)<=that timestamp tolerance, normalize actualduration toremaining; otherwise use root. Resulting body state is never clamped; all independent accuracy gates remain unchanged.",
+    "If opposing force exceedsstaticcapacity and stop occurs withinsegment, reject wholemacro before crossing; reversalnotimplemented.",
+    "Use actual segment duration for external halfkick, cold coupledgroup, unforced drift, second externalhalfkick, second coldgroup. Repeat existing2calls/start+2/end and retained4final; no double impulses.",
+    "After physical stop, certify rest/holding or onset alongforce; sourcepointlaw always handles physical impulses. Rest/schedule classifications use strictanalyticroundoff, not a different friction coefficient.",
+    "Reset normal AND tangent group buffers after an impact and before later support; impact target frozen from incoming trueTOI velocity; no restitution at stops.",
+    "Separate stop/onset counters fromexistingTOI admissions. Reject exhaustingexisting6segment ceiling or4caps atomically."
+  ],
+  "numerical_gates": "No changes: component state1e-10*(1+absreference), existingnormal/tangentvelocity1e-9scaled, cone1e-12scaled, energy1e-9scaled, macro1e-5m/1e-4mps/1e-5rad/1e-4radps and1second1e-4m/1e-3mps/1e-3rad/1e-3radps pluslever tightening.",
+  "first_gate": {
+    "fixtures": 12,
+    "variants": 4,
+    "point_orders": [
+      0,
+      5,
+      11,
+      23
+    ],
+    "records_each_path": 192,
+    "tests": "analytic sliding,oblique sliding,stop\u00bc/\u00bd/endfirstbase/midlastbase,staticbelow/onsetabove,stopunderparallel/antiparallelsubthresholdforce,zero normalbudget,mu0 parity"
+  },
+  "later_only_if_first_passes": [
+    "oblique impacts/recontacts,threshold/event boundaries and pressure certificates",
+    "finite genuine1second supported trajectories,strictanalytic momentum/energy/force consumption",
+    "source/freshpackage parity; generation/revision/teleport/material andfailedbody/input/episode rollback; overflow after privateprogress"
+  ],
+  "failure_policy": "Stop first substantive physical failure, retainevidence; no physics/gate/fixture tuning.",
+  "build_threads": 1,
+  "build_guard_s": 180,
+  "native_guard_s": 30,
+  "memory_reserve_GiB": 32,
+  "H3": "paused",
+  "counter_retry": false
+}

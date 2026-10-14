@@ -1,0 +1,492 @@
+[
+  {
+    "id": 0,
+    "hz": 30,
+    "policy": 64,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 0,
+    "hz": 30,
+    "policy": 96,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 0,
+    "hz": 60,
+    "policy": 64,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 0,
+    "hz": 60,
+    "policy": 96,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 1,
+    "hz": 30,
+    "policy": 64,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 1,
+    "hz": 30,
+    "policy": 96,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 1,
+    "hz": 60,
+    "policy": 64,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 1,
+    "hz": 60,
+    "policy": 96,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 2,
+    "hz": 30,
+    "policy": 64,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 2,
+    "hz": 30,
+    "policy": 96,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 2,
+    "hz": 60,
+    "policy": 64,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 2,
+    "hz": 60,
+    "policy": 96,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 3,
+    "hz": 30,
+    "policy": 64,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 3,
+    "hz": 30,
+    "policy": 96,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 3,
+    "hz": 60,
+    "policy": 64,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 3,
+    "hz": 60,
+    "policy": 96,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 4,
+    "hz": 30,
+    "policy": 64,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 4,
+    "hz": 30,
+    "policy": 96,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 4,
+    "hz": 60,
+    "policy": 64,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 4,
+    "hz": 60,
+    "policy": 96,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 5,
+    "hz": 30,
+    "policy": 64,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 5,
+    "hz": 30,
+    "policy": 96,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 5,
+    "hz": 60,
+    "policy": 64,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 5,
+    "hz": 60,
+    "policy": 96,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 6,
+    "hz": 30,
+    "policy": 64,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 6,
+    "hz": 30,
+    "policy": 96,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 6,
+    "hz": 60,
+    "policy": 64,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 6,
+    "hz": 60,
+    "policy": 96,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 7,
+    "hz": 30,
+    "policy": 64,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 7,
+    "hz": 30,
+    "policy": 96,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 7,
+    "hz": 60,
+    "policy": 64,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 7,
+    "hz": 60,
+    "policy": 96,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 8,
+    "hz": 30,
+    "policy": 64,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 8,
+    "hz": 30,
+    "policy": 96,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 8,
+    "hz": 60,
+    "policy": 64,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 8,
+    "hz": 60,
+    "policy": 96,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 9,
+    "hz": 30,
+    "policy": 64,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 9,
+    "hz": 30,
+    "policy": 96,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 9,
+    "hz": 60,
+    "policy": 64,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 9,
+    "hz": 60,
+    "policy": 96,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 10,
+    "hz": 30,
+    "policy": 64,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 10,
+    "hz": 30,
+    "policy": 96,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 10,
+    "hz": 60,
+    "policy": 64,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 10,
+    "hz": 60,
+    "policy": 96,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 5,
+    "hz": 30,
+    "policy": 64,
+    "seed": 29,
+    "variant": 0
+  },
+  {
+    "id": 5,
+    "hz": 30,
+    "policy": 96,
+    "seed": 29,
+    "variant": 0
+  },
+  {
+    "id": 5,
+    "hz": 60,
+    "policy": 64,
+    "seed": 29,
+    "variant": 0
+  },
+  {
+    "id": 5,
+    "hz": 60,
+    "policy": 96,
+    "seed": 29,
+    "variant": 0
+  },
+  {
+    "id": 5,
+    "hz": 30,
+    "policy": 64,
+    "seed": 43,
+    "variant": 0
+  },
+  {
+    "id": 5,
+    "hz": 30,
+    "policy": 96,
+    "seed": 43,
+    "variant": 0
+  },
+  {
+    "id": 5,
+    "hz": 60,
+    "policy": 64,
+    "seed": 43,
+    "variant": 0
+  },
+  {
+    "id": 5,
+    "hz": 60,
+    "policy": 96,
+    "seed": 43,
+    "variant": 0
+  },
+  {
+    "id": 5,
+    "hz": 30,
+    "policy": 64,
+    "seed": 61,
+    "variant": 0
+  },
+  {
+    "id": 5,
+    "hz": 30,
+    "policy": 96,
+    "seed": 61,
+    "variant": 0
+  },
+  {
+    "id": 5,
+    "hz": 60,
+    "policy": 64,
+    "seed": 61,
+    "variant": 0
+  },
+  {
+    "id": 5,
+    "hz": 60,
+    "policy": 96,
+    "seed": 61,
+    "variant": 0
+  },
+  {
+    "id": 2,
+    "hz": 120,
+    "policy": 64,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 2,
+    "hz": 120,
+    "policy": 96,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 3,
+    "hz": 120,
+    "policy": 64,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 3,
+    "hz": 120,
+    "policy": 96,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 6,
+    "hz": 120,
+    "policy": 64,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 6,
+    "hz": 120,
+    "policy": 96,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 8,
+    "hz": 120,
+    "policy": 64,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 8,
+    "hz": 120,
+    "policy": 96,
+    "seed": 17,
+    "variant": 0
+  },
+  {
+    "id": 0,
+    "hz": 60,
+    "policy": 96,
+    "seed": 17,
+    "variant": 1
+  },
+  {
+    "id": 0,
+    "hz": 60,
+    "policy": 96,
+    "seed": 17,
+    "variant": 2
+  },
+  {
+    "id": 6,
+    "hz": 60,
+    "policy": 96,
+    "seed": 17,
+    "variant": 1
+  },
+  {
+    "id": 6,
+    "hz": 60,
+    "policy": 96,
+    "seed": 17,
+    "variant": 2
+  },
+  {
+    "id": 8,
+    "hz": 60,
+    "policy": 96,
+    "seed": 17,
+    "variant": 1
+  },
+  {
+    "id": 8,
+    "hz": 60,
+    "policy": 96,
+    "seed": 17,
+    "variant": 2
+  }
+]

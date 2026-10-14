@@ -1,0 +1,58 @@
+{
+  "invariants_sha256": "77a9a574855891d07a66e22123ce8403f1aea01e113a3b5b4b46dfc6523a3072",
+  "correctness_before_timing": true,
+  "original_matrix_cases": 70,
+  "paths": [
+    "source",
+    "fresh-package"
+  ],
+  "original_coverage_retained": "63/70",
+  "old_proof_corpus_sha256": "02d035dce7a648c10a7e5d5878316893dce81e1884b4685e545dad543c44498e",
+  "mode_order_even": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      1,
+      2,
+      0
+    ],
+    [
+      2,
+      0,
+      1
+    ]
+  ],
+  "mode_order_odd": [
+    [
+      0,
+      2,
+      1
+    ],
+    [
+      2,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      2
+    ]
+  ],
+  "modes": [
+    "serial tangent-cache",
+    "leader-only32-lane block",
+    "cooperative32-lane block"
+  ],
+  "batches": 4,
+  "warmups_excluded_each_owner_batch": 2,
+  "measured_each_owner_batch": 3,
+  "measured_each_owner_fixture_path": 12,
+  "calls_each_interleaved_path": 240,
+  "GPU_profile_first_and_warmup_excluded": 3,
+  "GPU_profile_measured_per_mode_fixture": 7,
+  "no_default_or_algorithm_change": true
+}

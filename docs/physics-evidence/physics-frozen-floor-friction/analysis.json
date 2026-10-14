@@ -1,0 +1,331 @@
+{
+  "status": "FROZEN_RESTRICTED_COUPLED_BLOCK_FULL_POINT_LAW_PASS",
+  "records_source": 7488,
+  "records_package": 7488,
+  "accepted_each_path": 4320,
+  "rejected_each_path": 3168,
+  "source_package_byte_identical": true,
+  "all_gates_unchanged": true,
+  "physical_counterexamples_in_admitted_matrix": [],
+  "cases": [
+    {
+      "kind": 0,
+      "accepted_source": 288,
+      "expected_rejected_source": 0,
+      "codes": [
+        0
+      ]
+    },
+    {
+      "kind": 1,
+      "accepted_source": 288,
+      "expected_rejected_source": 0,
+      "codes": [
+        0
+      ]
+    },
+    {
+      "kind": 2,
+      "accepted_source": 288,
+      "expected_rejected_source": 0,
+      "codes": [
+        0
+      ]
+    },
+    {
+      "kind": 3,
+      "accepted_source": 288,
+      "expected_rejected_source": 0,
+      "codes": [
+        0
+      ]
+    },
+    {
+      "kind": 4,
+      "accepted_source": 288,
+      "expected_rejected_source": 0,
+      "codes": [
+        0
+      ]
+    },
+    {
+      "kind": 5,
+      "accepted_source": 288,
+      "expected_rejected_source": 0,
+      "codes": [
+        0
+      ]
+    },
+    {
+      "kind": 6,
+      "accepted_source": 288,
+      "expected_rejected_source": 0,
+      "codes": [
+        0
+      ]
+    },
+    {
+      "kind": 7,
+      "accepted_source": 288,
+      "expected_rejected_source": 0,
+      "codes": [
+        0
+      ]
+    },
+    {
+      "kind": 8,
+      "accepted_source": 0,
+      "expected_rejected_source": 288,
+      "codes": [
+        405
+      ]
+    },
+    {
+      "kind": 9,
+      "accepted_source": 0,
+      "expected_rejected_source": 288,
+      "codes": [
+        405
+      ]
+    },
+    {
+      "kind": 10,
+      "accepted_source": 0,
+      "expected_rejected_source": 288,
+      "codes": [
+        405
+      ]
+    },
+    {
+      "kind": 11,
+      "accepted_source": 288,
+      "expected_rejected_source": 0,
+      "codes": [
+        0
+      ]
+    },
+    {
+      "kind": 12,
+      "accepted_source": 288,
+      "expected_rejected_source": 0,
+      "codes": [
+        0
+      ]
+    },
+    {
+      "kind": 13,
+      "accepted_source": 288,
+      "expected_rejected_source": 0,
+      "codes": [
+        0
+      ]
+    },
+    {
+      "kind": 14,
+      "accepted_source": 288,
+      "expected_rejected_source": 0,
+      "codes": [
+        0
+      ]
+    },
+    {
+      "kind": 15,
+      "accepted_source": 288,
+      "expected_rejected_source": 0,
+      "codes": [
+        0
+      ]
+    },
+    {
+      "kind": 16,
+      "accepted_source": 0,
+      "expected_rejected_source": 288,
+      "codes": [
+        403
+      ]
+    },
+    {
+      "kind": 17,
+      "accepted_source": 0,
+      "expected_rejected_source": 288,
+      "codes": [
+        401
+      ]
+    },
+    {
+      "kind": 18,
+      "accepted_source": 0,
+      "expected_rejected_source": 288,
+      "codes": [
+        402
+      ]
+    },
+    {
+      "kind": 19,
+      "accepted_source": 0,
+      "expected_rejected_source": 288,
+      "codes": [
+        402
+      ]
+    },
+    {
+      "kind": 20,
+      "accepted_source": 0,
+      "expected_rejected_source": 288,
+      "codes": [
+        404
+      ]
+    },
+    {
+      "kind": 21,
+      "accepted_source": 0,
+      "expected_rejected_source": 288,
+      "codes": [
+        400
+      ]
+    },
+    {
+      "kind": 22,
+      "accepted_source": 0,
+      "expected_rejected_source": 288,
+      "codes": [
+        404
+      ]
+    },
+    {
+      "kind": 23,
+      "accepted_source": 0,
+      "expected_rejected_source": 288,
+      "codes": [
+        400
+      ]
+    },
+    {
+      "kind": 24,
+      "accepted_source": 288,
+      "expected_rejected_source": 0,
+      "codes": [
+        0
+      ]
+    },
+    {
+      "kind": 25,
+      "accepted_source": 288,
+      "expected_rejected_source": 0,
+      "codes": [
+        0
+      ]
+    }
+  ],
+  "maximum_independent_metrics": {
+    "CPU_normal_residual": 8.24988144430143e-16,
+    "CPU_disk_residual": 4.0086904569958534e-16,
+    "cone_excess": 8.881784197001252e-16,
+    "state_ratio": 6.938893903907228e-06,
+    "momentum_error": 4.930190325141863e-15,
+    "angular_error": 1.4273168140722167e-14,
+    "energy_identity_error": 8.881784197001252e-16
+  },
+  "independent_all_active_minimum_norm_equality_pressure_ratio": 7.558965274043623e-06,
+  "normal_pressure_ranks": [
+    3
+  ],
+  "contact_metric_ranks": [
+    {
+      "variant": 0,
+      "full_contact_metric_rank": 6,
+      "normal_metric_rank": 3
+    },
+    {
+      "variant": 1,
+      "full_contact_metric_rank": 6,
+      "normal_metric_rank": 3
+    },
+    {
+      "variant": 2,
+      "full_contact_metric_rank": 6,
+      "normal_metric_rank": 3
+    },
+    {
+      "variant": 3,
+      "full_contact_metric_rank": 6,
+      "normal_metric_rank": 3
+    }
+  ],
+  "worked_oblique_case": {
+    "mass": 2.0,
+    "inertia": [
+      1.3333333333333333,
+      1.3333333333333333,
+      1.3333333333333333
+    ],
+    "half": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "mu": 0.2,
+    "input_velocity": [
+      0.3,
+      -0.1,
+      0.4
+    ],
+    "N": 0.2,
+    "T_xz": [
+      -0.024,
+      -0.032
+    ],
+    "pressures": [
+      0.036,
+      0.052000000000000005,
+      0.04800000000000001,
+      0.064
+    ],
+    "post_velocity": [
+      0.288,
+      0.0,
+      0.384
+    ],
+    "post_angular_velocity": [
+      0.0,
+      3.2526065174565133e-19,
+      0.0
+    ],
+    "normal_residual": 7.968885967768458e-18,
+    "per_point_disk_residual": 2.739622497717579e-18
+  },
+  "counterexample_to_total_disk_without_pressure_redistribution": {
+    "fixture": "worked oblique case with equal normal pressures substituted",
+    "uniform_normal_pressures": [
+      0.05,
+      0.05,
+      0.05,
+      0.05
+    ],
+    "N": 0.2,
+    "T_xz": [
+      -0.024,
+      -0.032
+    ],
+    "net_torque_impulse": [
+      0.016,
+      0,
+      -0.012
+    ],
+    "induced_omega": [
+      0.012,
+      0,
+      -0.009
+    ],
+    "maximum_normal_row_error_mps": 0.0105,
+    "reason": "Total circular disk alone is feasible but leaves nonzero angular impulse and normal-speed residual. Clamping angular motion would violate momentum balance. This is an independent algebraic counterexample, not an extra native run."
+  },
+  "pressure_rejection_classes": {
+    "kind8": "boundary neutral support outside strict all-positive margin, not generally impossible",
+    "kind9": "CoP outside convex support hull; impossible torque-balanced flat-face solution for prescribed Coulomb total",
+    "kind10": "hull interior outside positive minimum-norm diamond; rejected restricted certificate, physically feasible active-point solution may exist"
+  },
+  "seeding_scope": "Retained impulse fixtures are private within-current-group algebraic seeds, not cross-frame warm starts or integrated trajectory transitions.",
+  "integration": false,
+  "benchmark": false
+}

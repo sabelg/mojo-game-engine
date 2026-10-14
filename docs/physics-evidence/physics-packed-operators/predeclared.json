@@ -1,0 +1,39 @@
+{
+  "invariants_sha256": "c3ac7634911180ffa48d9fb5aad51553555685e900c41cd4d841ee97c8430be4",
+  "baseline": "GpuSharedOperatorBoxResponse",
+  "candidate": "GpuPackedOperatorBoxResponse",
+  "warm_seeds": false,
+  "cache_plumbing": false,
+  "payload_capacity_words_per_patch": 256,
+  "metadata_words_per_patch": 18,
+  "compact_live_payload_words_by_count": [
+    0,
+    1,
+    6,
+    24,
+    80
+  ],
+  "dense_fallback": "Any bit other than positive zero outside selected live rows/columns, including unused masks",
+  "batches": 4,
+  "cycles": 5,
+  "excluded_cycles": [
+    0,
+    1
+  ],
+  "measured_cycles": [
+    2,
+    3,
+    4
+  ],
+  "orders": "(batch+cycle+position)%2",
+  "measured_pairs_per_fixture_path": 12,
+  "fixtures": [
+    "difficult",
+    "zero-friction",
+    "rebound",
+    "empty"
+  ],
+  "source_package_paths": 2,
+  "plain_and_trace_profiles": "10samples each,exclude0..2,7warmed",
+  "no_timing_before_correctness": true
+}

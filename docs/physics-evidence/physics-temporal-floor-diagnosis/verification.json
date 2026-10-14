@@ -1,0 +1,412 @@
+{
+  "status": "BOUNDED_TWO_FIXTURE_CAUSAL_DIAGNOSIS_COMPLETE_NO_OWNER_CHANGE",
+  "recorded_at_UTC": "2026-10-14T02:36:30.236429+00:00",
+  "evidence": {
+    "status": "SEALED_SOURCE_AND_TWO_FIXTURE_CPU_DIAGNOSIS_COMPLETE",
+    "replay": "CPU-only fixed saved fixtures2and5; no GPU execution, gate/cap/algorithm changes or budget sweep",
+    "reports": [
+      {
+        "kind": 2,
+        "saved_candidate_match_ratio": 9.62414670983532e-09,
+        "groups": 9,
+        "corrections": 80,
+        "first_spurious_spin": {
+          "event": "correction",
+          "group": 0,
+          "phase": "support-start",
+          "global_sweep": 1,
+          "point": 0,
+          "common_point": [
+            -0.5,
+            0.0,
+            -0.5
+          ],
+          "lever_arm": [
+            -0.5,
+            -0.5,
+            -0.5
+          ],
+          "inverse_effective_mass_k": 0.875,
+          "point_v_before": -0.040875,
+          "fixed_target": 0.0,
+          "lambda_before": 0.0,
+          "lambda_after": 0.046714285714285715,
+          "delta_impulse": 0.046714285714285715,
+          "lambda_vector_after": [
+            0.046714285714285715,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "state_after": {
+            "position": [
+              0.0,
+              0.5,
+              0.0
+            ],
+            "velocity": [
+              0.0,
+              -0.017517857142857144,
+              0.0
+            ],
+            "quaternion": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "omega": [
+              0.017517857142857144,
+              0.0,
+              -0.017517857142857144
+            ],
+            "kinetic_J": 0.0007160424107142858,
+            "potential_J": 9.81,
+            "world_spin_momentum": [
+              0.023357142857142858,
+              0.0,
+              -0.023357142857142858
+            ]
+          },
+          "delta_kinetic_J": -0.0009547232142857144,
+          "independent_deltaK_identity_J": -0.0009547232142857144,
+          "deltaK_identity_error_J": 0.0,
+          "delta_spin_momentum": [
+            0.023357142857142858,
+            0.0,
+            -0.023357142857142858
+          ],
+          "expected_contact_torque_impulse": [
+            0.023357142857142858,
+            0.0,
+            -0.023357142857142858
+          ],
+          "geometry_was_positive_gap": false
+        },
+        "first_contact_energy_above_group_entry": null,
+        "force_impulse_total": [
+          0.0,
+          -0.654,
+          0.0
+        ],
+        "kick_work_total_J": 0.012829087097933798,
+        "contact_work_total_J": -0.012829087097918478,
+        "drift_kinetic_change_J": 0.0,
+        "potential_change_J": 0.000613190319578294,
+        "positive_gap_group_entries": 8,
+        "all_points_positive_gap_group_entries": 0,
+        "positive_gap_updates": 54,
+        "max_deltaK_identity_error_J": 3.2526065174565133e-19,
+        "final_state": {
+          "position": [
+            0.0,
+            0.5000312533292344,
+            0.0
+          ],
+          "velocity": [
+            0.0,
+            7.770599797472799e-08,
+            0.0
+          ],
+          "quaternion": [
+            1.2608396278137704e-05,
+            -1.030827888852348e-13,
+            -1.864531292307949e-05,
+            0.9999999997466904
+          ],
+          "omega": [
+            4.7333614651824624e-08,
+            -1.2714969280232757e-22,
+            -1.080836055694301e-07
+          ],
+          "kinetic_J": 1.5319913367178812e-14,
+          "potential_J": 9.810613190319579,
+          "world_spin_momentum": [
+            6.311148620243283e-08,
+            -1.6953365537894072e-22,
+            -1.4411147409257346e-07
+          ]
+        },
+        "independent_static_support_solution": {
+          "expected_y": 0.5,
+          "expected_v_and_omega": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "each_halfkick_group_total_normal_impulse": 0.08175,
+          "symmetric_pressure_per_corner": 0.0204375,
+          "ground_clearance_first_end_group": [
+            1.5524204363015492e-05,
+            9.254833573113519e-06,
+            6.269402029190907e-06,
+            3.123923342229773e-11
+          ],
+          "ground_clearance_last_group": [
+            6.250754504699696e-05,
+            3.729075249714331e-05,
+            2.521691921031355e-05,
+            1.2666045989817576e-10
+          ]
+        }
+      },
+      {
+        "kind": 5,
+        "saved_candidate_match_ratio": 0.0,
+        "groups": 1,
+        "corrections": 8,
+        "first_spurious_spin": {
+          "event": "correction",
+          "group": 0,
+          "phase": "impact",
+          "global_sweep": 1,
+          "point": 0,
+          "common_point": [
+            -0.5,
+            0.0,
+            -0.5
+          ],
+          "lever_arm": [
+            -0.5,
+            -0.5,
+            -0.5
+          ],
+          "inverse_effective_mass_k": 0.875,
+          "point_v_before": -1.0194312139619819,
+          "fixed_target": 1.0194312139619819,
+          "lambda_before": 0.0,
+          "lambda_after": 2.3301284890559586,
+          "delta_impulse": 2.3301284890559586,
+          "lambda_vector_after": [
+            2.3301284890559586,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "state_after": {
+            "position": [
+              0.0,
+              0.5,
+              0.0
+            ],
+            "velocity": [
+              0.0,
+              0.1456330305659974,
+              0.0
+            ],
+            "quaternion": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "omega": [
+              0.8737981833959845,
+              0.0,
+              -0.8737981833959845
+            ],
+            "kinetic_J": 1.03924,
+            "potential_J": 9.81,
+            "world_spin_momentum": [
+              1.1650642445279793,
+              0.0,
+              -1.1650642445279793
+            ]
+          },
+          "delta_kinetic_J": -2.220446049250313e-16,
+          "independent_deltaK_identity_J": 0.0,
+          "deltaK_identity_error_J": -2.220446049250313e-16,
+          "delta_spin_momentum": [
+            1.1650642445279793,
+            0.0,
+            -1.1650642445279793
+          ],
+          "expected_contact_torque_impulse": [
+            1.1650642445279793,
+            0.0,
+            -1.1650642445279793
+          ],
+          "geometry_was_positive_gap": false
+        },
+        "first_contact_energy_above_group_entry": {
+          "event": "correction",
+          "group": 0,
+          "phase": "impact",
+          "global_sweep": 1,
+          "point": 1,
+          "common_point": [
+            -0.5,
+            0.0,
+            0.5
+          ],
+          "lever_arm": [
+            -0.5,
+            -0.5,
+            0.5
+          ],
+          "inverse_effective_mass_k": 0.875,
+          "point_v_before": 0.1456330305659974,
+          "fixed_target": 1.0194312139619819,
+          "lambda_before": 0.0,
+          "lambda_after": 0.9986264953096965,
+          "delta_impulse": 0.9986264953096965,
+          "lambda_vector_after": [
+            2.3301284890559586,
+            0.9986264953096965,
+            0.0,
+            0.0
+          ],
+          "state_after": {
+            "position": [
+              0.0,
+              0.5,
+              0.0
+            ],
+            "velocity": [
+              0.0,
+              0.6449462782208457,
+              0.0
+            ],
+            "quaternion": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "omega": [
+              0.4993132476548483,
+              0.0,
+              -1.2482831191371206
+            ],
+            "kinetic_J": 1.6209720116618078,
+            "potential_J": 9.81,
+            "world_spin_momentum": [
+              0.665750996873131,
+              0.0,
+              -1.6643774921828274
+            ]
+          },
+          "delta_kinetic_J": 0.5817320116618079,
+          "independent_deltaK_identity_J": 0.5817320116618077,
+          "deltaK_identity_error_J": 2.220446049250313e-16,
+          "delta_spin_momentum": [
+            -0.4993132476548483,
+            0.0,
+            -0.4993132476548481
+          ],
+          "expected_contact_torque_impulse": [
+            -0.49931324765484825,
+            0.0,
+            -0.49931324765484825
+          ],
+          "geometry_was_positive_gap": false
+        },
+        "force_impulse_total": [
+          0.0,
+          -0.03886242792396377,
+          0.0
+        ],
+        "kick_work_total_J": 0,
+        "contact_work_total_J": 0.09987114185483337,
+        "drift_kinetic_change_J": 0.039240000000000164,
+        "potential_change_J": -0.0392399999999995,
+        "positive_gap_group_entries": 0,
+        "all_points_positive_gap_group_entries": 0,
+        "positive_gap_updates": 0,
+        "max_deltaK_identity_error_J": 2.220446049250313e-16,
+        "final_state": {
+          "position": [
+            0.0,
+            0.5,
+            0.0
+          ],
+          "velocity": [
+            0.0,
+            1.0658923564314422,
+            0.0
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "omega": [
+            0.03752626657059696,
+            0.0,
+            -0.055396018368323655
+          ],
+          "kinetic_J": 1.1391111418548334,
+          "potential_J": 9.81,
+          "world_spin_momentum": [
+            0.05003502209412928,
+            0.0,
+            -0.07386135782443154
+          ]
+        },
+        "independent_simultaneous_face_solution": {
+          "construction": "symmetry+linear/angular momentum and all four physical post-impact speeds; no sequential evaluator calls",
+          "incoming_all_points": [
+            -1.0194312139619819,
+            -1.0194312139619819,
+            -1.0194312139619819,
+            -1.0194312139619819
+          ],
+          "frozen_targets_all_points": [
+            1.0194312139619819,
+            1.0194312139619819,
+            1.0194312139619819,
+            1.0194312139619819
+          ],
+          "minimum_norm_lambda": [
+            1.0194312139619819,
+            1.0194312139619819,
+            1.0194312139619819,
+            1.0194312139619819
+          ],
+          "expected_COM_post_vy": 1.0194312139619819,
+          "expected_omega": [
+            0,
+            0,
+            0
+          ],
+          "expected_deltaK_J": 0,
+          "measured_deltaK_J": 0.09987114185483326,
+          "elastic_identity_half_lambda_dot_final_residual_J": 0.09987114185483331,
+          "total_impulse_overshoot_kgmps": 0.09292228493892107
+        }
+      }
+    ]
+  },
+  "sealed_temporal_verification_sha256": "67e48492b2daca75c5a7809e2c646f7589a2d5d61f97e85a3ac4fda1c361bd6e",
+  "protected_hashes": 17671,
+  "asset_save_identities": 5901,
+  "campaign_sources": 17,
+  "other_source_lock_hashes": 119,
+  "pins": [
+    "1.2.0.dev2026092905",
+    "26.7.0.dev2026092905"
+  ],
+  "current_available_GiB": 113.61935806274414,
+  "scope": {
+    "GPU_replays": 0,
+    "CPU_replay_fixtures": [
+      2,
+      5
+    ],
+    "CPU_timeout_s": 30,
+    "budget_sweep": false,
+    "algorithm_or_gate_or_settings_changes": false,
+    "performance_or_acceptance_claim": false,
+    "H3_resumed": false
+  },
+  "recommendation": "Review a coherent rank-aware normal patch solve for a certified simultaneous planar face; never use stale positive-gap rows. No change implemented.",
+  "cleanup": {
+    "owned_jobs": [],
+    "GPU_compute_apps": "",
+    "remaining_blocker": "Original failed contact solver remains unqualified; diagnosis complete and stopped for review"
+  }
+}

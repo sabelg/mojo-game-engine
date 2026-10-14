@@ -1,0 +1,18 @@
+{
+  "precision_digits": 80,
+  "records": 2560,
+  "accepted": 1536,
+  "rejected": 1024,
+  "method": "Explicit rotation matrices; full3x3 inertia via matrix products; independent Gaussian-Jordan inverse; contactmetric via cross-product matrix congruence; analytic scalar impulse; Decimalmomentum/energy witnesses",
+  "production_imports": false,
+  "supported_minimum_vertices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ]
+}

@@ -1,0 +1,972 @@
+{
+  "status": "TEMPORAL_FLOOR_FIXED_BUDGET_FAILED_STOPPED_FOR_REVIEW",
+  "recorded_at_UTC": "2026-10-14T02:23:38.943670+00:00",
+  "API": "experimental.physics_gpu.temporal_floor.GpuTemporalFloorAdvance",
+  "contract": {
+    "macro_dt": 0.03333333333333333,
+    "base_intervals": 4,
+    "interval_dt": 0.008333333333333333,
+    "start_normal_sweeps": 2,
+    "end_normal_sweeps": 2,
+    "final_unbiased_sweeps": 4,
+    "final_group_impulses_retained": true,
+    "impact_normal_sweeps": 2,
+    "max_impact_batches": 4,
+    "TOI": "physical segment-entry quadratic gap, actual event-sized force half-kicks; physical incoming restitution once per episode",
+    "solver": "canonical ordered corner scalar accumulated projected normal updates; negative deltas allowed; no spin clamp",
+    "domain": "single dynamic box with optional stationary axis-aligned planar box floor; no other active body/shape; no initial overlap; floor-lane zero initial angular velocity/contact torque; free-flight lane allows general torque",
+    "physical_gate": "independent matched temporal CPU/GPU 1e-10*(1+abs(reference)); actual final normal residual 1e-9*(1+abs(input normal speed)); penetration1e-5+1e-9; quiet and isolated symmetric impact spin/analytic checks1e-10 scaled",
+    "approved_temporal_gate": {
+      "per_macro": [
+        1e-05,
+        0.0001,
+        1e-05,
+        0.0001
+      ],
+      "one_second": [
+        0.0001,
+        0.001,
+        0.001,
+        0.001
+      ]
+    },
+    "rollback": "macro-entry bodies, forces/torques and committed episode bytes exact; prior registry commands retained",
+    "fixtures": [
+      "free gravity/constant force",
+      "free torque with independent convergence evidence",
+      "quiet multipoint support",
+      "isolated floor impacts e0,.5,1",
+      "unsupported domain/force/TOI/identity/config rollback"
+    ],
+    "failure_policy": "finish frozen source/package diagnosis matrix, retain failures and stop candidate without changing budget or gates; no timing unless correctness passes",
+    "packing": false,
+    "warm_starting": false,
+    "precision": "Float64",
+    "build_threads": 1,
+    "build_guard_s": 180,
+    "native_guard_s": 30,
+    "memory_reserve_GiB": 32,
+    "H3": "paused",
+    "counter_retry": false
+  },
+  "source_package_records": 24,
+  "accepted_free_flight_records": 4,
+  "rejected_contact_records": 8,
+  "expected_unsupported_config_rejections": 12,
+  "same_temporal_equation_independent_CPU_comparison": {
+    "status": "INDEPENDENT_TEMPORAL_EQUATION_AND_EXACT_REJECTION_EVIDENCE_COMPLETE",
+    "reports": [
+      {
+        "path": "source",
+        "kind": 0,
+        "same_equation_state_ratio": 1.246134792680137e-07,
+        "error": 0,
+        "normal_residual_mps": 0.0,
+        "max_spin_component_radps": 0.0,
+        "orientation_error_bound_rad": 0.0,
+        "penetration_m": 0.0,
+        "contact_energy_gain_J": 0.0,
+        "impact_incoming_mps": 0.0,
+        "impact_outgoing_mps": 0.0,
+        "TOI_s": 0.0,
+        "TOI_gap_error_m": 0.0,
+        "final_group_pressure": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "completed_intervals_events_sweeps": [
+          4.0,
+          0.0,
+          0.0
+        ],
+        "analytic": {
+          "position_error_m": 4.336808689942018e-19,
+          "velocity_error_mps": 2.7755575615628914e-17
+        }
+      },
+      {
+        "path": "source",
+        "kind": 1,
+        "same_equation_state_ratio": 1.0718374348087205e-06,
+        "error": 0,
+        "normal_residual_mps": 0.0,
+        "max_spin_component_radps": 0.0,
+        "orientation_error_bound_rad": 0.0,
+        "penetration_m": 0.0,
+        "contact_energy_gain_J": 0.0,
+        "impact_incoming_mps": 0.0,
+        "impact_outgoing_mps": 0.0,
+        "TOI_s": 0.0,
+        "TOI_gap_error_m": 0.0,
+        "final_group_pressure": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "completed_intervals_events_sweeps": [
+          4.0,
+          0.0,
+          0.0
+        ],
+        "analytic": {
+          "torque_orientation_convergence_not_analytic": [
+            {
+              "N": 8,
+              "orientation_delta_rad": 4.608396401353115e-07,
+              "omega_delta_radps": 1.367854642886357e-07
+            },
+            {
+              "N": 16,
+              "orientation_delta_rad": 5.760508351422425e-07,
+              "omega_delta_radps": 1.7098244819990782e-07
+            },
+            {
+              "N": 32,
+              "orientation_delta_rad": 6.048537141935653e-07,
+              "omega_delta_radps": 1.7953173170326409e-07
+            }
+          ]
+        }
+      },
+      {
+        "path": "source",
+        "kind": 2,
+        "same_equation_state_ratio": 9.62414670983532e-09,
+        "error": 306,
+        "normal_residual_mps": 1.5541722005793258e-07,
+        "max_spin_component_radps": 0.0011214510710780843,
+        "orientation_error_bound_rad": 4.501641260530543e-05,
+        "penetration_m": 0.0,
+        "contact_energy_gain_J": 0.0,
+        "impact_incoming_mps": 0.0,
+        "impact_outgoing_mps": 0.0,
+        "TOI_s": 0.0,
+        "TOI_gap_error_m": 0.0,
+        "final_group_pressure": [
+          0.01806987687351382,
+          0.020368949316579222,
+          0.020854069250064333,
+          0.020577960041249888
+        ],
+        "completed_intervals_events_sweeps": [
+          4.0,
+          0.0,
+          20.0
+        ],
+        "analytic": {}
+      },
+      {
+        "path": "source",
+        "kind": 3,
+        "same_equation_state_ratio": 0.0,
+        "error": 306,
+        "normal_residual_mps": 0.046461142469460356,
+        "max_spin_component_radps": 0.027698009184161848,
+        "orientation_error_bound_rad": 0.0,
+        "penetration_m": 0.0,
+        "contact_energy_gain_J": 0.0,
+        "impact_incoming_mps": -1.0194312139619819,
+        "impact_outgoing_mps": 0.023230571234730185,
+        "TOI_s": 0.0019807557555537062,
+        "TOI_gap_error_m": 0.0,
+        "final_group_pressure": [
+          0.5682175053487146,
+          0.5113749587602132,
+          0.4994617908950621,
+          0.5062693153894342
+        ],
+        "completed_intervals_events_sweeps": [
+          1.0,
+          1.0,
+          2.0
+        ],
+        "analytic": {}
+      },
+      {
+        "path": "source",
+        "kind": 4,
+        "same_equation_state_ratio": 1.3497893641611935e-07,
+        "error": 306,
+        "normal_residual_mps": 0.06969171370419058,
+        "max_spin_component_radps": 0.041547013776242786,
+        "orientation_error_bound_rad": 0.0,
+        "penetration_m": 0.0,
+        "contact_energy_gain_J": 0.0,
+        "impact_incoming_mps": -1.0194312139619819,
+        "impact_outgoing_mps": 0.5445614638330862,
+        "TOI_s": 0.0019807557555537062,
+        "TOI_gap_error_m": 0.0,
+        "final_group_pressure": [
+          0.8523262580230718,
+          0.7670624381403198,
+          0.7491926863425933,
+          0.759403973084151
+        ],
+        "completed_intervals_events_sweeps": [
+          1.0,
+          1.0,
+          2.0
+        ],
+        "analytic": {}
+      },
+      {
+        "path": "source",
+        "kind": 5,
+        "same_equation_state_ratio": 0.0,
+        "error": 306,
+        "normal_residual_mps": 0.09292228493892063,
+        "max_spin_component_radps": 0.055396018368323655,
+        "orientation_error_bound_rad": 0.0,
+        "penetration_m": 0.0,
+        "contact_energy_gain_J": 0.09987114185483326,
+        "impact_incoming_mps": -1.0194312139619819,
+        "impact_outgoing_mps": 1.0658923564314422,
+        "TOI_s": 0.0019807557555537062,
+        "TOI_gap_error_m": 0.0,
+        "final_group_pressure": [
+          1.1364350106974292,
+          1.0227499175204264,
+          0.9989235817901242,
+          1.0125386307788684
+        ],
+        "completed_intervals_events_sweeps": [
+          1.0,
+          1.0,
+          2.0
+        ],
+        "analytic": {}
+      },
+      {
+        "path": "source",
+        "kind": 6,
+        "same_equation_state_ratio": 0.0,
+        "error": 303,
+        "normal_residual_mps": 0.0,
+        "max_spin_component_radps": 0.0,
+        "orientation_error_bound_rad": 0.0,
+        "penetration_m": 0.0,
+        "contact_energy_gain_J": 0.0,
+        "impact_incoming_mps": 0.0,
+        "impact_outgoing_mps": 0.0,
+        "TOI_s": 0.0,
+        "TOI_gap_error_m": 0.0,
+        "final_group_pressure": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "completed_intervals_events_sweeps": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "analytic": {}
+      },
+      {
+        "path": "source",
+        "kind": 7,
+        "same_equation_state_ratio": 0.0,
+        "error": 301,
+        "normal_residual_mps": 0.0,
+        "max_spin_component_radps": 0.0,
+        "orientation_error_bound_rad": 0.0,
+        "penetration_m": 0.0,
+        "contact_energy_gain_J": 0.0,
+        "impact_incoming_mps": 0.0,
+        "impact_outgoing_mps": 0.0,
+        "TOI_s": 0.0,
+        "TOI_gap_error_m": 0.0,
+        "final_group_pressure": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "completed_intervals_events_sweeps": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "analytic": {}
+      },
+      {
+        "path": "source",
+        "kind": 8,
+        "same_equation_state_ratio": 0.0,
+        "error": 301,
+        "normal_residual_mps": 0.0,
+        "max_spin_component_radps": 0.0,
+        "orientation_error_bound_rad": 0.0,
+        "penetration_m": 0.0,
+        "contact_energy_gain_J": 0.0,
+        "impact_incoming_mps": 0.0,
+        "impact_outgoing_mps": 0.0,
+        "TOI_s": 0.0,
+        "TOI_gap_error_m": 0.0,
+        "final_group_pressure": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "completed_intervals_events_sweeps": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "analytic": {}
+      },
+      {
+        "path": "source",
+        "kind": 9,
+        "same_equation_state_ratio": 0.0,
+        "error": 304,
+        "normal_residual_mps": 0.0,
+        "max_spin_component_radps": 0.0,
+        "orientation_error_bound_rad": 0.0,
+        "penetration_m": 0.0,
+        "contact_energy_gain_J": 0.0,
+        "impact_incoming_mps": 0.0,
+        "impact_outgoing_mps": 0.0,
+        "TOI_s": 0.0,
+        "TOI_gap_error_m": 0.0,
+        "final_group_pressure": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "completed_intervals_events_sweeps": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "analytic": {}
+      },
+      {
+        "path": "source",
+        "kind": 10,
+        "same_equation_state_ratio": 0.0,
+        "error": 301,
+        "normal_residual_mps": 0.0,
+        "max_spin_component_radps": 0.0,
+        "orientation_error_bound_rad": 0.0,
+        "penetration_m": 0.0,
+        "contact_energy_gain_J": 0.0,
+        "impact_incoming_mps": 0.0,
+        "impact_outgoing_mps": 0.0,
+        "TOI_s": 0.0,
+        "TOI_gap_error_m": 0.0,
+        "final_group_pressure": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "completed_intervals_events_sweeps": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "analytic": {}
+      },
+      {
+        "path": "source",
+        "kind": 11,
+        "same_equation_state_ratio": 0.0,
+        "error": 300,
+        "normal_residual_mps": 0.0,
+        "max_spin_component_radps": 0.0,
+        "orientation_error_bound_rad": 0.0,
+        "penetration_m": 0.0,
+        "contact_energy_gain_J": 0.0,
+        "impact_incoming_mps": 0.0,
+        "impact_outgoing_mps": 0.0,
+        "TOI_s": 0.0,
+        "TOI_gap_error_m": 0.0,
+        "final_group_pressure": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "completed_intervals_events_sweeps": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "analytic": {}
+      },
+      {
+        "path": "packaged",
+        "kind": 0,
+        "same_equation_state_ratio": 1.246134792680137e-07,
+        "error": 0,
+        "normal_residual_mps": 0.0,
+        "max_spin_component_radps": 0.0,
+        "orientation_error_bound_rad": 0.0,
+        "penetration_m": 0.0,
+        "contact_energy_gain_J": 0.0,
+        "impact_incoming_mps": 0.0,
+        "impact_outgoing_mps": 0.0,
+        "TOI_s": 0.0,
+        "TOI_gap_error_m": 0.0,
+        "final_group_pressure": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "completed_intervals_events_sweeps": [
+          4.0,
+          0.0,
+          0.0
+        ],
+        "analytic": {
+          "position_error_m": 4.336808689942018e-19,
+          "velocity_error_mps": 2.7755575615628914e-17
+        }
+      },
+      {
+        "path": "packaged",
+        "kind": 1,
+        "same_equation_state_ratio": 1.0718374348087205e-06,
+        "error": 0,
+        "normal_residual_mps": 0.0,
+        "max_spin_component_radps": 0.0,
+        "orientation_error_bound_rad": 0.0,
+        "penetration_m": 0.0,
+        "contact_energy_gain_J": 0.0,
+        "impact_incoming_mps": 0.0,
+        "impact_outgoing_mps": 0.0,
+        "TOI_s": 0.0,
+        "TOI_gap_error_m": 0.0,
+        "final_group_pressure": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "completed_intervals_events_sweeps": [
+          4.0,
+          0.0,
+          0.0
+        ],
+        "analytic": {
+          "torque_orientation_convergence_not_analytic": [
+            {
+              "N": 8,
+              "orientation_delta_rad": 4.608396401353115e-07,
+              "omega_delta_radps": 1.367854642886357e-07
+            },
+            {
+              "N": 16,
+              "orientation_delta_rad": 5.760508351422425e-07,
+              "omega_delta_radps": 1.7098244819990782e-07
+            },
+            {
+              "N": 32,
+              "orientation_delta_rad": 6.048537141935653e-07,
+              "omega_delta_radps": 1.7953173170326409e-07
+            }
+          ]
+        }
+      },
+      {
+        "path": "packaged",
+        "kind": 2,
+        "same_equation_state_ratio": 9.62414670983532e-09,
+        "error": 306,
+        "normal_residual_mps": 1.5541722005793258e-07,
+        "max_spin_component_radps": 0.0011214510710780843,
+        "orientation_error_bound_rad": 4.501641260530543e-05,
+        "penetration_m": 0.0,
+        "contact_energy_gain_J": 0.0,
+        "impact_incoming_mps": 0.0,
+        "impact_outgoing_mps": 0.0,
+        "TOI_s": 0.0,
+        "TOI_gap_error_m": 0.0,
+        "final_group_pressure": [
+          0.01806987687351382,
+          0.020368949316579222,
+          0.020854069250064333,
+          0.020577960041249888
+        ],
+        "completed_intervals_events_sweeps": [
+          4.0,
+          0.0,
+          20.0
+        ],
+        "analytic": {}
+      },
+      {
+        "path": "packaged",
+        "kind": 3,
+        "same_equation_state_ratio": 0.0,
+        "error": 306,
+        "normal_residual_mps": 0.046461142469460356,
+        "max_spin_component_radps": 0.027698009184161848,
+        "orientation_error_bound_rad": 0.0,
+        "penetration_m": 0.0,
+        "contact_energy_gain_J": 0.0,
+        "impact_incoming_mps": -1.0194312139619819,
+        "impact_outgoing_mps": 0.023230571234730185,
+        "TOI_s": 0.0019807557555537062,
+        "TOI_gap_error_m": 0.0,
+        "final_group_pressure": [
+          0.5682175053487146,
+          0.5113749587602132,
+          0.4994617908950621,
+          0.5062693153894342
+        ],
+        "completed_intervals_events_sweeps": [
+          1.0,
+          1.0,
+          2.0
+        ],
+        "analytic": {}
+      },
+      {
+        "path": "packaged",
+        "kind": 4,
+        "same_equation_state_ratio": 1.3497893641611935e-07,
+        "error": 306,
+        "normal_residual_mps": 0.06969171370419058,
+        "max_spin_component_radps": 0.041547013776242786,
+        "orientation_error_bound_rad": 0.0,
+        "penetration_m": 0.0,
+        "contact_energy_gain_J": 0.0,
+        "impact_incoming_mps": -1.0194312139619819,
+        "impact_outgoing_mps": 0.5445614638330862,
+        "TOI_s": 0.0019807557555537062,
+        "TOI_gap_error_m": 0.0,
+        "final_group_pressure": [
+          0.8523262580230718,
+          0.7670624381403198,
+          0.7491926863425933,
+          0.759403973084151
+        ],
+        "completed_intervals_events_sweeps": [
+          1.0,
+          1.0,
+          2.0
+        ],
+        "analytic": {}
+      },
+      {
+        "path": "packaged",
+        "kind": 5,
+        "same_equation_state_ratio": 0.0,
+        "error": 306,
+        "normal_residual_mps": 0.09292228493892063,
+        "max_spin_component_radps": 0.055396018368323655,
+        "orientation_error_bound_rad": 0.0,
+        "penetration_m": 0.0,
+        "contact_energy_gain_J": 0.09987114185483326,
+        "impact_incoming_mps": -1.0194312139619819,
+        "impact_outgoing_mps": 1.0658923564314422,
+        "TOI_s": 0.0019807557555537062,
+        "TOI_gap_error_m": 0.0,
+        "final_group_pressure": [
+          1.1364350106974292,
+          1.0227499175204264,
+          0.9989235817901242,
+          1.0125386307788684
+        ],
+        "completed_intervals_events_sweeps": [
+          1.0,
+          1.0,
+          2.0
+        ],
+        "analytic": {}
+      },
+      {
+        "path": "packaged",
+        "kind": 6,
+        "same_equation_state_ratio": 0.0,
+        "error": 303,
+        "normal_residual_mps": 0.0,
+        "max_spin_component_radps": 0.0,
+        "orientation_error_bound_rad": 0.0,
+        "penetration_m": 0.0,
+        "contact_energy_gain_J": 0.0,
+        "impact_incoming_mps": 0.0,
+        "impact_outgoing_mps": 0.0,
+        "TOI_s": 0.0,
+        "TOI_gap_error_m": 0.0,
+        "final_group_pressure": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "completed_intervals_events_sweeps": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "analytic": {}
+      },
+      {
+        "path": "packaged",
+        "kind": 7,
+        "same_equation_state_ratio": 0.0,
+        "error": 301,
+        "normal_residual_mps": 0.0,
+        "max_spin_component_radps": 0.0,
+        "orientation_error_bound_rad": 0.0,
+        "penetration_m": 0.0,
+        "contact_energy_gain_J": 0.0,
+        "impact_incoming_mps": 0.0,
+        "impact_outgoing_mps": 0.0,
+        "TOI_s": 0.0,
+        "TOI_gap_error_m": 0.0,
+        "final_group_pressure": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "completed_intervals_events_sweeps": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "analytic": {}
+      },
+      {
+        "path": "packaged",
+        "kind": 8,
+        "same_equation_state_ratio": 0.0,
+        "error": 301,
+        "normal_residual_mps": 0.0,
+        "max_spin_component_radps": 0.0,
+        "orientation_error_bound_rad": 0.0,
+        "penetration_m": 0.0,
+        "contact_energy_gain_J": 0.0,
+        "impact_incoming_mps": 0.0,
+        "impact_outgoing_mps": 0.0,
+        "TOI_s": 0.0,
+        "TOI_gap_error_m": 0.0,
+        "final_group_pressure": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "completed_intervals_events_sweeps": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "analytic": {}
+      },
+      {
+        "path": "packaged",
+        "kind": 9,
+        "same_equation_state_ratio": 0.0,
+        "error": 304,
+        "normal_residual_mps": 0.0,
+        "max_spin_component_radps": 0.0,
+        "orientation_error_bound_rad": 0.0,
+        "penetration_m": 0.0,
+        "contact_energy_gain_J": 0.0,
+        "impact_incoming_mps": 0.0,
+        "impact_outgoing_mps": 0.0,
+        "TOI_s": 0.0,
+        "TOI_gap_error_m": 0.0,
+        "final_group_pressure": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "completed_intervals_events_sweeps": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "analytic": {}
+      },
+      {
+        "path": "packaged",
+        "kind": 10,
+        "same_equation_state_ratio": 0.0,
+        "error": 301,
+        "normal_residual_mps": 0.0,
+        "max_spin_component_radps": 0.0,
+        "orientation_error_bound_rad": 0.0,
+        "penetration_m": 0.0,
+        "contact_energy_gain_J": 0.0,
+        "impact_incoming_mps": 0.0,
+        "impact_outgoing_mps": 0.0,
+        "TOI_s": 0.0,
+        "TOI_gap_error_m": 0.0,
+        "final_group_pressure": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "completed_intervals_events_sweeps": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "analytic": {}
+      },
+      {
+        "path": "packaged",
+        "kind": 11,
+        "same_equation_state_ratio": 0.0,
+        "error": 300,
+        "normal_residual_mps": 0.0,
+        "max_spin_component_radps": 0.0,
+        "orientation_error_bound_rad": 0.0,
+        "penetration_m": 0.0,
+        "contact_energy_gain_J": 0.0,
+        "impact_incoming_mps": 0.0,
+        "impact_outgoing_mps": 0.0,
+        "TOI_s": 0.0,
+        "TOI_gap_error_m": 0.0,
+        "final_group_pressure": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "completed_intervals_events_sweeps": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "analytic": {}
+      }
+    ],
+    "maximum_same_equation_state_ratio": 1.0718374348087205e-06,
+    "candidate_physical_acceptance_passed": false,
+    "budget_tuned": false,
+    "timings_authorized_by_correctness": false
+  },
+  "additional_offline_physical_and_delta_evidence": {
+    "GPU_stages_repeated": 0,
+    "candidate_modified": false,
+    "timings_run": false,
+    "cases": [
+      {
+        "kind": 0,
+        "vertical_momentum_balance_error_kgmps": 0.0,
+        "normal_velocity_gate_mps": 1e-09,
+        "actual_final_spin_norm_radps": 0.0,
+        "position_error_against_initial_quiet_m": null,
+        "cpu_last_group_before_final4": null,
+        "cpu_last_group_after_final4": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "negative_incremental_corrections_in_final4": 0,
+        "translational_energy_balance_error_J": 1.887379141862766e-15
+      },
+      {
+        "kind": 1,
+        "vertical_momentum_balance_error_kgmps": 8.881784197001252e-16,
+        "normal_velocity_gate_mps": 1e-09,
+        "actual_final_spin_norm_radps": 1.9911836196407144,
+        "position_error_against_initial_quiet_m": null,
+        "cpu_last_group_before_final4": null,
+        "cpu_last_group_after_final4": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "negative_incremental_corrections_in_final4": 0,
+        "angular_momentum_force_balance_error_kgm2ps": 6.063725910276929e-15
+      },
+      {
+        "kind": 2,
+        "vertical_momentum_balance_error_kgmps": -2.220446049250313e-16,
+        "normal_velocity_gate_mps": 1.040875e-09,
+        "actual_final_spin_norm_radps": 1.1799380012966314e-07,
+        "position_error_against_initial_quiet_m": 3.125332923437085e-05,
+        "cpu_last_group_before_final4": [
+          0.020436128464819358,
+          0.02043735869817393,
+          0.020437848647437112,
+          0.020438663721612002
+        ],
+        "cpu_last_group_after_final4": [
+          0.018069876873513822,
+          0.020368949316579225,
+          0.020854069250064337,
+          0.02057796004124989
+        ],
+        "negative_incremental_corrections_in_final4": 8
+      },
+      {
+        "kind": 3,
+        "vertical_momentum_balance_error_kgmps": 0.0,
+        "normal_velocity_gate_mps": 2.019431213961982e-09,
+        "actual_final_spin_norm_radps": 0.033454967993525125,
+        "position_error_against_initial_quiet_m": null,
+        "cpu_last_group_before_final4": null,
+        "cpu_last_group_after_final4": [
+          0.5682175053487146,
+          0.5113749587602132,
+          0.4994617908950621,
+          0.5062693153894342
+        ],
+        "negative_incremental_corrections_in_final4": 0,
+        "bounce_velocity_target_mps": 0.0,
+        "bounce_COM_velocity_error_mps": 0.023230571234730185,
+        "TOI_analytic_formula_error_s": -2.6020852139652106e-18
+      },
+      {
+        "kind": 4,
+        "vertical_momentum_balance_error_kgmps": 4.440892098500626e-16,
+        "normal_velocity_gate_mps": 2.019431213961982e-09,
+        "actual_final_spin_norm_radps": 0.05018245199028773,
+        "position_error_against_initial_quiet_m": null,
+        "cpu_last_group_before_final4": null,
+        "cpu_last_group_after_final4": [
+          0.8523262580230718,
+          0.7670624381403198,
+          0.7491926863425933,
+          0.759403973084151
+        ],
+        "negative_incremental_corrections_in_final4": 0,
+        "bounce_velocity_target_mps": 0.5097156069809909,
+        "bounce_COM_velocity_error_mps": 0.03484585685209529,
+        "TOI_analytic_formula_error_s": -2.6020852139652106e-18
+      },
+      {
+        "kind": 5,
+        "vertical_momentum_balance_error_kgmps": 0.0,
+        "normal_velocity_gate_mps": 2.019431213961982e-09,
+        "actual_final_spin_norm_radps": 0.0669099359870502,
+        "position_error_against_initial_quiet_m": null,
+        "cpu_last_group_before_final4": null,
+        "cpu_last_group_after_final4": [
+          1.1364350106974292,
+          1.0227499175204264,
+          0.9989235817901242,
+          1.0125386307788684
+        ],
+        "negative_incremental_corrections_in_final4": 0,
+        "bounce_velocity_target_mps": 1.0194312139619819,
+        "bounce_COM_velocity_error_mps": 0.046461142469460315,
+        "TOI_analytic_formula_error_s": -2.6020852139652106e-18
+      }
+    ]
+  },
+  "exact_rollback": "Every native rejection asserts full current bodies/forces/torques and committed episode/last-state bytes unchanged; registry metadata unchanged after prior accepted commands; all endpoint guards tested",
+  "source_package_results": "identical canonical records including candidate state, diagnostics and rejection codes",
+  "budget_failure": "quiet support position/orientation and normal residual fail despite 20 sweeps including retained-pressure final4; isolated impacts fail residual/restitution/spin, elastic case also injects0.099871J",
+  "diagnostic_primary_code": "306 reports spin/orientation domain loss; residual and energy failures remain explicitly reported, not hidden by primary code",
+  "final_group_review_fix": "Source retains end-group lambda through final4, clamps only accumulated lambda>=0, applies deltas including negative; independent retained-pressure trace records8 negative final corrections",
+  "TOI_review_fix": "quadratic from actual physical segment-entry gap/velocity/acceleration; integrate actual root duration with midpoint free force; physical pre-impact velocity captured after event-sized integration; no full-h half-kick linear trajectory",
+  "not_qualified": [
+    "floor contact advance",
+    "one-second contact stability",
+    "stacks",
+    "friction",
+    "general rotating CCD",
+    "full difficult fixture",
+    "repeated-bounce positive trajectory acceptance"
+  ],
+  "tests_not_run_after_failure": [
+    "one-second GPU trajectories",
+    "matched-duration performance versus macro and four Newton references"
+  ],
+  "performance": "not run; correctness barrier failed; no speed or real-time claim",
+  "implementation_sources": {
+    "experimental/physics_gpu/temporal_floor.mojo": "52ac399d3fa34ca5499759a53c6520905b8accb341b6bb402a7958f9c22049c2",
+    "experimental/physics_gpu/temporal_floor_kernels.mojo": "c6a5ec9eeedd25b94235470d3db1144c6b7220f804b065c66eeaef65b3c20187",
+    "experimental/physics_gpu/test_temporal_floor.mojo": "8baf4b88effc3ebe88262212850781387f1d3f96e1ba3b2ccab5bc51b5bbfdc3"
+  },
+  "package_sha256": "682b740598ad96283947c54e5dc09f886027f386c2144b165febb6f922d6c4c4",
+  "dependency_only_package": [
+    "box_box",
+    "box_box_kernels",
+    "box_box_reference",
+    "box_oracle",
+    "box_response",
+    "box_response_kernels",
+    "box_response_math",
+    "box_response_reference",
+    "collision",
+    "contact_history",
+    "contact_oracle",
+    "core",
+    "friction_kernels",
+    "friction_reference",
+    "friction_response",
+    "history_kernels",
+    "kernels",
+    "lifecycle",
+    "lifecycle_kernels",
+    "normal_response",
+    "response_kernels",
+    "response_reference",
+    "shape_kernels",
+    "stability_kernels",
+    "temporal_floor",
+    "temporal_floor_kernels",
+    "test_box_interactions",
+    "test_box_response",
+    "__init__"
+  ],
+  "preservation": {
+    "protected_hashes": 17600,
+    "asset_save_identities": 5901,
+    "campaign_sources": 17,
+    "other_source_lock_hashes": 119,
+    "pins": [
+      {
+        "version": "1.2.0.dev2026092905",
+        "record_sha256": "40307d16e09c2e88bfe8085346d028d7479d93867fdd6e210305ed3fbaf9c534"
+      },
+      {
+        "version": "26.7.0.dev2026092905",
+        "record_sha256": "dab5b010e4a7b5f6b7dcc4f60f2e30f9e5e69b689ef2bd57e46025d251dc2403"
+      }
+    ],
+    "changes": []
+  },
+  "resources": {
+    "single_execution_slot": true,
+    "build_threads": 1,
+    "precompile_one_CPU": true,
+    "build_guard_s": 180,
+    "native_guard_s": 30,
+    "reserve_GiB": 32,
+    "minimum_sampled_available_GiB": 111.77413558959961,
+    "current_available_GiB": 113.63982391357422,
+    "explicit_owner_added_bytes": 48824,
+    "new_owner_buffers": 8
+  },
+  "negative_frontend_evidence": "Missing package initializer and subsequent missing-module compile receipts retained; only required package initializer was added; no physics/solver/gate/budget changes after native probes",
+  "scope": {
+    "strict_reference_changed": false,
+    "other_owners_changed": false,
+    "budget_tuned": false,
+    "spin_clamped": false,
+    "warm_starting": false,
+    "packing": false,
+    "defaults_or_precision_changed": false,
+    "dependencies_driver_power_security_profiling_permissions_changed": false,
+    "H3_resumed": false,
+    "counter_retry": false
+  },
+  "cleanup": {
+    "owned_jobs": [],
+    "GPU_compute_apps": "",
+    "remaining_blocker": "Fixed scalar corner correction budget does not meet approved physical/analytic/residual gates. Stop for review before any solver/budget revision."
+  }
+}

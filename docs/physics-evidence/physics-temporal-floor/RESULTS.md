@@ -1,0 +1,38 @@
+# Temporal planar-floor experiment: negative bounded result
+
+Implemented isolated native Mojo GPU GpuTemporalFloorAdvance. Four fixed1/120s intervals per1/30s macro; two start and two end normal corner sweeps per interval, followed by four final unbiased sweeps retaining the final end group's accumulated pressure. Updates permit negative deltas, constrain accumulated normal impulse>=0 and apply only deltas. No spin/rotation clamp, warm start, packed candidate, Newton pipeline combination or default replacement. The domain is one dynamic box, optional stationary planar axis-aligned box floor, constant world forces, zero friction/no contact-phase torque, no initial overlap and no other body/shape. Unsupported configurations explicitly reject.
+
+Floor TOI solves the physical constant-acceleration segment-entry gap quadratic. Integration uses the actual root duration, not a full-base-interval half-kicked linear path. The pre-impact force integration is completed before physical incoming velocity/restitution is recorded. Fixed base boundaries remain; event splits are bounded. Episode publication is conditional with body publication; rejected advances preserve committed episode bytes. Free-flight angular motion uses the unchanged bounded angular-momentum midpoint primitive; the CPU validator implements that equation separately using scalar rotation/tensor algebra and trigonometric rotation, not production GPU helpers. Torque orientation is checked by refinement convergence, never called analytic.
+
+**Candidate stopped: the planned cheap corner budget fails elementary contact acceptance.** No gate or budget was changed after native observations. No performance timings, one-second contact trajectories or further solver experiments were run.
+
+Source and fresh dependency-only package produced identical canonical records across12 fixed probes each. Two free-flight probes per path accepted; quiet support and impacts at e=0,.5,1 rejected in both paths; six unsupported/config probes per path rejected. Every rejection asserted exact full-body/uncleared-force/torque and committed episode/last-state rollback, unchanged registry metadata and buffer endpoint guards. Previously committed registry commands remain committed. Candidate scratch diagnostics are retained even though no rejected body state is published.
+
+|Probe|Outcome|Normal residual m/s|Max transient spin component rad/s|Orientation error bound rad|Penetration m|
+|---|---|---:|---:|---:|---:|
+|constant-force free flight|accepted|0|0|0|0|
+|free flight with torque|accepted|0|0|0|0|
+|quiet multipoint face support|rejected 306|1.55417220058e-07|0.00112145107108|4.50164126053e-05|0|
+|impact e0|rejected 306|0.0464611424695|0.0276980091842|0|0|
+|impact e.5|rejected 306|0.0696917137042|0.0415470137762|0|0|
+|impact e1|rejected 306|0.0929222849389|0.0553960183683|0|0|
+|initial overlap|rejected 303|0|0|0|0|
+|initial floor-lane angular motion|rejected 301|0|0|0|0|
+|contact-phase torque|rejected 301|0|0|0|0|
+|finite-floor footprint escape|rejected 304|0|0|0|0|
+|additional dynamic candidate|rejected 301|0|0|0|0|
+|wrong macro dt|rejected 300|0|0|0|0|
+
+Quiet support completes all4 intervals/20 correction sweeps, including the actual four final sweeps with retained pressure. Its final normal residual1.5541722e-7 exceeds the actual scaled gate1.040875e-9. Position drift3.1253329e-5m exceeds approved1e-5m; orientation bound4.5016413e-5rad exceeds1e-5rad. Final spin norm1.1799380e-7rad/s is below the broad1e-4 temporal bound but fails the stricter symmetric quiet analytic zero-spin requirement1e-10. Max transient spin component0.001121451rad/s is reported separately from final spin. There is no penetration or contact energy gain in this probe: those passing quantities do not excuse residual/drift/rotation failures. Source code allows the last group's pressure to decrease, and the independent trace records8 negative incremental corrections in the final4 sweeps; pressure was not reset and labelled relaxation.
+
+All three impacts certify the same event time0.0019807557555537062s, physical incoming velocity-1.0194312139619819m/s and zero stored gap error. Independent analytic root discrepancy is2.6021e-18s. The two-sweep impact corrections leave COM bounce errors0.02323057/0.03484586/0.04646114m/s and normal residuals0.04646114/0.06969171/0.09292228m/s. Final spin norms0.03345497/0.05018245/0.06690994rad/s violate symmetry and the approved angular-speed bound. The e1 trial additionally gains0.09987114J, far beyond the1e-9-scaled energy allowance. These candidates reject at the event before advancing remaining time; remainder handling/repeated-bounce positive acceptance is therefore not qualified. Primary rejection306 identifies lost spin/orientation admissibility; all other failed quantities are retained in reports.
+
+Independent CPU/GPU matched-temporal-equation state checks pass1e-10*(1+abs(reference)) on accepted and rejected candidate scratch. Maximum error/tolerance ratio1.07184e-6. Agreement on an inaccurate fixed-budget state is **not** physical acceptance. Free-flight translation analytic position/velocity errors4.34e-19m/2.78e-17m/s; translational energy balance error1.89e-15J and vertical momentum balance errors<=8.89e-16kgm/s. Torque-lane world-angular-momentum balance error6.06e-15kgm²/s. CPU8/16/32-interval refinement gives the four-interval torque orientation differences4.6084e-7/5.7605e-7/6.0485e-7rad and angular-speed differences1.3679e-7/1.7098e-7/1.7953e-7rad/s; successive refinement differences shrink, providing numerical convergence evidence without asserting an analytic quaternion solution. One-second GPU/trajectory qualification was not reached after contact budget failure.
+
+Implementation review boundaries: exact plane corner geometry is inspected; this is not validated rotating contact/CCD or a reusable manifold algorithm. Fixed-orientation new-impact certification refuses induced spin. The rejected support scratch can rock/lift and retains all corner rows; that unsuccessful contact model is not qualified or promoted. General shape/rotation/material/lifecycle episodes and one-second acceptance remain unqualified. Existing strict reference, optimized/shared/warm/packed owners and original63/70 accounting are unchanged.
+
+Eight new owner buffers /48,824 explicit bytes. All guards/indices are fixed and no new allocations occur after successful body/episode publication. The owner uses the original GPU registry; all-macro integration/forces are private until the success predicate. The 28-module dependency package plus required empty initializer contains no optimized/warm/packed owner imports. Packaging failures before native execution are retained; only package initialization was repaired.
+
+Preservation: 17,600 protected hashes, all5,901 asset/save size/mtime identities,17 campaign sources,119 other source/lock hashes and Mojo1.2.0.dev2026092905 /isolatedMAX26.7.0.dev2026092905 unchanged. Minimum sampled available memory111.774GiB, current113.640GiB, reserve32GiB. One execution slot, one-thread builds/one-CPU precompile, finite180s build/30s native guards. H3paused; no dependencies, hardware/security/power/profiling-permission, precision or default changes; no denied-counter retry.
+
+Checkpoint: negative result sealed, GPU idle and no owned jobs. Review is required before a new contact algorithm or larger budget; this task made no such change. Evidence: verification.json, predeclared.json, independent-comparison.json, offline-addendum.json, source/package cases/receipts/fingerprints, failed packaging logs and FINAL-SHA256SUMS.

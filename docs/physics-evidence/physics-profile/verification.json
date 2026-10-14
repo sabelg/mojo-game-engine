@@ -1,0 +1,141 @@
+{
+  "status": "bounded_qualified_GPU_physics_profiling_baseline_complete_no_optimization_implemented",
+  "recorded_at_UTC": "2026-10-13T15:31:11.775765+00:00",
+  "scope": "four small qualified workloads, before/traced/after fresh-precompiled; finite independent resets, no unqualified piles or rendering-time inference",
+  "production_changes": [],
+  "algorithm_numerical_policy_precision_iterations_timestep_sync_readback_changes": false,
+  "profiling_opt_in_and_standalone": true,
+  "timing_backend": "existing NVIDIA NsightSystems2025.3.2 CUDA/NVTX plus existing host clock_gettime monotonic pattern",
+  "sampling": {
+    "qualified_fixtures": 4,
+    "paths": [
+      "untraced_source_before",
+      "Nsight_source_trace",
+      "fresh_precompiled_after"
+    ],
+    "per_fixture_path": {
+      "first_call": 1,
+      "excluded_warmups": 2,
+      "warmed_samples": 7
+    },
+    "total_numerically_qualified_samples": 120,
+    "p95_or_confidence_interval_claim": false
+  },
+  "dominant_measured_cost": {
+    "fixture": "original coupled-friction sliding target, basis0",
+    "untraced_source_step_response_median_s": 1.3576727239997126,
+    "untraced_source_range_s": [
+      1.3491105739958584,
+      1.3647632130014244
+    ],
+    "traced_solver_GPU_median_ms": 1355.515584,
+    "solver_fraction_of_GPU_kernel_sum": 0.9921399333448283,
+    "geometry_pair_GPU_median_ms": 0.484512,
+    "single_thread_launch": {
+      "grid": 1,
+      "block": 1
+    },
+    "actual_velocity_sweeps": 96,
+    "actual_position_sweeps": 23,
+    "Newton_corrections": 505,
+    "residual_evaluations": 2707,
+    "coupled_attempts": 192,
+    "legacy_fallbacks": 0,
+    "launches_step_response": 17,
+    "synchronization_wait_APIs_step_response": 25,
+    "broadphase_bottleneck_claim": false
+  },
+  "numerical_validation": {
+    "all_canonical_raw_states_impulses_histories_counters_exact_before_during_after": true,
+    "saved_qualified_target_physical_states_impulses_counters_exact": true,
+    "independent_CPU_and_analytic_replay": true,
+    "original_physical_residual_depth_Coulomb_energy_and_fixed_accumulator_no_contact_bytes_gates": true,
+    "invalid_configuration_body_metadata_rollback": true,
+    "control_failure_not_reclassified": {
+      "fixture": "same sliding scene withmu0",
+      "attempt": "plain-fixture-1",
+      "status": "failed additional zero-spin analytic gate, retained; no timing used",
+      "omega_error": 4.143690976806101e-10,
+      "gate": 1e-10,
+      "replacement": "already qualified centered single_floor",
+      "no_original_test_reclassification": true
+    }
+  },
+  "reports": {
+    "readable": "/home/user/mojo-game-engine/build/physics-profile/PROFILE.md",
+    "machine_readable": "/home/user/mojo-game-engine/build/physics-profile/measured-baseline.json",
+    "GPU_phases": "/home/user/mojo-game-engine/build/physics-profile/GPU-phase-summary.json",
+    "native_traces": "/home/user/mojo-game-engine/build/physics-profile/trace-v2-fixture-*.nsys-rep",
+    "exact_scoped_activities": "/home/user/mojo-game-engine/build/physics-profile/trace-v2-fixture-*.sqlite"
+  },
+  "memory": {
+    "maximum_sampled_compute_device_MiB": 983,
+    "maximum_sampled_compute_host_RSS_kB": 3047604,
+    "sample_scope": "stage observer at approximately.5s intervals plus observer overhead; process footprint includes CUDA/MAX/Nsight/cache and allocator pool; not guaranteed instantaneous peak",
+    "minimum_available_GiB": 111.20129013061523
+  },
+  "recommendations_ranked": [
+    "within-step invariantNT/TT metric reuse in measured dominant solver; source-based candidate requiring exact matrix and full physics regression gates",
+    "inspect bounded8x8/residual kernel work; deterministic GPU storage/parallel execution only after instruction-level evidence and rank/physical gates",
+    "reduce provably redundant mapping/waits or packing for cheap controls while preserving generation/orphan/transaction behavior"
+  ],
+  "optimization_implemented": false,
+  "instrumentation_limits": [
+    "traced GPU and untraced host distributions are different runs; no speedup inference",
+    "synchronization wait duration overlaps device kernels; not additive overhead",
+    "device phase attribution from checked unchanged enqueue order and CUDA correlation IDs; sub-microsecond host/device clock alignment differences retained",
+    "no CPU sampling, instruction-level attribution, occupancy/spill proof or memory-usage tracing",
+    "sampled process memory includes runtime/profiler/cache and is not guaranteed peak",
+    "cold calls use existing disk/driver/MAX caches; no forced-empty-cache claim",
+    "seven warmed samples per path; no p95 or broad PhysX performance/parity claim"
+  ],
+  "retained_limits": {
+    "original_fully_qualified": 63,
+    "original_case_count": 70,
+    "strict_translated_failure_retained": true,
+    "baseline64_rejects": 2,
+    "old_ledge_no_detachment_cases": 4,
+    "separate_ledge_cases_passed": 12,
+    "separate_translation_cases_passed": 75,
+    "coupled_API_expensive_opt_in": true
+  },
+  "preservation": {
+    "protected_baseline_hashes": 112,
+    "protected_changes": [],
+    "unrelated_sources_locks": 119,
+    "unrelated_changes": [],
+    "asset_save_identities": 5901,
+    "asset_save_changes": [],
+    "campaign_sources": 17,
+    "campaign_changes": [],
+    "pins": [
+      {
+        "version": "1.2.0.dev2026092905",
+        "metadata_sha256": "40307d16e09c2e88bfe8085346d028d7479d93867fdd6e210305ed3fbaf9c534"
+      },
+      {
+        "version": "26.7.0.dev2026092905",
+        "metadata_sha256": "dab5b010e4a7b5f6b7dcc4f60f2e30f9e5e69b689ef2bd57e46025d251dc2403"
+      }
+    ],
+    "SDK_assets_saves_campaign_baselines_dirty_work_locks_preserved": true
+  },
+  "resources": {
+    "compile_threads": 1,
+    "compile_guard_s": 180,
+    "run_guard_s": 30,
+    "memory_reserve_GiB": 32,
+    "minimum_observed_available_GiB": 111.20129013061523,
+    "normal_settings_unchanged": true,
+    "retired_thermal_cutoffs_reintroduced": false
+  },
+  "cleanup": {
+    "owned_native_profiling_jobs": [],
+    "GPU_compute_apps": "",
+    "boot_id": "22ae0bec-f40a-4c98-b2d7-c1312a226dea",
+    "H3_resumed": false,
+    "OS_driver_firmware_settings_changed": false,
+    "dependency_installs": false,
+    "publication": false
+  }
+}

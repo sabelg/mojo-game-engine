@@ -1,0 +1,70 @@
+{
+  "stage": "package-variant-1",
+  "command": [
+    "/home/user/mojo-game-engine/build/physics-rotating-floor-vertex/packaged",
+    "/home/user/mojo-game-engine/build/physics-rotating-floor-vertex/package-variant-1",
+    "/home/user/mojo-game-engine/build/physics-rotating-floor-vertex/fixtures-1.tsv"
+  ],
+  "deadline_s": 30,
+  "elapsed_s": 1.577,
+  "returncode": 0,
+  "fault": null,
+  "samples": [
+    {
+      "available_kB": 118850504,
+      "GPU_C": 36,
+      "GPU_utilization": 3,
+      "sensors_C": {
+        "thermal_zone2": 41.1,
+        "thermal_zone0": 41.1,
+        "thermal_zone5": 38.7,
+        "thermal_zone3": 36.0,
+        "thermal_zone1": 36.5,
+        "thermal_zone6": 36.7,
+        "thermal_zone4": 36.1
+      }
+    },
+    {
+      "available_kB": 118843840,
+      "GPU_C": 36,
+      "GPU_utilization": 3,
+      "sensors_C": {
+        "thermal_zone2": 41.0,
+        "thermal_zone0": 41.0,
+        "thermal_zone5": 38.7,
+        "thermal_zone3": 36.0,
+        "thermal_zone1": 36.5,
+        "thermal_zone6": 36.7,
+        "thermal_zone4": 36.1
+      }
+    },
+    {
+      "available_kB": 117625084,
+      "GPU_C": 35,
+      "GPU_utilization": 4,
+      "sensors_C": {
+        "thermal_zone2": 38.6,
+        "thermal_zone0": 38.7,
+        "thermal_zone5": 38.7,
+        "thermal_zone3": 36.3,
+        "thermal_zone1": 36.2,
+        "thermal_zone6": 36.7,
+        "thermal_zone4": 37.3
+      }
+    },
+    {
+      "available_kB": 116988516,
+      "GPU_C": 36,
+      "GPU_utilization": 3,
+      "sensors_C": {
+        "thermal_zone2": 37.7,
+        "thermal_zone0": 39.4,
+        "thermal_zone5": 38.7,
+        "thermal_zone3": 36.5,
+        "thermal_zone1": 36.0,
+        "thermal_zone6": 36.7,
+        "thermal_zone4": 39.4
+      }
+    }
+  ]
+}

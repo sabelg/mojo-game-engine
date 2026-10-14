@@ -1,0 +1,19 @@
+{
+  "path": "source",
+  "variant": 0,
+  "primary_records": 640,
+  "chain_records": 3,
+  "codes": {
+    "0": 384,
+    "604": 48,
+    "602": 64,
+    "603": 32,
+    "601": 64,
+    "600": 32,
+    "606": 16
+  },
+  "max_independent_state_gate_ratio": 2.001888746894848e-06,
+  "max_independent_diagnostic_gate_ratio": 1.7772239894833363e-05,
+  "all_16_enumerations_exact": true,
+  "package_source_byte_identical": false
+}

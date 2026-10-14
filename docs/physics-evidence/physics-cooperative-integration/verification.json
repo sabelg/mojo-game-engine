@@ -1,0 +1,1045 @@
+{
+  "status": "BOUNDED_OPT_IN_COOPERATIVE_SOLVER_EXACT_QUALIFICATION_AND_MEASUREMENT_COMPLETE",
+  "recorded_at_UTC": "2026-10-13T19:33:09.210781+00:00",
+  "API": "experimental.physics_gpu.cooperative_response.GpuCooperativeBoxResponse",
+  "opt_in": true,
+  "existing_modes_defaults_SDK_policy_changed": false,
+  "scope": "Only per-point residual/Jacobian cooperation inside one persistent32lane block; serial pressure/dP/norms/pivots/acceptance/patch/body feedback and original authoritative commit retained",
+  "new_repository_files": {
+    "experimental/physics_gpu/cooperative_math.mojo": "ed445442937674cd1657405062bbc22c73103b1cce6029269e6f2d1d483d3ccf",
+    "experimental/physics_gpu/cooperative_kernels.mojo": "eb6115aeea5a8fffa0255195aad7be1232d109d1736788b8a1657ab92a979020",
+    "experimental/physics_gpu/cooperative_response.mojo": "8c9293db11e753024467391e0651843189bce1f29f350077b4326975b2b360b5",
+    "experimental/physics_gpu/test_cooperative_helpers.mojo": "f9028c40b15dc14b0a1b558b3c307736d8119989ed700e3e9ca4ef8f3d7eb142",
+    "experimental/physics_gpu/COOPERATIVE.md": "b57a2d08281e2854b08de67d70b8455fc3bedfa978887265f467be7a71957422"
+  },
+  "final_physics_sources": {
+    "experimental/physics_gpu/coupled_geometry_reference.mojo": "a7edca5b18db94efd1003d16148e3409a6afd88885eb87c121b2d3210e4ba41b",
+    "experimental/physics_gpu/cached_tangent_response.mojo": "a024f38db3810c0e2e4836f07bcdca91a2745bbf50c8d3afd3881770a979c235",
+    "experimental/physics_gpu/box_response_diagnostic.mojo": "1d9999c1119118eeb7993e964c2be270eaf07a988201a7c2251f60b2a2f7b081",
+    "experimental/physics_gpu/test_cached_coupled.mojo": "2006bcd8cfa78fe8c9b49c9a3f68550d921708b679c44edd6dcf20ffa30b2708",
+    "experimental/physics_gpu/test_cached_helpers.mojo": "309b62deb8edf9b6f1dca47c4100612e34876038926cce4338ade2a1ef726c18",
+    "experimental/physics_gpu/cooperative_math.mojo": "ed445442937674cd1657405062bbc22c73103b1cce6029269e6f2d1d483d3ccf",
+    "experimental/physics_gpu/test_box_friction_diagnosis.mojo": "f9bfd94e8a6465cf3015054cf4f06f40ae95ffb6047241b96b090c0f09698dcd",
+    "experimental/physics_gpu/friction_response.mojo": "fdb4a3a039d48ad02d774a15d6e045fad71f191081fe5c02a71c13a20238a99e",
+    "experimental/physics_gpu/response_kernels.mojo": "3237b81df7cd797554920d24e2b621e0d13cf0fa7ae6802cd645d4b115baf291",
+    "experimental/physics_gpu/contact_oracle.mojo": "d0486cc489286bf4ce56146adb3d7066cf6db60a8cf6c57d55842ea8963c81ac",
+    "experimental/physics_gpu/test_g04b.mojo": "03e065914f6c78e1e212247d7b834c2988a6295a713789560775e7a84d99448d",
+    "experimental/physics_gpu/box_response.mojo": "2374c6a8d39b17d508c13d5e9994ba9224489e6ca03da2aa6abdfb69ac99f596",
+    "experimental/physics_gpu/stable_friction.mojo": "51a23796145d11670bf06fd526ec2fd10335f1ace7e30bf81971514f4de68f21",
+    "experimental/physics_gpu/test_g03b.mojo": "f8c04152ed73cd9940937e1221a5664ccbe245ce06f9a8c0bf6160f15cf532fc",
+    "experimental/physics_gpu/box_response_kernels.mojo": "19a2c32301b0569541c6082b61007c575b8c8227d140debe467da47260da105b",
+    "experimental/physics_gpu/sleep_reference.mojo": "13b970347f30e26d6f65b282d1a5b63df90b1b4194c90885d2f5f7a70c5cf919",
+    "experimental/physics_gpu/box_box.mojo": "986b02793c9fa02cd78d6291f9703adbbd0b2c90968d433076d93acd349b8242",
+    "experimental/physics_gpu/stability_kernels.mojo": "33f887ce94ea6d479f839674050b4802177b3ab4ad95db6ab8bdce4bbe364c05",
+    "experimental/physics_gpu/response_reference.mojo": "58744e78c161bb1dbeea43f7fe2ded77f382c1bb0980ebf5519d35557d2563b6",
+    "experimental/physics_gpu/cached_coupled_response.mojo": "e4486779f99bcd0b5125fa8580a6b986c0e3c918c9368ca568a8f1da3f4fb38d",
+    "experimental/physics_gpu/boundary_reference.mojo": "ebe6849d1cf0e4f09d09194dac59af59f41938d1de431485904ab8d381295694",
+    "experimental/physics_gpu/test_coupled_rank.mojo": "7ad839fba99b59cf1ec547c812ee6c7ea8041c4a704f8d3bf2d120b79d78f7b6",
+    "experimental/physics_gpu/test_g03.mojo": "3627186566dbfa320411a1d07a6785cd05515700730d7805762409e019e9b44f",
+    "experimental/physics_gpu/island_kernels.mojo": "ab557f9d0a5e8ed5c273070e08ec7fff08c16c95f8039da3cc9c03da9504f608",
+    "experimental/physics_gpu/contact_reference.mojo": "7afa1279abd56509f15ef0fcf9d53321bbd0829a5943b40b7de97f8c35742cdb",
+    "experimental/physics_gpu/test.mojo": "dfd16e3de353d46e2ad34658109d3fb535a1fb43202fbc4ded95db638c470fef",
+    "experimental/physics_gpu/test_box_coupled.mojo": "c93897bb18e51a0e6edaa24ba79b4668d216a3f7dc7bb127f7a118981dc3cfea",
+    "experimental/physics_gpu/cooperative_response.mojo": "8c9293db11e753024467391e0651843189bce1f29f350077b4326975b2b360b5",
+    "experimental/physics_gpu/test_coupled_validation.mojo": "5e109db152e3f31d187f423ae0def7365d5a983089f4526e9cdf21bd3419bdce",
+    "experimental/physics_gpu/test_box_interactions.mojo": "c3ad0bf3e662c71e3eaf7b108af1cb3a5f584cf40d3cddfc816d729c3f04d4c5",
+    "experimental/physics_gpu/test_box_response.mojo": "d9253ef9cc3d561e505544e128b3042f73e9862c0e3958e45a4ba91f09a30fd6",
+    "experimental/physics_gpu/__init__.mojo": "56a24fd8faae2389d1e4708ac3aadcf75f6a5690300df36200ad5bc741ff2683",
+    "experimental/physics_gpu/core.mojo": "5d08412fa579ddf734eade6d50ddd850af5197af20cfd3741c8bae8540974e01",
+    "experimental/physics_gpu/test_cached_tangent_helpers.mojo": "ca5a4733a5a17200f5f93e2112ab7a2e68f12205e6c2248beea840bd484f26b2",
+    "experimental/physics_gpu/sleep_kernels.mojo": "326c37fb82be809b9fad76a3c78132ba0916b240a7e5d4ba8b0bdd491f32eaba",
+    "experimental/physics_gpu/host.mojo": "ab74f43f05acaa0fa56c9839dc6611f66806f352aac3245862d6774f18568512",
+    "experimental/physics_gpu/test_islands.mojo": "54a38f6c22fdad6f6fdc581e77912e7b2286a627df5ccbbe5a12294dde75df24",
+    "experimental/physics_gpu/islands.mojo": "55db9d03d76a116d678cfa3b63631ed13ac367f6c8422aa0504397fe5c391fc8",
+    "experimental/physics_gpu/box_oracle.mojo": "97d0dd9fed3a66d8bbc6a136c67dcce7c9ff069f7746d7381a42699891f2db89",
+    "experimental/physics_gpu/shape_kernels.mojo": "336fcda9ffe176c04fb2723b184be858e3c78b04d3dae97e230b9ffbe8755976",
+    "experimental/physics_gpu/stable_reference.mojo": "e5e869df26968e28f0571b955f98730274b04bc6fe034070fd901043f5940a7a",
+    "experimental/physics_gpu/capability.mojo": "ac357c8b9f7aed2690f47f2ca90be33cbbce1f72f3dde8eddb2955c8b0c35e50",
+    "experimental/physics_gpu/box_box_reference.mojo": "d4cf129f16545f49fa4fd3bab4cb1803545ebf69605eebbfdffac169fbf51081",
+    "experimental/physics_gpu/normal_response.mojo": "06b08eff1bf18a94d855909b2a9a6a3dd1b4aea8d27d7019af6ad37323b50d6d",
+    "experimental/physics_gpu/friction_kernels.mojo": "892987eb45579ff4b5427c6112e2ec2ad5b9ca999702e811ede27d677fe8f58c",
+    "experimental/physics_gpu/box_response_math.mojo": "b19e2d43d1fd6190f6fbc2556118198d012909c9f779965e5916a53b80e7d7ed",
+    "experimental/physics_gpu/sleep.mojo": "e1fb5432e258af6f2d40c24b1db89bb187f99f8a8a71e84ec481d142f61d2101",
+    "experimental/physics_gpu/coupled_box_reference.mojo": "218787a0d43885cb7e5e40c52ce2f4091e9d9266829859eb01f8ad5d91fba061",
+    "experimental/physics_gpu/test_g04a.mojo": "bedc0ccfb76d08d2f2b32f5df651384e4f119854a07cb69dc1fe4aa32e3f799d",
+    "experimental/physics_gpu/cached_coupled_kernels.mojo": "36ccbd66b956e4f5e5c2d6d7773fb8fb13677f2d3937b45964ff07bdf896e0af",
+    "experimental/physics_gpu/box_response_reference.mojo": "44c9960e78c59981ee9ac0f33b7aa84bde3dd9dd534cb30c673e40e7b67e941e",
+    "experimental/physics_gpu/contact_history.mojo": "a5afe114b88eb6011e367d63ef8194b4bd3204505441e472d151332f62dc18a9",
+    "experimental/physics_gpu/sleep_diagnostic.mojo": "761c63b7dda73ca7670dae5f0329f467ce37d91ad55077b1a3dd0a5e8da6cc53",
+    "experimental/physics_gpu/box_box_diagnostic.mojo": "5fc19858eabec7a9964e33d0f2c18158ab053d149fb08db9e12718f2e1bcda52",
+    "experimental/physics_gpu/test_box_box.mojo": "74e83c3d738e898e9463d15441c54bed99cf25238323ccc30768270cd9ff0c58",
+    "experimental/physics_gpu/collision.mojo": "249c631e84dfcfe7c1001a79fb271e344efcb053588cc5a6e39b6776f0a270b2",
+    "experimental/physics_gpu/test_g03c.mojo": "cfd6207f6d2d8013ede003bbde53745ad73359840742df31dd16a8fda55af68a",
+    "experimental/physics_gpu/test_cooperative_helpers.mojo": "f9028c40b15dc14b0a1b558b3c307736d8119989ed700e3e9ca4ef8f3d7eb142",
+    "experimental/physics_gpu/lifecycle_kernels.mojo": "f269cc930e2b98ca5d0abea792b3dc19146bc7d99d45128d9e7e1f38c1632ef1",
+    "experimental/physics_gpu/cooperative_kernels.mojo": "eb6115aeea5a8fffa0255195aad7be1232d109d1736788b8a1657ab92a979020",
+    "experimental/physics_gpu/coupled_friction_math.mojo": "25c20e6a26e3409e7099f24041e7f963909077b1fe88558d824aef22697395c8",
+    "experimental/physics_gpu/coupled_box_response.mojo": "3a152462e7d5e1d4686d130bb960d93ecf49bd4a019b5536123851568173cc83",
+    "experimental/physics_gpu/island_diagnostic.mojo": "40ae419a56c0c833d7962e034a9d4daa12bab876e012d97426082b5146c096ba",
+    "experimental/physics_gpu/lifecycle.mojo": "410e537cfaab77a8e7256c04bcc0d797d805241b323240c854fa5d71264aeb36",
+    "experimental/physics_gpu/cached_tangent_kernels.mojo": "bcb5cc79899b15e2c1d93f9f55f56bf0eeb2412965958bdf3b0596a1cd94e23a",
+    "experimental/physics_gpu/coupled_box_kernels.mojo": "bf513d26a7c37a037704f7f4ab2ba6cc4bb852c6624c9c3e471436abf67ea937",
+    "experimental/physics_gpu/recommended.mojo": "49105f157c8547cd68da991e8fdd3d6604e7463cab45bf0ca42290863d297d32",
+    "experimental/physics_gpu/test_translation_boundary.mojo": "a4d009c497efd6a216155d23dbaeaeab40cdde4b33cebfc719f35ab4e91617b7",
+    "experimental/physics_gpu/box_box_kernels.mojo": "192f8077c88fa8aabdbe79e9ae38f5a5be96e098b96f7a4f933e971bc4772276",
+    "experimental/physics_gpu/test_cached_tangent.mojo": "06ae1b91f30ddd40c776cb4eb314cb961338fd2ca835544fe55494d13008f02c",
+    "experimental/physics_gpu/kernels.mojo": "622340afdb094fee435d6c71ef8d14b24b4ebc4966cf8cf99795b4b4f979865c",
+    "experimental/physics_gpu/coupled_friction_reference.mojo": "13aacfb408331710b3544dd6c36813aa566f702cf504144ffa3dd70945a5db54",
+    "experimental/physics_gpu/history_kernels.mojo": "1056b153ecf17a6839a9ceb0ce18dc6cd2ab08e2219730bf05d3faa3fb75d4cc",
+    "experimental/physics_gpu/friction_reference.mojo": "2f57ac0680a02cd389e4e45d49e079d462065fe52e9abda1710786d3e43d15d8",
+    "experimental/physics_gpu/test_g02.mojo": "14b655c69c599dcb43eec3f1dae559b30fa0b6e5f16effe26667376c2bb5d692",
+    "experimental/physics_gpu/test_ledge_events.mojo": "9eafc32d2c4fa80659c438c9fa2ba0953a5825eec5ee9572f94f05987bbd0988",
+    "experimental/physics_gpu/test_stability.mojo": "354ccc4c2e642864502c61ca6c111cca869acc2b3479c27faa7aa7703959b00a",
+    "experimental/physics_gpu/test_coupled_helpers.mojo": "a80b1a74684bb76408785813f5e852006f0d9ef448777454f59353c22799260d",
+    "experimental/physics_gpu/test_sleep.mojo": "f082f76e4bf947b35e6d8f7f20ea9d0c76c7fb8131339c2fd185acae828be318",
+    "mojo_game/math3d.mojo": "f4d40f2f702c204f260e4c05022af3eb20c4f3567d2f5dd182b290cb705d55e4",
+    "mojo_game/transform3d.mojo": "c78700e7b736d733f6f222aded03cd985376e199e9120c3d1df0a5b6266b0d05",
+    "mojo_game/rigidbody3d.mojo": "4c38e1af58bf5f3b80601d0883f98d5c8a62adeebddf83fbe253b58f62e894f3",
+    "pixi.lock": "025aa9df305f20ec4762fc5f8a3f0b02e208f8ea08a5a358d1060eda1fc44a25",
+    ".deps/physics-gpu-g01/pixi.lock": "70e04692d582d8474ed72d4fdb455411e5d71e7643933c23c95f809c876bf081"
+  },
+  "tested_build_receipts": 30,
+  "correctness": {
+    "receipt_sha256": "801dd20b366b65f3a4e3b7e5ebef03b9ac888661f9d69888acf2c12fd14915e4",
+    "full_matrix_trajectories": 280,
+    "original70_each_mode_path_byte_exact": true,
+    "source_package_controller_records": 9792,
+    "clock_disabled_full_owner_records": 160,
+    "timed_canonical_records": 720,
+    "affected_regressions": 186,
+    "basis0_45_90_rank_cache_physical_energy_and_body_meta_rollback_pass": true,
+    "work_iterations_masks_pivots_first_acceptance_and_failure_accounting_unchanged": true,
+    "numerical_mismatches": [],
+    "source_audit_sha256": "b1665854a848001c581c658d2ba92c81aa83ceb423a1671ce10a06ff1d940d42",
+    "generated_behavior_sha256": "0644a1eafe51bd2a49c8a0e2d7c16164d116508d5a64fe9af0b9ece1833248f9",
+    "limits": [
+      "Finite input coverage and source barrier audit; not exhaustive race proof",
+      "Invalid-direction and final BR_ENERGY branches not separately forced; source uniformity audited",
+      "Single pinned GPU/toolchain numerical contract; no cross-architecture claim"
+    ]
+  },
+  "performance": {
+    "interleaved": {
+      "source": [
+        {
+          "fixture": 0,
+          "label": "coupled sliding target",
+          "absolute_ms": {
+            "serial": {
+              "n": 12,
+              "median": 1106.1212194981636,
+              "minimum": 1096.9233609939693,
+              "maximum": 1124.1695099888602
+            },
+            "leader": {
+              "n": 12,
+              "median": 1371.9896905022324,
+              "minimum": 1353.4801310161129,
+              "maximum": 1389.9592499947175
+            },
+            "coop": {
+              "n": 12,
+              "median": 734.8793924975325,
+              "minimum": 730.2605880104238,
+              "maximum": 751.8556709983386
+            }
+          },
+          "coop_vs_serial": {
+            "delta_ms_candidate_minus_reference": {
+              "n": 12,
+              "median": -370.8734315005131,
+              "minimum": -382.68798499484546,
+              "maximum": -356.03072799858637
+            },
+            "paired_percent": {
+              "n": 12,
+              "median": -33.578505980610686,
+              "minimum": -34.37657809772693,
+              "maximum": -32.13603202647265
+            },
+            "faster_pairs": 12,
+            "slower_pairs": 0,
+            "batch_delta_medians_ms": [
+              -378.40853999659885,
+              -366.8995320040267,
+              -371.37390999123454,
+              -370.3729530097917
+            ],
+            "classification": "repeatable faster in bounded protocol",
+            "paired_deltas_ms": [
+              -379.486520003411,
+              -356.03072799858637,
+              -378.40853999659885,
+              -366.8995320040267,
+              -361.52426499756984,
+              -373.2494489813689,
+              -366.66277298354544,
+              -382.68798499484546,
+              -371.37390999123454,
+              -370.3729530097917,
+              -366.0292870044941,
+              -373.66310898505617
+            ]
+          },
+          "coop_vs_leader": {
+            "delta_ms_candidate_minus_reference": {
+              "n": 12,
+              "median": -634.1748595004901,
+              "minimum": -649.9335289845476,
+              "maximum": -621.8285550130531
+            },
+            "paired_percent": {
+              "n": 12,
+              "median": -46.28228740221305,
+              "minimum": -47.090008643104184,
+              "maximum": -45.30676034839756
+            },
+            "faster_pairs": 12,
+            "slower_pairs": 0,
+            "batch_delta_medians_ms": [
+              -633.7470460130135,
+              -643.9959819836076,
+              -639.8212580097606,
+              -624.8616770026274
+            ],
+            "classification": "repeatable faster in bounded protocol",
+            "paired_deltas_ms": [
+              -633.7470460130135,
+              -622.8218500036746,
+              -644.1982800024562,
+              -645.0270669884048,
+              -627.314759985893,
+              -643.9959819836076,
+              -649.9335289845476,
+              -623.3938220102573,
+              -639.8212580097606,
+              -624.8616770026274,
+              -634.6026729879668,
+              -621.8285550130531
+            ]
+          }
+        },
+        {
+          "fixture": 1,
+          "label": "zero-friction floor",
+          "absolute_ms": {
+            "serial": {
+              "n": 12,
+              "median": 4.387731503811665,
+              "minimum": 4.2104060121346265,
+              "maximum": 5.713615988497622
+            },
+            "leader": {
+              "n": 12,
+              "median": 4.258649496478029,
+              "minimum": 4.107947010197677,
+              "maximum": 5.571923000388779
+            },
+            "coop": {
+              "n": 12,
+              "median": 4.623613502189983,
+              "minimum": 4.246215015882626,
+              "maximum": 6.267544013098814
+            }
+          },
+          "coop_vs_serial": {
+            "delta_ms_candidate_minus_reference": {
+              "n": 12,
+              "median": 0.14425649715121835,
+              "minimum": -1.4674009726149961,
+              "maximum": 1.8286680133314803
+            },
+            "paired_percent": {
+              "n": 12,
+              "median": 3.409288577021252,
+              "minimum": -25.682527064631177,
+              "maximum": 41.19664557936134
+            },
+            "faster_pairs": 4,
+            "slower_pairs": 8,
+            "batch_delta_medians_ms": [
+              -0.5252030096016824,
+              0.7799730083206668,
+              0.12560001050587744,
+              0.15676800103392452
+            ],
+            "classification": "mixed/inconclusive",
+            "paired_deltas_ms": [
+              -0.8982769795693457,
+              -0.5252030096016824,
+              -0.08900901593733579,
+              0.45485098962672055,
+              0.7799730083206668,
+              1.8286680133314803,
+              0.8196370181394741,
+              0.12560001050587744,
+              -1.4674009726149961,
+              0.8295569859910756,
+              0.1317449932685122,
+              0.15676800103392452
+            ]
+          },
+          "coop_vs_leader": {
+            "delta_ms_candidate_minus_reference": {
+              "n": 12,
+              "median": 0.29290600650710985,
+              "minimum": -0.8430120069533587,
+              "maximum": 1.3992570020491257
+            },
+            "paired_percent": {
+              "n": 12,
+              "median": 6.309721850197514,
+              "minimum": -16.067278182017752,
+              "maximum": 33.06880012948514
+            },
+            "faster_pairs": 3,
+            "slower_pairs": 9,
+            "batch_delta_medians_ms": [
+              0.19273800717201084,
+              0.5577309930231422,
+              0.11761601490434259,
+              -0.5629150109598413
+            ],
+            "classification": "mixed/inconclusive",
+            "paired_deltas_ms": [
+              0.19273800717201084,
+              0.7035719900159165,
+              0.044272979721426964,
+              0.5577309930231422,
+              0.39307400584220886,
+              0.6956210127100348,
+              1.3992570020491257,
+              0.11761601490434259,
+              -0.008032977348193526,
+              0.7952199957799166,
+              -0.5629150109598413,
+              -0.8430120069533587
+            ]
+          }
+        },
+        {
+          "fixture": 2,
+          "label": "centered rebound",
+          "absolute_ms": {
+            "serial": {
+              "n": 12,
+              "median": 46.47356400528224,
+              "minimum": 44.398853002348915,
+              "maximum": 48.44572499860078
+            },
+            "leader": {
+              "n": 12,
+              "median": 65.82141049875645,
+              "minimum": 63.42057698930148,
+              "maximum": 68.45812799292617
+            },
+            "coop": {
+              "n": 12,
+              "median": 58.36226599785732,
+              "minimum": 56.80895100522321,
+              "maximum": 60.78417600656394
+            }
+          },
+          "coop_vs_serial": {
+            "delta_ms_candidate_minus_reference": {
+              "n": 12,
+              "median": 12.321291011176072,
+              "minimum": 10.00697498966474,
+              "maximum": 15.580416002194397
+            },
+            "paired_percent": {
+              "n": 12,
+              "median": 27.128754864020223,
+              "minimum": 20.656053738392323,
+              "maximum": 35.09193357173015
+            },
+            "faster_pairs": 0,
+            "slower_pairs": 12,
+            "batch_delta_medians_ms": [
+              12.078733008820564,
+              12.869343991042115,
+              12.56384901353158,
+              11.901854973984882
+            ],
+            "classification": "repeatable slower in bounded protocol",
+            "paired_deltas_ms": [
+              12.078733008820564,
+              14.258378010708839,
+              10.508433973882347,
+              15.580416002194397,
+              12.869343991042115,
+              10.00697498966474,
+              12.56384901353158,
+              13.219086002209224,
+              10.777343006338924,
+              12.586961995111778,
+              10.500182994292118,
+              11.901854973984882
+            ]
+          },
+          "coop_vs_leader": {
+            "delta_ms_candidate_minus_reference": {
+              "n": 12,
+              "median": -6.9159749982645735,
+              "minimum": -11.649176987702958,
+              "maximum": -4.012505989521742
+            },
+            "paired_percent": {
+              "n": 12,
+              "median": -10.569172476748955,
+              "minimum": -17.016499470898005,
+              "maximum": -6.192455949772446
+            },
+            "faster_pairs": 12,
+            "slower_pairs": 0,
+            "batch_delta_medians_ms": [
+              -5.646115998388268,
+              -7.549071015091613,
+              -6.961784994928166,
+              -6.870165001600981
+            ],
+            "classification": "repeatable faster in bounded protocol",
+            "paired_deltas_ms": [
+              -11.649176987702958,
+              -4.012505989521742,
+              -5.646115998388268,
+              -6.4334959897678345,
+              -8.860936010023579,
+              -7.549071015091613,
+              -9.049781991052441,
+              -4.183960976661183,
+              -6.961784994928166,
+              -6.870165001600981,
+              -8.545020973542705,
+              -5.4138520354172215
+            ]
+          }
+        },
+        {
+          "fixture": 3,
+          "label": "empty separated bodies",
+          "absolute_ms": {
+            "serial": {
+              "n": 12,
+              "median": 1.7471864994149655,
+              "minimum": 1.675656996667385,
+              "maximum": 2.956387004815042
+            },
+            "leader": {
+              "n": 12,
+              "median": 1.7638900026213378,
+              "minimum": 1.6469390102429315,
+              "maximum": 1.9838040170725435
+            },
+            "coop": {
+              "n": 12,
+              "median": 1.7671140012680553,
+              "minimum": 1.6504910017829388,
+              "maximum": 3.21744401298929
+            }
+          },
+          "coop_vs_serial": {
+            "delta_ms_candidate_minus_reference": {
+              "n": 12,
+              "median": 0.04639250255422667,
+              "minimum": -1.1766160023398697,
+              "maximum": 1.4306010270956904
+            },
+            "paired_percent": {
+              "n": 12,
+              "median": 2.7450032441247996,
+              "minimum": -39.7991196830295,
+              "maximum": 80.06305189598106
+            },
+            "faster_pairs": 5,
+            "slower_pairs": 7,
+            "batch_delta_medians_ms": [
+              -0.0008800270734354854,
+              0.008144997991621494,
+              0.08473698107991368,
+              0.08464000711683184
+            ],
+            "classification": "mixed/inconclusive",
+            "paired_deltas_ms": [
+              -0.08839998918119818,
+              0.3614910237956792,
+              -0.0008800270734354854,
+              0.008144997991621494,
+              1.4306010270956904,
+              -1.1766160023398697,
+              -0.18401697161607444,
+              0.09256099292542785,
+              0.08473698107991368,
+              0.09196900646202266,
+              -0.39494600787293166,
+              0.08464000711683184
+            ]
+          },
+          "coop_vs_leader": {
+            "delta_ms_candidate_minus_reference": {
+              "n": 12,
+              "median": 0.0019759972929023206,
+              "minimum": -0.13987299462314695,
+              "maximum": 1.2336399959167466
+            },
+            "paired_percent": {
+              "n": 12,
+              "median": 0.1122405335158394,
+              "minimum": -7.680830640847114,
+              "maximum": 62.18557807626595
+            },
+            "faster_pairs": 5,
+            "slower_pairs": 7,
+            "batch_delta_medians_ms": [
+              -0.08670399256516248,
+              0.08371200237888843,
+              -1.5017576515674591e-05,
+              0.00031999661587178707
+            ],
+            "classification": "mixed/inconclusive",
+            "paired_deltas_ms": [
+              -0.08670399256516248,
+              0.4896669997833669,
+              -0.08937602979131043,
+              0.003631997969932854,
+              1.2336399959167466,
+              0.08371200237888843,
+              -0.012702992535196245,
+              0.14780901256017387,
+              -1.5017576515674591e-05,
+              0.00612800067756325,
+              -0.13987299462314695,
+              0.00031999661587178707
+            ]
+          }
+        }
+      ],
+      "packaged": [
+        {
+          "fixture": 0,
+          "label": "coupled sliding target",
+          "absolute_ms": {
+            "serial": {
+              "n": 12,
+              "median": 1113.82186699484,
+              "minimum": 1103.9617159985937,
+              "maximum": 1142.383251019055
+            },
+            "leader": {
+              "n": 12,
+              "median": 1378.5601734925876,
+              "minimum": 1357.2491550003178,
+              "maximum": 1401.2314729916397
+            },
+            "coop": {
+              "n": 12,
+              "median": 742.7104979942669,
+              "minimum": 731.2760130007518,
+              "maximum": 767.4020459962776
+            }
+          },
+          "coop_vs_serial": {
+            "delta_ms_candidate_minus_reference": {
+              "n": 12,
+              "median": -368.5891315108165,
+              "minimum": -397.2373790311394,
+              "maximum": -350.0087750144303
+            },
+            "paired_percent": {
+              "n": 12,
+              "median": -33.137452434039595,
+              "minimum": -34.772689347185946,
+              "maximum": -31.399304192187405
+            },
+            "faster_pairs": 12,
+            "slower_pairs": 0,
+            "batch_delta_medians_ms": [
+              -384.73736100422684,
+              -369.7962860169355,
+              -366.4458370039938,
+              -362.30298600276
+            ],
+            "classification": "repeatable faster in bounded protocol",
+            "paired_deltas_ms": [
+              -380.71824399230536,
+              -384.73736100422684,
+              -387.74848499451764,
+              -363.56355602038093,
+              -372.33477299741935,
+              -369.7962860169355,
+              -350.0087750144303,
+              -367.38197700469755,
+              -366.4458370039938,
+              -350.30617300071754,
+              -397.2373790311394,
+              -362.30298600276
+            ]
+          },
+          "coop_vs_leader": {
+            "delta_ms_candidate_minus_reference": {
+              "n": 12,
+              "median": -633.8334629981546,
+              "minimum": -658.0887169984635,
+              "maximum": -612.1500089939218
+            },
+            "paired_percent": {
+              "n": 12,
+              "median": -46.08484416111585,
+              "minimum": -46.97771754366754,
+              "maximum": -44.37309971592705
+            },
+            "faster_pairs": 12,
+            "slower_pairs": 0,
+            "batch_delta_medians_ms": [
+              -638.4605919884052,
+              -646.8340210121823,
+              -614.3764100124827,
+              -621.5933469939046
+            ],
+            "classification": "repeatable faster in bounded protocol",
+            "paired_deltas_ms": [
+              -638.4605919884052,
+              -640.2688089729054,
+              -634.3275339895627,
+              -646.8340210121823,
+              -629.2453759961063,
+              -655.1868340175133,
+              -614.3764100124827,
+              -658.0887169984635,
+              -612.1500089939218,
+              -621.5933469939046,
+              -633.3393920067465,
+              -615.5904250044841
+            ]
+          }
+        },
+        {
+          "fixture": 1,
+          "label": "zero-friction floor",
+          "absolute_ms": {
+            "serial": {
+              "n": 12,
+              "median": 4.842122507398017,
+              "minimum": 3.8221440045163035,
+              "maximum": 6.218775000888854
+            },
+            "leader": {
+              "n": 12,
+              "median": 4.25981550506549,
+              "minimum": 4.183920987998135,
+              "maximum": 5.888871994102374
+            },
+            "coop": {
+              "n": 12,
+              "median": 4.366943001514301,
+              "minimum": 4.1485109977656975,
+              "maximum": 6.117320983321406
+            }
+          },
+          "coop_vs_serial": {
+            "delta_ms_candidate_minus_reference": {
+              "n": 12,
+              "median": -0.1465605164412409,
+              "minimum": -1.7712549888528883,
+              "maximum": 1.2737969809677452
+            },
+            "paired_percent": {
+              "n": 12,
+              "median": -2.8813542002147363,
+              "minimum": -28.48237777696928,
+              "maximum": 26.29897116951947
+            },
+            "faster_pairs": 6,
+            "slower_pairs": 6,
+            "batch_delta_medians_ms": [
+              0.4225779994158074,
+              0.22262598213274032,
+              -1.0093320161104202,
+              -0.5040179967181757
+            ],
+            "classification": "mixed/inconclusive",
+            "paired_deltas_ms": [
+              0.4225779994158074,
+              -0.6150420085759833,
+              1.2737969809677452,
+              0.2832169702742249,
+              0.22262598213274032,
+              0.08145699393935502,
+              0.4484990058699623,
+              -1.0093320161104202,
+              -1.7712549888528883,
+              -0.5040179967181757,
+              -0.6074750126572326,
+              -0.37457802682183683
+            ]
+          },
+          "coop_vs_leader": {
+            "delta_ms_candidate_minus_reference": {
+              "n": 12,
+              "median": -0.027103502361569554,
+              "minimum": -1.2034610117552802,
+              "maximum": 1.1800210195360705
+            },
+            "paired_percent": {
+              "n": 12,
+              "median": -0.6364529086920756,
+              "minimum": -21.92165638649254,
+              "maximum": 27.746404766301524
+            },
+            "faster_pairs": 7,
+            "slower_pairs": 5,
+            "batch_delta_medians_ms": [
+              -0.01999900268856436,
+              0.02120101999025792,
+              0.20192100782878697,
+              -1.0658430255716667
+            ],
+            "classification": "mixed/inconclusive",
+            "paired_deltas_ms": [
+              -0.01999900268856436,
+              -0.8164190221577883,
+              0.22844898921903223,
+              0.2587529888842255,
+              -0.40068902308121324,
+              0.02120101999025792,
+              1.1800210195360705,
+              -0.08568100747652352,
+              0.20192100782878697,
+              -0.03420800203457475,
+              -1.2034610117552802,
+              -1.0658430255716667
+            ]
+          }
+        },
+        {
+          "fixture": 2,
+          "label": "centered rebound",
+          "absolute_ms": {
+            "serial": {
+              "n": 12,
+              "median": 47.24484200414736,
+              "minimum": 44.758506992366165,
+              "maximum": 48.63488300179597
+            },
+            "leader": {
+              "n": 12,
+              "median": 66.77423149812967,
+              "minimum": 62.74868699256331,
+              "maximum": 68.95287201041356
+            },
+            "coop": {
+              "n": 12,
+              "median": 59.68084499181714,
+              "minimum": 57.18866499955766,
+              "maximum": 62.22865599556826
+            }
+          },
+          "coop_vs_serial": {
+            "delta_ms_candidate_minus_reference": {
+              "n": 12,
+              "median": 12.671776006754953,
+              "minimum": 8.795460002147593,
+              "maximum": 16.13652599917259
+            },
+            "paired_percent": {
+              "n": 12,
+              "median": 27.318204319562668,
+              "minimum": 18.1749896553004,
+              "maximum": 36.05242239631625
+            },
+            "faster_pairs": 0,
+            "slower_pairs": 12,
+            "batch_delta_medians_ms": [
+              12.389668001560494,
+              11.847727990243584,
+              11.692908985423855,
+              13.385629004915245
+            ],
+            "classification": "repeatable slower in bounded protocol",
+            "paired_deltas_ms": [
+              14.188026980264112,
+              10.058664993266575,
+              12.389668001560494,
+              8.795460002147593,
+              11.847727990243584,
+              16.029394028009847,
+              9.93406902125571,
+              11.692908985423855,
+              16.13652599917259,
+              12.953884011949413,
+              13.385629004915245,
+              13.857293990440667
+            ]
+          },
+          "coop_vs_leader": {
+            "delta_ms_candidate_minus_reference": {
+              "n": 12,
+              "median": -7.064159493893385,
+              "minimum": -11.475004022940993,
+              "maximum": -3.6738229828188196
+            },
+            "paired_percent": {
+              "n": 12,
+              "median": -10.324224052675756,
+              "minimum": -16.64180720595364,
+              "maximum": -5.667422148174984
+            },
+            "faster_pairs": 12,
+            "slower_pairs": 0,
+            "batch_delta_medians_ms": [
+              -8.465636012260802,
+              -3.9857439987827092,
+              -8.486192979034968,
+              -6.74347898166161
+            ],
+            "classification": "repeatable faster in bounded protocol",
+            "paired_deltas_ms": [
+              -4.150769003899768,
+              -8.465636012260802,
+              -11.334030001307838,
+              -8.606098999734968,
+              -3.9857439987827092,
+              -3.6738229828188196,
+              -8.486192979034968,
+              -11.475004022940993,
+              -6.152231013402343,
+              -7.38484000612516,
+              -6.74347898166161,
+              -6.263637013034895
+            ]
+          }
+        },
+        {
+          "fixture": 3,
+          "label": "empty separated bodies",
+          "absolute_ms": {
+            "serial": {
+              "n": 12,
+              "median": 1.7699105155770667,
+              "minimum": 1.6398629959439859,
+              "maximum": 2.6803299988387153
+            },
+            "leader": {
+              "n": 12,
+              "median": 1.896054993267171,
+              "minimum": 1.6488379915244877,
+              "maximum": 2.981850993819535
+            },
+            "coop": {
+              "n": 12,
+              "median": 1.7275744903599843,
+              "minimum": 1.6477499884786084,
+              "maximum": 2.5749859923962504
+            }
+          },
+          "coop_vs_serial": {
+            "delta_ms_candidate_minus_reference": {
+              "n": 12,
+              "median": -0.06921601016074419,
+              "minimum": -0.6432489899452776,
+              "maximum": 0.804674971732311
+            },
+            "paired_percent": {
+              "n": 12,
+              "median": -3.847451273605079,
+              "minimum": -23.9988729083349,
+              "maximum": 45.4538757506308
+            },
+            "faster_pairs": 8,
+            "slower_pairs": 4,
+            "batch_delta_medians_ms": [
+              -0.07868802640587091,
+              -0.24115298583637923,
+              0.12316899665165693,
+              -0.12176002201158553
+            ],
+            "classification": "mixed/inconclusive",
+            "paired_deltas_ms": [
+              -0.07868802640587091,
+              0.00937501317821443,
+              -0.366273001418449,
+              -0.6432489899452776,
+              -0.24115298583637923,
+              -0.000654981704428792,
+              0.12316899665165693,
+              0.804674971732311,
+              -0.059743993915617466,
+              -0.1772010000422597,
+              -0.12176002201158553,
+              0.0034869881346821785
+            ]
+          },
+          "coop_vs_leader": {
+            "delta_ms_candidate_minus_reference": {
+              "n": 12,
+              "median": -0.22001699107931927,
+              "minimum": -1.196659984998405,
+              "maximum": 0.8228200022131205
+            },
+            "paired_percent": {
+              "n": 12,
+              "median": -11.034651107574806,
+              "minimum": -40.13144813334788,
+              "maximum": 46.96016283977309
+            },
+            "faster_pairs": 8,
+            "slower_pairs": 4,
+            "batch_delta_medians_ms": [
+              -0.0750399922253564,
+              -0.36499398993328214,
+              0.11927999730687588,
+              -0.3735210048034787
+            ],
+            "classification": "mixed/inconclusive",
+            "paired_deltas_ms": [
+              -0.0750399922253564,
+              -0.00040100712794810534,
+              -0.3868649946525693,
+              0.26624201564118266,
+              -0.36499398993328214,
+              -0.7244659936986864,
+              0.11927999730687588,
+              0.8228200022131205,
+              -1.196659984998405,
+              0.0015680125216022134,
+              -0.3735210048034787,
+              -0.9213000012096018
+            ]
+          }
+        }
+      ]
+    },
+    "receipt_sha256": "dbefbf452fdd2601615fcc04082d1f23c4b0718e9da1fcf8c6679ff98a84e3c3",
+    "counts": {
+      "interleaved_all_calls": 480,
+      "interleaved_measured": 288,
+      "interleaved_excluded": 192,
+      "plain_profile_all_calls": 120,
+      "traced_profile_all_calls": 120,
+      "plain_and_traced_warmed": 168,
+      "all_timed_canonical_records": 720
+    },
+    "target_benefit_operational_rule_pass_both_paths_and_controls": true,
+    "decision": "Retain explicit opt-in mode for qualified expensive connected target; centered rebound regresses and cheapcontrols are inconclusive. No automatic selector or default recommendation.",
+    "instrumentation": {
+      "source": "/home/user/mojo-game-engine/build/physics-cooperative-integration/INSTRUMENTATION.md",
+      "aggregate_plain_trace_target_deltas": {
+        "serial": {
+          "ms": -12.748602995998226,
+          "percent": -1.1436673126843933
+        },
+        "leader": {
+          "ms": -13.101554999593645,
+          "percent": -0.9565807913786362
+        },
+        "coop": {
+          "ms": -0.3635430184658617,
+          "percent": -0.04909861443888053
+        }
+      },
+      "limitations": [
+        "Plain/traced same-binary paired processes estimate aggregate tracer effect with variance, not pure overhead",
+        "Clock/NVTX marker isolated cost unmeasured; both runs retain them",
+        "Debug counters/canaries remain enabled; leader-only delta includes staging/barriers/debug/control/codegen and cannot isolate individual costs",
+        "CUDA synchronization waits overlap device work and must not be summed as additive overhead",
+        "CUPTI/local PTX declarations are not dynamic spill traffic or allocator footprint",
+        "Seven traced warmed observations and twelve interleaved permode/fixture/path; no p95/confidence/general-scene claim"
+      ]
+    },
+    "GPU_target_solver_median_ms": {
+      "serial": 1089.228416,
+      "leader": 1342.761696,
+      "coop": 726.884544
+    },
+    "memory": {
+      "serial": {
+        "maximum_sampled_device_MiB": 929,
+        "maximum_sampled_host_RSS_kB": 2992012
+      },
+      "leader": {
+        "maximum_sampled_device_MiB": 1047,
+        "maximum_sampled_host_RSS_kB": 3112376
+      },
+      "coop": {
+        "maximum_sampled_device_MiB": 1047,
+        "maximum_sampled_host_RSS_kB": 3112696
+      }
+    },
+    "exact_incremental_storage": {
+      "new_global_bytes": 144,
+      "new_shared_bytes": 4176,
+      "new_owner_buffers": 1,
+      "retained_tangent_cache_bytes": 14608
+    },
+    "GPU_only_API_timing_or_general_PhysX_parity_claim": false
+  },
+  "retained_original_coverage": "63/70",
+  "retained_known_limits": [
+    "strictSAME-TIME translatedcase68failure",
+    "two baseline64convergence rejects",
+    "four oldledgefixtureswithoutdetachment",
+    "separate12/12ledge and75/75translation suites notadded to63/70",
+    "bounded expensive serial optin only"
+  ],
+  "historical_non_numeric_runner_snapshot": [
+    {
+      "receipt": "build/physics-cooperative-integration/source-coop-rank-build.json",
+      "non_numeric_runner_snapshot": "build/physics-cooperative-integration/run-checks-rank-preserved.py",
+      "sha256": "b6bb9e862e1890d6b8d512cc0e129e239ecc31c82a1f19f5f6b3142cd633255c"
+    }
+  ],
+  "retained_frontend_diagnostics": {
+    "controller-compile-3": {
+      "returncode": 1,
+      "fault": null
+    },
+    "controller-compile-2": {
+      "returncode": 1,
+      "fault": null
+    },
+    "controller-compile-1": {
+      "returncode": 1,
+      "fault": null
+    }
+  },
+  "preservation": {
+    "protected_hashes": 368,
+    "protected_changes": [],
+    "asset_save_identities": 5901,
+    "asset_save_changes": [],
+    "campaign_sources": 17,
+    "unrelated_sources_locks": 119,
+    "pins": [
+      {
+        "version": "1.2.0.dev2026092905",
+        "metadata_sha256": "40307d16e09c2e88bfe8085346d028d7479d93867fdd6e210305ed3fbaf9c534"
+      },
+      {
+        "version": "26.7.0.dev2026092905",
+        "metadata_sha256": "dab5b010e4a7b5f6b7dcc4f60f2e30f9e5e69b689ef2bd57e46025d251dc2403"
+      }
+    ],
+    "SDK_campaign_assets_saves_dirtywork_locks_and_prior_evidence_preserved": true
+  },
+  "resources": {
+    "code_generation_threads": 1,
+    "archive_process_CPU_affinity": [
+      0
+    ],
+    "compile_guard_s": 180,
+    "native_guard_s": 30,
+    "reserve_GiB": 32,
+    "minimum_sampled_available_GiB": 110.8711166381836,
+    "normal_settings_unchanged": true,
+    "retired_thermal_cutoffs_reintroduced": false
+  },
+  "cleanup": {
+    "owned_jobs": [],
+    "GPU_compute_apps": "",
+    "H3_resumed": false,
+    "OS_driver_firmware_settings_changes": false,
+    "installs_dependencies_external_source_copy_or_publication": false,
+    "remaining_blockers": [],
+    "fixed_measurement_budget_complete_no_further_work_started": true
+  }
+}

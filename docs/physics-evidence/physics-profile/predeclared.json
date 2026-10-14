@@ -1,0 +1,9 @@
+{
+  "recorded_at_UTC": "2026-10-13T15:12:02.413528+00:00",
+  "design_sha256": "ff182565a15d69543bf5b1329d8d40e4f0adc0e729ceec4fc70e3fdd93bd3ad5",
+  "warmed_samples_per_fixture": 7,
+  "warmups_excluded": 2,
+  "cold_samples_per_fixture": 1,
+  "fixtures": 4,
+  "production_changes": false
+}

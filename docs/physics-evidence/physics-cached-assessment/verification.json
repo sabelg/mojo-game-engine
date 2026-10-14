@@ -1,0 +1,67 @@
+{
+  "status": "read_only_next_cached_solver_cost_assessment_complete",
+  "recorded_at_UTC": "2026-10-13T16:37:23.727291+00:00",
+  "physics_harness_source_changes": [],
+  "new_GPU_runs": 0,
+  "saved_bounded_profile_samples_reused": 7,
+  "measured_dominant_phase": "cached velocity kernel1127.899104ms median,98.86% of device kernel sum",
+  "subroutine_wall_attribution": "unmeasured; existing counters/source establish work quantities only",
+  "first_recommendation": "resolve-local exact original tangent_axes and separately computed tangent_metric reuse in fallback/terminal residuals",
+  "estimated_schedule_reduction_not_speedup": {
+    "basis": {
+      "current": 962,
+      "proposed": 2
+    },
+    "terminal_metric": {
+      "current": 768,
+      "proposed": 8
+    },
+    "additional_capacity_payload_bytes": 2304
+  },
+  "ranked_secondary_candidates": [
+    "mask-indexed geometric Jacobian dP/dx,dFree/dx tables; dynamic masks/nonlinear terms retained; max192KiB payload and unknown benefit",
+    "new cooperative independent inner work only with explicit exact-order execution qualification; preserve serial shared-body/sweep/Newton/halving dependencies"
+  ],
+  "rank_factorization_cache_not_justified": "Jacobian depends on current disk regime/multiplier/direction/radius and active masks; no equality/hit-rate evidence",
+  "launch_overhead_not_dominant": "0.039008ms launch API sum; wait time overlaps device execution",
+  "no_optimization_implemented": true,
+  "acceptance_target": "unchanged solver law/precision/policies and bit-identical140trajectory/320sample records, basis/rank/lifecycle/rollback/physical gates",
+  "retained_coverage": {
+    "original": 63,
+    "cases": 70,
+    "known_failures_unchanged": true
+  },
+  "preservation": {
+    "protected_hashes": 132,
+    "changes": [],
+    "unrelated_sources_locks": 119,
+    "asset_save_identities": 5901,
+    "asset_save_changes": [],
+    "campaign_sources": 17,
+    "campaign_changes": [],
+    "pins": [
+      "1.2.0.dev2026092905",
+      "26.7.0.dev2026092905"
+    ],
+    "SDK_campaign_dirty_work_baselines_code_exes_and_locks_unchanged": true
+  },
+  "resources": {
+    "no_compilation_or_new_physics_jobs": true,
+    "available_GiB_at_cleanup": 114.43778991699219,
+    "reserve_GiB": 32,
+    "clock_cache_boost_thermal_settings_changed": false,
+    "normal_settings_preserved": true
+  },
+  "cleanup": {
+    "owned_jobs": [],
+    "GPU_compute_apps": "",
+    "H3_resumed": false,
+    "OS_driver_firmware_changes": false,
+    "installs_or_publication": false
+  },
+  "evidence": {
+    "assessment": "/home/user/mojo-game-engine/build/physics-cached-assessment/ASSESSMENT.md",
+    "quantities": "/home/user/mojo-game-engine/build/physics-cached-assessment/assessment.json",
+    "prior_profile": "/home/user/mojo-game-engine/build/physics-invariant-reuse/cached-GPU-phases-fixture-0.json"
+  }
+}

@@ -1,0 +1,752 @@
+{
+  "physics-box-box/verification.json": {
+    "original": "build/physics-box-box/verification.json",
+    "bytes": 20028,
+    "sha256": "36cdde18e6475be9d81ecd3e90200174a08c57c175c16b90ad94e1d297aee6c5"
+  },
+  "physics-box-interactions/verification.json": {
+    "original": "build/physics-box-interactions/verification.json",
+    "bytes": 15399,
+    "sha256": "f28d7a8bb81f9568f1fa8866c728f9a4f29585e6d480232632ce15fa6cadd539"
+  },
+  "physics-box-interactions/predeclared.json": {
+    "original": "build/physics-box-interactions/predeclared.json",
+    "bytes": 389,
+    "sha256": "3f0d81c3baddeda0ae70ececd84ac4fdf467ecef8c523378b8e68e30e9b2e4af"
+  },
+  "physics-box-response/verification.json": {
+    "original": "build/physics-box-response/verification.json",
+    "bytes": 51780,
+    "sha256": "24584afa1c5292b5945bc498cc2311a64961915d5e109d7665155d011da6a8a7"
+  },
+  "physics-box-review/verification.json": {
+    "original": "build/physics-box-review/verification.json",
+    "bytes": 29424,
+    "sha256": "c3ba6740a38053a4ef51cfec508da3c78b7623e22b2cd3b91aea94be7bcdab5d"
+  },
+  "physics-cached-assessment/verification.json": {
+    "original": "build/physics-cached-assessment/verification.json",
+    "bytes": 2861,
+    "sha256": "4afd051a8b6bfb9d5bbe43a4acae9ce74ef3c6409244a5755fd4a1d9d320edb2"
+  },
+  "physics-convergence-diagnostic/verification.json": {
+    "original": "build/physics-convergence-diagnostic/verification.json",
+    "bytes": 28409,
+    "sha256": "e1f40e7b52c5b3145d70bd6cf8b17ec74063993fb8c6c7eb5af00c826b8932dd"
+  },
+  "physics-convergence-diagnostic/analysis.json": {
+    "original": "build/physics-convergence-diagnostic/analysis.json",
+    "bytes": 713695,
+    "sha256": "dd0496d47b9459a2ac31edad741009991c27a3ab9f4053cd903ab5d163628c70"
+  },
+  "physics-cooperative-cost-assessment/verification.json": {
+    "original": "build/physics-cooperative-cost-assessment/verification.json",
+    "bytes": 2012,
+    "sha256": "1de6b2f8026831b541fb5ea02cc05f3adb8519fefc3ff9c2158cd03ea4269c2a"
+  },
+  "physics-cooperative-design/verification.json": {
+    "original": "build/physics-cooperative-design/verification.json",
+    "bytes": 4239,
+    "sha256": "12ce2e6c147fbf88d5d638e58000f6bef8df772e1e386f3714a420b5d4e363ac"
+  },
+  "physics-cooperative-design/DESIGN.md": {
+    "original": "build/physics-cooperative-design/DESIGN.md",
+    "bytes": 18862,
+    "sha256": "0ef0ac04cee68a2e8df058ab71386753a62cdc644b2918a2f507fc6f9e939386"
+  },
+  "physics-cooperative-integration/verification.json": {
+    "original": "build/physics-cooperative-integration/verification.json",
+    "bytes": 42939,
+    "sha256": "5093fa396ec7a736c3098ab6c7a6cb920c40d825cc1098d4115ea7253bde9111"
+  },
+  "physics-cooperative-integration/predeclared.json": {
+    "original": "build/physics-cooperative-integration/predeclared.json",
+    "bytes": 1054,
+    "sha256": "db239684004d1b5ad8290f95c22bb0091a7e6196bb2dd25213defd632b61d65c"
+  },
+  "physics-cooperative-integration/correctness-barrier.json": {
+    "original": "build/physics-cooperative-integration/correctness-barrier.json",
+    "bytes": 14696,
+    "sha256": "801dd20b366b65f3a4e3b7e5ebef03b9ac888661f9d69888acf2c12fd14915e4"
+  },
+  "physics-cooperative-integration/RESULTS.md": {
+    "original": "build/physics-cooperative-integration/RESULTS.md",
+    "bytes": 10272,
+    "sha256": "18518fd8ef9cd28c55e7f6781df8511e1613b1632ba6f158b833a98f5fb931e2"
+  },
+  "physics-cooperative-proof/verification.json": {
+    "original": "build/physics-cooperative-proof/verification.json",
+    "bytes": 23975,
+    "sha256": "ebd06e0bda7d24cf9e5be4274d2ff441eadc5bea5ecce1ef5991ef44980e92b6"
+  },
+  "physics-cooperative-proof/predeclared.json": {
+    "original": "build/physics-cooperative-proof/predeclared.json",
+    "bytes": 985,
+    "sha256": "bef9897d80f994243ca6316fd5298d28c23349439ef49784463c6ee33a1b4755"
+  },
+  "physics-cooperative-proof/RESULTS.md": {
+    "original": "build/physics-cooperative-proof/RESULTS.md",
+    "bytes": 10968,
+    "sha256": "4f2600dae906db59891dacac219bc8de8647784952f85023162f17e64f84470e"
+  },
+  "physics-cooperative-unread-copy/verification.json": {
+    "original": "build/physics-cooperative-unread-copy/verification.json",
+    "bytes": 43575,
+    "sha256": "f063adbe0aec1c6fcaaa19c0dd6b4a57b8d29bb49d03f97d966e8ddad0913ff5"
+  },
+  "physics-cooperative-unread-copy/predeclared.json": {
+    "original": "build/physics-cooperative-unread-copy/predeclared.json",
+    "bytes": 725,
+    "sha256": "057eabbca13b3ec1e3f23bd0e05c6c821622fefaaa04496900747e21bbf32348"
+  },
+  "physics-cooperative-unread-copy/correctness-barrier.json": {
+    "original": "build/physics-cooperative-unread-copy/correctness-barrier.json",
+    "bytes": 14868,
+    "sha256": "283faeb45304628ac010291002c8dc408b15bdc718bc7f5804659a094d873d72"
+  },
+  "physics-cooperative-unread-copy/RESULTS.md": {
+    "original": "build/physics-cooperative-unread-copy/RESULTS.md",
+    "bytes": 4483,
+    "sha256": "c70a37691918d0d1f62a1cad209ffc6ad4854ae36d2c0eaf6151604db725bf00"
+  },
+  "physics-early-inner/verification.json": {
+    "original": "build/physics-early-inner/verification.json",
+    "bytes": 426508,
+    "sha256": "1d6ae3fbffca9037b7acd014e2020b4ef2bb8aa5ef50948d9ab49ce61171fc37"
+  },
+  "physics-early-inner/predeclared.json": {
+    "original": "build/physics-early-inner/predeclared.json",
+    "bytes": 862,
+    "sha256": "eb0949c16c652431e43fc6bbcf3e7902eb47cef6657dcdc90989b594693c1334"
+  },
+  "physics-early-inner/correctness-barrier.json": {
+    "original": "build/physics-early-inner/correctness-barrier.json",
+    "bytes": 11849,
+    "sha256": "ef5e18bfc4379ba1ad2bebcc0ff8e82967e499f945e5d7255b306628c4215468"
+  },
+  "physics-early-inner/RESULTS.md": {
+    "original": "build/physics-early-inner/RESULTS.md",
+    "bytes": 3723,
+    "sha256": "b9308641c2d652d8b4fe7cc8e3ec3602df7037a410985dc1eaf91608b441b903"
+  },
+  "physics-early-inner-profile/verification.json": {
+    "original": "build/physics-early-inner-profile/verification.json",
+    "bytes": 5676,
+    "sha256": "6f08f6754a419f5ee942b2fa3ff726441e99e6a3b53340a9faefbdc4c0a6598f"
+  },
+  "physics-early-inner-profile/analysis.json": {
+    "original": "build/physics-early-inner-profile/analysis.json",
+    "bytes": 7487,
+    "sha256": "422622ce8c4379f23dd945ffac4556d88a387a8c17c3b242a2b9c5080e9a62cc"
+  },
+  "physics-frozen-floor-friction/verification.json": {
+    "original": "build/physics-frozen-floor-friction/verification.json",
+    "bytes": 12214,
+    "sha256": "c41f0fb1cb740a1c13dbb7db0b27f355cd97fd1f1f8399d1e3a0b5b13823a0ab"
+  },
+  "physics-frozen-floor-friction/analysis.json": {
+    "original": "build/physics-frozen-floor-friction/analysis.json",
+    "bytes": 6777,
+    "sha256": "e58e8de666abd5480827e0f9fe0485e08200db07fdcc2a46d1bc1cf921bbd031"
+  },
+  "physics-frozen-floor-friction/predeclared.json": {
+    "original": "build/physics-frozen-floor-friction/predeclared.json",
+    "bytes": 1283,
+    "sha256": "3b92a9168dd2354779459c5c99124463ba1f66dafaa41f67e7ea9f6df91be0f0"
+  },
+  "physics-frozen-floor-friction/package-dependencies.json": {
+    "original": "build/physics-frozen-floor-friction/package-dependencies.json",
+    "bytes": 604,
+    "sha256": "3d9c062cce891e52591a7ce465b6ef379e9e5ec3479ca4fbc1ee0015b8781763"
+  },
+  "physics-frozen-floor-friction/RESULTS.md": {
+    "original": "build/physics-frozen-floor-friction/RESULTS.md",
+    "bytes": 9929,
+    "sha256": "0727730f35653deaf561e79b6e2667cb1bae7fd8fa204387cd379b52c2485a58"
+  },
+  "physics-g05-islands/verification.json": {
+    "original": "build/physics-g05-islands/verification.json",
+    "bytes": 13315,
+    "sha256": "679f9184d1f1f69938ee91192a179274624f2adbfa3cf5c399eae8681aca4f78"
+  },
+  "physics-g05-sleep/verification.json": {
+    "original": "build/physics-g05-sleep/verification.json",
+    "bytes": 14967,
+    "sha256": "f81bc505fcfa44fbf7b7e2d2e58ef0284d6472357d9c20ff5e46d15ee7a134b0"
+  },
+  "physics-invariant-reuse/verification.json": {
+    "original": "build/physics-invariant-reuse/verification.json",
+    "bytes": 8595,
+    "sha256": "bccac5c2c5d94c1f200e2d584809695fcacad875c164c63951dec75d74df6b6d"
+  },
+  "physics-invariant-reuse/predeclared.json": {
+    "original": "build/physics-invariant-reuse/predeclared.json",
+    "bytes": 299,
+    "sha256": "812be3d7d290dbff861897ae95373320c31d3c81bbe9d41d440d1a9d29046fac"
+  },
+  "physics-invariant-reuse/RESULTS.md": {
+    "original": "build/physics-invariant-reuse/RESULTS.md",
+    "bytes": 12035,
+    "sha256": "094554f38f3502a35d47c2a005226ba28d96c88928a21ae6cd70dcc9a79b28b0"
+  },
+  "physics-ledge-events/verification.json": {
+    "original": "build/physics-ledge-events/verification.json",
+    "bytes": 45942,
+    "sha256": "431f4f8fb9ba6fc9e6c2a021d01a29c1412ce75c628823013a1c47ec1d7a75a8"
+  },
+  "physics-ledge-events/predeclared.json": {
+    "original": "build/physics-ledge-events/predeclared.json",
+    "bytes": 376,
+    "sha256": "8390e887d551843a00a6f18e052d1d2bba95b2a1963d8669c4d5b89919358aa2"
+  },
+  "physics-owner-assessment/verification.json": {
+    "original": "build/physics-owner-assessment/verification.json",
+    "bytes": 2869,
+    "sha256": "5091d33b00ce6e44c8e2604590231f207694713f38d14d8cbc6807e67ad083f6"
+  },
+  "physics-owner-assessment/predeclared.json": {
+    "original": "build/physics-owner-assessment/predeclared.json",
+    "bytes": 891,
+    "sha256": "a6d5d6287f9f35dd22a66ebcd24074d803944d1a17ea45b47b72271a09a0e490"
+  },
+  "physics-owner-assessment/DESIGN.md": {
+    "original": "build/physics-owner-assessment/DESIGN.md",
+    "bytes": 3293,
+    "sha256": "2d3d07077217f57bdadd750480c838bcf9c8ec2d90abba297a960029488604d5"
+  },
+  "physics-packed-operators/verification.json": {
+    "original": "build/physics-packed-operators/verification.json",
+    "bytes": 818309,
+    "sha256": "1b2e5f8e7fd15eabd7a5ebf53af2bc6bef82be4b7ae1683d93dc21cedf6993ee"
+  },
+  "physics-packed-operators/predeclared.json": {
+    "original": "build/physics-packed-operators/predeclared.json",
+    "bytes": 937,
+    "sha256": "984aaef0368a88392868244c11df119e86684b26d5a4a0f85129f47f8a5bcef4"
+  },
+  "physics-packed-operators/correctness-barrier.json": {
+    "original": "build/physics-packed-operators/correctness-barrier.json",
+    "bytes": 543822,
+    "sha256": "70ce316438f9e038a39d500e81454ccded97300354225c9791a5b1ff901315f6"
+  },
+  "physics-packed-operators/RESULTS.md": {
+    "original": "build/physics-packed-operators/RESULTS.md",
+    "bytes": 6371,
+    "sha256": "55d7ef0ff49ae3fa93c7e296a69a87cd9b28ecb4f39a5ba9fd3c5418aad6c433"
+  },
+  "physics-profile/verification.json": {
+    "original": "build/physics-profile/verification.json",
+    "bytes": 6261,
+    "sha256": "af52a2a493d0e7c9baa3e04ff853a3983716c54d9907328743e22adba96c931d"
+  },
+  "physics-profile/predeclared.json": {
+    "original": "build/physics-profile/predeclared.json",
+    "bytes": 288,
+    "sha256": "586f902247703ea253de428316e77e3affa8fcf9541871bc6047121b618d0128"
+  },
+  "physics-profile/DESIGN.md": {
+    "original": "build/physics-profile/DESIGN.md",
+    "bytes": 2902,
+    "sha256": "ff182565a15d69543bf5b1329d8d40e4f0adc0e729ceec4fc70e3fdd93bd3ad5"
+  },
+  "physics-rotating-floor-vertex/source-variant-2-independent-check.json": {
+    "original": "build/physics-rotating-floor-vertex/source-variant-2-independent-check.json",
+    "bytes": 415,
+    "sha256": "fe5a29746fe87c070def966481063d04131a0f0b1bb62322e82eec2ff198ebcb"
+  },
+  "physics-rotating-floor-vertex/source-variant-0-independent-check.json": {
+    "original": "build/physics-rotating-floor-vertex/source-variant-0-independent-check.json",
+    "bytes": 415,
+    "sha256": "b266ef0bdd77f8b4c45dc7b3c4abb30fb2019be87e7e74e51a2e8d8522fce8b7"
+  },
+  "physics-rotating-floor-vertex/package-variant-3-telemetry.json": {
+    "original": "build/physics-rotating-floor-vertex/package-variant-3-telemetry.json",
+    "bytes": 1759,
+    "sha256": "1202d50d8db3298f6925b6e4de2886cd1e6229354cbb85f8de61acebfe526af0"
+  },
+  "physics-rotating-floor-vertex/source-variant-1-telemetry.json": {
+    "original": "build/physics-rotating-floor-vertex/source-variant-1-telemetry.json",
+    "bytes": 1754,
+    "sha256": "af36ce1e9545e32f5473c4da53992ba7f294b5309fdb0348039833ac3c74aa32"
+  },
+  "physics-rotating-floor-vertex/package-variant-0-cases.jsonl": {
+    "original": "build/physics-rotating-floor-vertex/package-variant-0-cases.jsonl",
+    "bytes": 1688940,
+    "sha256": "7a9adcadfdb85c6c03c079031b53d3fdf113e70d4ee94f9c712df7cc8acf6376"
+  },
+  "physics-rotating-floor-vertex/transport-recovery.json": {
+    "original": "build/physics-rotating-floor-vertex/transport-recovery.json",
+    "bytes": 319,
+    "sha256": "03c400f212a0e307dc172e6ec75d2d5b68e43ee129dfd638bef89dc4751b8848"
+  },
+  "physics-rotating-floor-vertex/package-variant-0-telemetry.json": {
+    "original": "build/physics-rotating-floor-vertex/package-variant-0-telemetry.json",
+    "bytes": 1759,
+    "sha256": "cd7b561460f0b7d4a7859f94a155834850f7c539ea9eeb29bca13f04cff3ea09"
+  },
+  "physics-rotating-floor-vertex/package-variant-1-telemetry.json": {
+    "original": "build/physics-rotating-floor-vertex/package-variant-1-telemetry.json",
+    "bytes": 1758,
+    "sha256": "145e78aadfb1259fe6753d575e8ab279f0cfaf49019defa51ec406c19831e444"
+  },
+  "physics-rotating-floor-vertex/package-variant-1-cases.jsonl": {
+    "original": "build/physics-rotating-floor-vertex/package-variant-1-cases.jsonl",
+    "bytes": 1630037,
+    "sha256": "3321ae818ba9afa3c39bfe94705a407d5471958834a889bf07cbc32693c1a198"
+  },
+  "physics-rotating-floor-vertex/source-variant-2-cases.jsonl": {
+    "original": "build/physics-rotating-floor-vertex/source-variant-2-cases.jsonl",
+    "bytes": 1645436,
+    "sha256": "d649f293e2e3108615114d7ef24bc0923e219a966aa55326ef66f2673aa61ca6"
+  },
+  "physics-rotating-floor-vertex/source-variant-3-cases.jsonl": {
+    "original": "build/physics-rotating-floor-vertex/source-variant-3-cases.jsonl",
+    "bytes": 1627548,
+    "sha256": "1dc03d5a9b8453349ea9c630a1698142fa96b51130b317c5c8357bee1f367d52"
+  },
+  "physics-rotating-floor-vertex/verification.json": {
+    "original": "build/physics-rotating-floor-vertex/verification.json",
+    "bytes": 15104,
+    "sha256": "41b259a8948d95e7de5fcbb633bd801ab7759dec00299c3cdad5db138e3c163d"
+  },
+  "physics-rotating-floor-vertex/STATUS.md": {
+    "original": "build/physics-rotating-floor-vertex/STATUS.md",
+    "bytes": 2243,
+    "sha256": "4b6ad2327cf798b8a916f1b7abde3f239273800d16680b034adb39b02930d369"
+  },
+  "physics-rotating-floor-vertex/pre-native-fingerprints-2.json": {
+    "original": "build/physics-rotating-floor-vertex/pre-native-fingerprints-2.json",
+    "bytes": 2281,
+    "sha256": "9a1841412e6b7f086ddb7310e3b0b43fbb779524762ad623cc11509a4536f8ab"
+  },
+  "physics-rotating-floor-vertex/source-variant-1-cases.jsonl": {
+    "original": "build/physics-rotating-floor-vertex/source-variant-1-cases.jsonl",
+    "bytes": 1630037,
+    "sha256": "3321ae818ba9afa3c39bfe94705a407d5471958834a889bf07cbc32693c1a198"
+  },
+  "physics-rotating-floor-vertex/package-variant-3-independent-check.json": {
+    "original": "build/physics-rotating-floor-vertex/package-variant-3-independent-check.json",
+    "bytes": 415,
+    "sha256": "2cbba518a026a9ed9f98879b73d26fe93c6faebe846c1f534835ed79e006f7e1"
+  },
+  "physics-rotating-floor-vertex/reference.py": {
+    "original": "build/physics-rotating-floor-vertex/reference.py",
+    "bytes": 8010,
+    "sha256": "b2a976b09efe1832b0e79ec465bad46cf8a1c96cb2a4aa8e9ead4f3fdf5c1c41"
+  },
+  "physics-rotating-floor-vertex/source-compile-telemetry.json": {
+    "original": "build/physics-rotating-floor-vertex/source-compile-telemetry.json",
+    "bytes": 1075,
+    "sha256": "722345c2d2dd82a6a9cc350c716323e98d6e4abcb69c0f2b1df2006a8c8f4903"
+  },
+  "physics-rotating-floor-vertex/source-compile-2-telemetry.json": {
+    "original": "build/physics-rotating-floor-vertex/source-compile-2-telemetry.json",
+    "bytes": 3782,
+    "sha256": "dadb8c33ffcf314f6a7a62b5bf6dedf3a14c22222b8910482c2e627ff1567fab"
+  },
+  "physics-rotating-floor-vertex/package-variant-2-independent-check.json": {
+    "original": "build/physics-rotating-floor-vertex/package-variant-2-independent-check.json",
+    "bytes": 415,
+    "sha256": "2b8f9c739f6a6fad8f65c5bf47ca18aa4f7ebd6d9f021e80cc0cb559f2a06d58"
+  },
+  "physics-rotating-floor-vertex/run-stage.py": {
+    "original": "build/physics-rotating-floor-vertex/run-stage.py",
+    "bytes": 1128,
+    "sha256": "65e94da6cf257c3a640d0955d26af518152860265d0c3b3815db29d7e1523332"
+  },
+  "physics-rotating-floor-vertex/source-variant-3-telemetry.json": {
+    "original": "build/physics-rotating-floor-vertex/source-variant-3-telemetry.json",
+    "bytes": 1754,
+    "sha256": "4c667297d2760845dff78a29f159160f1fc288f7dc2d01bf8b1475d633514a19"
+  },
+  "physics-rotating-floor-vertex/check-invariants.py": {
+    "original": "build/physics-rotating-floor-vertex/check-invariants.py",
+    "bytes": 3675,
+    "sha256": "dd6af50ca6b68e939ddf9b5029c495593221221761a3ca2e874a5ccc9bbccca8"
+  },
+  "physics-rotating-floor-vertex/predeclared.json": {
+    "original": "build/physics-rotating-floor-vertex/predeclared.json",
+    "bytes": 932,
+    "sha256": "6e4a9bdfa79c50f56e0c7be0c1ac353b23000593009985c95b957191f86924c1"
+  },
+  "physics-rotating-floor-vertex/package-compile-telemetry.json": {
+    "original": "build/physics-rotating-floor-vertex/package-compile-telemetry.json",
+    "bytes": 3973,
+    "sha256": "6b2aab8fcb10c18cbc47643388dd4df9316eaf5da880dbb99d85796003e60f9f"
+  },
+  "physics-rotating-floor-vertex/package-dependencies.json": {
+    "original": "build/physics-rotating-floor-vertex/package-dependencies.json",
+    "bytes": 101,
+    "sha256": "ee613b3816eb8362314ab5137ff7442d20f769a9d34e95918bc74e3de6ac506a"
+  },
+  "physics-rotating-floor-vertex/source-variant-0-telemetry.json": {
+    "original": "build/physics-rotating-floor-vertex/source-variant-0-telemetry.json",
+    "bytes": 1754,
+    "sha256": "f70e8869683d5e4c471c19c0c631328016d428120af8b7ca9567ae9bdf0b9d7b"
+  },
+  "physics-rotating-floor-vertex/package-variant-2-telemetry.json": {
+    "original": "build/physics-rotating-floor-vertex/package-variant-2-telemetry.json",
+    "bytes": 1758,
+    "sha256": "efc3ebcf2725b43cb37045340653ab3351e6fd056869a0939e93c91d57a65e62"
+  },
+  "physics-rotating-floor-vertex/pre-native-review.json": {
+    "original": "build/physics-rotating-floor-vertex/pre-native-review.json",
+    "bytes": 326,
+    "sha256": "7f4b4df34d9411efe4b5de37567eafa16fb50761e185229aa609b3fac001b671"
+  },
+  "physics-rotating-floor-vertex/source-variant-0-cases.jsonl": {
+    "original": "build/physics-rotating-floor-vertex/source-variant-0-cases.jsonl",
+    "bytes": 1688940,
+    "sha256": "7a9adcadfdb85c6c03c079031b53d3fdf113e70d4ee94f9c712df7cc8acf6376"
+  },
+  "physics-rotating-floor-vertex/reference-proof.json": {
+    "original": "build/physics-rotating-floor-vertex/reference-proof.json",
+    "bytes": 439,
+    "sha256": "df3445cc792831e0fc2485026859a4206648de3d1d2e980d21d6c2cf501a44f2"
+  },
+  "physics-rotating-floor-vertex/qualified-build-fingerprints.json": {
+    "original": "build/physics-rotating-floor-vertex/qualified-build-fingerprints.json",
+    "bytes": 1677,
+    "sha256": "6faa4529f8c5ed51a02df5a84111f79e510c68791679c684c13a9728e5b6cb02"
+  },
+  "physics-rotating-floor-vertex/package-variant-3-cases.jsonl": {
+    "original": "build/physics-rotating-floor-vertex/package-variant-3-cases.jsonl",
+    "bytes": 1627548,
+    "sha256": "1dc03d5a9b8453349ea9c630a1698142fa96b51130b317c5c8357bee1f367d52"
+  },
+  "physics-rotating-floor-vertex/package-precompile-telemetry.json": {
+    "original": "build/physics-rotating-floor-vertex/package-precompile-telemetry.json",
+    "bytes": 2270,
+    "sha256": "6b9f30e129cba55ee8a1003e7918e9b430f81913ca84394012eb7664f7cfe6a0"
+  },
+  "physics-rotating-floor-vertex/package-variant-2-cases.jsonl": {
+    "original": "build/physics-rotating-floor-vertex/package-variant-2-cases.jsonl",
+    "bytes": 1645436,
+    "sha256": "d649f293e2e3108615114d7ef24bc0923e219a966aa55326ef66f2673aa61ca6"
+  },
+  "physics-rotating-floor-vertex/RESULTS.md": {
+    "original": "build/physics-rotating-floor-vertex/RESULTS.md",
+    "bytes": 7739,
+    "sha256": "14bb258d93c71d2f5e360a09d861082714d7b67334fa6ab910f89cffe86e78de"
+  },
+  "physics-rotating-floor-vertex/source-variant-2-telemetry.json": {
+    "original": "build/physics-rotating-floor-vertex/source-variant-2-telemetry.json",
+    "bytes": 1753,
+    "sha256": "51e77aef5c4df7707e0432b72c7129ec5bb635c402cb2cdddfd370f50c1c8158"
+  },
+  "physics-rotating-floor-vertex/package-variant-1-independent-check.json": {
+    "original": "build/physics-rotating-floor-vertex/package-variant-1-independent-check.json",
+    "bytes": 415,
+    "sha256": "90848ab8f8e3f0c3430b086519488e79a44de04183676929c8894f842c0229e8"
+  },
+  "physics-rotating-floor-vertex/independent-reference.jsonl": {
+    "original": "build/physics-rotating-floor-vertex/independent-reference.jsonl",
+    "bytes": 4334752,
+    "sha256": "f20a7ee54165eb4ba6c9bc7c0c64461c33c1850105b42e1baf45d8a49b42610b"
+  },
+  "physics-rotating-floor-vertex/run-qualification.py": {
+    "original": "build/physics-rotating-floor-vertex/run-qualification.py",
+    "bytes": 3121,
+    "sha256": "710fbde55ad47cd3cc885c867809a4c4713d9f7826ff8d5bacdb786c8274133e"
+  },
+  "physics-rotating-floor-vertex/DESIGN.md": {
+    "original": "build/physics-rotating-floor-vertex/DESIGN.md",
+    "bytes": 6823,
+    "sha256": "1573e2e66866b0aa4235742f9f2044ecd73799f4c302d884e09d27645f60e234"
+  },
+  "physics-rotating-floor-vertex/source-variant-3-independent-check.json": {
+    "original": "build/physics-rotating-floor-vertex/source-variant-3-independent-check.json",
+    "bytes": 415,
+    "sha256": "007ab440987f6d6f97129ffaf3465730083579a58c7db45fbb6d5e7996cd11a9"
+  },
+  "physics-rotating-floor-vertex/source-variant-1-independent-check.json": {
+    "original": "build/physics-rotating-floor-vertex/source-variant-1-independent-check.json",
+    "bytes": 415,
+    "sha256": "451947976ff3b542c52a84dbfa154dd784a8ece909e24ca69dc30de6021ee28c"
+  },
+  "physics-rotating-floor-vertex/package-variant-0-independent-check.json": {
+    "original": "build/physics-rotating-floor-vertex/package-variant-0-independent-check.json",
+    "bytes": 415,
+    "sha256": "a50741ecb7e4841bcc7ff94619d1e26e5a185adb2718d28c6d56250fd4fb5ee7"
+  },
+  "physics-rotating-floor-vertex/independent-invariant-proof.json": {
+    "original": "build/physics-rotating-floor-vertex/independent-invariant-proof.json",
+    "bytes": 8484,
+    "sha256": "f5c74039da228b313248d077f4d938fadb7e7ecfcf403928815d6b5d868d6620"
+  },
+  "physics-rotating-floor-vertex/test-packaged.mojo": {
+    "original": "build/physics-rotating-floor-vertex/test-packaged.mojo",
+    "bytes": 5205,
+    "sha256": "77346d882b91ff63503586905297ecc953e44fb35a54353acbd87b84b0828297"
+  },
+  "physics-shared-operator/COMPRESSION.md": {
+    "original": "build/physics-shared-operator/COMPRESSION.md",
+    "bytes": 5025,
+    "sha256": "97570df77980972122eb5165e60f2a7cfcfdc5fff76e5e6082f6480677e842d2"
+  },
+  "physics-shared-operator/verification.json": {
+    "original": "build/physics-shared-operator/verification.json",
+    "bytes": 987487,
+    "sha256": "a0eb128e9fac6f43e63ed578b5aec532d03d5583864587b339f1936e78651d83"
+  },
+  "physics-shared-operator/WARM_START_DESIGN.md": {
+    "original": "build/physics-shared-operator/WARM_START_DESIGN.md",
+    "bytes": 14195,
+    "sha256": "5572d1f0a5887d7f88cb50af6df7a768fc6cbbc1f67c580795f7d101d093df11"
+  },
+  "physics-shared-operator/predeclared.json": {
+    "original": "build/physics-shared-operator/predeclared.json",
+    "bytes": 918,
+    "sha256": "ae4d13bbef870522d36c7c44388b654539b700c0599533617bfb2d7e98afe32d"
+  },
+  "physics-shared-operator/correctness-barrier.json": {
+    "original": "build/physics-shared-operator/correctness-barrier.json",
+    "bytes": 540876,
+    "sha256": "903c1523f28a0dad352f92c12fd59631f29e2ecaed2b1cbc7da0943280c124cd"
+  },
+  "physics-shared-operator/RESULTS.md": {
+    "original": "build/physics-shared-operator/RESULTS.md",
+    "bytes": 5193,
+    "sha256": "bbc6ce570985ba6d1b1c669fee2f10ced8f53616776c4a4b2860a559b49e4908"
+  },
+  "physics-tangent-reuse/verification.json": {
+    "original": "build/physics-tangent-reuse/verification.json",
+    "bytes": 8223,
+    "sha256": "3b8bc3badadde582850d703fe660f5f1359ddd5606e94f71c17bc35c2a5b2c50"
+  },
+  "physics-tangent-reuse/predeclared.json": {
+    "original": "build/physics-tangent-reuse/predeclared.json",
+    "bytes": 311,
+    "sha256": "8feff3dc0fbe69f328d50feed46c6d205a2007c2087611a880f94494515f2fe5"
+  },
+  "physics-tangent-reuse/RESULTS.md": {
+    "original": "build/physics-tangent-reuse/RESULTS.md",
+    "bytes": 12101,
+    "sha256": "48ff498ab49e3c995cec0e042c1c48d4de7525999657cf4d88168e317b39040c"
+  },
+  "physics-temporal-floor/verification.json": {
+    "original": "build/physics-temporal-floor/verification.json",
+    "bytes": 30256,
+    "sha256": "67e48492b2daca75c5a7809e2c646f7589a2d5d61f97e85a3ac4fda1c361bd6e"
+  },
+  "physics-temporal-floor/predeclared.json": {
+    "original": "build/physics-temporal-floor/predeclared.json",
+    "bytes": 1956,
+    "sha256": "a20fee5d1a6e7356a532b167f047f55bc03ce8d7c0c1bec7a43411f5703e3a08"
+  },
+  "physics-temporal-floor/package-dependencies.json": {
+    "original": "build/physics-temporal-floor/package-dependencies.json",
+    "bytes": 585,
+    "sha256": "2f151bfc4640a4dc90aa531c4d8b0dbaf62cd0f070141261ee2db992b6d361fd"
+  },
+  "physics-temporal-floor/RESULTS.md": {
+    "original": "build/physics-temporal-floor/RESULTS.md",
+    "bytes": 7604,
+    "sha256": "ed5bdfbb8e040b7aa0cb03450ec6ca7bc369eac26089c638273610e3722a4951"
+  },
+  "physics-temporal-floor-diagnosis/verification.json": {
+    "original": "build/physics-temporal-floor-diagnosis/verification.json",
+    "bytes": 11816,
+    "sha256": "195321e334ac9d1b71a0dccc13cca6977cafebfc99f47d44f34d9dfd5a4b6e22"
+  },
+  "physics-temporal-floor-diagnosis/RESULTS.md": {
+    "original": "build/physics-temporal-floor-diagnosis/RESULTS.md",
+    "bytes": 7893,
+    "sha256": "133f7a901b0f713bc36c322bd5b3f73ebd9f9d2964f9f19cd50782e036aa0240"
+  },
+  "physics-temporal-floor-friction/verification.json": {
+    "original": "build/physics-temporal-floor-friction/verification.json",
+    "bytes": 12992,
+    "sha256": "3b5815f0349197d01c1ca48c15249ede8d7a42aa870fe2de7922710366ae88fd"
+  },
+  "physics-temporal-floor-friction/predeclared.json": {
+    "original": "build/physics-temporal-floor-friction/predeclared.json",
+    "bytes": 3309,
+    "sha256": "ed1a5a525ba9f419fa71a521af8b5fce2e579c1f41c4dfc19ea70b81d67ddd79"
+  },
+  "physics-temporal-floor-friction/package-dependencies.json": {
+    "original": "build/physics-temporal-floor-friction/package-dependencies.json",
+    "bytes": 670,
+    "sha256": "e2f62ab7b3de1e31f9d7659c42a20e8a88b8a78c934977bbff558fbe3740820c"
+  },
+  "physics-temporal-floor-friction/pre-native-review.json": {
+    "original": "build/physics-temporal-floor-friction/pre-native-review.json",
+    "bytes": 497,
+    "sha256": "55cd8d55e17897b26dee4a49cb0b6e13dbb29fc2bd2eda3bc2b9cbe3a74b925a"
+  },
+  "physics-temporal-floor-friction/RESULTS.md": {
+    "original": "build/physics-temporal-floor-friction/RESULTS.md",
+    "bytes": 9346,
+    "sha256": "d65fccc29f0bed0b6f4d9b8ba942e5adf62e6a507341533aaf46f964cf8d71c1"
+  },
+  "physics-temporal-floor-friction-design/verification.json": {
+    "original": "build/physics-temporal-floor-friction-design/verification.json",
+    "bytes": 1668,
+    "sha256": "2811ad574f82bb653a6dcaaf4a373a499b60dc8738d86ecc7b10c17be88157ca"
+  },
+  "physics-temporal-floor-friction-design/DESIGN.md": {
+    "original": "build/physics-temporal-floor-friction-design/DESIGN.md",
+    "bytes": 9943,
+    "sha256": "2737da8d746c8425440fb2efa53ab53c2c01165ee7e149a1118119b5d8e49962"
+  },
+  "physics-temporal-floor-friction-timing/verification.json": {
+    "original": "build/physics-temporal-floor-friction-timing/verification.json",
+    "bytes": 230841,
+    "sha256": "f0424e41a0565fbd7089762b84a16a18aeb39f53772b99f34b5a74c47941c744"
+  },
+  "physics-temporal-floor-friction-timing/performance.json": {
+    "original": "build/physics-temporal-floor-friction-timing/performance.json",
+    "bytes": 209404,
+    "sha256": "2e2291d7816bc1ef4522fe5735efc8b71e7faa6a6b55c7b36829289cd45ca53d"
+  },
+  "physics-temporal-floor-friction-timing/predeclared.json": {
+    "original": "build/physics-temporal-floor-friction-timing/predeclared.json",
+    "bytes": 2065,
+    "sha256": "6d634d26816107791a15ec1f48518fdea081c20f9cd7d1c57242a1af61d93da0"
+  },
+  "physics-temporal-floor-friction-timing/correctness-barrier.json": {
+    "original": "build/physics-temporal-floor-friction-timing/correctness-barrier.json",
+    "bytes": 18968,
+    "sha256": "6b9f9122a54aac4fcb7e135574f7d26575883abea0f871f1ad6404fc0ccbf076"
+  },
+  "physics-temporal-floor-friction-timing/RESULTS.md": {
+    "original": "build/physics-temporal-floor-friction-timing/RESULTS.md",
+    "bytes": 9294,
+    "sha256": "62ae4b7efec827eaf0617e0f4019e19b7b7bce14b8ad80c42525a81675d954cd"
+  },
+  "physics-temporal-floor-friction-unilateral/verification.json": {
+    "original": "build/physics-temporal-floor-friction-unilateral/verification.json",
+    "bytes": 8122,
+    "sha256": "9c015876a693aab8ca8f0bb1348c0d8766878aa519d9f34cd99ca484d90d8670"
+  },
+  "physics-temporal-floor-friction-unilateral/predeclared.json": {
+    "original": "build/physics-temporal-floor-friction-unilateral/predeclared.json",
+    "bytes": 2473,
+    "sha256": "a8445dc11f68e7c26a21dd37b70e2f18922e57375405d7180663065a0d89e50b"
+  },
+  "physics-temporal-floor-friction-unilateral/package-dependencies.json": {
+    "original": "build/physics-temporal-floor-friction-unilateral/package-dependencies.json",
+    "bytes": 729,
+    "sha256": "1c47f6345843b85cd6ebcba44a4e3895e5a53cf2df426380a44f76920f469197"
+  },
+  "physics-temporal-floor-friction-unilateral/pre-native-review.json": {
+    "original": "build/physics-temporal-floor-friction-unilateral/pre-native-review.json",
+    "bytes": 474,
+    "sha256": "873dfa1411d0851636422e65308b0a4c66a4fcbb267da6133db9d2a7c86ac5a5"
+  },
+  "physics-temporal-floor-friction-unilateral/qualified-build-fingerprints.json": {
+    "original": "build/physics-temporal-floor-friction-unilateral/qualified-build-fingerprints.json",
+    "bytes": 9576,
+    "sha256": "add688ce990db65f71d665087895228be35f0edf78d86406a5fedd3c9a5159bb"
+  },
+  "physics-temporal-floor-friction-unilateral/RESULTS.md": {
+    "original": "build/physics-temporal-floor-friction-unilateral/RESULTS.md",
+    "bytes": 7367,
+    "sha256": "c3f0dbc5530517b959a1631006b79df6d74748996c0ae2bb83635ed6301953a2"
+  },
+  "physics-temporal-patch/verification.json": {
+    "original": "build/physics-temporal-patch/verification.json",
+    "bytes": 12259,
+    "sha256": "71bdb8a3b97625a0c915de8ef2ab69e5193efcd40fb89d987b678e494f283e8b"
+  },
+  "physics-temporal-patch/predeclared.json": {
+    "original": "build/physics-temporal-patch/predeclared.json",
+    "bytes": 3373,
+    "sha256": "b951f05aa191b2e1820254d07373244e195134803047bbd0381aa2aa12c47801"
+  },
+  "physics-temporal-patch/package-dependencies.json": {
+    "original": "build/physics-temporal-patch/package-dependencies.json",
+    "bytes": 597,
+    "sha256": "cf7444c09040ef77f3651e1ac990acea6aafecb728b61b2e39d987112f2b209d"
+  },
+  "physics-temporal-patch/RESULTS.md": {
+    "original": "build/physics-temporal-patch/RESULTS.md",
+    "bytes": 5334,
+    "sha256": "7074fd4f7b43813cf7ebc988deded0465116006f2ea025f06205c4a7647b53f2"
+  },
+  "physics-temporal-patch-lifecycle-diagnosis/verification.json": {
+    "original": "build/physics-temporal-patch-lifecycle-diagnosis/verification.json",
+    "bytes": 2853,
+    "sha256": "01c77536c53d416b88f7c5a6c13eb0d029f186764157dbf0dfd2783b3fca1abe"
+  },
+  "physics-temporal-patch-lifecycle-diagnosis/RESULTS.md": {
+    "original": "build/physics-temporal-patch-lifecycle-diagnosis/RESULTS.md",
+    "bytes": 6695,
+    "sha256": "f64e16b66031bb6a5c7ad1328ce9dac3b459acb1d9e109750ddc6effc798104d"
+  },
+  "physics-temporal-patch-qualified/verification.json": {
+    "original": "build/physics-temporal-patch-qualified/verification.json",
+    "bytes": 5690,
+    "sha256": "4e8ff351ed164705aec4344aafd03e72442eda223c99c3ce77c262c501461a30"
+  },
+  "physics-temporal-patch-qualified/performance.json": {
+    "original": "build/physics-temporal-patch-qualified/performance.json",
+    "bytes": 158553,
+    "sha256": "f73a802870aa72c57274159442bdb757ca6cf5f481999a3e938bebb68ef85b92"
+  },
+  "physics-temporal-patch-qualified/predeclared.json": {
+    "original": "build/physics-temporal-patch-qualified/predeclared.json",
+    "bytes": 1704,
+    "sha256": "49f2ab3198c64b838a620cb6db385be3b90f62ba5bab4b88c5d7761b678b7f54"
+  },
+  "physics-temporal-patch-qualified/correctness-barrier.json": {
+    "original": "build/physics-temporal-patch-qualified/correctness-barrier.json",
+    "bytes": 16007,
+    "sha256": "908fbf53ce3c91b99dfc78cdd320c5253bb2777d25d8bd26a211289889acee46"
+  },
+  "physics-temporal-patch-qualified/RESULTS.md": {
+    "original": "build/physics-temporal-patch-qualified/RESULTS.md",
+    "bytes": 8986,
+    "sha256": "9e9edd6e5f4b4c7dc2e5e6e787a47f784db58dcc670005b93a5bfe2df7de4489"
+  },
+  "physics-translation-boundary/verification.json": {
+    "original": "build/physics-translation-boundary/verification.json",
+    "bytes": 9267,
+    "sha256": "e305b9985ec750ee9e023064bebdcf6b2aca5da1b122eb28685acf3daf63b4e1"
+  },
+  "physics-translation-boundary/predeclared.json": {
+    "original": "build/physics-translation-boundary/predeclared.json",
+    "bytes": 426,
+    "sha256": "bbf8831dcc40d92f4172a8cd9001eab4e0aff4054ed57a0e0a1b3ab4e1a3e7bb"
+  },
+  "physics-warm-plumbing/verification.json": {
+    "original": "build/physics-warm-plumbing/verification.json",
+    "bytes": 908723,
+    "sha256": "811d7512a44d897bd0e4a1d4094feeaa70a1266287e55fb7d37bfa7d79c68478"
+  },
+  "physics-warm-plumbing/predeclared.json": {
+    "original": "build/physics-warm-plumbing/predeclared.json",
+    "bytes": 566,
+    "sha256": "c550b43f4bff8f3b5d7cc1df113c2b194381190a05d137e358afe388bf4d456a"
+  },
+  "physics-warm-plumbing/correctness-barrier.json": {
+    "original": "build/physics-warm-plumbing/correctness-barrier.json",
+    "bytes": 543568,
+    "sha256": "0666c367f55ecdd467de60b320a05dca5a2e1694b78d1ae8cdb1a96efaa14a7c"
+  },
+  "physics-warm-plumbing/RESULTS.md": {
+    "original": "build/physics-warm-plumbing/RESULTS.md",
+    "bytes": 6802,
+    "sha256": "f56907ac8c195a51ea3c9ec1d666c966a77ee2a5d6adbffaa367962058a25b21"
+  },
+  "physics-warm-seeds/verification.json": {
+    "original": "build/physics-warm-seeds/verification.json",
+    "bytes": 544994,
+    "sha256": "1e9062e45aef9ee0080f98cfcb5faee23149bef8dc87bd33743d57a3c0940c7f"
+  },
+  "physics-warm-seeds/predeclared.json": {
+    "original": "build/physics-warm-seeds/predeclared.json",
+    "bytes": 507,
+    "sha256": "718a75b7e49a2411d0d890cec63faa39c4f06061e6d5296d7d0bd245c92ec362"
+  },
+  "physics-warm-seeds/correctness-barrier.json": {
+    "original": "build/physics-warm-seeds/correctness-barrier.json",
+    "bytes": 71347,
+    "sha256": "c2519c015767ee53e8eecab37dc2d079f69dc27bdba508deecf69f7131cf92ba"
+  },
+  "physics-warm-seeds/RESULTS.md": {
+    "original": "build/physics-warm-seeds/RESULTS.md",
+    "bytes": 7467,
+    "sha256": "a147622473ae9a4db4bc8bf34037141cc093ef5d482680db979a3e89f7c974ff"
+  }
+}

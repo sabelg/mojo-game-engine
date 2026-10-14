@@ -1,0 +1,8 @@
+{
+  "owned_jobs": [],
+  "source_compile_2_started": false,
+  "source_compile_2_receipts_absent": true,
+  "earlier_harness_fix_did_not_persist": true,
+  "harness_fix_now_saved": true,
+  "recovery": "Read-only ls and scoped owned-process check succeeded; resume only missing correctedcompile, no duplicated nativejob."
+}

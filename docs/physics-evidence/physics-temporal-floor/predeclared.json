@@ -1,0 +1,47 @@
+{
+  "macro_dt": 0.03333333333333333,
+  "base_intervals": 4,
+  "interval_dt": 0.008333333333333333,
+  "start_normal_sweeps": 2,
+  "end_normal_sweeps": 2,
+  "final_unbiased_sweeps": 4,
+  "final_group_impulses_retained": true,
+  "impact_normal_sweeps": 2,
+  "max_impact_batches": 4,
+  "TOI": "physical segment-entry quadratic gap, actual event-sized force half-kicks; physical incoming restitution once per episode",
+  "solver": "canonical ordered corner scalar accumulated projected normal updates; negative deltas allowed; no spin clamp",
+  "domain": "single dynamic box with optional stationary axis-aligned planar box floor; no other active body/shape; no initial overlap; floor-lane zero initial angular velocity/contact torque; free-flight lane allows general torque",
+  "physical_gate": "independent matched temporal CPU/GPU 1e-10*(1+abs(reference)); actual final normal residual 1e-9*(1+abs(input normal speed)); penetration1e-5+1e-9; quiet and isolated symmetric impact spin/analytic checks1e-10 scaled",
+  "approved_temporal_gate": {
+    "per_macro": [
+      1e-05,
+      0.0001,
+      1e-05,
+      0.0001
+    ],
+    "one_second": [
+      0.0001,
+      0.001,
+      0.001,
+      0.001
+    ]
+  },
+  "rollback": "macro-entry bodies, forces/torques and committed episode bytes exact; prior registry commands retained",
+  "fixtures": [
+    "free gravity/constant force",
+    "free torque with independent convergence evidence",
+    "quiet multipoint support",
+    "isolated floor impacts e0,.5,1",
+    "unsupported domain/force/TOI/identity/config rollback"
+  ],
+  "failure_policy": "finish frozen source/package diagnosis matrix, retain failures and stop candidate without changing budget or gates; no timing unless correctness passes",
+  "packing": false,
+  "warm_starting": false,
+  "precision": "Float64",
+  "build_threads": 1,
+  "build_guard_s": 180,
+  "native_guard_s": 30,
+  "memory_reserve_GiB": 32,
+  "H3": "paused",
+  "counter_retry": false
+}

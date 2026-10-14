@@ -1,0 +1,30 @@
+{
+  "scope": "Separate unilateral temporal friction revision; preserve failed owner, qualified frictionless/frozen owners and receipts. No timing.",
+  "minimal_fix": "Do not dispatch noncompressive cold input to compression-only frozen block. Classify unloaded/no-contact trajectory by real velocities/geometry; carry actual v/omega unchanged; discard group bookkeeping only, not physical impulse.",
+  "admission": {
+    "unloaded": "ay==0, COMvy>=0, all normal rows>=-originalnormalTol: zero normal/tangent impulses, then physical ballistic segment/TOI and true endpoint geometry checks",
+    "force_supported_roundoff": "ay<0,0<=COMvy<=existingstrictanalytic1e-10,certified face and COMvy+ay*remaining/2<0; retain support and apply actual force halfkick before normal solve; no velocity clamp",
+    "genuine_separation": "COMvy>0 exceptabove certified force-supported roundoff; clear touching and use unchanged physical quadratic floorTOI, including return underdownward acceleration",
+    "end_geometry": "check each true corner gap>=-1e-9 and reject materially closing row atgap<=0 if noTOI wasfound; no penalty/compliance/projection",
+    "cold_group": "After actual halfkick, ifgroupempty,target0,COMvy>=0,certifiedface,bodyprofilevalid andzero-pressure normal residual<=same1e-9scaledgate, no-op withzero disks/wrench. Otherwise compression block unchanged."
+  },
+  "bounds_and_law": "All existing1e-10scaledstate,1e-9scaledvelocity,1e-12scaledcones,1e-9scaledenergy and approved macro/one-secondbounds unchanged; frozen block reusedverbatim",
+  "limits": {
+    "macro": 0.03333333333333333,
+    "bases": 4,
+    "base_h": 0.008333333333333333,
+    "segments_per_base": 6,
+    "TOI": 4,
+    "stops": 4,
+    "onset": 4
+  },
+  "targeted_tests": "savedcase exacttinyupwardpreservation; paired+/-5.55e-17and1e-12 separated/approaching withzero/downwardacceleration, actualpositive separation and returnTOI, fullunexpectedfailure rollback assertions",
+  "remaining": "source/freshpackage affectedanalyticmatrix andcompleteimpact/protocol, genuine1second friction/recontact trajectories, fulllifecycleidentity/revision/material/teleport/rollback. Reuse old frozenblock14976 andqualifiedfrictionless63/70 receipts only; no repeat",
+  "failure_policy": "Stop next substantivephysicalfailure; preserve version androw; no tuning/weakening",
+  "build_threads": 1,
+  "build_guard_s": 180,
+  "native_guard_s": 30,
+  "reserve_GiB": 32,
+  "H3": "paused",
+  "counter_retry": false
+}

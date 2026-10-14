@@ -1,0 +1,255 @@
+{
+  "status": "TEMPORAL_FRICTION_STOPPED_AT_UNLOADED_POST_IMPACT_ACCEPTANCE_FAILURE",
+  "recorded_at_UTC": "2026-10-14T05:03:21.008613+00:00",
+  "API": "experimental.physics_gpu.temporal_floor_friction.GpuTemporalFloorFrictionAdvance",
+  "promotion": false,
+  "implemented": "Separate bounded temporal friction adapter using the qualified frozen block verbatim; physical stopping roots, cold current-group budgets, constant-force collinear lane, transactional unsupported/overflow rejections.",
+  "scope": {
+    "scope": "Separate opt-in one dynamic box and optional fixed planar floor; no benchmark; preserve qualified frictionless and frozen block sources.",
+    "dt": 0.03333333333333333,
+    "base_intervals": 4,
+    "base_dt": 0.008333333333333333,
+    "segment_ceiling_per_base": 6,
+    "TOI_admissions_cap": 4,
+    "stop_cap": 4,
+    "onset_cap": 4,
+    "caps": "Constructor permits only lowering stop/segment caps for explicit transactional rejection checks; no increase.",
+    "domain": "axis-aligned positive-pressure certified face; near-zero physical omega and zero applied contact torque; constant normal acceleration<=0; force collinear with slip or rest; reject turning slip/reversal/tipping/unsupported rotation/overflow; gravity0 withnormalbudget0 supported",
+    "event_schedule": [
+      "At physical segment entry, before full interval half-kicks, compute speed/direction, force projection and friction drag=mu*(-ay).",
+      "When speed>1e-10 and netdeceleration>0, stoproot=speed/deceleration. Admit ifroot<=remaining+64eps*(1+remaining). Ifabs(root-remaining)<=that timestamp tolerance, normalize actualduration toremaining; otherwise use root. Resulting body state is never clamped; all independent accuracy gates remain unchanged.",
+      "If opposing force exceedsstaticcapacity and stop occurs withinsegment, reject wholemacro before crossing; reversalnotimplemented.",
+      "Use actual segment duration for external halfkick, cold coupledgroup, unforced drift, second externalhalfkick, second coldgroup. Repeat existing2calls/start+2/end and retained4final; no double impulses.",
+      "After physical stop, certify rest/holding or onset alongforce; sourcepointlaw always handles physical impulses. Rest/schedule classifications use strictanalyticroundoff, not a different friction coefficient.",
+      "Reset normal AND tangent group buffers after an impact and before later support; impact target frozen from incoming trueTOI velocity; no restitution at stops.",
+      "Separate stop/onset counters fromexistingTOI admissions. Reject exhaustingexisting6segment ceiling or4caps atomically."
+    ],
+    "numerical_gates": "No changes: component state1e-10*(1+absreference), existingnormal/tangentvelocity1e-9scaled, cone1e-12scaled, energy1e-9scaled, macro1e-5m/1e-4mps/1e-5rad/1e-4radps and1second1e-4m/1e-3mps/1e-3rad/1e-3radps pluslever tightening.",
+    "first_gate": {
+      "fixtures": 12,
+      "variants": 4,
+      "point_orders": [
+        0,
+        5,
+        11,
+        23
+      ],
+      "records_each_path": 192,
+      "tests": "analytic sliding,oblique sliding,stop\u00bc/\u00bd/endfirstbase/midlastbase,staticbelow/onsetabove,stopunderparallel/antiparallelsubthresholdforce,zero normalbudget,mu0 parity"
+    },
+    "later_only_if_first_passes": [
+      "oblique impacts/recontacts,threshold/event boundaries and pressure certificates",
+      "finite genuine1second supported trajectories,strictanalytic momentum/energy/force consumption",
+      "source/freshpackage parity; generation/revision/teleport/material andfailedbody/input/episode rollback; overflow after privateprogress"
+    ],
+    "failure_policy": "Stop first substantive physical failure, retainevidence; no physics/gate/fixture tuning.",
+    "build_threads": 1,
+    "build_guard_s": 180,
+    "native_guard_s": 30,
+    "memory_reserve_GiB": 32,
+    "H3": "paused",
+    "counter_retry": false
+  },
+  "completed": {
+    "status": "STOPPED_AT_ZERO_NORMAL_LOAD_POST_IMPACT_ACCEPTANCE_FAILURE",
+    "sliding_stopping_source_package_records": 384,
+    "sliding_stopping_source_package_exact": true,
+    "first_analytic_maxima": {
+      "position_error": 3.878959614448864e-18,
+      "velocity_error": 1.241581439856808e-16,
+      "spin": 8.309387820870601e-17,
+      "angle": 1.499607374966724e-18,
+      "momentum_error": 7.17533971441876e-15,
+      "energy_error": 5.773159728050814e-15
+    },
+    "completed_source_probe_rows": 37,
+    "successful_source_probe_rows": 36,
+    "accepted_probe_rows": 18,
+    "expected_rejection_probe_rows": 18,
+    "first_failed_probe": {
+      "variant": 1,
+      "kind": 3,
+      "order": 0,
+      "mass": 0.1,
+      "inertia": [
+        0.01,
+        0.02,
+        0.025
+      ],
+      "half": [
+        0.25,
+        0.5,
+        0.75
+      ],
+      "gravity": 0,
+      "mu": 0.2,
+      "restitution": 0,
+      "owner_code": 1304,
+      "block_code": 404,
+      "time_completed_s": 0.0020000000000000018,
+      "TOI_admissions": 1.0,
+      "block_calls": 3.0
+    },
+    "saved_causal_state": {
+      "position": [
+        0.0006000000000000005,
+        0.5,
+        0.0008000000000000008
+      ],
+      "velocity": [
+        0.18,
+        5.551115123125783e-17,
+        0.24000000000000002
+      ],
+      "angular_velocity": [
+        0.0,
+        -3.252606517456513e-17,
+        3.469446951953614e-17
+      ],
+      "old_group_impulses": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "requested_normal_impulse_kg_mps": -5.551115123125783e-18,
+      "normal_target": 0.0,
+      "gaps": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "normal_point_velocities": [
+        4.683753385137379e-17,
+        4.683753385137379e-17,
+        6.418476861114186e-17,
+        6.418476861114186e-17
+      ],
+      "zero_impulse_normal_residual_mps": 0,
+      "zero_impulse_disk_residual": 0,
+      "zero_impulse_cone_excess": 0,
+      "zero_impulse_delta_energy": 0
+    },
+    "cause": "A valid inelastic oblique impact leaves tiny upward Float64 velocity. At zero normal acceleration, persistent touching/normal-speed tolerance routes the remainder into support; both impulse arrays reset correctly, but the compression-specialized frozen block requiresN=m*(beta-vn*)>=0 and rejects the negative roundoff request. The owner failed to dispatch an unloaded unilateral continuation; this is not an impact-budget leak, double friction, turning, tipping or an independent test-oracle count failure.",
+    "independent_unloaded_witness": "lambda=t=0 satisfies all original row residual/cone/disk gates at this saved pose, preserving actual linear/angular velocity and energy. An opening/zero-load row need not be forced to close at beta0. All gaps are within original1e-9 geometry precision.",
+    "rollback_evidence": {
+      "unexpected_failure_dynamic23_words": "Measured after-state is bit-exact initial factory state; full body registry metadata equality assertion executed.",
+      "full_body_and_episode_bytes": "Verified directly by completed expected-reject cases including nonempty-episode stop/reversal failure after private progress. The unexpected-code path does not dump/assert full before-body/episode buffers; those bytes are not claimed measured specifically for this unexpected case.",
+      "source_publication_proof": "Unchanged qualified commit_temporal returns before every current body/episode/last-state store when summary0!=0. Candidate writes occur only in private buffers; current and committed cache receive no publish for code1304."
+    },
+    "minimal_future_fix_proposed_not_applied": "In the separate temporal adapter, handle zero-demand/unloaded unilateral continuation usingzero normal+tangent impulses and unchanged row/gap/energy gates; preserve actual velocity/omega. Do not invoke a compression-only all-active block to enforcebeta0 on roundoff opening motion. Keep the qualified frozen block and gates unchanged; never clamp vn/omega or borrow the impact load. Requalify with zero-load opening/near-zero rows and full-byte unexpected rollback assertions before proceeding.",
+    "not_run_after_failure": [
+      "remaining source variants2/3 and later variant1 probes",
+      "fresh-package impact/protocol probes",
+      "genuine1second friction trajectories and further lifecycle identity matrix",
+      "any timing or performance benchmark"
+    ],
+    "no_physics_gate_or_fixture_change_after_failure": true,
+    "benchmark": false
+  },
+  "first_analytic_source_package_parity": "192 records each, byte-identical; independent sliding/distance/stopping/force/momentum/energy/spin assertions",
+  "substantive_failure": "Zero-gravity oblique inelastic impact leaves5.551115123125783e-17m/s opening velocity; compression-only subsequent support requestN=-5.551115123125783e-18kgm/s rejects404 /owner1304. Empty impulse arrays prove no impact-bank reuse. Valid zero-impulse unloaded continuation passes original gates but was not dispatched.",
+  "source_package_probe_or_trajectory_completion": false,
+  "source_package_qualification_remainder": [
+    "remaining source variants2/3 and later variant1 probes",
+    "fresh-package impact/protocol probes",
+    "genuine1second friction trajectories and further lifecycle identity matrix",
+    "any timing or performance benchmark"
+  ],
+  "no_changes_after_failure": true,
+  "implementation_sources": {
+    "experimental/physics_gpu/temporal_floor_friction.mojo": "a17f0f916937977a22851e05c33e5dbe8d380326e09a2d88bfa5cbd8eafa996b",
+    "experimental/physics_gpu/temporal_floor_friction_kernels.mojo": "e8d7f51155133ef29fc38f757ed46c56760a37286f1377964cde9885a6a9ae92",
+    "experimental/physics_gpu/test_temporal_floor_friction_first.mojo": "d16c52e79c59250c2f2b722a168d3cb89cf58a16ba2c60480071ea5d636d91ff",
+    "experimental/physics_gpu/test_temporal_floor_friction_probes.mojo": "897c94bcbdd160e98a48f33c0d68e0249a328d634cf7f29b34d844b6aebfd9b6"
+  },
+  "package_sha256": "9dfaece1fb4386fe7f95e9c012f44806df21fb6558c813d71c622f4b83461146",
+  "dependency_modules": [
+    "box_box",
+    "box_box_kernels",
+    "box_box_reference",
+    "box_oracle",
+    "box_response",
+    "box_response_kernels",
+    "box_response_math",
+    "box_response_reference",
+    "collision",
+    "contact_history",
+    "contact_oracle",
+    "core",
+    "friction_kernels",
+    "friction_reference",
+    "friction_response",
+    "frozen_floor_friction_block",
+    "history_kernels",
+    "kernels",
+    "lifecycle",
+    "lifecycle_kernels",
+    "normal_response",
+    "response_kernels",
+    "response_reference",
+    "shape_kernels",
+    "stability_kernels",
+    "temporal_floor_friction",
+    "temporal_floor_friction_kernels",
+    "temporal_patch_floor_kernels",
+    "test_box_interactions",
+    "test_box_response"
+  ],
+  "pre_native_review": {
+    "native_tests_run": false,
+    "compiled_initial_executable_sha256": "09d5b7362a3d381063123cfce07cc61f757c8daf6a91ee37a34aae1a1d11ae33",
+    "initial_kernel_source_sha256": "e36fb79869e2053dc07451270cea9bddfb2a2577e0e4d248ff66f9fe84878cc5",
+    "change": "Before native observation, normalize stop roots within declared64eps time tolerance of a fixed interval endpoint to that actual endpoint. Prevent microscopic remainders. Never clamp position/velocity, alter friction law or numerical gates."
+  },
+  "pre_native_review_note": "Initial compile was never executed; boundary root timestamp normalization was reviewed and recompiled before the first native test. State/friction law/gates unchanged; old source and binary retained.",
+  "resources": {
+    "execution_slots": 1,
+    "build_threads": 1,
+    "precompile_CPUs": 1,
+    "build_guard_s": 180,
+    "native_guard_s": 30,
+    "reserve_GiB": 32,
+    "minimum_sampled_available_GiB": 111.53725814819336,
+    "final_available_GiB": 113.57378387451172,
+    "explicit_added_owner_buffers": 10,
+    "explicit_added_owner_bytes": 50168
+  },
+  "preservation": {
+    "protected_hashes": 18460,
+    "asset_save_identities": 5901,
+    "campaign_sources": 17,
+    "other_source_lock_hashes": 119,
+    "pins": [
+      {
+        "version": "1.2.0.dev2026092905",
+        "record_sha256": "40307d16e09c2e88bfe8085346d028d7479d93867fdd6e210305ed3fbaf9c534"
+      },
+      {
+        "version": "26.7.0.dev2026092905",
+        "record_sha256": "dab5b010e4a7b5f6b7dcc4f60f2e30f9e5e69b689ef2bd57e46025d251dc2403"
+      }
+    ],
+    "old_frictionless_or_frozen_block_or_other_owner_changes": [],
+    "H3": "paused",
+    "driver_power_security_profiling_permission_changes": [],
+    "counter_retry": false,
+    "warm_or_packing_combined": false,
+    "dynamic_spills_stalls": "unmeasured"
+  },
+  "timing_or_benchmark": false,
+  "cleanup": {
+    "owned_jobs": [],
+    "GPU_compute_apps": ""
+  },
+  "remaining_blocker": "Unloaded/near-zero opening continuation is missing in the adapter. Candidate stopped; no corrective implementation, native replay or timing after failure."
+}

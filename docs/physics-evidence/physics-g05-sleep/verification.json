@@ -1,0 +1,298 @@
+{
+  "status": "passed",
+  "milestone": "G05b-conservative-sleep-wake-and-opt-in-idle-gate",
+  "qualified_at_UTC": "2026-10-13T06:20:20.964522+00:00",
+  "API": "experimental.physics_gpu.sleep.GpuSleepingPhysics",
+  "semantics": {
+    "motion": "exactly zero representable linear/angular components and zero pending force/torque; no squared-norm underflow cutoff",
+    "dwell": "compensated elapsed Float64 seconds with fixed pose anchors; rational 30/60/120/240 Hz and mixed-rate checks",
+    "pose_resolution": "8*Float64.epsilon*max(1,abs(anchor),abs(current)) per coordinate across awake dwell; explicit edits and all changes of previously sleeping poses wake",
+    "support": "zero gravity or shallow near-vertical reaction-normal paths to fixed anchors; tested supported sphere/fixed-box rest at 30/60/120 Hz",
+    "wake": "GPU generation-safe command/packet intent, physical activity and old/new island/contact/shape/obstacle changes; fixed bodies never bridge dynamic propagation",
+    "publication": "sleep state/clocks/counters and request consumption commit after successful physics/validation; prior integration/response/lifecycle commits have separate scopes"
+  },
+  "actual_work": {
+    "gate": "whole-world only; disabled by default",
+    "condition": "all live dynamic bodies already asleep and unchanged with support/no force/no wake",
+    "partial_sleep": "any island needing work executes unchanged integration/response for all bodies; no per-island solver scheduling",
+    "diagnostic_totals": {
+      "steps": 9,
+      "integration_executed": 6,
+      "response_executed": 6,
+      "idle_skipped": 3
+    },
+    "diagnostic_sequence": [
+      {
+        "stage": "supported_idle_freeze",
+        "epoch": 7,
+        "asleep": 2,
+        "awake": 0,
+        "entered": 0,
+        "woke": 0,
+        "integration_calls": 0,
+        "response_calls": 0,
+        "idle_skipped": 1
+      },
+      {
+        "stage": "force_wakes_one_static_anchored_island",
+        "epoch": 8,
+        "asleep": 1,
+        "awake": 1,
+        "entered": 0,
+        "woke": 1,
+        "integration_calls": 1,
+        "response_calls": 1,
+        "idle_skipped": 0
+      },
+      {
+        "stage": "support_removed_all_incident_groups_awake",
+        "epoch": 9,
+        "asleep": 0,
+        "awake": 2,
+        "entered": 0,
+        "woke": 1,
+        "integration_calls": 1,
+        "response_calls": 1,
+        "idle_skipped": 0
+      }
+    ],
+    "skip_proof": "integration scratch and response candidate work-buffer canaries remain untouched on a skipped tick; actual invoked API-operation counts, not inferred body/kernel counts",
+    "performance_claim": false
+  },
+  "coverage": [
+    "independent CPU BFS/rational state machine and analytic event sequences",
+    "dwell/epoch/event-counter/zero/maximum boundaries",
+    "gravity supported rest and exact idle frozen poses",
+    "unsupported analytic free fall and tiny nonzero linear/angular/force activity",
+    "external force/impulse and identical explicit pose intent",
+    "static-only wake no-op and no shared-static bridge",
+    "contact-driven wake, merge/split, shape revise/detach, moving/removed fixed support",
+    "generation reuse and stale/foreign/range mixed wake packet rollback",
+    "invalid configuration, corrupt clock, counter exhaustion and retained requests",
+    "response rejection leaves earlier integration visible without sleep-publication advance",
+    "active rolling path equals unchanged stable GPU response in every body field",
+    "default-off gate, no skipped work when any island is active, empty/256-body capacity"
+  ],
+  "qualification_receipts": {
+    "test": "/home/user/mojo-game-engine/build/physics-g05-sleep/test-qualification.json",
+    "packaged": "/home/user/mojo-game-engine/build/physics-g05-sleep/packaged-qualification.json",
+    "demo": "/home/user/mojo-game-engine/build/physics-g05-sleep/demo-qualification.json"
+  },
+  "regression_stage_count": 27,
+  "regression_receipt": "/home/user/mojo-game-engine/build/physics-g05-sleep/regressions.json",
+  "frozen_prior_regression_receipts": [
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-sleep/final-regression-receipts/physics-g01/test-qualification.json",
+      "sha256": "9965d6d25d26c7083d20914219204d30eeb826f73c16e1e2344530fcd976084f"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-sleep/final-regression-receipts/physics-g02/test-qualification.json",
+      "sha256": "115c9d06767cd8bf9d50baf5aac369a7ae6db37c5926a68443178871be87dcf8"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-sleep/final-regression-receipts/physics-g02/packaged-qualification.json",
+      "sha256": "83c2520db8692f27b96f4f563baa923396436308ef15e5aa477682ea021956d6"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-sleep/final-regression-receipts/physics-g03/test-qualification.json",
+      "sha256": "6814568dc611cf305bbc8b54fbd58f8917afa31468f186a4a2a0b45c219bd7a6"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-sleep/final-regression-receipts/physics-g03/packaged-qualification.json",
+      "sha256": "fe929ed33fa3ff6999d01e233a4e9f3b03998e4c2a4c945a9e357f06fac108fe"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-sleep/final-regression-receipts/physics-g03b/test-qualification.json",
+      "sha256": "02772a4bd775e6d95a25970d1a1c050e2d19bed6ac5b2aa91182c5df2d0e139b"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-sleep/final-regression-receipts/physics-g03b/packaged-qualification.json",
+      "sha256": "1617e56c630098794fb04d9e074e04e815810b5562970ce98c96685af4ae63f7"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-sleep/final-regression-receipts/physics-g03c/test-qualification.json",
+      "sha256": "39938bb0387a3707b63a3e32f6f47aacde4c65e7eca3a198cdab07a4af5acf82"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-sleep/final-regression-receipts/physics-g03c/packaged-qualification.json",
+      "sha256": "b8e7ff5cca11435f37790c44824c6646235eddd42c51a24151a8669dbe3bfba8"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-sleep/final-regression-receipts/physics-g04a/test-qualification.json",
+      "sha256": "30dd138fa487d883fe52a807ce590396dd3d6fb00e3bfbedc8b04d2b90827818"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-sleep/final-regression-receipts/physics-g04a/packaged-qualification.json",
+      "sha256": "27af8bec1a9e86c8dee01e4d20255f66664ec01893ac0248c3bbb2227a244959"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-sleep/final-regression-receipts/physics-g04b/test-qualification.json",
+      "sha256": "62758a879483fc791e618e1a5ec66eb4fde3b8b5dd6776489630293222b0c7d6"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-sleep/final-regression-receipts/physics-g04b/packaged-qualification.json",
+      "sha256": "11d062fc6d2be6cd9cad7d47c3b68ef8af2a63c1d220c33f84b8cbcfb9e1e4d3"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-sleep/final-regression-receipts/physics-g04-stability/test-qualification.json",
+      "sha256": "f884d6bc03cf3fdc105a51abb7c08576c731c151cf00f8ea83d03fb92cc40639"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-sleep/final-regression-receipts/physics-g04-stability/packaged-qualification.json",
+      "sha256": "93f8890fd8cf6750efb77b32ae863528ce520d46e9cf09dd515bc20c16efce97"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-sleep/final-regression-receipts/physics-gpu-recommended/test-qualification.json",
+      "sha256": "3d6d75aeb8018d70e56678eb55bf3ff2ce05671c7424bb7255d73baac0a44746"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-sleep/final-regression-receipts/physics-gpu-recommended/packaged-qualification.json",
+      "sha256": "7aec924c16ae73a4c3d055b6406e1fc362959947be0cb5bedfe3cf9dec348f2f"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-sleep/final-regression-receipts/physics-gpu-recommended/demo-qualification.json",
+      "sha256": "77826127c380c943d5fa15a359b8162fc241f0e17978a5b2a6e143777c4cb654"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-sleep/final-regression-receipts/physics-g05-islands/test-qualification.json",
+      "sha256": "3b3554a4e230137457a7f2687c9adba8d85ccacdf065f328c844bdf0c9028b90"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-sleep/final-regression-receipts/physics-g05-islands/packaged-qualification.json",
+      "sha256": "5b59cade1af6c8441099aba9c047d6fd3aa3805558dafc4d2e886fae39c31925"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-sleep/final-regression-receipts/physics-g05-islands/demo-qualification.json",
+      "sha256": "dee78db51c7d0e8c317a18cb01751d0eec6ebeaae1d01d99140865226620852e"
+    }
+  ],
+  "source_hashes": {
+    "experimental/physics_gpu/sleep.mojo": "e1fb5432e258af6f2d40c24b1db89bb187f99f8a8a71e84ec481d142f61d2101",
+    "experimental/physics_gpu/sleep_kernels.mojo": "326c37fb82be809b9fad76a3c78132ba0916b240a7e5d4ba8b0bdd491f32eaba",
+    "experimental/physics_gpu/sleep_reference.mojo": "13b970347f30e26d6f65b282d1a5b63df90b1b4194c90885d2f5f7a70c5cf919",
+    "experimental/physics_gpu/test_sleep.mojo": "f082f76e4bf947b35e6d8f7f20ea9d0c76c7fb8131339c2fd185acae828be318",
+    "experimental/physics_gpu/sleep_diagnostic.mojo": "761c63b7dda73ca7670dae5f0329f467ce37d91ad55077b1a3dd0a5e8da6cc53",
+    "scripts/qualify-sleep.py": "f4b0d01e335383a71f5aea284369f7b9a3d88a40f4eb8df85d7f7d1cb1665b0c",
+    "experimental/physics_gpu/SLEEP.md": "8a6492fe33876c1242af41e48a1f2bc5b72e453cc471bb83f7feddbce503873f",
+    "experimental/physics_gpu/README.md": "b5fed54518371c8ba43b1fc227d213b069771806f89fa102ab29b7a3ac6aa885",
+    "docs/PHYSICS_ROADMAP.md": "2d061363398345d0fca23ff632a318feba9ad42f5023cdcf19be757e0a80969c"
+  },
+  "limits": {
+    "body_slots": 256,
+    "shapes": 64,
+    "response_contacts": 64,
+    "rates_hz": "30\u2013240",
+    "dwell_s": "0\u201310",
+    "simplified_support_not_general_equilibrium": true,
+    "approximate_motion_sleep_or_general_incline_pile_sleep": false,
+    "nonzero_residual_motion_can_prevent_sleep": true,
+    "partial_full_path_can_wake_on_representation_noise": true,
+    "per_island_skip_or_parallel_scheduling": false,
+    "warm_start_new_geometry": false,
+    "idle_still_runs_detection_graph_and_sleep_validation": true,
+    "driver_failure_or_async_transaction_guarantees": false
+  },
+  "preservation": {
+    "baseline_entries_checked": 72,
+    "intentional_differences": [
+      "experimental/physics_gpu/README.md",
+      "docs/PHYSICS_ROADMAP.md",
+      "build/mojo-game-source.tar.gz",
+      "build/atlas-release-manifest.json"
+    ],
+    "prior_unrelated_hashes_checked": 119,
+    "unrelated_changes": [],
+    "asset_save_identities_checked": 5901,
+    "asset_save_changes": [],
+    "campaign_sources_checked": 17,
+    "campaign_changes": [],
+    "root_GPU_game_locks_pins_unchanged": true,
+    "original_regression_sources_and_gates_unchanged": true,
+    "original_60Hz_failure_and_240Hz_pass_retained": true,
+    "original_240Hz_and_recommended_numeric_receipts_identical": true,
+    "recommended_review": {
+      "status": "passed",
+      "milestone": "recommended-G04-stability",
+      "device": "NVIDIA GB10",
+      "frames": 60,
+      "substeps_per_frame": 1,
+      "physics_hz": 60,
+      "sequential_GPU_worlds": 2,
+      "live_GPU_friction": true,
+      "entrypoint": "experimental.physics_gpu.recommended.GpuPhysicsResponse",
+      "solver": "GpuStableFrictionResponse",
+      "ordinary_engine_campaign_opt_in": false,
+      "low_mu": 0.02,
+      "high_mu": 0.8,
+      "low_final_x": 0.9035349999999964,
+      "high_final_x": -0.14573566588127745,
+      "low_final_vx": 2.8037999999999936,
+      "high_final_vx": 1.742837200942464,
+      "low_final_contact_slip": 3.71330700714285,
+      "high_final_contact_slip": -2.489802998522129e-05,
+      "low_final_kinetic_energy": 4.096087819208373,
+      "high_final_kinetic_energy": 2.1262544137014117,
+      "surface_slip_gate": 0.001,
+      "analytic_scene_laws_passed": true,
+      "rendered_snapshot_frames": [
+        0,
+        20,
+        40,
+        59
+      ],
+      "maximum_velocity_iterations": 1,
+      "maximum_cone_excess": 0.0,
+      "CPU_reference": "all 120 rendered-frame position/orientation/velocity/angular states, counts and energy reports after render; one CPU physics step per frame",
+      "fixed_bodies_unchanged": true,
+      "persistent_body_storage": true,
+      "warm_start": false,
+      "separate_static_dynamic_coefficients": false,
+      "solver_parallelism": "serial GPU contact sweeps",
+      "integration_response_separate_commits": true,
+      "validation_errors": 0,
+      "campaign_rules_changed": false
+    },
+    "normal_build_state": "Atlas engine source, archive and compiled API match.\nYo Frankie build matches game source and the explicit Atlas engine dependency.",
+    "normal_module_archive_game_artifacts_unchanged": true,
+    "normal_source_SDK_delta": {
+      "added": [],
+      "removed": [],
+      "changed": [
+        "docs/PHYSICS_ROADMAP.md"
+      ]
+    },
+    "source_SDK_workflow": "scripts/package-atlas.py only; normal SDK does not adopt sleep API",
+    "community_source_or_dependency_adoption": false,
+    "previous_receipts": "/home/user/mojo-game-engine/build/physics-g05-sleep/previous-gpu-receipts",
+    "rollback": "/home/user/mojo-game-engine/build/physics-g05-sleep/rollback"
+  },
+  "resolved_failures": {
+    "package_adapter": "renamed copied G04 helper main functions; original helpers unchanged",
+    "support_probe": "one-ULP solver floor cycle prevented exact-pose dwell; preserved diagnostic and revised declared pose-resolution rule, no original numerical gate change",
+    "test_event": "distinguished initial explicit wake from subsequent contact-driven event",
+    "initial_logs_retained": true,
+    "interrupted_checkpoint": "/home/user/mojo-game-engine/build/physics-g05-sleep/checkpoint.json"
+  },
+  "resources": {
+    "device": "NVIDIA GB10, 615.71.09, 12.1, 35",
+    "compile_threads": 1,
+    "compile_deadline_s": 180,
+    "run_deadline_s": 30,
+    "reserve_GiB": 32,
+    "minimum_sampled_available_GiB": 112.18045806884766,
+    "max_GPU_C": 39,
+    "temperature_policy": "observation only; retired diagnostic cutoffs inactive",
+    "H3_resumed": false,
+    "driver_firmware_OS_power_application_settings_changed": false
+  },
+  "cleanup": {
+    "native_or_H3_jobs": [],
+    "compute_apps": "",
+    "GPU_allocations": "scoped owners closed",
+    "evidence_and_rollback_retained": true,
+    "temporary_helper_removed": true,
+    "settings_changes": false
+  },
+  "remaining_blockers": [],
+  "stop_checkpoint": "G05b only; no broader sleep/per-island skip/solver scheduling"
+}

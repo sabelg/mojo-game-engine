@@ -1,0 +1,29 @@
+{
+  "scope": "Frozen-pose current-group friction block only; no integration, owner/default changes, warm cache, compression or timing.",
+  "cases": 26,
+  "variants": 4,
+  "point_orders": 24,
+  "tangent_bases": [
+    0,
+    45,
+    90
+  ],
+  "records_per_source_or_package": 7488,
+  "pressure_domain": "strictly positive minimum-norm face pressures; diamond<1-256eps; hull-interior outside certificate rejects as domain restriction, not physical impossibility",
+  "solver": "one existing disk_min onI/m total tangent metric; all-positive3-moment normal pressure solution; apply complete delta wrench; independent12-row CPU Gram plus normal RREF/spectral disks",
+  "gates": {
+    "state": "1e-10*(1+abs(reference))",
+    "normal_tangent": "1e-9*(1+input corresponding speed)",
+    "cone": "1e-12*(1+radius)",
+    "energy": "1e-9*(1+entry energy)",
+    "angular": "1e-10 supplied momentum/state"
+  },
+  "failure_policy": "Stop first unexpected reject or independent physical failure; no tuning after native observation.",
+  "build_threads": 1,
+  "build_guard_s": 180,
+  "native_guard_s": 30,
+  "memory_reserve_GiB": 32,
+  "H3": "paused",
+  "counter_retry": false,
+  "stopping_handling": "design separately; preserving approved bounds requires no relaxation; integration not included"
+}

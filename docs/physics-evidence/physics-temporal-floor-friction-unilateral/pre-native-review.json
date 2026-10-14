@@ -1,0 +1,6 @@
+{
+  "native_tests_run": false,
+  "classifier_only_source_sha256": "ebe78e41a9c2624694c8e644bde9263664dfe12a5d2d2052e20e52692a06a608",
+  "classifier_only_executable_sha256": "2011e1fd8c121fd7215a89f435629447cc412aba3d8fb4c5983db995a0b194a1",
+  "addition": "Apply the same zero-impulse complementarity witness to a cold current group after forcehalfkick as well as segment-entry classification. Avoid unsupportednegativeN after an endkick. No state/law/gate modifications."
+}

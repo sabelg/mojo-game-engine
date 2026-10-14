@@ -1,0 +1,6 @@
+{
+  "native_tests_run": false,
+  "compiled_initial_executable_sha256": "09d5b7362a3d381063123cfce07cc61f757c8daf6a91ee37a34aae1a1d11ae33",
+  "initial_kernel_source_sha256": "e36fb79869e2053dc07451270cea9bddfb2a2577e0e4d248ff66f9fe84878cc5",
+  "change": "Before native observation, normalize stop roots within declared64eps time tolerance of a fixed interval endpoint to that actual endpoint. Prevent microscopic remainders. Never clamp position/velocity, alter friction law or numerical gates."
+}

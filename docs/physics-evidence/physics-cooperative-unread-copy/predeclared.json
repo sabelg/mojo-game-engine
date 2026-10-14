@@ -1,0 +1,49 @@
+{
+  "invariants_sha256": "652779fffb6a91dbf3e01b117186038d1e46cd7149ea6c891db04c9694cb7038",
+  "mode_order_even": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      1,
+      2,
+      0
+    ],
+    [
+      2,
+      0,
+      1
+    ]
+  ],
+  "mode_order_odd": [
+    [
+      0,
+      2,
+      1
+    ],
+    [
+      2,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      2
+    ]
+  ],
+  "modes": [
+    "serial tangent-cache",
+    "retained cooperative",
+    "compact candidate"
+  ],
+  "batches": 4,
+  "calls_each_interleaved_path": 240,
+  "source_package_paths": 2,
+  "measured_per_mode_fixture_path": 12,
+  "profile_plain_calls": 120,
+  "profile_trace_calls": 120,
+  "no_algorithm_barrier_layout_clearing_or_gate_change": true
+}

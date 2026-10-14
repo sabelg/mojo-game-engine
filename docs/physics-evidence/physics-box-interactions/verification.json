@@ -1,0 +1,402 @@
+{
+  "status": "bounded_interacting_box_checkpoint_complete_with_retained_limits",
+  "recorded_at_UTC": "2026-10-13T10:47:42.571184+00:00",
+  "scope": "tests of the existing cold serial box-only solver; no production solver/API/SDK/campaign change",
+  "API": "experimental.physics_gpu.box_response.GpuBoxResponse",
+  "predeclared": {
+    "recorded_at_UTC": "2026-10-13T10:26:20.952360+00:00",
+    "design_path": "/home/user/mojo-game-engine/experimental/physics_gpu/BOX_INTERACTIONS_DESIGN.md",
+    "design_sha256": "d8e0e5e2e7311b257af0f7ffc46f18d6a3fe1083928b5129d71d2cd08c09d603",
+    "case_matrix_sha256": "35ab67a804d193a204e50911fe9257ab0d1a10b99d9cfa6cd11fb8acc22065d3",
+    "case_count": 70,
+    "execution_started": false
+  },
+  "qualified_domain_definition": "exact discrete cases flagged qualified_full_trajectory in coverage-matrix.json, durations.5/1s; not a continuous range or general stability claim",
+  "case_count_per_path": 70,
+  "local_complete_per_path": 50,
+  "all_applicable_gates_qualified_per_path": 49,
+  "convergence_rejections_per_path": 16,
+  "unreached_ledge_event_per_path": 4,
+  "source_package_result_and_trace_arithmetic_exactly_identical": true,
+  "successful_local_replayed_steps_per_path": 1935,
+  "all_numerically_completed_steps_per_path": 2115,
+  "metamorphic": {
+    "comparisons": 12,
+    "passed": 10,
+    "failures": "closed collision translation60Hz/96 in both paths; strict binary64 boundary event timing",
+    "path": "/home/user/mojo-game-engine/build/physics-box-interactions/metamorphic.json"
+  },
+  "scene_summary": [
+    {
+      "id": 0,
+      "scene": "offset rest",
+      "cases": 6,
+      "qualified_all_applicable_gates": 6,
+      "local_outcomes": {
+        "completed": 6
+      }
+    },
+    {
+      "id": 1,
+      "scene": "yawed offset rest",
+      "cases": 4,
+      "qualified_all_applicable_gates": 4,
+      "local_outcomes": {
+        "completed": 4
+      }
+    },
+    {
+      "id": 2,
+      "scene": "tilt settling",
+      "cases": 6,
+      "qualified_all_applicable_gates": 6,
+      "local_outcomes": {
+        "completed": 6
+      }
+    },
+    {
+      "id": 3,
+      "scene": "shared frictional slide",
+      "cases": 6,
+      "qualified_all_applicable_gates": 0,
+      "local_outcomes": {
+        "solver_rejected": 6
+      }
+    },
+    {
+      "id": 4,
+      "scene": "spin and slide",
+      "cases": 4,
+      "qualified_all_applicable_gates": 4,
+      "local_outcomes": {
+        "completed": 4
+      }
+    },
+    {
+      "id": 5,
+      "scene": "seeded perturbations",
+      "cases": 16,
+      "qualified_all_applicable_gates": 8,
+      "local_outcomes": {
+        "solver_rejected": 8,
+        "completed": 8
+      }
+    },
+    {
+      "id": 6,
+      "scene": "bounce creation/loss",
+      "cases": 8,
+      "qualified_all_applicable_gates": 8,
+      "local_outcomes": {
+        "completed": 8
+      }
+    },
+    {
+      "id": 7,
+      "scene": "support removal",
+      "cases": 4,
+      "qualified_all_applicable_gates": 4,
+      "local_outcomes": {
+        "completed": 4
+      }
+    },
+    {
+      "id": 8,
+      "scene": "closed frictional collision",
+      "cases": 8,
+      "qualified_all_applicable_gates": 7,
+      "local_outcomes": {
+        "completed": 8
+      }
+    },
+    {
+      "id": 9,
+      "scene": "finite ledge exit",
+      "cases": 4,
+      "qualified_all_applicable_gates": 0,
+      "local_outcomes": {
+        "event_coverage_failure": 4
+      }
+    },
+    {
+      "id": 10,
+      "scene": "three offset rest",
+      "cases": 4,
+      "qualified_all_applicable_gates": 2,
+      "local_outcomes": {
+        "solver_rejected": 2,
+        "completed": 2
+      }
+    }
+  ],
+  "qualification_receipts": [
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-interactions/source-cases-0-4.json",
+      "sha256": "4786a172e9c0fab1b9a1139879a3f6c05adc5e98cbd0ee6094f49e020eccc821",
+      "case_count": 4,
+      "mode": "source"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-interactions/source-cases-4-66.json",
+      "sha256": "66066d87bded08764f7351af1382d8826749cc3f125f47b85db5783bae6df30e",
+      "case_count": 66,
+      "mode": "source"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-interactions/packaged-cases-0-70.json",
+      "sha256": "8543baedd35a655df844bb2c9bef6d925feff6723eca6c01e85a88ae4479b4de",
+      "case_count": 70,
+      "mode": "packaged"
+    }
+  ],
+  "coverage_matrix": "/home/user/mojo-game-engine/build/physics-box-interactions/coverage-matrix.json",
+  "coverage_readable": "/home/user/mojo-game-engine/build/physics-box-interactions/COVERAGE.md",
+  "failures": "/home/user/mojo-game-engine/build/physics-box-interactions/failures.json",
+  "physical_metrics": "/home/user/mojo-game-engine/build/physics-box-interactions/physical-metrics.json",
+  "diagnoses": {
+    "coupled_friction": [
+      {
+        "scene": "shared frictional slide",
+        "hz": 30,
+        "normal_history64_matches_first64_of96": true,
+        "normal64": 6.513126725695712e-07,
+        "normal96": 3.69438989357356e-07,
+        "tangent64": 1.274765845316536e-05,
+        "tangent96": 8.533027288225932e-06,
+        "tangent_gate": 1.304138126514911e-09,
+        "observed64_to96_geometric_mean_tangent_ratio_per_sweep": 0.9875344897843101,
+        "tangent_gate_ratio_at96": 6543.039509955135,
+        "not_an_asymptotic_rate_or_convergence_guarantee": true
+      },
+      {
+        "scene": "shared frictional slide",
+        "hz": 60,
+        "normal_history64_matches_first64_of96": true,
+        "normal64": 3.2533115795676805e-07,
+        "normal96": 1.844456954113815e-07,
+        "tangent64": 6.416302744474501e-06,
+        "tangent96": 4.2897916560641545e-06,
+        "tangent_gate": 1.304138126514911e-09,
+        "observed64_to96_geometric_mean_tangent_ratio_per_sweep": 0.9874974430587482,
+        "tangent_gate_ratio_at96": 3289.369100440226,
+        "not_an_asymptotic_rate_or_convergence_guarantee": true
+      },
+      {
+        "scene": "shared frictional slide",
+        "hz": 120,
+        "normal_history64_matches_first64_of96": true,
+        "normal64": 1.6255443682372142e-07,
+        "normal96": 9.214236647208309e-08,
+        "tangent64": 3.2188639275799066e-06,
+        "tangent96": 2.150838500273723e-06,
+        "tangent_gate": 1.304138126514911e-09,
+        "observed64_to96_geometric_mean_tangent_ratio_per_sweep": 0.9874799513945471,
+        "tangent_gate_ratio_at96": 1649.2413315309443,
+        "not_an_asymptotic_rate_or_convergence_guarantee": true
+      }
+    ],
+    "translation_boundary": {
+      "status": "retained_metamorphic_failure",
+      "expected_real_arithmetic_gap_at_t0_1": 0,
+      "records": [
+        {
+          "variant": "original",
+          "frame": 5,
+          "simulation_time_s": 0.1,
+          "entry_x": [
+            -0.5000000000000002,
+            0.5000000000000002
+          ],
+          "exact_binary64_entry_face_gap_decimal": "4.440892098500626161694526672363281250E-16",
+          "patches": 0,
+          "first_contact_frame": 6,
+          "CPU_GPU_agree_for_this_trajectory": true
+        },
+        {
+          "variant": "translated",
+          "frame": 5,
+          "simulation_time_s": 0.1,
+          "entry_x": [
+            1.4999999999999998,
+            2.4999999999999973
+          ],
+          "exact_binary64_entry_face_gap_decimal": "-2.4424906541753443889319896697998046875E-15",
+          "patches": 1,
+          "first_contact_frame": 5,
+          "CPU_GPU_agree_for_this_trajectory": true
+        }
+      ],
+      "diagnosis": "absolute-position integration rounding changes the sign of a near-zero admitted input gap; strict separated/touching/overlapping predicates then yield a one-step difference in restitution timing",
+      "existing_strict_boundary_contract_preserved": true,
+      "epsilon_or_gate_change": false,
+      "remaining_limit": "exact event-time translation invariance is not qualified at binary64 signed boundaries; source and independent CPU both reproduce each configuration"
+    },
+    "ledge": "1s fixture remains contacting; numerical checks pass but detachment coverage is not qualified"
+  },
+  "retained_regressions": {
+    "stage_count": 61,
+    "receipt": "/home/user/mojo-game-engine/build/physics-box-interactions/regressions.json",
+    "original_box_groups_source_package": [
+      24,
+      24
+    ],
+    "engine_game_checks": 8,
+    "original_recommended_render": 1,
+    "original_box_review_scenes": 4,
+    "retained_box_review": [
+      {
+        "status": "passed",
+        "scene": 1,
+        "boxes": 1,
+        "policy": 64,
+        "physics_hz": 30,
+        "dt": 0.03333333333333333,
+        "frames": 60,
+        "simulated_duration_s": 2,
+        "maximum_sweeps": 1,
+        "maximum_depth": 1.0000000000065512e-05,
+        "maximum_drift": 0.0,
+        "maximum_speed_jitter": 1.1102230246251565e-16,
+        "maximum_angular_drift": 5.110395779822822e-17,
+        "cumulative_projection_work": 6.415740000000056,
+        "cumulative_kinetic_dissipation": 6.415740000000002,
+        "final_floor_reaction_N": 19.62,
+        "independent_CPU_replay_frames": 60,
+        "fixed_body_unchanged": true,
+        "persistent_GPU_storage": true,
+        "validation_errors": 0,
+        "synchronous_step_response_host_wall_s": 0.3004209010032355,
+        "render_plus_replay_host_wall_s": 0.5459852100029821,
+        "real_time_performance_claim": false,
+        "campaign_adoption": false
+      },
+      {
+        "status": "passed",
+        "scene": 2,
+        "boxes": 2,
+        "policy": 64,
+        "physics_hz": 30,
+        "dt": 0.03333333333333333,
+        "frames": 60,
+        "simulated_duration_s": 2,
+        "maximum_sweeps": 28,
+        "maximum_depth": 1.0000649690700136e-05,
+        "maximum_drift": 6.496907456466342e-10,
+        "maximum_speed_jitter": 1.2181703354374835e-09,
+        "maximum_angular_drift": 4.224327699416619e-17,
+        "cumulative_projection_work": 12.831480068514693,
+        "cumulative_kinetic_dissipation": 12.83148009400864,
+        "final_floor_reaction_N": 39.240000000000016,
+        "independent_CPU_replay_frames": 60,
+        "fixed_body_unchanged": true,
+        "persistent_GPU_storage": true,
+        "validation_errors": 0,
+        "synchronous_step_response_host_wall_s": 1.0338618329915334,
+        "render_plus_replay_host_wall_s": 1.315180371995666,
+        "real_time_performance_claim": false,
+        "campaign_adoption": false
+      },
+      {
+        "status": "passed",
+        "scene": 3,
+        "boxes": 3,
+        "policy": 96,
+        "physics_hz": 30,
+        "dt": 0.03333333333333333,
+        "frames": 60,
+        "simulated_duration_s": 2,
+        "maximum_sweeps": 66,
+        "maximum_depth": 1.0000868065018764e-05,
+        "maximum_drift": 1.302097762945229e-09,
+        "maximum_speed_jitter": 1.8560571343750889e-09,
+        "maximum_angular_drift": 3.4489192569323517e-17,
+        "cumulative_projection_work": 19.24722012285565,
+        "cumulative_kinetic_dissipation": 19.247220190980826,
+        "final_floor_reaction_N": 58.859999999999985,
+        "independent_CPU_replay_frames": 60,
+        "fixed_body_unchanged": true,
+        "persistent_GPU_storage": true,
+        "validation_errors": 0,
+        "synchronous_step_response_host_wall_s": 2.5652178170057596,
+        "render_plus_replay_host_wall_s": 2.8838290499988943,
+        "real_time_performance_claim": false,
+        "campaign_adoption": false
+      },
+      {
+        "status": "expected_rejection_verified",
+        "scene": 4,
+        "boxes": 3,
+        "policy": 64,
+        "dt": 0.03333333333333333,
+        "frames": 1,
+        "simulated_duration_s": 0.03333333333333333,
+        "error": 114,
+        "sweeps": 64,
+        "normal_residual": 2.19977070586852e-09,
+        "normal_gate": 1.327e-09,
+        "response_entry_depth": 0.00546000000000002,
+        "body_rollback": true,
+        "independent_reference": true,
+        "validation_errors": 0,
+        "synchronous_step_response_host_wall_s": 0.05547949999890989
+      }
+    ]
+  },
+  "production_correctness_fix": null,
+  "new_files": {
+    "experimental/physics_gpu/test_box_interactions.mojo": "c3ad0bf3e662c71e3eaf7b108af1cb3a5f584cf40d3cddfc816d729c3f04d4c5",
+    "experimental/physics_gpu/BOX_INTERACTIONS.md": "59a75353defd17025ed73aecd9e7d46b0d1accf85d51d0468f129956020180bc",
+    "experimental/physics_gpu/BOX_INTERACTIONS_DESIGN.md": "d8e0e5e2e7311b257af0f7ffc46f18d6a3fe1083928b5129d71d2cd08c09d603",
+    "experimental/physics_gpu/BOX_INTERACTIONS_CASES.json": "35ab67a804d193a204e50911fe9257ab0d1a10b99d9cfa6cd11fb8acc22065d3",
+    "scripts/qualify-box-interactions.py": "83d8f3444f211e6ecbba1bd9c3640427faf4d2925f38e87db27c7fc45873a6db",
+    "scripts/prepare-box-interactions.py": "79df5e11dcff3a495c144cb99f204e48faf16235d55adf84bbdd66c8f60425ac",
+    "build/physics-box-interactions/analyze.py": "8b628d3d5114cff613f0d85367239b0b00bf1beb05ab45cd5a9d339b457f12c3",
+    "build/physics-box-interactions/physical-metrics.py": "938e52e9ef41acbfe7584c3c7c5ae97575c355d27aa1e091a4de0196b739a329",
+    "build/physics-box-interactions/run-retained-regressions.py": "ac9f0a4a35e4594abc89a37ea4489cc46b4b220aa021ae1e847358325200e6b5",
+    "build/physics-box-interactions/consolidate.py": "4a26c0a91bbf012a8375b2cf53d3448aebe67950bc75c05dd490607b818d9a1b"
+  },
+  "preservation": {
+    "protected_hashes_checked": 85,
+    "protected_changes": [],
+    "unrelated_sources_locks_checked": 119,
+    "unrelated_changes": [],
+    "asset_save_identities_checked": 5901,
+    "asset_save_changes": [],
+    "campaign_sources_checked": 17,
+    "campaign_changes": [],
+    "old_physics_sources_numerical_gates_policies_and_fixtures_unchanged": true,
+    "normal_SDK_module_archive_game_source_package_unchanged": true,
+    "matched_Mojo_MAX_pins_and_locks_unchanged": true,
+    "original_G04_failure_240Hz_baseline_and_recommended60Hz_slip_gate_preserved": true,
+    "recommended_high_slip": -2.489802998522129e-05,
+    "original_Library_review_preserved": "libfile_8327c0cfbe588191941f545c6dd44ffa",
+    "HEPJo_dependency": false
+  },
+  "resource_policy": {
+    "compile_threads": 1,
+    "compile_deadline_s": 180,
+    "each_trajectory_deadline_s": 30,
+    "available_memory_reserve_GiB": 32,
+    "minimum_observed_available_GiB": 110.99325180053711,
+    "Mojo": "1.2.0.dev2026092905",
+    "MAX": "26.7.0.dev2026092905",
+    "normal_settings": true,
+    "temperature_observation_only": true,
+    "retired_diagnostic_cutoffs_reinstated": false,
+    "performance_claim": false
+  },
+  "cleanup": {
+    "remaining_owned_native_GPU_or_qualification_commands": [],
+    "GPU_compute_apps": "",
+    "H3_resumed": false,
+    "boot_id": "22ae0bec-f40a-4c98-b2d7-c1312a226dea",
+    "settings_driver_firmware_OS_power_changes": false,
+    "unrelated_dirty_work_and_prior_evidence_preserved": true
+  },
+  "next_blockers": [
+    "coupled-friction convergence fails under64/96 at30/60/120Hz; new method decisions require separate scope and regression",
+    "exact event-time translation invariance remains unqualified at near-zero binary64 strict contact boundaries",
+    "predeclared finite ledge did not detach within1s; exit event remains uncovered"
+  ],
+  "stop_checkpoint": "bounded correctness increment complete; stop before algorithm, warm-start, scheduling, broadphase, sleeping or new physics features"
+}

@@ -1,0 +1,48 @@
+{
+  "stage": "source-compile",
+  "command": [
+    ".deps/physics-gpu-g01/.pixi/envs/default/bin/mojo",
+    "build",
+    "--num-threads",
+    "1",
+    "experimental/physics_gpu/test_rotating_floor_vertex_impact.mojo",
+    "-I",
+    ".",
+    "-o",
+    "build/physics-rotating-floor-vertex/source"
+  ],
+  "deadline_s": 180,
+  "elapsed_s": 0.529,
+  "returncode": 1,
+  "fault": null,
+  "samples": [
+    {
+      "available_kB": 118879148,
+      "GPU_C": 34,
+      "GPU_utilization": 6,
+      "sensors_C": {
+        "thermal_zone2": 39.4,
+        "thermal_zone0": 39.4,
+        "thermal_zone5": 36.8,
+        "thermal_zone3": 35.1,
+        "thermal_zone1": 35.0,
+        "thermal_zone6": 35.1,
+        "thermal_zone4": 34.7
+      }
+    },
+    {
+      "available_kB": 118875156,
+      "GPU_C": 34,
+      "GPU_utilization": 6,
+      "sensors_C": {
+        "thermal_zone2": 39.2,
+        "thermal_zone0": 39.2,
+        "thermal_zone5": 36.8,
+        "thermal_zone3": 35.1,
+        "thermal_zone1": 35.0,
+        "thermal_zone6": 35.1,
+        "thermal_zone4": 34.7
+      }
+    }
+  ]
+}

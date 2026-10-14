@@ -1,0 +1,9 @@
+{
+  "recorded_at_UTC": "2026-10-13T14:38:38.043885+00:00",
+  "design": "experimental/physics_gpu/TRANSLATION_BOUNDARY_DESIGN.md",
+  "design_sha256": "80b38dc08d9ee191975c8efdf4e77554adadd822c322e2c6a6e21321cd584d49",
+  "cases_sha256": "b85a80823e9e29d92a7b91855e8899384797070d0213d9297e53c99b52ac8889",
+  "native_fixture_execution_started": false,
+  "old_strict_test_assertion_unchanged": true,
+  "production_change": false
+}

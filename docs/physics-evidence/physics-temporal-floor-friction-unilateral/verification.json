@@ -1,0 +1,163 @@
+{
+  "status": "BOUNDED_UNILATERAL_TEMPORAL_FRICTION_CORRECTNESS_QUALIFIED",
+  "recorded_at_UTC": "2026-10-14T05:49:24.574283+00:00",
+  "API": "experimental.physics_gpu.unilateral_temporal_floor_friction.GpuUnilateralTemporalFloorFrictionAdvance",
+  "promotion": false,
+  "scope": {
+    "scope": "Separate unilateral temporal friction revision; preserve failed owner, qualified frictionless/frozen owners and receipts. No timing.",
+    "minimal_fix": "Do not dispatch noncompressive cold input to compression-only frozen block. Classify unloaded/no-contact trajectory by real velocities/geometry; carry actual v/omega unchanged; discard group bookkeeping only, not physical impulse.",
+    "admission": {
+      "unloaded": "ay==0, COMvy>=0, all normal rows>=-originalnormalTol: zero normal/tangent impulses, then physical ballistic segment/TOI and true endpoint geometry checks",
+      "force_supported_roundoff": "ay<0,0<=COMvy<=existingstrictanalytic1e-10,certified face and COMvy+ay*remaining/2<0; retain support and apply actual force halfkick before normal solve; no velocity clamp",
+      "genuine_separation": "COMvy>0 exceptabove certified force-supported roundoff; clear touching and use unchanged physical quadratic floorTOI, including return underdownward acceleration",
+      "end_geometry": "check each true corner gap>=-1e-9 and reject materially closing row atgap<=0 if noTOI wasfound; no penalty/compliance/projection",
+      "cold_group": "After actual halfkick, ifgroupempty,target0,COMvy>=0,certifiedface,bodyprofilevalid andzero-pressure normal residual<=same1e-9scaledgate, no-op withzero disks/wrench. Otherwise compression block unchanged."
+    },
+    "bounds_and_law": "All existing1e-10scaledstate,1e-9scaledvelocity,1e-12scaledcones,1e-9scaledenergy and approved macro/one-secondbounds unchanged; frozen block reusedverbatim",
+    "limits": {
+      "macro": 0.03333333333333333,
+      "bases": 4,
+      "base_h": 0.008333333333333333,
+      "segments_per_base": 6,
+      "TOI": 4,
+      "stops": 4,
+      "onset": 4
+    },
+    "targeted_tests": "savedcase exacttinyupwardpreservation; paired+/-5.55e-17and1e-12 separated/approaching withzero/downwardacceleration, actualpositive separation and returnTOI, fullunexpectedfailure rollback assertions",
+    "remaining": "source/freshpackage affectedanalyticmatrix andcompleteimpact/protocol, genuine1second friction/recontact trajectories, fulllifecycleidentity/revision/material/teleport/rollback. Reuse old frozenblock14976 andqualifiedfrictionless63/70 receipts only; no repeat",
+    "failure_policy": "Stop next substantivephysicalfailure; preserve version androw; no tuning/weakening",
+    "build_threads": 1,
+    "build_guard_s": 180,
+    "native_guard_s": 30,
+    "reserve_GiB": 32,
+    "H3": "paused",
+    "counter_retry": false
+  },
+  "completed": {
+    "boundary": {
+      "records_each_path": 96,
+      "accepted_each_path": 96,
+      "expected_rejected_each_path": 0,
+      "codes": {
+        "0": 96
+      },
+      "source_package_byte_identical": true
+    },
+    "first": {
+      "records_each_path": 192,
+      "accepted_each_path": 192,
+      "expected_rejected_each_path": 0,
+      "codes": {
+        "0": 192
+      },
+      "source_package_byte_identical": true
+    },
+    "probes": {
+      "records_each_path": 120,
+      "accepted_each_path": 48,
+      "expected_rejected_each_path": 72,
+      "codes": {
+        "0": 48,
+        "511": 8,
+        "301": 16,
+        "1305": 16,
+        "513": 8,
+        "512": 8,
+        "517": 8,
+        "305": 8
+      },
+      "source_package_byte_identical": true
+    },
+    "trajectories": {
+      "records_each_path": 1440,
+      "accepted_each_path": 1440,
+      "expected_rejected_each_path": 0,
+      "codes": {
+        "0": 1440
+      },
+      "source_package_byte_identical": true
+    },
+    "lifecycle": {
+      "records_each_path": 15,
+      "accepted_each_path": 7,
+      "expected_rejected_each_path": 8,
+      "codes": {
+        "300": 3,
+        "301": 3,
+        "0": 7,
+        "511": 1,
+        "510": 1
+      },
+      "source_package_byte_identical": true
+    }
+  },
+  "records_each_path": 1863,
+  "accepted_each_path": 1783,
+  "expected_rejected_each_path": 80,
+  "total_qualified_records": 3726,
+  "analytic_maxima": {
+    "position_error": 2.4425005105388437e-15,
+    "velocity_error": 2.1094237467877974e-14,
+    "momentum_error": 2.929642751054232e-14,
+    "energy_error": 1.3677947663381929e-13
+  },
+  "component_state_gate_receipt": "Boundary, first, accepted probes and trajectory position/velocity norm errors are all below absolute 1e-10, stricter than every original 1e-10*(1+abs(reference)) component gate. Lifecycle independently checks analytic vertical state, spin, consumed forces, identities and exact rollback. No gate changes.",
+  "genuine_trajectories": "12 kinds x4 variants x30 consecutiveframes/path. No repeated isolatedstep resets.",
+  "reuse": "Qualified frozen block 14,976 source/package records, original 63/70 and unchanged registry/lifecycle implementations reused; no repeat or added coverage claim.",
+  "minimal_change": "Newadapter dispatches coldzero-demand/opening rows to zeroimpulseunilateral continuation and realflight/TOI; tinyupward actual v/omega untouched; downwardroundoff admits support onlyif actualhalfkickcompresses; oldcompressionblockunchanged.",
+  "rollback": "All nonzero returns in affected probes andcommitted lifecycle assert entirebody/force/torque bytes, committedepisode16words,last48words; metadataexact. Body/shape generations andshape revisions refreshed; materialchanges andteleport validate acceptedpriorcommands.",
+  "oracle_correction": "Preserved5row interrupted trajectoryreceipt; sole failurewas doubledexactreference stop frompositivefloating subtraction residue. Set exactreferenceevent speed0; GPUunchanged; gatesunchanged. Corrected genuine matrix passed.",
+  "compile_correction": "TestInt32 count comparisonfixedbefore lifecyclefirstnative; retained failedcompile log.",
+  "benchmark": false,
+  "performance_claim": null,
+  "buffer_count": 10,
+  "explicit_owner_bytes": 50168,
+  "preservation": {
+    "UTC": "2026-10-14T05:48:28.757251+00:00",
+    "protected_hashes_verified": 18563,
+    "asset_save_size_mtime_identities": 5901,
+    "campaign_source_hashes": 17,
+    "other_source_lock_hashes": 119,
+    "pins": {
+      "1.2.0.dev2026092905": {
+        "metadata_sha256": "40307d16e09c2e88bfe8085346d028d7479d93867fdd6e210305ed3fbaf9c534",
+        "path": "/home/user/mojo-game-engine/.deps/physics-gpu-g01/.pixi/envs/default/conda-meta/mojo-compiler-1.2.0.dev2026092905-release.json"
+      },
+      "26.7.0.dev2026092905": {
+        "metadata_sha256": "dab5b010e4a7b5f6b7dcc4f60f2e30f9e5e69b689ef2bd57e46025d251dc2403",
+        "path": "/home/user/mojo-game-engine/.deps/physics-gpu-g01/.pixi/envs/default/conda-meta/max-core-26.7.0.dev2026092905-release.json"
+      }
+    },
+    "minimum_available_GiB": 110.86332702636719,
+    "final_available_GiB": 113.47587203979492,
+    "reserve_GiB": 32,
+    "owned_jobs": [],
+    "GPU_compute_processes": "",
+    "GPU_read_only_inventory": "NVIDIA GB10, 615.71.09, 35, 5.68 W, 6 %, [N/A]",
+    "telemetry_count": 49,
+    "nonzero_stages": [
+      {
+        "stage": "lifecycle-source-compile",
+        "returncode": 1,
+        "fault": null
+      },
+      {
+        "stage": "trajectories-source-variant-1",
+        "returncode": 1,
+        "fault": null
+      }
+    ],
+    "hardware_changes": false,
+    "H3": "paused; untouched",
+    "profiling_counter_retry": false,
+    "dynamic_spills_stalls": "unmeasured",
+    "benchmark": false,
+    "owned_native_executable_scan": []
+  },
+  "remaining_blockers": "None for the declared bounded correctness matrix. Turning, reversal, rotation, tipping, multiple bodies and finite-floor transitions remain unsupported. Performance is unmeasured.",
+  "previous_deliverables": {
+    "shared_operator_result": "build/physics-shared-operator/RESULTS.md",
+    "compression_assessment": "build/physics-shared-operator/COMPRESSION.md",
+    "warm_start_design_only": "build/physics-shared-operator/WARM_START_DESIGN.md"
+  }
+}

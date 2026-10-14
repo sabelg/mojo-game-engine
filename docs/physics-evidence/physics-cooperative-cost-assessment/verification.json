@@ -1,0 +1,48 @@
+{
+  "status": "READ_ONLY_COOPERATIVE_COST_ASSESSMENT_COMPLETE",
+  "recorded_at_UTC": "2026-10-13T19:46:15.359558+00:00",
+  "recommendation": "One next bounded experiment: remove only unread shared-input stores, preserving layout/clearing/canaries/barriers/private serial math and explicit modes",
+  "implementation": false,
+  "new_compile_native_or_GPU_instrumentation_runs": 0,
+  "inner_factorization_versus_control_wall_time_unmeasured": true,
+  "source_nominal_store_counts_not_measured_traffic_or_speedup": true,
+  "instrumentation_distortion_reported": true,
+  "assessment_sha256": "3edaee0e567b2aaf01b98936b3c144930807cbf3950b185d960f070600ac5511",
+  "source_estimates_and_measurements_sha256": "068d5b27d2c098a019c1aa58421b0b4d5147d2c72572012640e8b29be9f2add0",
+  "preservation": {
+    "final_checkpoint_files_hash_preserved": 3013,
+    "earlier_protected_files": 368,
+    "protected_changes": [],
+    "asset_save_identities": 5901,
+    "asset_save_changes": [],
+    "campaign_sources": 17,
+    "unrelated_sources_locks": 119,
+    "pins": [
+      {
+        "version": "1.2.0.dev2026092905",
+        "metadata_sha256": "40307d16e09c2e88bfe8085346d028d7479d93867fdd6e210305ed3fbaf9c534"
+      },
+      {
+        "version": "26.7.0.dev2026092905",
+        "metadata_sha256": "dab5b010e4a7b5f6b7dcc4f60f2e30f9e5e69b689ef2bd57e46025d251dc2403"
+      }
+    ],
+    "physics_code_evidence_SDK_campaign_dirtywork_locks_and_original_policies_unchanged": true
+  },
+  "retained_coverage": "63/70 unchanged; separate75/75translation and12/12ledge remain separate",
+  "resources": {
+    "final_available_GiB": 114.43611907958984,
+    "required_reserve_GiB": 32,
+    "no_native_commands_to_time_or_recompile": true
+  },
+  "cleanup": {
+    "owned_jobs": [],
+    "GPU_compute_apps": "",
+    "H3_resumed": false,
+    "normal_settings_unchanged": true,
+    "OS_driver_firmware_settings_changes": false,
+    "installs_dependencies_or_publication": false,
+    "remaining_blockers": [],
+    "stopped_at_assessment": true
+  }
+}

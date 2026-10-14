@@ -1,0 +1,1044 @@
+{
+  "status": "BOUNDED_UNREAD_COPY_ONLY_EXACT_QUALIFICATION_AND_MEASUREMENT_COMPLETE",
+  "recorded_at_UTC": "2026-10-13T20:38:11.026975+00:00",
+  "API": "experimental.physics_gpu.compact_cooperative_response.GpuCompactCooperativeBoxResponse",
+  "opt_in": true,
+  "existing_modes_defaults_SDK_policy_changed": false,
+  "scope": "Only removal of277unread Float64 shared input stores and16unread Int32mask stores per evaluator call; all arithmetic, offsets, clearing, allocations, barriers, work and authoritative commit retained",
+  "new_repository_files": {
+    "experimental/physics_gpu/compact_cooperative_math.mojo": "51fefb3de341055f60bf6b33d551cdbcd49252df4e14e71940c5fa7ff2d1e9da",
+    "experimental/physics_gpu/compact_cooperative_kernels.mojo": "18aec76057539c0c9303e123646c30b595ca5c7a0e4597d2dbf1a4169127bb72",
+    "experimental/physics_gpu/compact_cooperative_response.mojo": "232b1cbc9a0d0aa319ecf72677877f772be395960f1ddd15a4ca41c25072a66e",
+    "experimental/physics_gpu/test_compact_cooperative_helpers.mojo": "e5a515145b70c012a4b61de464b269dec664055cdd18d13f0dbc378280cce12a"
+  },
+  "final_physics_sources": {
+    "experimental/physics_gpu/coupled_geometry_reference.mojo": "a7edca5b18db94efd1003d16148e3409a6afd88885eb87c121b2d3210e4ba41b",
+    "experimental/physics_gpu/cached_tangent_response.mojo": "a024f38db3810c0e2e4836f07bcdca91a2745bbf50c8d3afd3881770a979c235",
+    "experimental/physics_gpu/box_response_diagnostic.mojo": "1d9999c1119118eeb7993e964c2be270eaf07a988201a7c2251f60b2a2f7b081",
+    "experimental/physics_gpu/test_cached_coupled.mojo": "2006bcd8cfa78fe8c9b49c9a3f68550d921708b679c44edd6dcf20ffa30b2708",
+    "experimental/physics_gpu/test_cached_helpers.mojo": "309b62deb8edf9b6f1dca47c4100612e34876038926cce4338ade2a1ef726c18",
+    "experimental/physics_gpu/cooperative_math.mojo": "ed445442937674cd1657405062bbc22c73103b1cce6029269e6f2d1d483d3ccf",
+    "experimental/physics_gpu/test_box_friction_diagnosis.mojo": "f9bfd94e8a6465cf3015054cf4f06f40ae95ffb6047241b96b090c0f09698dcd",
+    "experimental/physics_gpu/compact_cooperative_response.mojo": "232b1cbc9a0d0aa319ecf72677877f772be395960f1ddd15a4ca41c25072a66e",
+    "experimental/physics_gpu/friction_response.mojo": "fdb4a3a039d48ad02d774a15d6e045fad71f191081fe5c02a71c13a20238a99e",
+    "experimental/physics_gpu/test_compact_cooperative_helpers.mojo": "e5a515145b70c012a4b61de464b269dec664055cdd18d13f0dbc378280cce12a",
+    "experimental/physics_gpu/response_kernels.mojo": "3237b81df7cd797554920d24e2b621e0d13cf0fa7ae6802cd645d4b115baf291",
+    "experimental/physics_gpu/contact_oracle.mojo": "d0486cc489286bf4ce56146adb3d7066cf6db60a8cf6c57d55842ea8963c81ac",
+    "experimental/physics_gpu/test_g04b.mojo": "03e065914f6c78e1e212247d7b834c2988a6295a713789560775e7a84d99448d",
+    "experimental/physics_gpu/box_response.mojo": "2374c6a8d39b17d508c13d5e9994ba9224489e6ca03da2aa6abdfb69ac99f596",
+    "experimental/physics_gpu/stable_friction.mojo": "51a23796145d11670bf06fd526ec2fd10335f1ace7e30bf81971514f4de68f21",
+    "experimental/physics_gpu/test_g03b.mojo": "f8c04152ed73cd9940937e1221a5664ccbe245ce06f9a8c0bf6160f15cf532fc",
+    "experimental/physics_gpu/box_response_kernels.mojo": "19a2c32301b0569541c6082b61007c575b8c8227d140debe467da47260da105b",
+    "experimental/physics_gpu/sleep_reference.mojo": "13b970347f30e26d6f65b282d1a5b63df90b1b4194c90885d2f5f7a70c5cf919",
+    "experimental/physics_gpu/box_box.mojo": "986b02793c9fa02cd78d6291f9703adbbd0b2c90968d433076d93acd349b8242",
+    "experimental/physics_gpu/stability_kernels.mojo": "33f887ce94ea6d479f839674050b4802177b3ab4ad95db6ab8bdce4bbe364c05",
+    "experimental/physics_gpu/response_reference.mojo": "58744e78c161bb1dbeea43f7fe2ded77f382c1bb0980ebf5519d35557d2563b6",
+    "experimental/physics_gpu/cached_coupled_response.mojo": "e4486779f99bcd0b5125fa8580a6b986c0e3c918c9368ca568a8f1da3f4fb38d",
+    "experimental/physics_gpu/boundary_reference.mojo": "ebe6849d1cf0e4f09d09194dac59af59f41938d1de431485904ab8d381295694",
+    "experimental/physics_gpu/test_coupled_rank.mojo": "7ad839fba99b59cf1ec547c812ee6c7ea8041c4a704f8d3bf2d120b79d78f7b6",
+    "experimental/physics_gpu/test_g03.mojo": "3627186566dbfa320411a1d07a6785cd05515700730d7805762409e019e9b44f",
+    "experimental/physics_gpu/island_kernels.mojo": "ab557f9d0a5e8ed5c273070e08ec7fff08c16c95f8039da3cc9c03da9504f608",
+    "experimental/physics_gpu/contact_reference.mojo": "7afa1279abd56509f15ef0fcf9d53321bbd0829a5943b40b7de97f8c35742cdb",
+    "experimental/physics_gpu/test.mojo": "dfd16e3de353d46e2ad34658109d3fb535a1fb43202fbc4ded95db638c470fef",
+    "experimental/physics_gpu/test_box_coupled.mojo": "c93897bb18e51a0e6edaa24ba79b4668d216a3f7dc7bb127f7a118981dc3cfea",
+    "experimental/physics_gpu/cooperative_response.mojo": "8c9293db11e753024467391e0651843189bce1f29f350077b4326975b2b360b5",
+    "experimental/physics_gpu/compact_cooperative_kernels.mojo": "18aec76057539c0c9303e123646c30b595ca5c7a0e4597d2dbf1a4169127bb72",
+    "experimental/physics_gpu/test_coupled_validation.mojo": "5e109db152e3f31d187f423ae0def7365d5a983089f4526e9cdf21bd3419bdce",
+    "experimental/physics_gpu/test_box_interactions.mojo": "c3ad0bf3e662c71e3eaf7b108af1cb3a5f584cf40d3cddfc816d729c3f04d4c5",
+    "experimental/physics_gpu/test_box_response.mojo": "d9253ef9cc3d561e505544e128b3042f73e9862c0e3958e45a4ba91f09a30fd6",
+    "experimental/physics_gpu/__init__.mojo": "56a24fd8faae2389d1e4708ac3aadcf75f6a5690300df36200ad5bc741ff2683",
+    "experimental/physics_gpu/core.mojo": "5d08412fa579ddf734eade6d50ddd850af5197af20cfd3741c8bae8540974e01",
+    "experimental/physics_gpu/test_cached_tangent_helpers.mojo": "ca5a4733a5a17200f5f93e2112ab7a2e68f12205e6c2248beea840bd484f26b2",
+    "experimental/physics_gpu/sleep_kernels.mojo": "326c37fb82be809b9fad76a3c78132ba0916b240a7e5d4ba8b0bdd491f32eaba",
+    "experimental/physics_gpu/host.mojo": "ab74f43f05acaa0fa56c9839dc6611f66806f352aac3245862d6774f18568512",
+    "experimental/physics_gpu/test_islands.mojo": "54a38f6c22fdad6f6fdc581e77912e7b2286a627df5ccbbe5a12294dde75df24",
+    "experimental/physics_gpu/islands.mojo": "55db9d03d76a116d678cfa3b63631ed13ac367f6c8422aa0504397fe5c391fc8",
+    "experimental/physics_gpu/box_oracle.mojo": "97d0dd9fed3a66d8bbc6a136c67dcce7c9ff069f7746d7381a42699891f2db89",
+    "experimental/physics_gpu/shape_kernels.mojo": "336fcda9ffe176c04fb2723b184be858e3c78b04d3dae97e230b9ffbe8755976",
+    "experimental/physics_gpu/stable_reference.mojo": "e5e869df26968e28f0571b955f98730274b04bc6fe034070fd901043f5940a7a",
+    "experimental/physics_gpu/capability.mojo": "ac357c8b9f7aed2690f47f2ca90be33cbbce1f72f3dde8eddb2955c8b0c35e50",
+    "experimental/physics_gpu/box_box_reference.mojo": "d4cf129f16545f49fa4fd3bab4cb1803545ebf69605eebbfdffac169fbf51081",
+    "experimental/physics_gpu/normal_response.mojo": "06b08eff1bf18a94d855909b2a9a6a3dd1b4aea8d27d7019af6ad37323b50d6d",
+    "experimental/physics_gpu/friction_kernels.mojo": "892987eb45579ff4b5427c6112e2ec2ad5b9ca999702e811ede27d677fe8f58c",
+    "experimental/physics_gpu/box_response_math.mojo": "b19e2d43d1fd6190f6fbc2556118198d012909c9f779965e5916a53b80e7d7ed",
+    "experimental/physics_gpu/compact_cooperative_math.mojo": "51fefb3de341055f60bf6b33d551cdbcd49252df4e14e71940c5fa7ff2d1e9da",
+    "experimental/physics_gpu/sleep.mojo": "e1fb5432e258af6f2d40c24b1db89bb187f99f8a8a71e84ec481d142f61d2101",
+    "experimental/physics_gpu/coupled_box_reference.mojo": "218787a0d43885cb7e5e40c52ce2f4091e9d9266829859eb01f8ad5d91fba061",
+    "experimental/physics_gpu/test_g04a.mojo": "bedc0ccfb76d08d2f2b32f5df651384e4f119854a07cb69dc1fe4aa32e3f799d",
+    "experimental/physics_gpu/cached_coupled_kernels.mojo": "36ccbd66b956e4f5e5c2d6d7773fb8fb13677f2d3937b45964ff07bdf896e0af",
+    "experimental/physics_gpu/box_response_reference.mojo": "44c9960e78c59981ee9ac0f33b7aa84bde3dd9dd534cb30c673e40e7b67e941e",
+    "experimental/physics_gpu/contact_history.mojo": "a5afe114b88eb6011e367d63ef8194b4bd3204505441e472d151332f62dc18a9",
+    "experimental/physics_gpu/sleep_diagnostic.mojo": "761c63b7dda73ca7670dae5f0329f467ce37d91ad55077b1a3dd0a5e8da6cc53",
+    "experimental/physics_gpu/box_box_diagnostic.mojo": "5fc19858eabec7a9964e33d0f2c18158ab053d149fb08db9e12718f2e1bcda52",
+    "experimental/physics_gpu/test_box_box.mojo": "74e83c3d738e898e9463d15441c54bed99cf25238323ccc30768270cd9ff0c58",
+    "experimental/physics_gpu/collision.mojo": "249c631e84dfcfe7c1001a79fb271e344efcb053588cc5a6e39b6776f0a270b2",
+    "experimental/physics_gpu/test_g03c.mojo": "cfd6207f6d2d8013ede003bbde53745ad73359840742df31dd16a8fda55af68a",
+    "experimental/physics_gpu/test_cooperative_helpers.mojo": "f9028c40b15dc14b0a1b558b3c307736d8119989ed700e3e9ca4ef8f3d7eb142",
+    "experimental/physics_gpu/lifecycle_kernels.mojo": "f269cc930e2b98ca5d0abea792b3dc19146bc7d99d45128d9e7e1f38c1632ef1",
+    "experimental/physics_gpu/cooperative_kernels.mojo": "eb6115aeea5a8fffa0255195aad7be1232d109d1736788b8a1657ab92a979020",
+    "experimental/physics_gpu/coupled_friction_math.mojo": "25c20e6a26e3409e7099f24041e7f963909077b1fe88558d824aef22697395c8",
+    "experimental/physics_gpu/coupled_box_response.mojo": "3a152462e7d5e1d4686d130bb960d93ecf49bd4a019b5536123851568173cc83",
+    "experimental/physics_gpu/island_diagnostic.mojo": "40ae419a56c0c833d7962e034a9d4daa12bab876e012d97426082b5146c096ba",
+    "experimental/physics_gpu/lifecycle.mojo": "410e537cfaab77a8e7256c04bcc0d797d805241b323240c854fa5d71264aeb36",
+    "experimental/physics_gpu/cached_tangent_kernels.mojo": "bcb5cc79899b15e2c1d93f9f55f56bf0eeb2412965958bdf3b0596a1cd94e23a",
+    "experimental/physics_gpu/coupled_box_kernels.mojo": "bf513d26a7c37a037704f7f4ab2ba6cc4bb852c6624c9c3e471436abf67ea937",
+    "experimental/physics_gpu/recommended.mojo": "49105f157c8547cd68da991e8fdd3d6604e7463cab45bf0ca42290863d297d32",
+    "experimental/physics_gpu/test_translation_boundary.mojo": "a4d009c497efd6a216155d23dbaeaeab40cdde4b33cebfc719f35ab4e91617b7",
+    "experimental/physics_gpu/box_box_kernels.mojo": "192f8077c88fa8aabdbe79e9ae38f5a5be96e098b96f7a4f933e971bc4772276",
+    "experimental/physics_gpu/test_cached_tangent.mojo": "06ae1b91f30ddd40c776cb4eb314cb961338fd2ca835544fe55494d13008f02c",
+    "experimental/physics_gpu/kernels.mojo": "622340afdb094fee435d6c71ef8d14b24b4ebc4966cf8cf99795b4b4f979865c",
+    "experimental/physics_gpu/coupled_friction_reference.mojo": "13aacfb408331710b3544dd6c36813aa566f702cf504144ffa3dd70945a5db54",
+    "experimental/physics_gpu/history_kernels.mojo": "1056b153ecf17a6839a9ceb0ce18dc6cd2ab08e2219730bf05d3faa3fb75d4cc",
+    "experimental/physics_gpu/friction_reference.mojo": "2f57ac0680a02cd389e4e45d49e079d462065fe52e9abda1710786d3e43d15d8",
+    "experimental/physics_gpu/test_g02.mojo": "14b655c69c599dcb43eec3f1dae559b30fa0b6e5f16effe26667376c2bb5d692",
+    "experimental/physics_gpu/test_ledge_events.mojo": "9eafc32d2c4fa80659c438c9fa2ba0953a5825eec5ee9572f94f05987bbd0988",
+    "experimental/physics_gpu/test_stability.mojo": "354ccc4c2e642864502c61ca6c111cca869acc2b3479c27faa7aa7703959b00a",
+    "experimental/physics_gpu/test_coupled_helpers.mojo": "a80b1a74684bb76408785813f5e852006f0d9ef448777454f59353c22799260d",
+    "experimental/physics_gpu/test_sleep.mojo": "f082f76e4bf947b35e6d8f7f20ea9d0c76c7fb8131339c2fd185acae828be318",
+    "mojo_game/math3d.mojo": "f4d40f2f702c204f260e4c05022af3eb20c4f3567d2f5dd182b290cb705d55e4",
+    "mojo_game/transform3d.mojo": "c78700e7b736d733f6f222aded03cd985376e199e9120c3d1df0a5b6266b0d05",
+    "mojo_game/rigidbody3d.mojo": "4c38e1af58bf5f3b80601d0883f98d5c8a62adeebddf83fbe253b58f62e894f3",
+    "pixi.lock": "025aa9df305f20ec4762fc5f8a3f0b02e208f8ea08a5a358d1060eda1fc44a25",
+    ".deps/physics-gpu-g01/pixi.lock": "70e04692d582d8474ed72d4fdb455411e5d71e7643933c23c95f809c876bf081"
+  },
+  "tested_build_receipts": 35,
+  "correctness": {
+    "receipt_sha256": "283faeb45304628ac010291002c8dc408b15bdc718bc7f5804659a094d873d72",
+    "full_matrix_trajectories": 280,
+    "original70_each_mode_path_byte_exact": true,
+    "source_package_controller_records": 9792,
+    "clock_disabled_full_owner_records": 160,
+    "timed_canonical_records": 720,
+    "affected_regressions": 186,
+    "basis0_45_90_rank_cache_physical_energy_and_body_meta_rollback_pass": true,
+    "work_iterations_masks_pivots_first_acceptance_and_failure_accounting_unchanged": true,
+    "numerical_mismatches": [],
+    "source_audit_sha256": "39c7d448d4a75ecec293d7991bc992251491dcfac10d263d5b982460b6afd806",
+    "generated_behavior_sha256": "086cce616528dc2c30a231286562edc87073e6a5b0e83d25fa950cc5da5f625b",
+    "limits": [
+      "Finite input coverage and source barrier audit; not exhaustive race proof",
+      "Invalid-direction and final BR_ENERGY branches not separately forced; source uniformity audited",
+      "Single pinned GPU/toolchain numerical contract; no cross-architecture claim"
+    ]
+  },
+  "performance": {
+    "interleaved": {
+      "source": [
+        {
+          "fixture": 0,
+          "label": "coupled sliding target",
+          "absolute_ms": {
+            "serial": {
+              "n": 12,
+              "median": 1107.6387119974243,
+              "minimum": 1092.705703980755,
+              "maximum": 1126.696199993603
+            },
+            "baseline": {
+              "n": 12,
+              "median": 734.4964500007336,
+              "minimum": 721.8456280097598,
+              "maximum": 747.2401809936855
+            },
+            "candidate": {
+              "n": 12,
+              "median": 620.4583145008655,
+              "minimum": 610.7468760019401,
+              "maximum": 635.2044799859868
+            }
+          },
+          "candidate_vs_serial": {
+            "delta_ms_candidate_minus_reference": {
+              "n": 12,
+              "median": -487.40650249965256,
+              "minimum": -497.84593598451465,
+              "maximum": -458.66994399693795
+            },
+            "paired_percent": {
+              "n": 12,
+              "median": -43.97446730894099,
+              "minimum": -44.83298581312999,
+              "maximum": -41.93076773171705
+            },
+            "faster_pairs": 12,
+            "slower_pairs": 0,
+            "batch_delta_medians_ms": [
+              -496.3401849963702,
+              -494.4996370031731,
+              -484.23249200277496,
+              -486.4477299997816
+            ],
+            "classification": "repeatable faster in bounded protocol",
+            "paired_deltas_ms": [
+              -497.84593598451465,
+              -496.3401849963702,
+              -476.47169698029757,
+              -490.5802689900156,
+              -494.4996370031731,
+              -497.8355399944121,
+              -486.7952329805121,
+              -484.23249200277496,
+              -458.66994399693795,
+              -486.4477299997816,
+              -488.01777201879304,
+              -472.78480598470196
+            ]
+          },
+          "candidate_vs_cooperative": {
+            "delta_ms_candidate_minus_reference": {
+              "n": 12,
+              "median": -113.06749449431663,
+              "minimum": -125.79905301390681,
+              "maximum": -101.03159601567313
+            },
+            "paired_percent": {
+              "n": 12,
+              "median": -15.422789406405684,
+              "minimum": -16.835156381261285,
+              "maximum": -13.722717387655603
+            },
+            "faster_pairs": 12,
+            "slower_pairs": 0,
+            "batch_delta_medians_ms": [
+              -112.10433299129363,
+              -115.28520898718853,
+              -109.17071400035638,
+              -113.40002001088578
+            ],
+            "classification": "repeatable faster in bounded protocol",
+            "paired_deltas_ms": [
+              -113.1312329962384,
+              -111.09875200781971,
+              -112.10433299129363,
+              -115.28520898718853,
+              -117.22122400533408,
+              -113.00375599239487,
+              -116.10170298081357,
+              -109.17071400035638,
+              -101.03159601567313,
+              -113.40002001088578,
+              -125.79905301390681,
+              -108.73440899013076
+            ]
+          }
+        },
+        {
+          "fixture": 1,
+          "label": "zero-friction floor",
+          "absolute_ms": {
+            "serial": {
+              "n": 12,
+              "median": 4.270054007065482,
+              "minimum": 4.217213994706981,
+              "maximum": 6.5064289956353605
+            },
+            "baseline": {
+              "n": 12,
+              "median": 4.260509987943806,
+              "minimum": 4.229549987940118,
+              "maximum": 6.177212999318726
+            },
+            "candidate": {
+              "n": 12,
+              "median": 4.753597502713092,
+              "minimum": 4.114061986911111,
+              "maximum": 5.802077008411288
+            }
+          },
+          "candidate_vs_serial": {
+            "delta_ms_candidate_minus_reference": {
+              "n": 12,
+              "median": 0.17877601203508675,
+              "minimum": -2.0892629981972277,
+              "maximum": 1.5199030167423189
+            },
+            "paired_percent": {
+              "n": 12,
+              "median": 4.200770310885882,
+              "minimum": -32.110747686614985,
+              "maximum": 35.49372397523576
+            },
+            "faster_pairs": 6,
+            "slower_pairs": 6,
+            "batch_delta_medians_ms": [
+              -0.6974239804549143,
+              -0.014703982742503285,
+              1.191566974739544,
+              0.3722560068126768
+            ],
+            "classification": "mixed/inconclusive",
+            "paired_deltas_ms": [
+              -0.6974239804549143,
+              0.6212309963302687,
+              -2.0892629981972277,
+              1.162015978479758,
+              -0.12329600576777011,
+              -0.014703982742503285,
+              1.5199030167423189,
+              1.191566974739544,
+              -0.6253119936445728,
+              1.4484309940598905,
+              -0.09332799527328461,
+              0.3722560068126768
+            ]
+          },
+          "candidate_vs_cooperative": {
+            "delta_ms_candidate_minus_reference": {
+              "n": 12,
+              "median": 0.3950154932681471,
+              "minimum": -1.9747029873542488,
+              "maximum": 1.5552320110145956
+            },
+            "paired_percent": {
+              "n": 12,
+              "median": 9.29450279477846,
+              "minimum": -31.96753920533475,
+              "maximum": 36.62088001723514
+            },
+            "faster_pairs": 4,
+            "slower_pairs": 8,
+            "batch_delta_medians_ms": [
+              0.6332629855023697,
+              -0.15660801727790385,
+              1.2115990102756768,
+              -0.12223998783156276
+            ],
+            "classification": "mixed/inconclusive",
+            "paired_deltas_ms": [
+              1.5191500133369118,
+              0.6332629855023697,
+              0.15676800103392452,
+              1.316032008617185,
+              -0.15660801727790385,
+              -1.9747029873542488,
+              1.5552320110145956,
+              1.2115990102756768,
+              0.09633603622205555,
+              1.4534069923684,
+              -0.12223998783156276,
+              -0.9848619956756011
+            ]
+          }
+        },
+        {
+          "fixture": 2,
+          "label": "centered rebound",
+          "absolute_ms": {
+            "serial": {
+              "n": 12,
+              "median": 45.82209949148819,
+              "minimum": 43.371304011088796,
+              "maximum": 47.6774990092963
+            },
+            "baseline": {
+              "n": 12,
+              "median": 57.3026585043408,
+              "minimum": 56.611524982145056,
+              "maximum": 60.52899699716363
+            },
+            "candidate": {
+              "n": 12,
+              "median": 51.49335299938684,
+              "minimum": 49.0128259989433,
+              "maximum": 52.77249998471234
+            }
+          },
+          "candidate_vs_serial": {
+            "delta_ms_candidate_minus_reference": {
+              "n": 12,
+              "median": 5.2476380005828105,
+              "minimum": 2.610253999591805,
+              "maximum": 9.401195973623544
+            },
+            "paired_percent": {
+              "n": 12,
+              "median": 11.50034530720162,
+              "minimum": 5.518881351987437,
+              "maximum": 21.67607404937588
+            },
+            "faster_pairs": 0,
+            "slower_pairs": 12,
+            "batch_delta_medians_ms": [
+              5.892493005376309,
+              3.9366379933198914,
+              5.830973983393051,
+              4.759341987664811
+            ],
+            "classification": "repeatable slower in bounded protocol",
+            "paired_deltas_ms": [
+              5.892493005376309,
+              2.755149980657734,
+              6.484716999693774,
+              2.610253999591805,
+              5.644590011797845,
+              3.9366379933198914,
+              5.830973983393051,
+              4.850685989367776,
+              6.599500979064032,
+              9.401195973623544,
+              4.759341987664811,
+              3.2993589993566275
+            ]
+          },
+          "candidate_vs_cooperative": {
+            "delta_ms_candidate_minus_reference": {
+              "n": 12,
+              "median": -6.622588502068538,
+              "minimum": -8.927162998588756,
+              "maximum": -4.094813994015567
+            },
+            "paired_percent": {
+              "n": 12,
+              "median": -11.607693509095125,
+              "minimum": -15.245972660264083,
+              "maximum": -7.233180867865774
+            },
+            "faster_pairs": 12,
+            "slower_pairs": 0,
+            "batch_delta_medians_ms": [
+              -5.960862006759271,
+              -7.078989001456648,
+              -6.921996013261378,
+              -6.323180990875699
+            ],
+            "classification": "repeatable faster in bounded protocol",
+            "paired_deltas_ms": [
+              -5.960862006759271,
+              -8.816668996587396,
+              -5.274814015137963,
+              -7.078989001456648,
+              -5.792348994873464,
+              -8.914859994547442,
+              -4.094813994015567,
+              -6.921996013261378,
+              -7.82090901338961,
+              -4.543053015368059,
+              -8.927162998588756,
+              -6.323180990875699
+            ]
+          }
+        },
+        {
+          "fixture": 3,
+          "label": "empty separated bodies",
+          "absolute_ms": {
+            "serial": {
+              "n": 12,
+              "median": 1.7682629986666143,
+              "minimum": 1.6496309981448576,
+              "maximum": 2.0193429954815656
+            },
+            "baseline": {
+              "n": 12,
+              "median": 1.7629989961278625,
+              "minimum": 1.6453269927296788,
+              "maximum": 2.945950982393697
+            },
+            "candidate": {
+              "n": 12,
+              "median": 1.7505590003565885,
+              "minimum": 1.6411029937444255,
+              "maximum": 2.954943003715016
+            }
+          },
+          "candidate_vs_serial": {
+            "delta_ms_candidate_minus_reference": {
+              "n": 12,
+              "median": 0.0013915123417973518,
+              "minimum": -0.3782400017371401,
+              "maximum": 1.215696000144817
+            },
+            "paired_percent": {
+              "n": 12,
+              "median": 0.08645479753048857,
+              "minimum": -18.730844764038658,
+              "maximum": 69.89783496244783
+            },
+            "faster_pairs": 6,
+            "slower_pairs": 6,
+            "batch_delta_medians_ms": [
+              0.02398299693595618,
+              -0.08350398275069892,
+              -0.19283199799247086,
+              0.0037280115066096187
+            ],
+            "classification": "mixed/inconclusive",
+            "paired_deltas_ms": [
+              -0.000944986823014915,
+              1.150814990978688,
+              0.02398299693595618,
+              0.08180798613466322,
+              -0.08350398275069892,
+              -0.08531200001016259,
+              -0.19283199799247086,
+              -0.3782400017371401,
+              0.08231999527197331,
+              -0.08668801456224173,
+              1.215696000144817,
+              0.0037280115066096187
+            ]
+          },
+          "candidate_vs_cooperative": {
+            "delta_ms_candidate_minus_reference": {
+              "n": 12,
+              "median": 0.004632005584426224,
+              "minimum": -1.2473439855966717,
+              "maximum": 1.2595829903148115
+            },
+            "paired_percent": {
+              "n": 12,
+              "median": 0.2717813686345827,
+              "minimum": -42.3409619865147,
+              "maximum": 75.13192589463948
+            },
+            "faster_pairs": 4,
+            "slower_pairs": 8,
+            "batch_delta_medians_ms": [
+              0.008400020305998623,
+              0.0012319942470639944,
+              0.0007040071068331599,
+              0.008032016921788454
+            ],
+            "classification": "mixed/inconclusive",
+            "paired_deltas_ms": [
+              0.008400020305998623,
+              1.2595829903148115,
+              -1.2473439855966717,
+              0.0012319942470639944,
+              -0.786911987233907,
+              0.05159899592399597,
+              0.0007040071068331599,
+              -0.029472008463926613,
+              0.009408002370037138,
+              -0.624111999059096,
+              1.2178400065749884,
+              0.008032016921788454
+            ]
+          }
+        }
+      ],
+      "packaged": [
+        {
+          "fixture": 0,
+          "label": "coupled sliding target",
+          "absolute_ms": {
+            "serial": {
+              "n": 12,
+              "median": 1117.0988419980858,
+              "minimum": 1102.2005539998645,
+              "maximum": 1129.8751619906398
+            },
+            "baseline": {
+              "n": 12,
+              "median": 744.2059570021229,
+              "minimum": 731.7082260124153,
+              "maximum": 772.2769399842946
+            },
+            "candidate": {
+              "n": 12,
+              "median": 632.5922794931103,
+              "minimum": 625.2734300214797,
+              "maximum": 650.2496159955626
+            }
+          },
+          "candidate_vs_serial": {
+            "delta_ms_candidate_minus_reference": {
+              "n": 12,
+              "median": -481.14775050635217,
+              "minimum": -500.8973289804999,
+              "maximum": -452.7517300157342
+            },
+            "paired_percent": {
+              "n": 12,
+              "median": -43.29143066128752,
+              "minimum": -44.33209489250189,
+              "maximum": -41.0472509079873
+            },
+            "faster_pairs": 12,
+            "slower_pairs": 0,
+            "batch_delta_medians_ms": [
+              -482.7167590119643,
+              -485.0665159901837,
+              -478.0786040064413,
+              -500.1054840104189
+            ],
+            "classification": "repeatable faster in bounded protocol",
+            "paired_deltas_ms": [
+              -482.7167590119643,
+              -486.90823900687974,
+              -452.7517300157342,
+              -485.0665159901837,
+              -486.8239819916198,
+              -476.92712397838477,
+              -478.0786040064413,
+              -479.57874200074,
+              -477.65075901406817,
+              -500.8973289804999,
+              -500.1054840104189,
+              -477.14182100025937
+            ]
+          },
+          "candidate_vs_cooperative": {
+            "delta_ms_candidate_minus_reference": {
+              "n": 12,
+              "median": -110.74090999318287,
+              "minimum": -132.23732299229596,
+              "maximum": -90.20237601362169
+            },
+            "paired_percent": {
+              "n": 12,
+              "median": -14.978594236397587,
+              "minimum": -17.123044356987428,
+              "maximum": -12.182069463931278
+            },
+            "faster_pairs": 12,
+            "slower_pairs": 0,
+            "batch_delta_medians_ms": [
+              -101.87800401763525,
+              -108.71990097803064,
+              -105.98646001017187,
+              -116.31185900478158
+            ],
+            "classification": "repeatable faster in bounded protocol",
+            "paired_deltas_ms": [
+              -112.7619190083351,
+              -101.87800401763525,
+              -90.20237601362169,
+              -107.93457299587317,
+              -123.62742600089405,
+              -108.71990097803064,
+              -132.23732299229596,
+              -105.98646001017187,
+              -100.25441301695537,
+              -114.243218980846,
+              -127.98159402154852,
+              -116.31185900478158
+            ]
+          }
+        },
+        {
+          "fixture": 1,
+          "label": "zero-friction floor",
+          "absolute_ms": {
+            "serial": {
+              "n": 12,
+              "median": 5.0405410074745305,
+              "minimum": 4.216525005176663,
+              "maximum": 6.3743799983058125
+            },
+            "baseline": {
+              "n": 12,
+              "median": 4.385901003843173,
+              "minimum": 4.124302009586245,
+              "maximum": 5.551164998905733
+            },
+            "candidate": {
+              "n": 12,
+              "median": 5.318428491591476,
+              "minimum": 4.242941009579226,
+              "maximum": 5.552508009714074
+            }
+          },
+          "candidate_vs_serial": {
+            "delta_ms_candidate_minus_reference": {
+              "n": 12,
+              "median": 0.16383151523768902,
+              "minimum": -2.131438988726586,
+              "maximum": 1.137567000114359
+            },
+            "paired_percent": {
+              "n": 12,
+              "median": 3.428783767119492,
+              "minimum": -33.43758905639579,
+              "maximum": 26.748175420025145
+            },
+            "faster_pairs": 5,
+            "slower_pairs": 7,
+            "batch_delta_medians_ms": [
+              -1.2350860197329894,
+              0.4357599973445758,
+              -0.07374398410320282,
+              0.49454299733042717
+            ],
+            "classification": "mixed/inconclusive",
+            "paired_deltas_ms": [
+              -1.2350860197329894,
+              -2.131438988726586,
+              -0.5696480075130239,
+              0.6583510257769376,
+              0.14881600509397686,
+              0.4357599973445758,
+              -0.9024949977174401,
+              1.137567000114359,
+              -0.07374398410320282,
+              0.49454299733042717,
+              0.858334984513931,
+              0.17884702538140118
+            ]
+          },
+          "candidate_vs_cooperative": {
+            "delta_ms_candidate_minus_reference": {
+              "n": 12,
+              "median": 0.45181599853094667,
+              "minimum": -1.3082239893265069,
+              "maximum": 1.263104029931128
+            },
+            "paired_percent": {
+              "n": 12,
+              "median": 9.15014907190168,
+              "minimum": -23.566656541183495,
+              "maximum": 29.709490339885814
+            },
+            "faster_pairs": 2,
+            "slower_pairs": 10,
+            "batch_delta_medians_ms": [
+              0.19867299124598503,
+              0.24103900068439543,
+              1.149838004494086,
+              0.5818710196763277
+            ],
+            "classification": "repeatable slower in bounded protocol",
+            "paired_deltas_ms": [
+              0.19867299124598503,
+              -1.3082239893265069,
+              0.2541920111980289,
+              1.263104029931128,
+              0.24103900068439543,
+              -0.6776639784220606,
+              0.3345119912410155,
+              1.149838004494086,
+              1.1500950204208493,
+              0.5691200058208779,
+              0.832238991279155,
+              0.5818710196763277
+            ]
+          }
+        },
+        {
+          "fixture": 2,
+          "label": "centered rebound",
+          "absolute_ms": {
+            "serial": {
+              "n": 12,
+              "median": 46.708481495443266,
+              "minimum": 44.4456179975532,
+              "maximum": 49.750401987694204
+            },
+            "baseline": {
+              "n": 12,
+              "median": 59.898339000937995,
+              "minimum": 57.053419994190335,
+              "maximum": 62.21645300684031
+            },
+            "candidate": {
+              "n": 12,
+              "median": 51.26849699445302,
+              "minimum": 49.65900599199813,
+              "maximum": 53.616768011124805
+            }
+          },
+          "candidate_vs_serial": {
+            "delta_ms_candidate_minus_reference": {
+              "n": 12,
+              "median": 4.13489350466989,
+              "minimum": 1.5905110049061477,
+              "maximum": 9.09535400569439
+            },
+            "paired_percent": {
+              "n": 12,
+              "median": 8.486676905161806,
+              "minimum": 3.196981212934835,
+              "maximum": 20.429166972515734
+            },
+            "faster_pairs": 0,
+            "slower_pairs": 12,
+            "batch_delta_medians_ms": [
+              3.2068619912024587,
+              4.206045006867498,
+              4.585564995068125,
+              4.0637420024722815
+            ],
+            "classification": "repeatable slower in bounded protocol",
+            "paired_deltas_ms": [
+              3.2068619912024587,
+              1.5905110049061477,
+              9.09535400569439,
+              3.8541900139534846,
+              4.206045006867498,
+              7.427770993672311,
+              4.585564995068125,
+              4.87074900593143,
+              2.3717099975328892,
+              7.630746011273004,
+              3.5529419837985188,
+              4.0637420024722815
+            ]
+          },
+          "candidate_vs_cooperative": {
+            "delta_ms_candidate_minus_reference": {
+              "n": 12,
+              "median": -8.667898007843178,
+              "minimum": -10.767032013973221,
+              "maximum": -5.673293009749614
+            },
+            "paired_percent": {
+              "n": 12,
+              "median": -14.191235017492309,
+              "minimum": -17.81853050320661,
+              "maximum": -9.568708333344777
+            },
+            "faster_pairs": 12,
+            "slower_pairs": 0,
+            "batch_delta_medians_ms": [
+              -7.493883022107184,
+              -9.168731005047448,
+              -8.910041986382566,
+              -8.702489009010606
+            ],
+            "classification": "repeatable faster in bounded protocol",
+            "paired_deltas_ms": [
+              -7.493883022107184,
+              -8.63330700667575,
+              -5.673293009749614,
+              -10.719992991653271,
+              -6.634796998696402,
+              -9.168731005047448,
+              -9.652824999648146,
+              -8.910041986382566,
+              -5.930555998929776,
+              -6.2465719965985045,
+              -10.767032013973221,
+              -8.702489009010606
+            ]
+          }
+        },
+        {
+          "fixture": 3,
+          "label": "empty separated bodies",
+          "absolute_ms": {
+            "serial": {
+              "n": 12,
+              "median": 1.7691105022095144,
+              "minimum": 1.6468630055896938,
+              "maximum": 3.50335800612811
+            },
+            "baseline": {
+              "n": 12,
+              "median": 1.7765110023901798,
+              "minimum": 1.644862990360707,
+              "maximum": 2.6371179847046733
+            },
+            "candidate": {
+              "n": 12,
+              "median": 1.761222505592741,
+              "minimum": 1.6497750038979575,
+              "maximum": 3.029885978321545
+            }
+          },
+          "candidate_vs_serial": {
+            "delta_ms_candidate_minus_reference": {
+              "n": 12,
+              "median": 0.008704002539161593,
+              "minimum": -1.7315680015599355,
+              "maximum": 1.2751189788104966
+            },
+            "paired_percent": {
+              "n": 12,
+              "median": 0.49862921320920073,
+              "minimum": -49.42595071731347,
+              "maximum": 72.66599948402256
+            },
+            "faster_pairs": 4,
+            "slower_pairs": 8,
+            "batch_delta_medians_ms": [
+              0.00099198950920254,
+              0.002911998308263719,
+              0.07248000474646688,
+              0.2675509895198047
+            ],
+            "classification": "mixed/inconclusive",
+            "paired_deltas_ms": [
+              0.00099198950920254,
+              0.014496006770059466,
+              -0.09209499694406986,
+              -1.7315680015599355,
+              0.03399998240638524,
+              0.002911998308263719,
+              -0.27033699734602123,
+              0.5804629909107462,
+              0.07248000474646688,
+              -0.020112012862227857,
+              0.2675509895198047,
+              1.2751189788104966
+            ]
+          },
+          "candidate_vs_cooperative": {
+            "delta_ms_candidate_minus_reference": {
+              "n": 12,
+              "median": 0.0031600065995007753,
+              "minimum": -0.8823669923003763,
+              "maximum": 1.2421589926816523
+            },
+            "paired_percent": {
+              "n": 12,
+              "median": 0.19194439548843034,
+              "minimum": -33.459518967983946,
+              "maximum": 69.4825889332894
+            },
+            "faster_pairs": 5,
+            "slower_pairs": 7,
+            "batch_delta_medians_ms": [
+              -0.25561598886270076,
+              0.0077590084401890635,
+              -0.007153008482418954,
+              0.26055899797938764
+            ],
+            "classification": "mixed/inconclusive",
+            "paired_deltas_ms": [
+              0.002176006091758609,
+              -0.25561598886270076,
+              -0.8324149821419269,
+              0.0077590084401890635,
+              0.04126399289816618,
+              0.004144007107242942,
+              -0.007153008482418954,
+              0.31094299629330635,
+              -0.01457598409615457,
+              -0.8823669923003763,
+              0.26055899797938764,
+              1.2421589926816523
+            ]
+          }
+        }
+      ]
+    },
+    "receipt_sha256": "36072b446ef56c59f5986586fa555f95f2038f088efc66597755cf162ca67383",
+    "counts": {
+      "interleaved_all_calls": 480,
+      "interleaved_measured": 288,
+      "interleaved_excluded": 192,
+      "plain_profile_all_calls": 120,
+      "traced_profile_all_calls": 120,
+      "plain_and_traced_warmed": 168,
+      "all_timed_canonical_records": 720
+    },
+    "classification_candidate_vs_cooperative": {
+      "source": [
+        "repeatable faster in bounded protocol",
+        "mixed/inconclusive",
+        "repeatable faster in bounded protocol",
+        "mixed/inconclusive"
+      ],
+      "packaged": [
+        "repeatable faster in bounded protocol",
+        "repeatable slower in bounded protocol",
+        "repeatable faster in bounded protocol",
+        "mixed/inconclusive"
+      ]
+    },
+    "decision": "Retain both original cooperative and copy-only candidate as explicit opt-in modes. Report the fixed-budget actual effect without automatic selection or a default recommendation.",
+    "instrumentation": {
+      "source": "/home/user/mojo-game-engine/build/physics-cooperative-unread-copy/INVARIANTS.md",
+      "aggregate_plain_trace_target_deltas": {
+        "serial": {
+          "ms": -3.5567869927035645,
+          "percent": -0.31884176146826926
+        },
+        "baseline": {
+          "ms": -1.8589500105008483,
+          "percent": -0.25017899994684845
+        },
+        "candidate": {
+          "ms": -6.57481599773746,
+          "percent": -1.047241678691424
+        }
+      },
+      "limitations": [
+        "Plain/traced same-binary paired processes estimate aggregate tracer effect with variance, not pure overhead",
+        "Clock/NVTX marker isolated cost unmeasured; both runs retain them",
+        "Debug counters/canaries remain enabled; Copy-only candidate retains all staging offsets, barriers, debug and control; tracer deltas cannot isolate individual costs",
+        "CUDA synchronization waits overlap device work and must not be summed as additive overhead",
+        "CUPTI/local PTX declarations are not dynamic spill traffic or allocator footprint",
+        "Seven traced warmed observations and twelve interleaved permode/fixture/path; no p95/confidence/general-scene claim"
+      ]
+    },
+    "GPU_target_solver_median_ms": {
+      "serial": 1098.761504,
+      "baseline": 728.999168,
+      "candidate": 608.700864
+    },
+    "memory": {
+      "serial": {
+        "maximum_sampled_device_MiB": 929,
+        "maximum_sampled_host_RSS_kB": 2991992
+      },
+      "baseline": {
+        "maximum_sampled_device_MiB": 1047,
+        "maximum_sampled_host_RSS_kB": 3112384
+      },
+      "candidate": {
+        "maximum_sampled_device_MiB": 1037,
+        "maximum_sampled_host_RSS_kB": 3102320
+      }
+    },
+    "exact_incremental_storage": {
+      "new_global_bytes_vs_cooperative": 0,
+      "new_shared_bytes_vs_cooperative": 0,
+      "new_owner_buffers_vs_cooperative": 0,
+      "retained_cooperative_debug_bytes": 144,
+      "retained_cooperative_shared_bytes": 4176,
+      "retained_tangent_cache_bytes": 14608
+    },
+    "GPU_only_API_timing_or_general_PhysX_parity_claim": false
+  },
+  "retained_original_coverage": "63/70",
+  "retained_known_limits": [
+    "strictSAME-TIME translatedcase68failure",
+    "two baseline64convergence rejects",
+    "four oldledgefixtureswithoutdetachment",
+    "separate12/12ledge and75/75translation suites notadded to63/70",
+    "bounded expensive serial optin only"
+  ],
+  "historical_non_numeric_runner_snapshot": [],
+  "retained_frontend_diagnostics": {},
+  "preservation": {
+    "protected_hashes": 3019,
+    "protected_changes": [],
+    "asset_save_identities": 5901,
+    "asset_save_changes": [],
+    "campaign_sources": 17,
+    "unrelated_sources_locks": 119,
+    "pins": [
+      {
+        "version": "1.2.0.dev2026092905",
+        "metadata_sha256": "40307d16e09c2e88bfe8085346d028d7479d93867fdd6e210305ed3fbaf9c534"
+      },
+      {
+        "version": "26.7.0.dev2026092905",
+        "metadata_sha256": "dab5b010e4a7b5f6b7dcc4f60f2e30f9e5e69b689ef2bd57e46025d251dc2403"
+      }
+    ],
+    "SDK_campaign_assets_saves_dirtywork_locks_and_prior_evidence_preserved": true
+  },
+  "resources": {
+    "code_generation_threads": 1,
+    "archive_process_CPU_affinity": [
+      0
+    ],
+    "compile_guard_s": 180,
+    "native_guard_s": 30,
+    "reserve_GiB": 32,
+    "minimum_sampled_available_GiB": 110.6357307434082,
+    "normal_settings_unchanged": true,
+    "retired_thermal_cutoffs_reintroduced": false
+  },
+  "cleanup": {
+    "owned_jobs": [],
+    "GPU_compute_apps": "",
+    "H3_resumed": false,
+    "OS_driver_firmware_settings_changes": false,
+    "installs_dependencies_external_source_copy_or_publication": false,
+    "remaining_blockers": [],
+    "fixed_measurement_budget_complete_no_further_work_started": true
+  }
+}

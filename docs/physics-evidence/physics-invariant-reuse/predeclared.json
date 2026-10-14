@@ -1,0 +1,8 @@
+{
+  "recorded_at_UTC": "2026-10-13T15:34:42.052434+00:00",
+  "design_sha256": "21e3bbdb90b7613b122c5c8554b3939193c05dc724c6750417b05d71b0a1eb36",
+  "canonical_difference_acceptance": "none",
+  "cache_payload_bytes": 12304,
+  "original70case_coverage": 63,
+  "first_performance_run_started": false
+}

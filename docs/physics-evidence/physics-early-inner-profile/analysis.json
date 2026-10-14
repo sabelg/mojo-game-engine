@@ -1,0 +1,133 @@
+{
+  "status": "READ_ONLY_DIAGNOSIS_COMPLETE_COUNTER_ACCESS_DENIED",
+  "recorded_at_UTC": "2026-10-13T21:58:26.355157+00:00",
+  "counter_access": {
+    "status": "denied",
+    "error": "ERR_NVGPUCTRPERM",
+    "effective_UID": 1000,
+    "query_tool_exit_code": 0,
+    "profiled_solver_launches": 0,
+    "counter_profile_attempts_after_denial": 0,
+    "permissions_changed": false,
+    "GB10_metric_support_not_established_due_to_permission_denial": true
+  },
+  "source_baseline_sha256": "05c6e10ccf1f82aef14786ef8b87f881b133377c0b795f0213078d19147da371",
+  "qualified_binary_sha256": "99af2b24981ba908664eb7c6cff8d23e6d434225ce7ce84de5e358a67fa2c32a",
+  "qualified_archive_sha256": "5e324906085cb80ed2c001a364184ec1bcab0994fd0423fbc8268d9cbfc8e0b4",
+  "saved_measured_timing": {
+    "velocity_response_GPU_ms": {
+      "n": 7,
+      "median": 501.980992,
+      "min": 498.221824,
+      "max": 507.376704
+    },
+    "GPU_kernel_sum_ms": {
+      "n": 7,
+      "median": 514.597504,
+      "min": 511.393856,
+      "max": 519.5359040000001
+    },
+    "solver_fraction_of_GPU_kernel_time": {
+      "n": 7,
+      "median": 0.9755246522157721,
+      "min": 0.9742428817916812,
+      "max": 0.9765960352183859
+    },
+    "launch_API_ms": {
+      "n": 7,
+      "median": 0.038432,
+      "min": 0.03792,
+      "max": 0.041872
+    },
+    "synchronization_wait_API_ms": {
+      "n": 7,
+      "median": 514.6596480000001,
+      "min": 511.45808,
+      "max": 520.65032
+    }
+  },
+  "timing_scope": "Prior qualified NsightSystems CUDA activity timings of production kernel with no added convergence tracing;no new instrumented timing or performance comparison generated",
+  "saved_CUPTI_launch_metadata": {
+    "symbol": "gpu_early_inner_api_early_inner6A6A_db0058a096e75cf6",
+    "grid_x": 1,
+    "block_x": 32,
+    "registers_per_thread": 255,
+    "CUPTI_local_memory_per_thread": 0,
+    "CUPTI_local_memory_total": 721944576
+  },
+  "saved_measured_program_counters": [
+    192.0,
+    183.0,
+    9.0,
+    429.0,
+    2102.0,
+    429.0,
+    1315.0,
+    3405.0,
+    8.0,
+    0.0
+  ],
+  "derived_source_execution_counts": {
+    "jacobian_evaluations": 595,
+    "barrier_executions": 11238,
+    "classification": "Derived from retained program counters and unchanged source control;not GPUperformance counters or measured latency",
+    "evaluation_four_point_mask_candidates": 33632,
+    "fallback_four_point_mask_candidates": 144,
+    "evaluation_plus_fallback_four_point_mask_candidates": 33776
+  },
+  "structural_parallelism": {
+    "launched_blocks": 1,
+    "threads_per_block": 32,
+    "launched_warps": 1,
+    "point_phase_max_participating_lanes": 4,
+    "leader_only": "pressure enumeration,dP,norms,linear8complete pivots,line search selection,patch feedback and commit",
+    "dynamic_active_lanes_warps_occupancy_or_utilization_measured": false
+  },
+  "unavailable_dynamic_metrics": [
+    "dependency/scoreboard/issue stalls",
+    "active-lane/warp efficiency and achieved occupancy",
+    "FP64instruction counts/throughput/pipeline utilization",
+    "register spills and executed local-memory bytes/cache traffic"
+  ],
+  "static_evidence_sha256": "02c9b80daf1724d9e1394fcc951f73035ef93232239367ebad9ff9d17c016582",
+  "reference_convergence_trace": {
+    "route": "retained cooperative beforeearly-innerpolicy;not candidate-specificper-sweep capture",
+    "sha256": "dd0496d47b9459a2ac31edad741009991c27a3ab9f4053cd903ab5d163628c70",
+    "root_inner_thresholds": {
+      "count": 662,
+      "min": 1.4210854715202004e-14,
+      "median": 1.4210854715202004e-14,
+      "max": 1.4210854715202004e-14
+    },
+    "before_global_gate_first40": {
+      "patch_solves": 80,
+      "maximum_final_inner_root_norm": 3.6387559632089506e-14,
+      "linear_solves": 269,
+      "line_search_trials": 548
+    },
+    "after_first_global_gate": {
+      "outer_sweeps": 55,
+      "linear_solves": 227,
+      "line_search_trials": 1265,
+      "evaluations": 1689
+    },
+    "reference_active_disk_calls": 10529,
+    "reference_fixed64_bisection_iterations": 673856
+  },
+  "recommendation": {
+    "implemented": false,
+    "name": "Resolve-local shared storage for the leader256Float64mask-operator table",
+    "scope": "Separate opt-in layout variant based on qualified early-inner. Stage the already packed immutable256Float64operator entries once per patch solve into the existing unused shared offsets113..368(2048bytes);replace the private local table and its reads with shared-address-space access. Keep valid_masks private for this first experiment.",
+    "unchanged": "Same FP64 values,mask enumeration,minimal-norm selection/tie order,complete pivots,pressure/dP arithmetic order,fallback and body commit. Same1percentfirst8rule,96outer sweeps,8Newton/16trial caps,64disk bisection,all final residual,1e-10physical-state,energy/cone/rollback gates. No precision/mask skipping/dispatch change.",
+    "barriers_and_memory": "Keep all existing barriers and4176bytes allocation;source audit and source/fresh-package qualification must establish patch lifetime and visibility before pressure/dP/fallback reads. No reuse across mutable patches or resolves.",
+    "hypothesis": "Eliminate statically proven2048byteaddressed-local table/copy and redirect repeated serial small-matrix reads;may lower local traffic. Not a confirmed spill reduction or proven speedup.",
+    "why_over_further_nested_work": "Current candidate still evaluates2102times;cached_normal_block scans up to16masks per four-point patch in serial leader work. Rebound executes192evaluations with zero Newton/line-search/active-disk work yet its solver remains45.3ms. The common pressure/operator path is a broader target without widening the qualified inexact policy.",
+    "alternatives": {
+      "nested_work": "Saved retained-cooperative traces show673856pointdisk bisection iterations implied by logged branch counts,plus unlogged terminal calls. Candidate-specific stagnation/bisection counts were not captured. A bit-preserving frozen-bracket early exit could be a later bounded experiment;final gates and64cap would remain. Its benefit is unknown and it cannot address rebound zero-active-disk work. Do not reuse reference late-sweep counts as candidate measurements.",
+      "serial_matrix_algorithms": "Active-mask-first,batched factorization or pivot cooperation could save arithmetic but change selection/reduction/ties and need stronger new proof. Prefer storage-only access first;preserve full mask scan and complete pivot rank semantics.",
+      "validated_mixed_precision": "Potential FP64hardware advantage cannot predict this application without measured utilization. FP32alone cannot meet1e-10state/near1e-14inner criteria or preserve near-singular rank/minimum-norm decisions. A future confined8x8FP32correction would need FP64rank/null-space safeguards,residual/refinement,automatic FP64fallback and complete original physical/gate qualification. Keep geometry,contact activation and authoritative acceptance FP64. Higher correctness risk;not the next experiment."
+    },
+    "qualification_required": "Source/fresh-package original trajectory/controller/rejection,basis/rank,cache/lifecycle/rollback and affected regressions. For storage-only change require exact numeric/work/controller equivalence to the qualified early-inner route,not merely tolerance agreement;then frozen four-fixture interleaved GPU/API/memory timing. Report regressions/nulls."
+  },
+  "no_algorithm_policy_precision_gate_or_default_change": true
+}

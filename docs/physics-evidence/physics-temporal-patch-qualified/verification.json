@@ -1,0 +1,127 @@
+{
+  "status": "BOUNDED_TEMPORAL_PATCH_CORRECTNESS_AND_MATCHED_DURATION_RESULT_SEALED",
+  "recorded_at_UTC": "2026-10-14T03:28:36.024718+00:00",
+  "API": "experimental.physics_gpu.temporal_patch_floor.GpuTemporalPatchFloorAdvance",
+  "authorized_change": {
+    "path": "experimental/physics_gpu/test_temporal_patch_lifecycle.mojo",
+    "original_sha256": "a64fd24cdacdf72d6273fa7b6238b3c23b6199d5c60e6af31ba0312c4681b159",
+    "original_preserved_copy": "build/physics-temporal-patch-qualified/original-failed-lifecycle.mojo",
+    "corrected_sha256": "4e53fb323abcc3fc71f0be359487852e46c2f986dcbc8c09cba0a26a22d0cb8e",
+    "scope": "Only test oracle/counter terminology and explicit identity/no-restitution assertions; candidate owner/kernel and numerical gates unchanged."
+  },
+  "physics_owner_changes": [],
+  "old_failed_receipts_and_diagnosis": "All old evidence files unchanged. Original failed test source preserved by exact SHA copy; only authorized current lifecycle test path differs from its historical manifest.",
+  "correctness": {
+    "reused_first_stage_receipt_sha256": "b6c037d3951665b7434f091349fbf3edf462406486b85874c4e3af7c42123db9",
+    "original_source_package_frames_repeated": false,
+    "new_source_lifecycle_cases": [
+      7,
+      8
+    ],
+    "new_package_lifecycle_cases": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "shape_replacement": "toi_admissions1 at t0 with zero restitution target, bit-identical event COM velocity and spin, fresh shape generation2, unchanged body generations and metadata; all original state/force/episode predicates retained",
+    "shared_domain_preflight_records": 72,
+    "all_new_preflight_plain_trace_records": 396,
+    "accuracy": {
+      "status": "ALL396_NEW_ADVANCES_PASS_FULL23WORD_INDEPENDENT_COMPONENT_GATES",
+      "records": 396,
+      "maximum_full_state_error_tolerance_ratio": 4.512337441321551e-06,
+      "gate": "1e-10*(1+abs(independent scalar method reference))",
+      "physical_temporal_gate": "candidate support analytic zero gap; unmodified strict response original1e-5m slop; difference within approved1e-5m +original1e-9 geometry representation tolerance. All velocity/spin/orientation/energy/residual bounds unchanged.",
+      "no_numerical_changes": true
+    },
+    "strict_reference_and_all_numerical_gates_unchanged": true,
+    "original_trajectory_accounting": "63/70 unchanged"
+  },
+  "performance_sha256": "f73a802870aa72c57274159442bdb757ca6cf5f481999a3e938bebb68ef85b92",
+  "performance_conclusion": "Free flight faster than strict macro and four strict substeps; support/e0-start warm contact frames approximately2x slower than strict macro but approximately2.1x faster than four full strict substeps. No overall optimization or realtime claim.",
+  "benchmark": {
+    "dt": 0.03333333333333333,
+    "methods": [
+      "temporal_patch",
+      "strict96_macro",
+      "four_full_strict96_substeps"
+    ],
+    "fixtures": [
+      "free constant force",
+      "quiet floor support",
+      "inelastic floor impact"
+    ],
+    "preflight_frames": 8,
+    "plain_blocks": 3,
+    "timed_frames_per_block": 10,
+    "excluded_first_frames": 2,
+    "method_order": "[0,1,2],[2,0,1],[1,2,0] balanced sequential processes per fixture",
+    "trace_frames_per_method_fixture": 6,
+    "GPU": "Nsight Systems CUDA/NVTX no counter collection",
+    "cost_scope": "every force submission; complete integration/response or temporal advance including existing registry reconciliation, commit, synchronization and scalar API readbacks; diagnostics/validation after scope",
+    "quality": "Same1/30 simulated duration; approve only methods meeting independent analytic/matched4-substep physical state, temporal1e-5m/1e-4mps/1e-5rad/1e-4radps +fixed residual/energy/rollback; reject benchmark case if any method does not share domain",
+    "disallowed": [
+      "friction",
+      "stacks",
+      "rotating contacts",
+      "warm seeds",
+      "packing",
+      "counter retry"
+    ]
+  },
+  "sample_counts": {
+    "plain_records": 270,
+    "plain_warmed": 216,
+    "trace_records": 54,
+    "trace_warmed": 36,
+    "plain_fresh_processes": 27,
+    "traces": 9
+  },
+  "resource_metadata": "Registers/shared/local-memory metadata in performance.json; localMemoryTotal not allocator footprint or dynamic spill measurement",
+  "preservation": {
+    "protected_hashes": 17828,
+    "asset_save_identities": 5901,
+    "campaign_sources": 17,
+    "other_source_lock_hashes": 119,
+    "pins": [
+      {
+        "version": "1.2.0.dev2026092905",
+        "record_sha256": "40307d16e09c2e88bfe8085346d028d7479d93867fdd6e210305ed3fbaf9c534"
+      },
+      {
+        "version": "26.7.0.dev2026092905",
+        "record_sha256": "dab5b010e4a7b5f6b7dcc4f60f2e30f9e5e69b689ef2bd57e46025d251dc2403"
+      }
+    ],
+    "prior_owner_changes": [],
+    "H3": "paused",
+    "hardware_driver_power_security_permission_changes": [],
+    "warm_seeds_combined": false,
+    "packing_combined": false,
+    "counter_retry": false,
+    "dynamic_spills_stalls": "unmeasured"
+  },
+  "resources": {
+    "hardware": "NVIDIA GB10, 615.71.09, [N/A]",
+    "execution_slots": 1,
+    "build_threads": 1,
+    "build_guard_s": 180,
+    "native_guard_s": 30,
+    "memory_reserve_GiB": 32,
+    "minimum_sampled_available_GiB": 110.41775512695312,
+    "final_available_GiB": 113.59383010864258,
+    "candidate_added_explicit_bytes": 48824,
+    "candidate_added_buffers": 8
+  },
+  "cleanup": {
+    "owned_jobs": [],
+    "GPU_compute_apps": ""
+  },
+  "remaining_blockers": "None for requested bounded qualification/measurement. Broader contacts, stacks, friction and rotating contacts remain outside this owner and result."
+}

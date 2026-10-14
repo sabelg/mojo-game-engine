@@ -1,0 +1,277 @@
+{
+  "status": "passed",
+  "milestone": "G05a-island-construction",
+  "qualified_at_UTC": "2026-10-13T05:05:49.110602+00:00",
+  "implementation": {
+    "API": "experimental.physics_gpu.islands.GpuContactIslands",
+    "vertices": "all active positive-mass bodies, including unshaped/no-contact bodies",
+    "edges": "current supported dynamic/dynamic contacts; fixed bodies are read-only anchors and never connect dynamic components",
+    "static_only_contacts": "retained with root -1/gen 0; no dynamic island",
+    "canonical_label": "minimum live body slot, exact root generation and namespace; not a persistent island lifetime ID",
+    "canonical_output": "body slots ascending; contacts sorted by shape pair independent of input order",
+    "GPU_work": "existing parallel Float64 geometry plus serial one-thread validation/min-root union/canonicalization/capacity/commit",
+    "host_work": "allocation/dispatch/status+state observation; explicit membership diagnostic readback; no CPU graph work in product",
+    "publication": "fresh GPU predicates and full identity/completeness checks; private candidate words; final commit only after capacity/epoch checks",
+    "mutation_scope": "island words/epoch rollback; does not roll back earlier caller body/shape edits or collision orphan reconciliation; no integration or response changes"
+  },
+  "coverage": {
+    "oracle": "independent CPU scalar sphere/OBB geometry followed by queue-based connected-components flood fill; expected edges never taken from GPU output",
+    "comparison": "exact integer labels/identity/counts and byte-equivalent rollback/output",
+    "groups": [
+      "isolated/unshaped bodies",
+      "disconnected chains and cycles",
+      "shared fixed box/static-only/static-chain policy",
+      "AABB-only false positives and excluded box/box",
+      "reversed creation and contact-record order",
+      "unchanged body bytes/resident addresses",
+      "contact creation/removal/split/rejoin",
+      "generation reuse and immutable earlier frames",
+      "stale pose topology, body/shape keys and revisions",
+      "bad namespace/duplicate/incomplete/range/count records",
+      "corrupt body/mass/active/generation and epoch exhaustion",
+      "zero/full capacities and unchanged publication/tails"
+    ],
+    "capacity": {
+      "bodies": 256,
+      "shapes": 64,
+      "contacts": 2016,
+      "singleton_islands": 256
+    },
+    "source_and_precompiled_actual_GPU": true
+  },
+  "qualification_receipts": {
+    "test": "/home/user/mojo-game-engine/build/physics-g05-islands/test-qualification.json",
+    "packaged": "/home/user/mojo-game-engine/build/physics-g05-islands/packaged-qualification.json",
+    "demo": "/home/user/mojo-game-engine/build/physics-g05-islands/demo-qualification.json"
+  },
+  "diagnostic": {
+    "path": "/home/user/mojo-game-engine/build/physics-g05-islands/demo-run.log",
+    "sequence": [
+      {
+        "stage": "initial_shared_fixed_floor",
+        "epoch": 1,
+        "islands": 2,
+        "live_bodies": 4,
+        "contacts": 4
+      },
+      {
+        "stage": "split_without_static_bridge",
+        "epoch": 2,
+        "islands": 3,
+        "live_bodies": 4,
+        "contacts": 3
+      },
+      {
+        "stage": "rejoined",
+        "epoch": 3,
+        "islands": 2,
+        "live_bodies": 4,
+        "contacts": 4
+      },
+      {
+        "stage": "root_removed",
+        "epoch": 4,
+        "islands": 2,
+        "live_bodies": 3,
+        "contacts": 2
+      },
+      {
+        "stage": "root_slot_reused_new_generation",
+        "epoch": 5,
+        "islands": 2,
+        "live_bodies": 4,
+        "contacts": 4
+      }
+    ],
+    "final_root": "slot 1 generation 2",
+    "solver_or_render_feature": false
+  },
+  "regression_receipt": "/home/user/mojo-game-engine/build/physics-g05-islands/regressions.json",
+  "frozen_GPU_regression_receipts": [
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-islands/final-regression-receipts/physics-g01/test-qualification.json",
+      "sha256": "dc41ba2fc68de7e2d7fc88c5496d5645c482c46baadb880765bd7eb9363a0ba1"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-islands/final-regression-receipts/physics-g02/test-qualification.json",
+      "sha256": "1df3506aea1a2ac01564975474be0d77ed7abda58d2712c93286f9eb9338de62"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-islands/final-regression-receipts/physics-g02/packaged-qualification.json",
+      "sha256": "24401c488662dd28f68ba5ba7873ac83146a56003188f7ce06008e177b2c77b9"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-islands/final-regression-receipts/physics-g03/test-qualification.json",
+      "sha256": "dbe2ed188a0f4671fb4fa346b4de8c6797b199dd7f7c2a324a8fc7dbd6a4185d"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-islands/final-regression-receipts/physics-g03/packaged-qualification.json",
+      "sha256": "bfe1247c975aed0b1c3b5b9f02e009591c0b158854b75deee84031e22c4939df"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-islands/final-regression-receipts/physics-g03b/test-qualification.json",
+      "sha256": "46bce7407488243443160aa77ff1ff14bdb52c6b466f459994f2a468b30ff293"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-islands/final-regression-receipts/physics-g03b/packaged-qualification.json",
+      "sha256": "351fcc3113607643e48e08390b765cdc16d1972fb168be307eb22d835bb7700b"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-islands/final-regression-receipts/physics-g03c/test-qualification.json",
+      "sha256": "e967a74bd13d60d1bee125e7fa988af0051e841537167096d2eac1c5e4f19f04"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-islands/final-regression-receipts/physics-g03c/packaged-qualification.json",
+      "sha256": "09f932c6d6d36a6975785baf8825dd91e6b776574bee8e4717c850e3c8d7d34c"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-islands/final-regression-receipts/physics-g04a/test-qualification.json",
+      "sha256": "62677ed42dbebff4482df48718a5ebdada76d799da884ad535c2b136c889050e"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-islands/final-regression-receipts/physics-g04a/packaged-qualification.json",
+      "sha256": "1875d4007c2e4e82b90f28177627ae3d62d61821656deb95fe4683e2b894ddb8"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-islands/final-regression-receipts/physics-g04b/test-qualification.json",
+      "sha256": "5b78508238544078317729c2a5685634f64a500f575248ea3e71f0fb10809801"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-islands/final-regression-receipts/physics-g04b/packaged-qualification.json",
+      "sha256": "081ef8f3b86cd3b19e2d7bdf89c868ab58fc70110a4814b5540e1b1f2daf9b56"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-islands/final-regression-receipts/physics-g04-stability/test-qualification.json",
+      "sha256": "c8641c97f0db69f857ed7bb9ab5cddb0d723d1ad5cc713dd876a23d52e6e68d0"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-islands/final-regression-receipts/physics-g04-stability/packaged-qualification.json",
+      "sha256": "ed1252db92eb61ec7b17ac6acdaf53dcda294d56b9f4b2118ecf933532059628"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-islands/final-regression-receipts/physics-gpu-recommended/test-qualification.json",
+      "sha256": "f362355345ca42c63344ef590d3ad12e5767708eba52c6d83318b10f092003fe"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-islands/final-regression-receipts/physics-gpu-recommended/packaged-qualification.json",
+      "sha256": "6b8b90dbfe597bb0048846dec16972df8235660ba6f0e37f6236dc3cebaaee24"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-g05-islands/final-regression-receipts/physics-gpu-recommended/demo-qualification.json",
+      "sha256": "2af9dd6f9eaec3fa6671876b76e9b1c3f83d071e8e14db44dea55c9e37b603e0"
+    }
+  ],
+  "recommended_review": {
+    "status": "passed",
+    "milestone": "recommended-G04-stability",
+    "device": "NVIDIA GB10",
+    "frames": 60,
+    "substeps_per_frame": 1,
+    "physics_hz": 60,
+    "sequential_GPU_worlds": 2,
+    "live_GPU_friction": true,
+    "entrypoint": "experimental.physics_gpu.recommended.GpuPhysicsResponse",
+    "solver": "GpuStableFrictionResponse",
+    "ordinary_engine_campaign_opt_in": false,
+    "low_mu": 0.02,
+    "high_mu": 0.8,
+    "low_final_x": 0.9035349999999964,
+    "high_final_x": -0.14573566588127745,
+    "low_final_vx": 2.8037999999999936,
+    "high_final_vx": 1.742837200942464,
+    "low_final_contact_slip": 3.71330700714285,
+    "high_final_contact_slip": -2.489802998522129e-05,
+    "low_final_kinetic_energy": 4.096087819208373,
+    "high_final_kinetic_energy": 2.1262544137014117,
+    "surface_slip_gate": 0.001,
+    "analytic_scene_laws_passed": true,
+    "rendered_snapshot_frames": [
+      0,
+      20,
+      40,
+      59
+    ],
+    "maximum_velocity_iterations": 1,
+    "maximum_cone_excess": 0.0,
+    "CPU_reference": "all 120 rendered-frame position/orientation/velocity/angular states, counts and energy reports after render; one CPU physics step per frame",
+    "fixed_bodies_unchanged": true,
+    "persistent_body_storage": true,
+    "warm_start": false,
+    "separate_static_dynamic_coefficients": false,
+    "solver_parallelism": "serial GPU contact sweeps",
+    "integration_response_separate_commits": true,
+    "validation_errors": 0,
+    "campaign_rules_changed": false
+  },
+  "source_hashes": {
+    "experimental/physics_gpu/islands.mojo": "55db9d03d76a116d678cfa3b63631ed13ac367f6c8422aa0504397fe5c391fc8",
+    "experimental/physics_gpu/island_kernels.mojo": "ab557f9d0a5e8ed5c273070e08ec7fff08c16c95f8039da3cc9c03da9504f608",
+    "experimental/physics_gpu/test_islands.mojo": "54a38f6c22fdad6f6fdc581e77912e7b2286a627df5ccbbe5a12294dde75df24",
+    "experimental/physics_gpu/island_diagnostic.mojo": "40ae419a56c0c833d7962e034a9d4daa12bab876e012d97426082b5146c096ba",
+    "scripts/qualify-islands.py": "90ed5e70298be00e79adfd5e6f735c1f3b409231f91becb37ceb26de5ea3eda6",
+    "experimental/physics_gpu/ISLANDS.md": "ec83ae976426711b5398bc4300a8534f058869edb10beef361a73e488cdc1bad",
+    "experimental/physics_gpu/README.md": "a94f342141370d5ba3bd7f640855655398d0a22948938b61496cc37ef572fb1c",
+    "docs/PHYSICS_ROADMAP.md": "d5797973321222c54a0f89a44679c7b2152ef6ec17137b19c41b0d92e315d739"
+  },
+  "limits": {
+    "serial_correctness_baseline": true,
+    "no_performance_claim": true,
+    "no_sleep_wake": true,
+    "no_warm_start": true,
+    "no_solver_scheduling": true,
+    "no_dense_compaction_or_membership_ranges": true,
+    "separate_owner_not_adopted_by_recommended_response": true,
+    "existing_supported_geometry_only": true,
+    "MAX_island_buffer_bytes": 453128,
+    "DMA_bytes_measured": false,
+    "diagnostic_snapshots_include_capacity_tails": true
+  },
+  "preservation": {
+    "G05_baseline_entries_checked": 64,
+    "intentional_changes": [
+      "experimental/physics_gpu/README.md",
+      "docs/PHYSICS_ROADMAP.md",
+      "build/mojo-game-source.tar.gz",
+      "build/atlas-release-manifest.json"
+    ],
+    "prior_unrelated_sources_locks_checked": 119,
+    "unrelated_changes": [],
+    "asset_save_identities_checked": 5901,
+    "asset_save_changes": [],
+    "campaign_sources_checked": 17,
+    "campaign_changes": [],
+    "old_240Hz_and_latest_recommended_numeric_receipts_identical": true,
+    "original_60Hz_failure_240Hz_pass_and_numerical_gates_retained": true,
+    "normal_build_state": "Atlas engine source, archive and compiled API match.\nYo Frankie build matches game source and the explicit Atlas engine dependency.",
+    "normal_module_archive_game_artifacts_unchanged": true,
+    "source_SDK_workflow": "scripts/package-atlas.py; only roadmap document changed in manifest; archive/manifest intentionally refreshed",
+    "normal_SDK_does_not_adopt_G05": true,
+    "new_dependency_or_community_code": false,
+    "old_receipts": "/home/user/mojo-game-engine/build/physics-g05-islands/previous-gpu-receipts",
+    "rollback": "/home/user/mojo-game-engine/build/physics-g05-islands/rollback"
+  },
+  "resources": {
+    "device": "NVIDIA GB10, 615.71.09, 12.1, 34",
+    "compile_threads": 1,
+    "compile_deadline_s": 180,
+    "run_deadline_s": 30,
+    "memory_reserve_GiB": 32,
+    "minimum_observed_available_GiB": 112.31477355957031,
+    "max_GPU_C": 38,
+    "temperature_policy": "observation only; retired cutoffs inactive",
+    "driver_OS_power_application_setting_changes": false,
+    "H3_resumed": false
+  },
+  "initial_failures": "Mojo argument mutability, nested diagnostic-list borrowing and explicit Int32 conditional conversions were corrected; initial compile logs retained; no final numeric failures or relaxed gates",
+  "cleanup": {
+    "remaining_native_jobs": [],
+    "compute_apps": "",
+    "H3_named_executables": [],
+    "GPU_allocations": "scoped DeviceContext owners closed",
+    "temporary_helper_removed": true,
+    "evidence_retained": true,
+    "settings_changed": false
+  },
+  "remaining_blockers": [],
+  "stop_checkpoint": "GPU contact-island construction only; stop before sleep/warm start/solver scheduling"
+}

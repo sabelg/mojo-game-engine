@@ -1,0 +1,13 @@
+{
+  "invariants_sha256": "163471b9f676d2cfa633c2269523b55f3eaee37605ba4d0ea952a8a9aa078b39",
+  "first_fixture": "unique edge/edge accepted-contact scene from plumbing proof",
+  "first_trajectory_steps": 8,
+  "paired_input_frame": 1,
+  "stop_on_first_physical_oracle_failure": true,
+  "physical_gate": "1e-10*(1+abs(reference))",
+  "normal_pressure_projection_evaluations": 3,
+  "seed_once": "sweep0 only; consumed even if invalid/failed",
+  "whole_response_retries": 1,
+  "packing": false,
+  "TGS": false
+}

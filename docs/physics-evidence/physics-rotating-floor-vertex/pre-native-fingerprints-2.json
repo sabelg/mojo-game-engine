@@ -1,0 +1,18 @@
+{
+  "experimental/physics_gpu/rotating_floor_vertex_impact.mojo": "c203b4eb1bb0fcfb85d2156afb258134c38b2a05c36100897fa4eb98dd436b5d",
+  "experimental/physics_gpu/test_rotating_floor_vertex_impact.mojo": "39cf87dd708ed4cc9cc50e6752cbdf43333aa74c672fe7d35b844821c31f5178",
+  "build/physics-rotating-floor-vertex/reference.py": "b2a976b09efe1832b0e79ec465bad46cf8a1c96cb2a4aa8e9ead4f3fdf5c1c41",
+  "build/physics-rotating-floor-vertex/DESIGN.md": "1573e2e66866b0aa4235742f9f2044ecd73799f4c302d884e09d27645f60e234",
+  "build/physics-rotating-floor-vertex/predeclared.json": "6e4a9bdfa79c50f56e0c7be0c1ac353b23000593009985c95b957191f86924c1",
+  "build/physics-rotating-floor-vertex/test-packaged.mojo": "77346d882b91ff63503586905297ecc953e44fb35a54353acbd87b84b0828297",
+  "build/physics-rotating-floor-vertex/fixtures-0.tsv": "481ab04a632c39a2b155235532ad3e8cb8e22634813c764c36b50cff18ff1ced",
+  "build/physics-rotating-floor-vertex/fixtures-2.tsv": "a1930b1e59f8b2a2709a028cdf360b2990f981fccca9ea1f9df0985335c36896",
+  "build/physics-rotating-floor-vertex/fixtures-1.tsv": "1794a9c46cf625f273517868b17d4f3590fb161fe87882716363f54d3107fcd6",
+  "build/physics-rotating-floor-vertex/fixtures-3.tsv": "b9bdcd0e1b9bacbd0273e918d15c68a000499007fdb33b9896c027636d7ba74a",
+  "build/physics-rotating-floor-vertex/package-src/gpu_rotating_floor_vertex_api/response_kernels.mojo": "3237b81df7cd797554920d24e2b621e0d13cf0fa7ae6802cd645d4b115baf291",
+  "build/physics-rotating-floor-vertex/package-src/gpu_rotating_floor_vertex_api/rotating_floor_vertex_impact.mojo": "c203b4eb1bb0fcfb85d2156afb258134c38b2a05c36100897fa4eb98dd436b5d",
+  "build/physics-rotating-floor-vertex/package-src/gpu_rotating_floor_vertex_api/__init__.mojo": "57e5ce96fb0505633de5449b393e9c8d82070a0abd93d3ce831d5da7c82bd898",
+  "build/physics-rotating-floor-vertex/package-src/gpu_rotating_floor_vertex_api/core.mojo": "5d08412fa579ddf734eade6d50ddd850af5197af20cfd3741c8bae8540974e01",
+  "build/physics-rotating-floor-vertex/package-src/gpu_rotating_floor_vertex_api/shape_kernels.mojo": "336fcda9ffe176c04fb2723b184be858e3c78b04d3dae97e230b9ffbe8755976",
+  "build/physics-rotating-floor-vertex/package-src/gpu_rotating_floor_vertex_api/kernels.mojo": "622340afdb094fee435d6c71ef8d14b24b4ebc4966cf8cf99795b4b4f979865c"
+}

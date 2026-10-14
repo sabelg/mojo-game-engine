@@ -1,0 +1,484 @@
+{
+  "status": "BOUNDED_ROTATING_SINGLE_VERTEX_FRICTIONLESS_IMPACT_CORRECTNESS_COMPLETE",
+  "UTC": "2026-10-14T06:47:25.555155+00:00",
+  "primitive": "experimental.physics_gpu.rotating_floor_vertex_impact.rotating_floor_vertex_impact",
+  "promotion": false,
+  "domain": "Cold instantaneous unique material vertex at actual arbitrary body/shape pose, within1e-9m contact band, all othervertices separated>1e-9m; fixed infinite horizontalplane; positive boundedmass/bodyinertia; arbitrary profile-bounded omega; mu0; e0..1 withold-.2mps threshold andcaller newepisode authorization. Forces andtorques preserved; noadvance.",
+  "completed": {
+    "primary_cases_each_path": 2560,
+    "accepted_impacts_each_path": 1536,
+    "exact_expected_rejections_each_path": 1024,
+    "continuation_checks_each_path": 12,
+    "records_each_path": 2572,
+    "total_source_package_records": 5144,
+    "source_package_byte_identical": true,
+    "all_16_enumerations_exact": true,
+    "all8_lowest_vertices_exercised": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "codes_each_path": {
+      "0": 1536,
+      "604": 192,
+      "602": 256,
+      "603": 128,
+      "601": 256,
+      "600": 128,
+      "606": 64
+    }
+  },
+  "independent_reference": {
+    "decimal_digits": 80,
+    "method": "Explicit rotation matrices; full3x3 inertia via matrix products; independent Gaussian-Jordan inverse; contactmetric via cross-product matrix congruence; analytic scalar impulse; Decimalmomentum/energy witnesses",
+    "production_oracle_imports": false,
+    "actual_poststate_worldtensor_invariant_proof": {
+      "method": "Independent Decimal80 worldtensor applied to actualnative poststate, notshared CPU/core equations",
+      "counts_source": {
+        "accepted": 1536,
+        "chain": 12,
+        "rejected": 1024
+      },
+      "source_package_exact": true,
+      "all_eight_lowest_vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "maxima": {
+        "linear_momentum_error_kg_mps": 3.1086244689504383e-15,
+        "world_angular_momentum_error_kg_m2ps": 1.9630184802486643e-14,
+        "origin_angular_momentum_error_kg_m2ps": 1.9630184802486643e-14,
+        "normal_residual_mps": 4.485845584741514e-16,
+        "energy_balance_error_J": 7.430524080633438e-15,
+        "normal_axis_angular_momentum_change": 4.760972545926284e-15
+      },
+      "max_gate_ratios": {
+        "linear_momentum_error_kg_mps": 1.999148044125311e-05,
+        "world_angular_momentum_error_kg_m2ps": 2.1194739456406565e-05,
+        "origin_angular_momentum_error_kg_m2ps": 2.1194739456406565e-05,
+        "normal_residual_mps": 2.242922792370757e-07,
+        "energy_balance_error_J": 2.1031860663785418e-07,
+        "normal_axis_angular_momentum_change": 7.364267342580143e-06
+      },
+      "examples": [
+        {
+          "variant": 0,
+          "kind": 9,
+          "vertex": 4,
+          "COM_vy": -1.0,
+          "incoming_point_vn": -1.0,
+          "omega_before": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "omega_after": [
+            -0.48218745085010606,
+            1.0,
+            -0.2844329308027564
+          ],
+          "L_world_before": [
+            -1.3e-80,
+            1.3333333333333333,
+            -1e-80
+          ],
+          "L_world_after": [
+            -0.6429166011334747,
+            1.3333333333333333,
+            -0.3792439077370085
+          ],
+          "normal_impulse": 1.405275774808976
+        },
+        {
+          "variant": 0,
+          "kind": 10,
+          "vertex": 4,
+          "COM_vy": 0.0,
+          "incoming_point_vn": -0.36368680339964915,
+          "omega_before": [
+            0.5,
+            0.0,
+            0.5
+          ],
+          "omega_after": [
+            0.3246347873608995,
+            6.938893903907228e-18,
+            0.3965554966147519
+          ],
+          "L_world_before": [
+            0.6666666666666666,
+            -1.15e-80,
+            0.6666666666666666
+          ],
+          "L_world_after": [
+            0.432846383147866,
+            9.25185853854297e-18,
+            0.5287406621530025
+          ],
+          "normal_impulse": 0.5110802544352416
+        },
+        {
+          "variant": 0,
+          "kind": 20,
+          "vertex": 7,
+          "COM_vy": -0.9254420265971077,
+          "incoming_point_vn": -0.9999999999999999,
+          "omega_before": [
+            0.4,
+            0.3,
+            -0.2
+          ],
+          "omega_after": [
+            0.38879916948862475,
+            0.3,
+            0.24782249227449915
+          ],
+          "L_world_before": [
+            0.5333333333333333,
+            0.39999999999999997,
+            -0.26666666666666666
+          ],
+          "L_world_after": [
+            0.5183988926514996,
+            0.39999999999999997,
+            0.3304299896993322
+          ],
+          "normal_impulse": 1.681820224221237
+        },
+        {
+          "variant": 1,
+          "kind": 9,
+          "vertex": 0,
+          "COM_vy": -1.0,
+          "incoming_point_vn": -1.0,
+          "omega_before": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "omega_after": [
+            1.1534540154671102,
+            1.1236244137600535,
+            -0.5332719504397825
+          ],
+          "L_world_before": [
+            -0.0013569617409851429,
+            0.01992172976649356,
+            0.0016832297175093582
+          ],
+          "L_world_after": [
+            0.009837559513071078,
+            0.01992172976649356,
+            -0.005237539935311343
+          ],
+          "normal_impulse": 0.021022453214647734
+        },
+        {
+          "variant": 1,
+          "kind": 10,
+          "vertex": 0,
+          "COM_vy": 0.0,
+          "incoming_point_vn": -0.43085577886444765,
+          "omega_before": [
+            -0.5,
+            0.0,
+            0.5
+          ],
+          "omega_after": [
+            -0.0030276717815937437,
+            0.053264293077248594,
+            0.27023669844670445
+          ],
+          "L_world_before": [
+            -0.003710889154845085,
+            0.0015200957292472506,
+            0.009310871115800562
+          ],
+          "L_world_after": [
+            0.0011123350190859196,
+            0.001520095729247251,
+            0.006329017516693066
+          ],
+          "normal_impulse": 0.00905764545343846
+        },
+        {
+          "variant": 1,
+          "kind": 20,
+          "vertex": 3,
+          "COM_vy": -1.0079286866714372,
+          "incoming_point_vn": -1.0,
+          "omega_before": [
+            0.4,
+            0.3,
+            -0.2
+          ],
+          "omega_after": [
+            0.5369779769352834,
+            0.31941311235692327,
+            -0.09573063674963009
+          ],
+          "L_world_before": [
+            0.006158459735406906,
+            0.00741599926351493,
+            -0.0019151988797915357
+          ],
+          "L_world_after": [
+            0.009169616444085121,
+            0.007415999263514932,
+            0.00016789246335875308
+          ],
+          "normal_impulse": 0.09936631973103474
+        },
+        {
+          "variant": 2,
+          "kind": 9,
+          "vertex": 5,
+          "COM_vy": -1.0,
+          "incoming_point_vn": -1.0,
+          "omega_before": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "omega_after": [
+            -0.5991068860787488,
+            1.1324199414519698,
+            0.655871881761108
+          ],
+          "L_world_before": [
+            15.25983526252365,
+            96.95674909276634,
+            -5.636367032698465
+          ],
+          "L_world_after": [
+            21.74874871266406,
+            96.95674909276634,
+            35.425489015927674
+          ],
+          "normal_impulse": 63.986550453675044
+        },
+        {
+          "variant": 2,
+          "kind": 10,
+          "vertex": 5,
+          "COM_vy": 0.0,
+          "incoming_point_vn": -0.3715684715117776,
+          "omega_before": [
+            -0.5,
+            0.0,
+            -0.5
+          ],
+          "omega_after": [
+            -0.7226092299324613,
+            0.049203075242987476,
+            -0.2562986873864719
+          ],
+          "L_world_before": [
+            -25.87242322146338,
+            -4.811734114912592,
+            -58.91175271514397
+          ],
+          "L_world_after": [
+            -23.461347569022493,
+            -4.811734114912593,
+            -43.65446162571933
+          ],
+          "normal_impulse": 23.77538474938327
+        },
+        {
+          "variant": 2,
+          "kind": 20,
+          "vertex": 6,
+          "COM_vy": -0.7474669516867718,
+          "incoming_point_vn": -1.0,
+          "omega_before": [
+            0.4,
+            0.3,
+            -0.2
+          ],
+          "omega_after": [
+            -0.49416674432862184,
+            0.0371704867598297,
+            0.7176877573413736
+          ],
+          "L_world_before": [
+            20.30480685886237,
+            21.002270410013665,
+            12.750913274427056
+          ],
+          "L_world_after": [
+            -11.580931856423923,
+            21.002270410013658,
+            8.852148569601678
+          ],
+          "normal_impulse": 47.41772463102286
+        },
+        {
+          "variant": 3,
+          "kind": 9,
+          "vertex": 1,
+          "COM_vy": -1.0,
+          "incoming_point_vn": -1.0,
+          "omega_before": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "omega_after": [
+            1.304291581515591,
+            0.8796858334777408,
+            0.28904609947980175
+          ],
+          "L_world_before": [
+            0.024209930870436793,
+            0.3018159852267975,
+            0.01638468635554942
+          ],
+          "L_world_after": [
+            0.3218411791720622,
+            0.3018159852267974,
+            0.19195152888466085
+          ],
+          "normal_impulse": 0.6505571365353443
+        },
+        {
+          "variant": 3,
+          "kind": 10,
+          "vertex": 1,
+          "COM_vy": 0.0,
+          "incoming_point_vn": -0.36368680339964915,
+          "omega_before": [
+            -0.5,
+            0.0,
+            -0.5
+          ],
+          "omega_after": [
+            -0.025646364017521794,
+            -0.043756674626173525,
+            -0.39487774804505393
+          ],
+          "L_world_before": [
+            -0.13547589717430084,
+            -0.020297308612993104,
+            -0.21567849250783486
+          ],
+          "L_world_after": [
+            -0.027231339887635455,
+            -0.020297308612993108,
+            -0.15182714876545275
+          ],
+          "normal_impulse": 0.23659904541536844
+        },
+        {
+          "variant": 3,
+          "kind": 20,
+          "vertex": 2,
+          "COM_vy": -1.0745579734028923,
+          "incoming_point_vn": -1.0,
+          "omega_before": [
+            0.4,
+            0.3,
+            -0.2
+          ],
+          "omega_after": [
+            0.7017208459087644,
+            0.2413598326441599,
+            -1.4941387600008498
+          ],
+          "L_world_before": [
+            0.06757824361165521,
+            0.09311882611250888,
+            -0.05043866820216552
+          ],
+          "L_world_after": [
+            0.07713060548151301,
+            0.0931188261125089,
+            -0.4323534284802751
+          ],
+          "normal_impulse": 1.0757252798458412
+        }
+      ],
+      "geometry": "unchangedpose; actualvertexarms; no projection oromega clamp",
+      "trajectory_claim": false
+    },
+    "max_scaled_state_gate_ratio": 2.8374666293003946e-06,
+    "max_scaled_diagnostic_gate_ratio": 0.0005859285502108464
+  },
+  "gates": "Original1e-10scaledstate,1e-9scalednormal/energy,exactrollback/input/canaries andexistingprofile. Geometrydomainusesoriginal1e-9certificate. No relaxation.",
+  "genuine_rotation": "Actualomega remainsnonzero for angular-only closing/tipping; anisotropic yawvelocity maychange while worldL_yconserved. No pressure redistribution oromega/poseclamp. Full3x3 pointmetric retained.",
+  "episode_limitation": "New-impact flag is a caller contract, not aworldidentity proof. Blockstateless; no body/shape registry orpersistent episode cache. Twelveactualpoststate continuingcalls/path usebeta0,consumption0 andno repeatedbounce; futureowner mustvalidatefull identity/material/anchor/separation history.",
+  "preservation": {
+    "UTC": "2026-10-14T06:45:15.031565+00:00",
+    "protected_hashes_verified": 19623,
+    "asset_save_size_mtime_identities": 5901,
+    "campaign_source_hashes": 17,
+    "other_source_lock_hashes": 119,
+    "pins": {
+      "1.2.0.dev2026092905": {
+        "metadata_SHA256": "40307d16e09c2e88bfe8085346d028d7479d93867fdd6e210305ed3fbaf9c534",
+        "path": "/home/user/mojo-game-engine/.deps/physics-gpu-g01/.pixi/envs/default/conda-meta/mojo-compiler-1.2.0.dev2026092905-release.json"
+      },
+      "26.7.0.dev2026092905": {
+        "metadata_SHA256": "dab5b010e4a7b5f6b7dcc4f60f2e30f9e5e69b689ef2bd57e46025d251dc2403",
+        "path": "/home/user/mojo-game-engine/.deps/physics-gpu-g01/.pixi/envs/default/conda-meta/max-core-26.7.0.dev2026092905-release.json"
+      }
+    },
+    "minimum_available_GiB": 111.52309799194336,
+    "final_available_GiB": 113.739013671875,
+    "reserve_GiB": 32,
+    "owned_jobs": [],
+    "GPU_compute_processes": "",
+    "GPU_read_only_inventory": "NVIDIA GB10, 615.71.09, 34, 5.80 W, 10 %, [N/A]",
+    "telemetry_count": 12,
+    "nonzero_stages": [
+      {
+        "stage": "source-compile",
+        "returncode": 1,
+        "fault": null
+      }
+    ],
+    "hardware_changes": false,
+    "H3": "paused; untouched",
+    "profiling_counter_retry": false,
+    "dynamic_spills_stalls": "unmeasured",
+    "timing": false
+  },
+  "package_modules": [
+    "core",
+    "kernels",
+    "response_kernels",
+    "rotating_floor_vertex_impact",
+    "shape_kernels"
+  ],
+  "harness_buffers": {
+    "count": 2,
+    "Float64_words_each": 96,
+    "bytes_total": 1536,
+    "canaries_each": [
+      0,
+      95
+    ]
+  },
+  "setup_notes": [
+    "Testonly String len API error corrected tobyte_length beforefirstnative; failedcompile retained.",
+    "Executiontransport disconnect preventedbothfixandcorrectedcompile fromstarting; read-only recovery provednoownedjobs/noattemptreceipts; persistedfixthenexecutedonlymissingstage. No native duplication."
+  ],
+  "timing": false,
+  "multibody_implementation": false,
+  "warm_seed_or_packing": false,
+  "trajectory_integration": false,
+  "TOI_implementation": false,
+  "next_review_checkpoint": "Stopped at completed smallestcontact block. Nextprerequisite is rotating free-flight/earliest all-vertex floorTOI withindependenthigh-accuracy angularintegration/convergence and grazing/feature-transition certificates before anytrajectoryowner. Coupledrotating friction andedge/facecontacts remainunimplemented.",
+  "remaining_blockers": "No blocker for declaredbounded instantaneous block. Notqualified forfriction,edge/facepatches,finitefloor,rotatingTOI/trajectories,orinteracting bodies."
+}

@@ -1,0 +1,91 @@
+{
+  "stage": "package-precompile",
+  "command": [
+    "/usr/bin/taskset",
+    "-c",
+    "0",
+    "/home/user/mojo-game-engine/.deps/physics-gpu-g01/.pixi/envs/default/bin/mojo",
+    "precompile",
+    "/home/user/mojo-game-engine/build/physics-rotating-floor-vertex/package-src/gpu_rotating_floor_vertex_api",
+    "-I",
+    "/home/user/mojo-game-engine",
+    "-o",
+    "/home/user/mojo-game-engine/build/physics-rotating-floor-vertex/package/gpu_rotating_floor_vertex_api.mojoc"
+  ],
+  "deadline_s": 180,
+  "elapsed_s": 2.1,
+  "returncode": 0,
+  "fault": null,
+  "samples": [
+    {
+      "available_kB": 118764292,
+      "GPU_C": 35,
+      "GPU_utilization": 3,
+      "sensors_C": {
+        "thermal_zone2": 40.2,
+        "thermal_zone0": 40.2,
+        "thermal_zone5": 38.7,
+        "thermal_zone3": 36.0,
+        "thermal_zone1": 35.8,
+        "thermal_zone6": 37.1,
+        "thermal_zone4": 36.6
+      }
+    },
+    {
+      "available_kB": 118763680,
+      "GPU_C": 35,
+      "GPU_utilization": 3,
+      "sensors_C": {
+        "thermal_zone2": 40.1,
+        "thermal_zone0": 40.1,
+        "thermal_zone5": 38.7,
+        "thermal_zone3": 36.0,
+        "thermal_zone1": 35.8,
+        "thermal_zone6": 37.1,
+        "thermal_zone4": 36.6
+      }
+    },
+    {
+      "available_kB": 118764464,
+      "GPU_C": 35,
+      "GPU_utilization": 3,
+      "sensors_C": {
+        "thermal_zone2": 38.0,
+        "thermal_zone0": 38.7,
+        "thermal_zone5": 38.7,
+        "thermal_zone3": 35.9,
+        "thermal_zone1": 37.2,
+        "thermal_zone6": 36.7,
+        "thermal_zone4": 36.1
+      }
+    },
+    {
+      "available_kB": 118748520,
+      "GPU_C": 35,
+      "GPU_utilization": 3,
+      "sensors_C": {
+        "thermal_zone2": 37.0,
+        "thermal_zone0": 38.8,
+        "thermal_zone5": 38.5,
+        "thermal_zone3": 36.4,
+        "thermal_zone1": 38.8,
+        "thermal_zone6": 36.7,
+        "thermal_zone4": 37.2
+      }
+    },
+    {
+      "available_kB": 118696232,
+      "GPU_C": 35,
+      "GPU_utilization": 3,
+      "sensors_C": {
+        "thermal_zone2": 36.1,
+        "thermal_zone0": 39.0,
+        "thermal_zone5": 38.5,
+        "thermal_zone3": 36.1,
+        "thermal_zone1": 39.0,
+        "thermal_zone6": 36.7,
+        "thermal_zone4": 36.3
+      }
+    }
+  ]
+}

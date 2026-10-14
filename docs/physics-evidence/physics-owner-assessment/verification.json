@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "recorded_at_UTC": "2026-10-13T17:31:15.190769+00:00",
+  "scope": "Bounded interleaved original / invariant-cache / tangent-cache assessment only",
+  "decision": "Retain explicit modes; no reliable general crossover established; no selector implemented",
+  "predeclared_schedule_followed": true,
+  "predeclaration_arithmetic_error_retained_and_corrected": {
+    "declared_total": 180,
+    "actual_total": 240,
+    "measured": 144,
+    "excluded": 96,
+    "explanation": "Frozen schedule is 4 fixtures x 4 batches x 3 owners x 5 calls = 240. Per-owner first/warmup exclusions and all orders were obeyed. Aggregate declaration arithmetic was wrong; originals retained."
+  },
+  "correctness": {
+    "fresh_precompiled_actual_GPU": true,
+    "exact_physical_records_including_binary64_bits": 240,
+    "warmed_observations": 144,
+    "per_owner_fixture": 12,
+    "independent_CPU_analytic_state_residual_cone_depth_energy_rollback_checks": "Every invocation",
+    "all_16_process_batches_successful": true,
+    "original_full_correctness_receipts_retained_without_recounting": true
+  },
+  "preservation": {
+    "protected_hashes": 143,
+    "protected_changes": [],
+    "build_source_hashes": 85,
+    "asset_save_identities": 5901,
+    "asset_save_changes": [],
+    "campaign_sources": 17,
+    "campaign_changes": [],
+    "unrelated_sources_locks": 119,
+    "unrelated_changes": [],
+    "pins": [
+      {
+        "version": "1.2.0.dev2026092905",
+        "metadata_sha256": "40307d16e09c2e88bfe8085346d028d7479d93867fdd6e210305ed3fbaf9c534"
+      },
+      {
+        "version": "26.7.0.dev2026092905",
+        "metadata_sha256": "dab5b010e4a7b5f6b7dcc4f60f2e30f9e5e69b689ef2bd57e46025d251dc2403"
+      }
+    ],
+    "physics_sources_algorithms_defaults_policies_SDK_campaign_assets_saves_dirtywork_locks_changed": false
+  },
+  "retained_limits": [
+    "strictSAME-TIME translatedcase68failure",
+    "two baseline64convergence rejects",
+    "four oldledgefixtureswithoutdetachment",
+    "separate12/12ledge and75/75translation suites notadded to63/70",
+    "bounded expensive serial optin only"
+  ],
+  "original_coverage": "63/70 unchanged",
+  "timing": "Host/API wall; no new GPU-only or general-crossover claim; all absolute/paired/range/batch/position/excluded timings in measured.json",
+  "resources": {
+    "compile_threads": 1,
+    "compile_guard_s": 180,
+    "batch_guard_s": 30,
+    "reserve_GiB": 32,
+    "minimum_observed_available_GiB": 111.79825973510742,
+    "max_batch_elapsed_s": 20.004,
+    "compile_elapsed_s": 23.673,
+    "no_installs_settings_or_thermal_cutoff_changes": true
+  },
+  "cleanup": {
+    "owned_native_GPU_jobs": [],
+    "GPU_compute_apps": "",
+    "H3_resumed": false,
+    "normal_settings_unchanged": true,
+    "OS_driver_firmware_changes": false,
+    "installs_or_publication": false,
+    "remaining_blockers": []
+  }
+}

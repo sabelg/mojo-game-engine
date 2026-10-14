@@ -1,0 +1,400 @@
+{
+  "status": "passed",
+  "qualified_at_UTC": "2026-10-13T07:55:14.275759+00:00",
+  "milestone": "bounded oriented box/box detection and contact geometry",
+  "API": "experimental.physics_gpu.box_box.GpuBoxBoxDetection",
+  "scope": "detection-only separate patch stream; no response, history/island/sleep adoption or stacking readiness",
+  "implementation": {
+    "SAT": "six face normals plus nine edge crosses; max-component normalization; skip exactly zero crosses; strict computed positive gap separates",
+    "feature_selection": "face preference within 32-epsilon evaluation band for equivalent cross directions; no contact epsilon",
+    "face": "incident convex quad clipped against four side planes and contact halfspace; intermediate count proof/guard n+1 per halfspace; final 4+5<=9",
+    "edge": "one closest support-edge pair through transverse projection, with finite/admitted-edge checks",
+    "uniqueness_order": "scale-aware incident duplicate/collinear pruning; lexicographic final witness midpoint sorting and post-projection coalescing",
+    "depth": "signed separation <=0; depth=max(0,-separation); representation-scale positive clipped reconstruction coalesces to tagged exact touch after strict SAT",
+    "publication": "private pair candidates, counts/finite/feature/normal/depth/capacity/epoch checks, then one new box-output commit; legacy detect/orphan reconciliation earlier separate commits",
+    "identity": "canonical shape slots with exact generation/revision/body/namespace; fresh reconstruction on each detect"
+  },
+  "coverage": {
+    "actual_GPU_source_and_precompiled": true,
+    "oracle": "independent corner-extrema SAT; constructive projected-polygon intersections and hull; scalar Gram edge witnesses; input transforms checked against CPU matrices, no output contact reuse",
+    "analytic": [
+      "rectangular faces, separation/touch/deep",
+      "containment oriented minimum-translation gap",
+      "body/local quaternion rounding routes",
+      "rotated eight-point overlap",
+      "skew edge/edge and known edge-cross separator with overlapping face projections",
+      "exact line and point tangencies"
+    ],
+    "seeded_near_coplanar_cases_each_mode": 48,
+    "general_seeded_rotated_cases_each_mode": 96,
+    "metamorphic_cases_each_mode": 12,
+    "properties": [
+      "exact canonical pair identities and order",
+      "1..9 points, unique final midpoints, lexicographic order",
+      "fixed witness plane/shape membership",
+      "nonpositive separation and nonnegative depth",
+      "independent missing/extra contour and conditioned corner comparisons",
+      "bitwise repeatability for the same near-degenerate inputs",
+      "candidate/output guards and publication tails"
+    ],
+    "nine_point_test": "actual GPU helper with deliberately selected face vs independent nine-vertex constructive reference; not a claim SAT selects that face",
+    "lifecycle": [
+      "edit/revision/separate/rejoin",
+      "body removal and orphan reconciliation",
+      "shape/body slot generation reuse",
+      "stale/foreign packet rejection and mixed command rollback",
+      "immutable old frames and closed-owner rejection",
+      "body state/metadata byte preservation"
+    ],
+    "invalid_and_limits": [
+      "zero/negative/out-of-range/nonfinite extents",
+      "zero/nonfinite/out-of-range quaternion scales",
+      "nonfinite/out-of-range offsets",
+      "min/max extents and quaternion scales",
+      "extreme anisotropy and admitted 1e9 center translation",
+      "out-of-range center detection failure"
+    ],
+    "capacity": [
+      "256 body slots, 64 boxes, 2016 ordered patches, 8064 dense-fixture points",
+      "zero capacities",
+      "pair/point overflow preserves every output bit",
+      "failed publication then successful retry",
+      "UInt64 max epoch/exhaustion rollback",
+      "malformed private count/feature/flag/normal/nonfinite/positive-separation/error rejection"
+    ],
+    "legacy": "independent mixed sphere/OBB geometry unchanged; legacy pair/contact failure preserves new box output",
+    "diagnostic": "six explicit-edit GPU observations, epochs 1..6; points 8,8,0,4,0,4; no integration or response"
+  },
+  "qualification_receipts": [
+    {
+      "mode": "test",
+      "path": "/home/user/mojo-game-engine/build/physics-box-box/test-qualification.json",
+      "sha256": "769bbc024953437521487fd313f30a9f80ed2a05df58002caacd0803b99d21cc",
+      "stages": [
+        {
+          "stage": "test-compile",
+          "returncode": 0,
+          "elapsed_s": 11.048,
+          "deadline_s": 180
+        },
+        {
+          "stage": "test-run",
+          "returncode": 0,
+          "elapsed_s": 2.173,
+          "deadline_s": 30
+        }
+      ]
+    },
+    {
+      "mode": "packaged",
+      "path": "/home/user/mojo-game-engine/build/physics-box-box/packaged-qualification.json",
+      "sha256": "2cd9a9a053f1b6c45fad67d66e4aa5e78900ea93454068eaf49e03ce9f31028e",
+      "stages": [
+        {
+          "stage": "packaged-precompile",
+          "returncode": 0,
+          "elapsed_s": 1.564,
+          "deadline_s": 180
+        },
+        {
+          "stage": "packaged-compile",
+          "returncode": 0,
+          "elapsed_s": 11.048,
+          "deadline_s": 180
+        },
+        {
+          "stage": "packaged-run",
+          "returncode": 0,
+          "elapsed_s": 2.157,
+          "deadline_s": 30
+        }
+      ]
+    },
+    {
+      "mode": "demo",
+      "path": "/home/user/mojo-game-engine/build/physics-box-box/demo-qualification.json",
+      "sha256": "adb0ccea19e81158a3bb99d4ec4597c3dd902aa55113a4baceebecaaa44a4f28",
+      "stages": [
+        {
+          "stage": "demo-compile",
+          "returncode": 0,
+          "elapsed_s": 6.307,
+          "deadline_s": 180
+        },
+        {
+          "stage": "demo-run",
+          "returncode": 0,
+          "elapsed_s": 1.669,
+          "deadline_s": 30
+        }
+      ]
+    }
+  ],
+  "regression_stage_count": 49,
+  "regression_receipt": "/home/user/mojo-game-engine/build/physics-box-box/regressions.json",
+  "frozen_regression_receipts": [
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-box/final-regression-receipts/physics-g01/test-qualification.json",
+      "sha256": "1da148fb3fabf5879e388f317d787675808befb5345b07a8ad75836bae1376d4"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-box/final-regression-receipts/physics-g02/test-qualification.json",
+      "sha256": "33483ccf8601771c2c15851bbb9b26790dc13b2645f96a7e58de5d7c90adb6ab"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-box/final-regression-receipts/physics-g02/packaged-qualification.json",
+      "sha256": "81ea85c0d74b9250318f7e175508a2f1455775cb02f36d7c8cd4b1cb39e80850"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-box/final-regression-receipts/physics-g03/test-qualification.json",
+      "sha256": "ef0ef5af19c2bcd17b3bc5b0f02fd785c0d2038a3362c290c392bcbe0d53eee5"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-box/final-regression-receipts/physics-g03/packaged-qualification.json",
+      "sha256": "7c48e72cff24de79cc502f3b303f547c226d0c04594270bbc3aac1e755082852"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-box/final-regression-receipts/physics-g03b/test-qualification.json",
+      "sha256": "c1b16956f9136c6d7622f5785ba4ac69d914d29857c788116bdbc96c60aa0af9"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-box/final-regression-receipts/physics-g03b/packaged-qualification.json",
+      "sha256": "d0606f5a642bcc838bfafee07c1a4e6b3e13b609c5feabcfdab1fd46ddeddee2"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-box/final-regression-receipts/physics-g03c/test-qualification.json",
+      "sha256": "5b5b7132d856f3992d4dcc104213f06af22498663e85a4821c2e1918664c876e"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-box/final-regression-receipts/physics-g03c/packaged-qualification.json",
+      "sha256": "f7702ae9adfe2be320e9b24485d3719a096e27f8887fbbff91f079b55a228551"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-box/final-regression-receipts/physics-g04a/test-qualification.json",
+      "sha256": "7b5ac6eba917fc0f32658a547d061138b7db11232b226bb90f3eaa36719039fb"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-box/final-regression-receipts/physics-g04a/packaged-qualification.json",
+      "sha256": "393ac725bd11df41d674d246753bb2584898cd724e8a8ee0b89d912d0d797136"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-box/final-regression-receipts/physics-g04b/test-qualification.json",
+      "sha256": "64dfff89d2c23ab1483f33b8d0b71f9b0870cc84c638adc5fea8ab29fc4f43a8"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-box/final-regression-receipts/physics-g04b/packaged-qualification.json",
+      "sha256": "7f78e5be237990aa0391d893819d205028100428575b7fe2086e32c1711695f6"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-box/final-regression-receipts/physics-g04-stability/test-qualification.json",
+      "sha256": "3ea92d4f49059fb3685d337fc9fe870dd5610c0befc052e3999404e31709c34b"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-box/final-regression-receipts/physics-g04-stability/packaged-qualification.json",
+      "sha256": "b0b9d294da80ecb61de3dabaf92788d893f91f9e6ee63254fadb6ce10bb2c4e2"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-box/final-regression-receipts/physics-gpu-recommended/test-qualification.json",
+      "sha256": "ffee424a9579b03480dffa1feeaa4932b471722e0f8246c356fa429f119a99e3"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-box/final-regression-receipts/physics-gpu-recommended/packaged-qualification.json",
+      "sha256": "c08b3e4e39f23ffb862fc57be15bcb823864706b7f98a630800bd28835cd19ac"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-box/final-regression-receipts/physics-gpu-recommended/demo-qualification.json",
+      "sha256": "926f7deb120c14587bfafed7012bc37296f50936106045baa2b5bd46cef8ca69"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-box/final-regression-receipts/physics-g05-islands/test-qualification.json",
+      "sha256": "1faff9e45845b09bc59bafc10688499335156d1d8215ff8d8859a99f002917b6"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-box/final-regression-receipts/physics-g05-islands/packaged-qualification.json",
+      "sha256": "c9c905ae0289bd65b176b4117ba97806cc4f564a1fe04e817d34311e5b7a7084"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-box/final-regression-receipts/physics-g05-islands/demo-qualification.json",
+      "sha256": "6c23e324dd715862e6ea0940b8b25036992ae7b1926dc275b0979cc6b1ed327f"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-box/final-regression-receipts/physics-g05-sleep/test-qualification.json",
+      "sha256": "f3a7bb9b187b7a0b27006b55104ff43757e725c03436f1bee6984c63c8234a8d"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-box/final-regression-receipts/physics-g05-sleep/packaged-qualification.json",
+      "sha256": "da8553ab41ffb0cf4be92abe667c48d6657a8a90ec115169146ad0d12d82c6e5"
+    },
+    {
+      "path": "/home/user/mojo-game-engine/build/physics-box-box/final-regression-receipts/physics-g05-sleep/demo-qualification.json",
+      "sha256": "870a57e3a83420484a0f813b16a392d8a7f647c273163acd95acf59da6ede9d0"
+    }
+  ],
+  "source_hashes": {
+    "experimental/physics_gpu/box_box.mojo": "986b02793c9fa02cd78d6291f9703adbbd0b2c90968d433076d93acd349b8242",
+    "experimental/physics_gpu/box_box_kernels.mojo": "192f8077c88fa8aabdbe79e9ae38f5a5be96e098b96f7a4f933e971bc4772276",
+    "experimental/physics_gpu/box_box_reference.mojo": "d4cf129f16545f49fa4fd3bab4cb1803545ebf69605eebbfdffac169fbf51081",
+    "experimental/physics_gpu/test_box_box.mojo": "74e83c3d738e898e9463d15441c54bed99cf25238323ccc30768270cd9ff0c58",
+    "experimental/physics_gpu/box_box_diagnostic.mojo": "5fc19858eabec7a9964e33d0f2c18158ab053d149fb08db9e12718f2e1bcda52",
+    "experimental/physics_gpu/BOX_BOX.md": "41a9dcb11bf300cf237186f1c4e9c38b8ab0390a18de4494ac482a3ac2b12716",
+    "experimental/physics_gpu/README.md": "d698a0b62b3cb82e077410cf425b15d765029294785e6984498b889d8b2e4a68",
+    "scripts/qualify-box-box.py": "5ca401c201f3f94bb1254dd270ba31dcabe29032de5149ac646b54e812dabba7",
+    "docs/PHYSICS_ROADMAP.md": "1ff55a3ea9493dcd1c8b3ff528cf218dc2b52049be44ce0cb826e83aa8c5003e"
+  },
+  "limits": {
+    "bodies": 256,
+    "shapes": 64,
+    "pairs": 2016,
+    "points_per_patch": 9,
+    "total_points": 18144,
+    "default_pairs": 256,
+    "default_points": 1024,
+    "half_extents": [
+      1e-06,
+      10000.0
+    ],
+    "local_offset_max": 1000000.0,
+    "quaternion_max_component_range": [
+      1e-12,
+      1000000000000.0
+    ],
+    "world_center_max": 1000000000.0,
+    "precision": "Float64"
+  },
+  "numerical_limits": {
+    "membership_gate": "512*eps*max(1,extent), unchanged during qualification",
+    "coalescing_resolution": "32*eps*max(1,half_extent)",
+    "intersection_position_envelope": "forward comparisons divided by minimum nonzero edge/face-direction sine; tested conditioning envelope, not a uniform precision theorem",
+    "observed_limit": "1e-12 seeded perturbation amplified binary64 basis/dot rounding to ~0.000496 along an almost flat edge; plane membership retained",
+    "unqualified": [
+      "exact-real predicates below evaluation/input resolution",
+      "uniform tight corner positions or invariant counts for unresolved perturbations",
+      "adaptive exact or extended-precision clipping",
+      "persistent features/local anchors/impulse reuse",
+      "multi-point response or box stacks",
+      "per-island box sleep/wake adoption",
+      "broad production/performance claim"
+    ]
+  },
+  "preservation": {
+    "baseline_entries_checked": 79,
+    "intentional_differences": [
+      "experimental/physics_gpu/README.md",
+      "docs/PHYSICS_ROADMAP.md",
+      "build/mojo-game-source.tar.gz",
+      "build/atlas-release-manifest.json"
+    ],
+    "intentional_artifact_hashes": {
+      "experimental/physics_gpu/README.md": {
+        "before": "b5fed54518371c8ba43b1fc227d213b069771806f89fa102ab29b7a3ac6aa885",
+        "after": "d698a0b62b3cb82e077410cf425b15d765029294785e6984498b889d8b2e4a68"
+      },
+      "docs/PHYSICS_ROADMAP.md": {
+        "before": "2d061363398345d0fca23ff632a318feba9ad42f5023cdcf19be757e0a80969c",
+        "after": "1ff55a3ea9493dcd1c8b3ff528cf218dc2b52049be44ce0cb826e83aa8c5003e"
+      },
+      "build/mojo-game-source.tar.gz": {
+        "before": "a288f9ca1a435c562fb88943eecf7249ae6024909b46267bb25cfbd562ad3f34",
+        "after": "f9561e157cf8142d9ccfed1736b6821676d024620f88da10a7fcee7de3368e7e"
+      },
+      "build/atlas-release-manifest.json": {
+        "before": "b55a037a7cec32cf772d65f7e2f9a00169e86a00eff890ef20010cbcfd23009e",
+        "after": "a0d6bb1a4423020a0fd87d859e9411d1034f12fab644de6c8b98b2cf5d1a9309"
+      }
+    },
+    "prior_unrelated_hashes_checked": 119,
+    "unrelated_changes": [],
+    "asset_save_identities_checked": 5901,
+    "asset_save_changes": [],
+    "campaign_sources_checked": 17,
+    "campaign_changes": [],
+    "root_GPU_locks_pins_unchanged": true,
+    "normal_module_archive_game_artifacts_unchanged": true,
+    "normal_source_SDK_delta": {
+      "added": [],
+      "removed": [],
+      "changed": [
+        "docs/PHYSICS_ROADMAP.md"
+      ]
+    },
+    "source_SDK_workflow": "scripts/package-atlas.py; roadmap-only manifest delta; experimental API qualified through its isolated precompiled workflow, not added to normal SDK/campaign",
+    "original_60Hz_failure_and_240Hz_pass_and_numerical_gates_retained": true,
+    "original_240Hz_and_recommended_numeric_receipts_identical": true,
+    "recommended_review": {
+      "status": "passed",
+      "milestone": "recommended-G04-stability",
+      "device": "NVIDIA GB10",
+      "frames": 60,
+      "substeps_per_frame": 1,
+      "physics_hz": 60,
+      "sequential_GPU_worlds": 2,
+      "live_GPU_friction": true,
+      "entrypoint": "experimental.physics_gpu.recommended.GpuPhysicsResponse",
+      "solver": "GpuStableFrictionResponse",
+      "ordinary_engine_campaign_opt_in": false,
+      "low_mu": 0.02,
+      "high_mu": 0.8,
+      "low_final_x": 0.9035349999999964,
+      "high_final_x": -0.14573566588127745,
+      "low_final_vx": 2.8037999999999936,
+      "high_final_vx": 1.742837200942464,
+      "low_final_contact_slip": 3.71330700714285,
+      "high_final_contact_slip": -2.489802998522129e-05,
+      "low_final_kinetic_energy": 4.096087819208373,
+      "high_final_kinetic_energy": 2.1262544137014117,
+      "surface_slip_gate": 0.001,
+      "analytic_scene_laws_passed": true,
+      "rendered_snapshot_frames": [
+        0,
+        20,
+        40,
+        59
+      ],
+      "maximum_velocity_iterations": 1,
+      "maximum_cone_excess": 0.0,
+      "CPU_reference": "all 120 rendered-frame position/orientation/velocity/angular states, counts and energy reports after render; one CPU physics step per frame",
+      "fixed_bodies_unchanged": true,
+      "persistent_body_storage": true,
+      "warm_start": false,
+      "separate_static_dynamic_coefficients": false,
+      "solver_parallelism": "serial GPU contact sweeps",
+      "integration_response_separate_commits": true,
+      "validation_errors": 0,
+      "campaign_rules_changed": false
+    },
+    "normal_build_state": "Atlas engine source, archive and compiled API match.\nYo Frankie build matches game source and the explicit Atlas engine dependency.",
+    "community_code_fixture_dependency_adoption": false,
+    "historical_partial_checkpoint": "/home/user/mojo-game-engine/build/physics-box-box/partial-checkpoint.json",
+    "earlier_passed_fingerprint_round": "/home/user/mojo-game-engine/build/physics-box-box/first-final-regression-round",
+    "earlier_GPU_regression_evidence": "/home/user/mojo-game-engine/build/physics-g05-sleep/final-regression-receipts",
+    "rollback": "/home/user/mojo-game-engine/build/physics-box-box/rollback"
+  },
+  "resolved_failures": {
+    "reserved_token": "case loop variable renamed sample; failed compile did not execute",
+    "test_edge_normal": "derive oriented normal from unmodified raw reference direction; earlier sign mismatch was in the test calculation",
+    "nearparallel_metric": "retain fixed backward shape/plane checks and explicitly account for intersection conditioning; initial failed forward-corner logs preserved",
+    "post_projection_uniqueness": "final projected midpoints now coalesce at the declared resolution, with direct actual GPU counterexample test",
+    "parser_API_repairs": "half_extents field, explicit Array copies, indexed movable-list references, statement layout and pinned diagnostic bit reading corrected; known 1.0/-0.0 bit patterns checked",
+    "qualifier_metadata": "removed copied island metadata; receipts now describe SAT/patches/capacities/oracles and detection-only scope"
+  },
+  "resources": {
+    "compile_threads": 1,
+    "compile_deadline_s": 180,
+    "run_deadline_s": 30,
+    "memory_reserve_GiB": 32,
+    "minimum_observed_available_GiB": 112.19807815551758,
+    "maximum_observed_GPU_C": 40,
+    "thermal_policy": "observation only; no retired cutoffs"
+  },
+  "cleanup": {
+    "remaining_owned_native_or_qualification_jobs": [],
+    "GPU_compute_apps": "",
+    "H3_resumed": false,
+    "host_boot_id": "22ae0bec-f40a-4c98-b2d7-c1312a226dea",
+    "GPU_buffers": "scoped DeviceContext owners exited; no retained GPU compute process",
+    "settings_driver_firmware_OS_power_changes": false,
+    "dirty_work_prior_failures_and_rollback_preserved": true
+  },
+  "remaining_blockers": [],
+  "stop_checkpoint": "bounded detection/contact geometry complete; stop before response/history/sleep/performance work"
+}

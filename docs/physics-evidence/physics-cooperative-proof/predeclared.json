@@ -1,0 +1,30 @@
+{
+  "cases": 102,
+  "original_real_evaluator_records": 12,
+  "real_records_with_flag_toggle": 12,
+  "analytic_adversarial_cases": 78,
+  "jacobian_flags": [
+    false,
+    true
+  ],
+  "contact_counts": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "shared_block_lanes": 32,
+  "shared_bytes": 4176,
+  "epochs_forward_reverse": 8,
+  "invocations": 3,
+  "source_and_fresh_package": true,
+  "comparisons_per_path": 2448,
+  "compared_fields_per_record": 78,
+  "acceptance": "All pressure/residual/Jacobian/valid/norm words bit identical; original captured77word records bit identical; canaries, inactive lanes, inputs and all repetitions unchanged. No relaxed gate. Stop at first numerical or capability mismatch.",
+  "corpus_sha256": "02d035dce7a648c10a7e5d5878316893dce81e1884b4685e545dad543c44498e",
+  "input_words_sha256": "162293ddd376c1faae2482125dfe09a44affad62904959fbde62848b628a3e94",
+  "source_capture_exact": true,
+  "full_solver_integration": false,
+  "performance_claim": false
+}

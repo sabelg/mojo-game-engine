@@ -1,0 +1,57 @@
+{
+  "invariants_sha256": "408b56a215b6e80f46ecbe0f213e8f504880feab77d33be0f83fbddb84387cae",
+  "early_sweeps": 8,
+  "relative_inner_criterion": 0.01,
+  "outer_sweeps": 96,
+  "matrix_original_cases": 70,
+  "modes": [
+    "source",
+    "packaged"
+  ],
+  "no_performance_before_correctness": true,
+  "mode_order_even": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      1,
+      2,
+      0
+    ],
+    [
+      2,
+      0,
+      1
+    ]
+  ],
+  "mode_order_odd": [
+    [
+      0,
+      2,
+      1
+    ],
+    [
+      2,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      2
+    ]
+  ],
+  "batches": 4,
+  "calls_each_interleaved_path": 240,
+  "source_package_paths": 2,
+  "measured_per_mode_fixture_path": 12,
+  "profile_plain_calls": 120,
+  "profile_trace_calls": 120,
+  "performance_modes": [
+    "serial_tangent",
+    "retained_copy_only",
+    "early_inner"
+  ]
+}

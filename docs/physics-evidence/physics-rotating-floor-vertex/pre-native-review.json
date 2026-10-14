@@ -1,0 +1,8 @@
+{
+  "native_not_yet_run": true,
+  "physics_change_after_compile": false,
+  "test_fix": "Pinned Mojo strings require byte_length(), not len(); corrected bounded file-size test only after transportrecovery.",
+  "old_compile_receipt_retained": true,
+  "fingerprints": "pre-native-fingerprints-2.json",
+  "no_gate_change": true
+}
