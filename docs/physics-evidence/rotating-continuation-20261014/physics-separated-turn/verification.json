@@ -1,0 +1,416 @@
+{
+  "outcome": "Separated positive-gap geometry qualifies through the turn; cumulative native fifth-macro motion stops at unchanged roundoff budgets before the turn",
+  "correctness": {
+    "pass": true,
+    "trajectory_and_control_records": 144,
+    "source_package_comparisons": 72,
+    "admitted_records": 60,
+    "rejected_records": 84,
+    "geometry_records_both_paths": 84,
+    "geometry_positive_cases": 19,
+    "geometry_rejections": 2,
+    "private_prefix_independent_converged_trajectories": 35,
+    "turning_geometry_qualified": true,
+    "committed_native_motion_through_turn": false,
+    "fifth_macro_commits": 0,
+    "native_blocker": "unchanged cumulative roundoff quarter-budget",
+    "failure_boundaries": [
+      {
+        "case": 0,
+        "committed_macro": 4,
+        "private_accepted_cells": 8,
+        "failed_cell_1_based": 9,
+        "component": 13,
+        "R": 2.528912429466623e-11,
+        "R_limit": 2.4999999999999994e-11,
+        "trial_endpoint_exact": "350680290984582617/2305843009213693952",
+        "trial_endpoint_seconds": 0.15208333333333332,
+        "rollback_words": 16576
+      },
+      {
+        "case": 1,
+        "committed_macro": 4,
+        "private_accepted_cells": 8,
+        "failed_cell_1_based": 9,
+        "component": 13,
+        "R": 2.528912429466623e-11,
+        "R_limit": 2.4999999999999994e-11,
+        "trial_endpoint_exact": "350680290984582617/2305843009213693952",
+        "trial_endpoint_seconds": 0.15208333333333332,
+        "rollback_words": 16576
+      },
+      {
+        "case": 2,
+        "committed_macro": 4,
+        "private_accepted_cells": 8,
+        "failed_cell_1_based": 9,
+        "component": 13,
+        "R": 2.5288456947608156e-11,
+        "R_limit": 2.4999999999999994e-11,
+        "trial_endpoint_exact": "350680290984582617/2305843009213693952",
+        "trial_endpoint_seconds": 0.15208333333333332,
+        "rollback_words": 16576
+      },
+      {
+        "case": 3,
+        "committed_macro": 4,
+        "private_accepted_cells": 8,
+        "failed_cell_1_based": 9,
+        "component": 13,
+        "R": 2.52883889321273e-11,
+        "R_limit": 2.4999999999999994e-11,
+        "trial_endpoint_exact": "350680290984582617/2305843009213693952",
+        "trial_endpoint_seconds": 0.15208333333333332,
+        "rollback_words": 16576
+      },
+      {
+        "case": 4,
+        "committed_macro": 4,
+        "private_accepted_cells": 8,
+        "failed_cell_1_based": 9,
+        "component": 13,
+        "R": 2.5289013877964254e-11,
+        "R_limit": 2.4999999999999994e-11,
+        "trial_endpoint_exact": "350680290984582617/2305843009213693952",
+        "trial_endpoint_seconds": 0.15208333333333332,
+        "rollback_words": 16576
+      },
+      {
+        "case": 5,
+        "committed_macro": 4,
+        "private_accepted_cells": 2,
+        "failed_cell_1_based": 3,
+        "component": 20,
+        "R": 2.512633512036506e-11,
+        "R_limit": 2.4999999999999994e-11,
+        "trial_endpoint_exact": "321857253369411443/2305843009213693952",
+        "trial_endpoint_seconds": 0.13958333333333334,
+        "rollback_words": 16576
+      },
+      {
+        "case": 6,
+        "committed_macro": 3,
+        "private_accepted_cells": 11,
+        "failed_cell_1_based": 12,
+        "component": 20,
+        "R": 2.5148909518700992e-11,
+        "R_limit": 2.4999999999999994e-11,
+        "trial_endpoint_exact": "72057594037927935/576460752303423488",
+        "trial_endpoint_seconds": 0.125,
+        "rollback_words": 16576
+      },
+      {
+        "case": 7,
+        "committed_macro": 3,
+        "private_accepted_cells": 11,
+        "failed_cell_1_based": 12,
+        "component": 18,
+        "R": 2.5085527189889023e-11,
+        "R_limit": 2.4999999999999994e-11,
+        "trial_endpoint_exact": "72057594037927935/576460752303423488",
+        "trial_endpoint_seconds": 0.125,
+        "rollback_words": 16576
+      },
+      {
+        "case": 8,
+        "committed_macro": 4,
+        "private_accepted_cells": 1,
+        "failed_cell_1_based": 2,
+        "component": 18,
+        "R": 2.5405779429277634e-11,
+        "R_limit": 2.4999999999999994e-11,
+        "trial_endpoint_exact": "158526706883441457/1152921504606846976",
+        "trial_endpoint_seconds": 0.1375,
+        "rollback_words": 16576
+      }
+    ],
+    "retained_translated_limitations": [
+      6,
+      7
+    ],
+    "diagnostic_first_recontact": {
+      "time_lo": "0.301324646320387802278517597187601495534181594848632812500",
+      "time_hi": "0.301324646320388370712706205267750192433595657348632812500",
+      "vertex": 5,
+      "retained_support": 4,
+      "closing_speed": "-0.61024484637076171209006658605536442017774892303340418725795706369814030564673856",
+      "nearest_competitor_gap": "0.10394659443839977861762466917920785695628084066903534139056555436450939711445025",
+      "monotone_isolated_bracket": {
+        "released_speed_upper_whole_bracket": "-0.0726485052388499613514127946761420324181976193507061650114000348268938900275770720327273011207580566",
+        "already_checked_competitor_gap_lower": "0.0972483719349105102391916943815886043012142181396484375",
+        "remaining_corner_gap_lowers": [
+          "0.6431315114163037331720730124258621404021076940130180303810611558548173133841401339088933056982325534",
+          "0.6478870071407269582530623912081617370939699315649141569126150496925354072227186645795294339936444951"
+        ]
+      },
+      "native_event_locator_invoked": false,
+      "no_native_state_admitted_at_recontact": true
+    },
+    "geometry_unit_radii_do_not_replace_owner_history": true,
+    "no_impulse_or_loss_recharge": true,
+    "empirical_ODE_assumption_retained": true
+  },
+  "preservation": {
+    "protected_prior_hashes": 7547,
+    "asset_save_stat_identities": 7108,
+    "pins": {
+      "1.2.0.dev2026092905": {
+        "metadata_SHA256": "40307d16e09c2e88bfe8085346d028d7479d93867fdd6e210305ed3fbaf9c534",
+        "path": "/home/user/mojo-game-engine/.deps/physics-gpu-g01/.pixi/envs/default/conda-meta/mojo-compiler-1.2.0.dev2026092905-release.json"
+      },
+      "26.7.0.dev2026092905": {
+        "metadata_SHA256": "dab5b010e4a7b5f6b7dcc4f60f2e30f9e5e69b689ef2bd57e46025d251dc2403",
+        "path": "/home/user/mojo-game-engine/.deps/physics-gpu-g01/.pixi/envs/default/conda-meta/max-core-26.7.0.dev2026092905-release.json"
+      }
+    },
+    "HEAD": "f7c67e21286ecf16f8137b9a5cca350f4f667d99",
+    "minimum_available_GiB": 110.99320983886719,
+    "maximum_GPU_C": 35,
+    "owned_jobs": [],
+    "GPU_compute_processes": [],
+    "H3": "paused",
+    "old_modules_modified": false,
+    "new_modules": [
+      "experimental/physics_gpu/separated_gap_geometry.mojo",
+      "experimental/physics_gpu/separated_owner_advance.mojo"
+    ],
+    "package_modules_including_init": 50,
+    "publication": false,
+    "hardware_counters": false,
+    "system_changes": false,
+    "accuracy_relaxation": false,
+    "final_native_calls": 228,
+    "total_native_calls": 246,
+    "native_call_inventory": [
+      {
+        "stage": "controls-packaged",
+        "calls": 36
+      },
+      {
+        "stage": "controls-source",
+        "calls": 36
+      },
+      {
+        "stage": "geometry-packaged",
+        "calls": 42
+      },
+      {
+        "stage": "geometry-source",
+        "calls": 42
+      },
+      {
+        "stage": "packaged-macro5",
+        "calls": 18
+      },
+      {
+        "stage": "packaged-recovery-macro4",
+        "calls": 18
+      },
+      {
+        "stage": "source-macro-5",
+        "calls": 18
+      },
+      {
+        "stage": "source-macro5",
+        "calls": 18
+      },
+      {
+        "stage": "source-recovery-macro4",
+        "calls": 18
+      }
+    ],
+    "preserved_failed_stages": [
+      "final-correctness-check"
+    ],
+    "stages": [
+      {
+        "stage": "compile-package",
+        "returncode": 0,
+        "fault": null,
+        "elapsed_s": 9.981
+      },
+      {
+        "stage": "compile-source-final",
+        "returncode": 0,
+        "fault": null,
+        "elapsed_s": 9.981
+      },
+      {
+        "stage": "compile-source",
+        "returncode": 0,
+        "fault": null,
+        "elapsed_s": 9.471
+      },
+      {
+        "stage": "controls-packaged",
+        "returncode": 0,
+        "fault": null,
+        "elapsed_s": 2.097
+      },
+      {
+        "stage": "controls-source",
+        "returncode": 0,
+        "fault": null,
+        "elapsed_s": 2.096
+      },
+      {
+        "stage": "final-correctness-check",
+        "returncode": 1,
+        "fault": null,
+        "elapsed_s": 6.83
+      },
+      {
+        "stage": "final-correctness-check-v2",
+        "returncode": 0,
+        "fault": null,
+        "elapsed_s": 6.839
+      },
+      {
+        "stage": "geometry-oracle-fixtures",
+        "returncode": 0,
+        "fault": null,
+        "elapsed_s": 5.79
+      },
+      {
+        "stage": "geometry-package-compile",
+        "returncode": 0,
+        "fault": null,
+        "elapsed_s": 4.749
+      },
+      {
+        "stage": "geometry-packaged",
+        "returncode": 0,
+        "fault": null,
+        "elapsed_s": 1.704
+      },
+      {
+        "stage": "geometry-source-compile",
+        "returncode": 0,
+        "fault": null,
+        "elapsed_s": 5.265
+      },
+      {
+        "stage": "geometry-source",
+        "returncode": 0,
+        "fault": null,
+        "elapsed_s": 1.69
+      },
+      {
+        "stage": "independent-recontact-128",
+        "returncode": 0,
+        "fault": null,
+        "elapsed_s": 4.745
+      },
+      {
+        "stage": "independent-scan",
+        "returncode": 0,
+        "fault": null,
+        "elapsed_s": 1.583
+      },
+      {
+        "stage": "package-precompile",
+        "returncode": 0,
+        "fault": null,
+        "elapsed_s": 17.865
+      },
+      {
+        "stage": "packaged-macro5",
+        "returncode": 0,
+        "fault": null,
+        "elapsed_s": 1.572
+      },
+      {
+        "stage": "packaged-recovery-macro4",
+        "returncode": 0,
+        "fault": null,
+        "elapsed_s": 2.166
+      },
+      {
+        "stage": "recontact-256-80",
+        "returncode": 0,
+        "fault": null,
+        "elapsed_s": 8.43
+      },
+      {
+        "stage": "recontact-512-50",
+        "returncode": 0,
+        "fault": null,
+        "elapsed_s": 13.702
+      },
+      {
+        "stage": "recontact-512-80",
+        "returncode": 0,
+        "fault": null,
+        "elapsed_s": 17.342
+      },
+      {
+        "stage": "reference-private-c0",
+        "returncode": 0,
+        "fault": null,
+        "elapsed_s": 6.314
+      },
+      {
+        "stage": "reference-private-c1",
+        "returncode": 0,
+        "fault": null,
+        "elapsed_s": 6.326
+      },
+      {
+        "stage": "reference-private-c2",
+        "returncode": 0,
+        "fault": null,
+        "elapsed_s": 6.3
+      },
+      {
+        "stage": "reference-private-c3",
+        "returncode": 0,
+        "fault": null,
+        "elapsed_s": 6.306
+      },
+      {
+        "stage": "reference-private-c4",
+        "returncode": 0,
+        "fault": null,
+        "elapsed_s": 6.301
+      },
+      {
+        "stage": "reference-private-c5",
+        "returncode": 0,
+        "fault": null,
+        "elapsed_s": 6.329
+      },
+      {
+        "stage": "reference-private-c8",
+        "returncode": 0,
+        "fault": null,
+        "elapsed_s": 6.312
+      },
+      {
+        "stage": "source-macro-5",
+        "returncode": 0,
+        "fault": null,
+        "elapsed_s": 2.095
+      },
+      {
+        "stage": "source-macro5",
+        "returncode": 0,
+        "fault": null,
+        "elapsed_s": 1.569
+      },
+      {
+        "stage": "source-recovery-macro4",
+        "returncode": 0,
+        "fault": null,
+        "elapsed_s": 2.168
+      }
+    ]
+  },
+  "preferred_baseline": "physics-dp-stage-cooperative",
+  "runtime_measurement_added": false,
+  "native_through_turn_trajectory_claim": false,
+  "one_second_claim": false,
+  "multibody_claim": false,
+  "60_Hz_claim": false,
+  "remaining_prerequisite": "Tighter justified cumulative roundoff transport, especially normal impulse and translated fixed-origin moments; no reset or allowance relaxation. Native recontact location/history remains unqualified because no budget-admissible precontact owner is available.",
+  "blocker_state": "diagnosed cumulative accuracy boundary; no denied action, pending approval or running job"
+}

@@ -1,0 +1,54 @@
+{
+  "docs/physics-evidence/rotating-continuation-20261014/physics-single-support-design/NUMERICAL-CONTRACT.md": {
+    "source": "build/physics-single-support-design/NUMERICAL-CONTRACT.md",
+    "sha256": "5a4d832a370ded19fe97e532be1cd67c0137569a6559d0bf7dee78adfc2c37e1"
+  },
+  "docs/physics-evidence/rotating-continuation-20261014/physics-single-support-design/verification.json": {
+    "source": "build/physics-single-support-design/verification.json",
+    "sha256": "a0a1826022dd150c52344a4ae498dcf37e35d71d9f74a6bc5db77d75a16f8e32"
+  },
+  "docs/physics-evidence/rotating-continuation-20261014/physics-dp-stage-cooperative/RESULTS.md": {
+    "source": "build/physics-dp-stage-cooperative/RESULTS.md",
+    "sha256": "41013eefd7900e68cf590a07a66282bcce6e5692bc3b66cb3cd80deced75a536"
+  },
+  "docs/physics-evidence/rotating-continuation-20261014/physics-dp-stage-cooperative/verification.json": {
+    "source": "build/physics-dp-stage-cooperative/verification.json",
+    "sha256": "2b8ee427bd7df3c089aeb1343b91bcf2f6b1661f40c3546270eaf9eaee3aa9c1"
+  },
+  "docs/physics-evidence/rotating-continuation-20261014/physics-dp-stage-cooperative/package-source-fingerprints.json": {
+    "source": "build/physics-dp-stage-cooperative/package-source-fingerprints.json",
+    "sha256": "e1be4686d4f59037acd7aeeee07d78f8630de241ae2cf0caf63ae50ac9c505a4"
+  },
+  "docs/physics-evidence/rotating-continuation-20261014/physics-owner-clock/RESULTS.md": {
+    "source": "build/physics-owner-clock/RESULTS.md",
+    "sha256": "94596b80e71660f4fbd11df4b0776c26cb20a1bdd76ac592f667ce0d4788542f"
+  },
+  "docs/physics-evidence/rotating-continuation-20261014/physics-owner-clock/verification.json": {
+    "source": "build/physics-owner-clock/verification.json",
+    "sha256": "c6e0c3a900273041eac33526c104825acc362a5b884cfab1521860d6e6f21345"
+  },
+  "docs/physics-evidence/rotating-continuation-20261014/physics-owner-clock/package-source-fingerprints.json": {
+    "source": "build/physics-owner-clock/package-source-fingerprints.json",
+    "sha256": "4f2d0547eee8f8352dc0d37959ff57df29f957cc922880d6686c484819af301d"
+  },
+  "docs/physics-evidence/rotating-continuation-20261014/physics-separated-turn/RESULTS.md": {
+    "source": "build/physics-separated-turn/RESULTS.md",
+    "sha256": "442376383915895d709f6712eb37263b199745a618dbd32d4e10b5c17bb62c73"
+  },
+  "docs/physics-evidence/rotating-continuation-20261014/physics-separated-turn/verification.json": {
+    "source": "build/physics-separated-turn/verification.json",
+    "sha256": "3119d8bf0127530d43fcdd20fe66bd1d7fb4be2aea1bf890847a52c8314361ef"
+  },
+  "docs/physics-evidence/rotating-continuation-20261014/physics-separated-turn/correctness.json": {
+    "source": "build/physics-separated-turn/correctness.json",
+    "sha256": "7a7c604e22483cff473b7b95b418b46ac40ec6d08ae9f5d2ede9cecfec686686"
+  },
+  "docs/physics-evidence/rotating-continuation-20261014/physics-separated-turn/package-source-fingerprints.json": {
+    "source": "build/physics-separated-turn/package-source-fingerprints.json",
+    "sha256": "715a1ea9b1774d494480ed9726d3b8600b9d34c4d68442b49bf85c049e5164ab"
+  },
+  "docs/physics-evidence/rotating-continuation-20261014/roundoff-investigation-paused.json": {
+    "source": "build/physics-roundoff-local/PAUSED.json",
+    "sha256": "3440725fd22ae93c3d141acb59fab4aefeb04392946e9fddbc298bd4d88d80a9"
+  }
+}

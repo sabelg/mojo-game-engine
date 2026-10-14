@@ -1,0 +1,16 @@
+{
+  "scope": "design and bounded CPU-only mathematical prototype",
+  "production_changes": false,
+  "GPU_runs": 0,
+  "timing_claim": false,
+  "publication": false,
+  "prior_baseline_hashes_verified": 923,
+  "prior_single_reaction_seal_verified": true,
+  "asset_stat_identities_verified": 7108,
+  "pins_unchanged": true,
+  "H3": "paused; untouched",
+  "CPU_limit": "taskset CPU0, timeout30s, internal25s guard, memory reserve32GiB",
+  "prototype_pass": true,
+  "proof_claim": false,
+  "recommended_method": "DP5 two-half-step acceptance, empirical error control plus conservative analytic event bounds"
+}

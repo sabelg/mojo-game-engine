@@ -1,0 +1,15 @@
+{
+  "status": "Paused for publication review; diagnostic only, no correction implemented",
+  "maps": 17,
+  "bit_mismatches": 55,
+  "max_native_vs_Decimal100_map_difference": 3.568744210113644e-16,
+  "max_difference_fraction_of_local_charge": 0.007922150446815641,
+  "transport_fraction_range": [
+    0.9021019844589918,
+    0.97582554985481
+  ],
+  "limitation": "Operation replay is not bit exact; differences must be diagnosed before treating the replay as an operation-exact audit. No tighter bound is qualified. No cumulative uncertainty removed.",
+  "new_native_runs": 0,
+  "fifth_macro_commits": 0,
+  "feature_work_paused": true
+}
